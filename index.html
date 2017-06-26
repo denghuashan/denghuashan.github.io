@@ -61,7 +61,7 @@
 	        
 				<li><a href="/archives">所有文章</a></li>
 	        
-				<li><a href="/404.html">公益</a></li>
+				<li><a href="/404.html">腾讯公益</a></li>
 	        
 			</ul>
 		</nav>
@@ -143,7 +143,7 @@
 		        
 					<li style="width: 33.333333333333336%"><a href="/archives">所有文章</a></li>
 		        
-					<li style="width: 33.333333333333336%"><a href="/404.html">公益</a></li>
+					<li style="width: 33.333333333333336%"><a href="/404.html">腾讯公益</a></li>
 		        
 				</ul>
 			</nav>
@@ -159,6 +159,100 @@
           </div>
           <div id="js-content" class="content-ll">
             
+  
+    <article id="post-decrypt-blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/06/26/decrypt-blog/">搭建个人博客站点解密</a>
+    </h1>
+  
+
+        
+        <a href="/2017/06/26/decrypt-blog/" class="archive-article-date">
+  	<time datetime="2017-06-26T00:55:52.068Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-06-26</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>对搭建个人博客站点的步骤进行详细回顾，并记录。个人喜欢图文并茂。总结是检验自己的学习效果，并进行巩固。</p>
+<h2 id="系统环境配置"><a href="#系统环境配置" class="headerlink" title="系统环境配置"></a>系统环境配置</h2><ul>
+<li>之前说过个人博客采用node.js+hexo+github搭建。要使用hexo，需要在你的系统中支持node.js以及Git，如果还没有，那就需要安装。<h2 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h2></li>
+<li>下载与安装地址：<a href="http://www.runoob.com/nodejs/nodejs-install-setup.html" target="_blank" rel="external">http://www.runoob.com/nodejs/nodejs-install-setup.html</a></li>
+<li>请根据自己操作系统的位数进行下载，这里不在阐述。</li>
+<li>检验node.js是否安装好，如下图：<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/7768675.jpg" alt=""><h2 id="安装Git"><a href="#安装Git" class="headerlink" title="安装Git"></a>安装Git</h2></li>
+<li>下载与安装地址：<a href="https://git-scm.com/download/" target="_blank" rel="external">https://git-scm.com/download/</a></li>
+<li>请根据自己操作系统的位数进行下载，这里不在阐述。</li>
+<li>检验Git是否安装好，如下图：<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/83255845.jpg" alt=""><h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2></li>
+<li>安装好Git后，右键点击Git Bash，进入本地Git控制台。<br><br><code>$ cd d:/hexo # 可自行安装到任意目录</code><br><br><code>$ npm install hexo-cli -g # 使用包管理工具npm安装hexo，-g是全局安装</code><br><br><code>$ hexo init blog # 初始化到blog目录中，可任意选择</code><br><br><code>$ cd blog # 进入blog目录</code><br><br><code>$ npm install # 本地安装</code><br><br><code>$ hexo g # 或者hexo generate，会在当前路径下生成public文件夹</code><br><br><code>$ hexo s # 或者hexo server，可以在http://localhost:4000/ 查看</code></li>
+<li>这里有必要提下Hexo常用的几个命令：<br><br><code>hexo generate (hexo g) 生成静态文件，会在当前目录下生成一个新的叫做public的文件夹</code><br><br><code>hexo server (hexo s) 启动本地web服务，用于博客的预览</code><br><br><code>hexo deploy (hexo d) 部署播客到远端（比如github, heroku等平台）</code></li>
+<li>常用简写<br><br><code>$ hexo n == hexo new</code><br><br><code>$ hexo g == hexo generate</code><br><br><code>$ hexo s == hexo server</code><br><br><code>$ hexo d == hexo deploy</code><br><h3 id="现在打开http-localhost-4000-已经可以看到一篇内置的blog了。"><a href="#现在打开http-localhost-4000-已经可以看到一篇内置的blog了。" class="headerlink" title="现在打开http://localhost:4000/已经可以看到一篇内置的blog了。"></a>现在打开<a href="http://localhost:4000/已经可以看到一篇内置的blog了。" target="_blank" rel="external">http://localhost:4000/已经可以看到一篇内置的blog了。</a></h3><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/49793978.jpg" alt=""><h3 id="安装所用的本地环境如下：-可以通过Git控制台输入hexo-v查看"><a href="#安装所用的本地环境如下：-可以通过Git控制台输入hexo-v查看" class="headerlink" title="安装所用的本地环境如下：(可以通过Git控制台输入hexo -v查看)"></a>安装所用的本地环境如下：(可以通过Git控制台输入hexo -v查看)</h3><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/15846985.jpg" alt=""><h2 id="hexo主题设置"><a href="#hexo主题设置" class="headerlink" title="hexo主题设置"></a>hexo主题设置</h2>这里以主题yilia为例进行说明。可以百度搜索hexo主题，有很多。<h3 id="安装主题"><a href="#安装主题" class="headerlink" title="安装主题"></a>安装主题</h3>  $ hexo clean<br>  $ git clone <a href="https://github.com/litten/hexo-theme-yilia.git" target="_blank" rel="external">https://github.com/litten/hexo-theme-yilia.git</a> themes/yilia<h3 id="启用主题"><a href="#启用主题" class="headerlink" title="启用主题"></a>启用主题</h3>修改blog目录下的_config.yml配置文件中的theme属性，将其设置为yilia。<h3 id="更新主题"><a href="#更新主题" class="headerlink" title="更新主题"></a>更新主题</h3>  $ cd d:/hexo/blog/themes/yilia<br>  $ git pull # # 取回远程仓库的变化，并与本地分支合并<br>  $ cd d:/hexo/blog<br>  $ hexo g # 生成新的静态文件<br>  $ hexo s # 启动本地web服务器<br>现在打开<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a> ，会看已经应用了一个新的主题。<h2 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h2><h3 id="注册GitHub"><a href="#注册GitHub" class="headerlink" title="注册GitHub"></a>注册GitHub</h3>地址：<a href="http://www.github.com/" target="_blank" rel="external">http://www.github.com/</a><br><br>注册你的 username 和邮箱，邮箱十分重要，GitHub 上很多通知都是通过邮箱发送。<h3 id="配置和使用-GitHub"><a href="#配置和使用-GitHub" class="headerlink" title="配置和使用 GitHub"></a>配置和使用 GitHub</h3></li>
+<li>登录GitHub，跳过引导页。点击Start a project</li>
+<li>入下图示例：以.github.io结尾仓库。红色感叹号，是因为我的仓库已经存在同名项目了。不存在会显示绿色打钩图标<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/13049613.jpg" alt=""></li>
+<li>新建的仓库，需要有一次提交记录。红框部分就是一个示例，在Git控制台进行输入。输入之前先让本地 git 项目与远程的 GitHub 建立联系。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/7148619.jpg" alt=""><h2 id="配置-SSH-keys"><a href="#配置-SSH-keys" class="headerlink" title="配置 SSH keys"></a>配置 SSH keys<br></h2><h3 id="检查-SSH-keys的设置"><a href="#检查-SSH-keys的设置" class="headerlink" title="检查 SSH keys的设置"></a>检查 SSH keys的设置</h3>  $ cd ~/.ssh # 检查本机的ssh密钥<br>如果提示：No such file or directory，说明你是第一次使用 git。如果有把.ssh文件夹里的文件先删掉。.ssh路径为：’C:\Users\your_user_directory\’，例如我的’C:\Users\DELL\’<h3 id="生成新的-SSH-Key："><a href="#生成新的-SSH-Key：" class="headerlink" title="生成新的 SSH Key："></a>生成新的 SSH Key：</h3>  $ ssh-keygen -t rsa -C “邮箱地址@youremail.com” # GitHub注册的邮箱地址，-C为大写的C<br>  Generating public/private rsa key pair. # 采用非对称加密算法RSA生成公钥与私钥<br>  Enter file in which to save the key (/Users/your_user_directory/.ssh/id_rsa): # 回车就好<br>  Enter passphrase (empty for no passphrase): # 加盐处理，输入加密串<br>  Enter same passphrase again: # 加盐处理，再次输入加密串<br>SSH key设置成功界面：<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/25782206.jpg" alt=""><h3 id="添加-SSH-Key-到-GitHub"><a href="#添加-SSH-Key-到-GitHub" class="headerlink" title="添加 SSH Key 到 GitHub"></a>添加 SSH Key 到 GitHub</h3></li>
+<li>打开本地 id_rsa.pub 文件（参考地址 C:\Users\DELL.ssh\id_rsa.pub）。此文件里面内容为刚才生成的密钥。如果看不到这个文件，你需要设置显示隐藏文件。准确的复制这个文件的内容，才能保证设置的成功。</li>
+<li>登陆 GitHub 账号。点击右上角的 Account Settings—&gt;SSH Public keys —&gt; add another public keys</li>
+<li>把本地生成的密钥复制到里面（ key 文本框中）， 点击 add key 就ok了<br><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/16438910.jpg" alt=""><h3 id="使用Git控制台进行第一次提交"><a href="#使用Git控制台进行第一次提交" class="headerlink" title="使用Git控制台进行第一次提交"></a>使用Git控制台进行第一次提交</h3>  新建一个文件夹，右键点击Git Bash，进入本地Git控制台。<br>  echo “# test” &gt;&gt; README.md<br>  git init<br>  git add README.md<br>  git commit -m “first commit”<br>  git remote add origin <a href="https://github.com/denghuashan/denghuashan.git.io.git" target="_blank" rel="external">https://github.com/denghuashan/denghuashan.git.io.git</a><br>  git push -u origin master<br>  此时会要求输入username和password<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/79878299.jpg" alt=""><br><h4 id="返回GitHub仓库F5刷新一下"><a href="#返回GitHub仓库F5刷新一下" class="headerlink" title="返回GitHub仓库F5刷新一下"></a>返回GitHub仓库F5刷新一下</h4><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/44614202.jpg" alt=""><h4 id="点击右上角Fork"><a href="#点击右上角Fork" class="headerlink" title="点击右上角Fork"></a>点击右上角Fork</h4><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/21744995.jpg" alt=""><br><br><br>这时，可以通过链接<a href="http://denghuashan.github.io/访问了。（现在还没有内容，别着急）" target="_blank" rel="external">http://denghuashan.github.io/访问了。（现在还没有内容，别着急）</a><h2 id="部署hexo到Github"><a href="#部署hexo到Github" class="headerlink" title="部署hexo到Github"></a>部署hexo到Github</h2><h3 id="这是很关键的一步，把在本地web环境下预览到的博客部署到github上，然后就可以直接通过http-denghuashan-github-io-访问了。"><a href="#这是很关键的一步，把在本地web环境下预览到的博客部署到github上，然后就可以直接通过http-denghuashan-github-io-访问了。" class="headerlink" title="这是很关键的一步，把在本地web环境下预览到的博客部署到github上，然后就可以直接通过http://denghuashan.github.io/访问了。"></a>这是很关键的一步，把在本地web环境下预览到的博客部署到github上，然后就可以直接通过<a href="http://denghuashan.github.io/访问了。" target="_blank" rel="external">http://denghuashan.github.io/访问了。</a></h3>  $ cd d:/hexo/blog<br>  $ git clone <a href="https://github.com/denghuashan/denghuashan.github.io.git" target="_blank" rel="external">https://github.com/denghuashan/denghuashan.github.io.git</a> .deploy/denghuashan.github.io<br>将之前创建的repo克隆到本地，新建一个目录叫做.deploy用于存放克隆的代码。<h3 id="创建一个deploy脚本文件"><a href="#创建一个deploy脚本文件" class="headerlink" title="创建一个deploy脚本文件"></a>创建一个deploy脚本文件</h3>  hexo generate # 生成最新的静态文件<br>  cp -R public/* .deploy/denghuashan.github.io # 拷贝public文件夹下的文件到本地仓库中去<br>  cd .deploy/denghuashan.github.io<br>  git add . # 添加到暂存区<br>  git commit -m “update” # 说明为update<br>  git push origin master # 推送本地分支到远程仓库master分支，输入username和password<br>在d:/hexo/blog新建一个deploy.sh的文件，保存上面的指令。（shell脚本）下次推送到仓库的时候，直接在Git控制台启用。<br><br><code>输入：cd d:/hexo/blog</code><br><br><code>输入：sh deploy.sh</code><br><br>再访问<a href="http://denghuashan.github.io，就会看到hexo的web页面了。" target="_blank" rel="external">http://denghuashan.github.io，就会看到hexo的web页面了。</a><h2 id="blog目录"><a href="#blog目录" class="headerlink" title="blog目录"></a>blog目录</h2><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/20117628.jpg" alt=""><h3 id="各文件夹及文件的作用"><a href="#各文件夹及文件的作用" class="headerlink" title="各文件夹及文件的作用"></a>各文件夹及文件的作用</h3></li>
+<li>.deploy：本地仓库</li>
+<li>node_modules：nodejs对hexo的支持，不要删除</li>
+<li>public：hexo生成的静态文件</li>
+<li>source：类似那个webapp目录，该目录下的_posts文件夹就是存放文章的。Markdown文件，方便博客的编写与编辑。</li>
+<li><p>themes：主题文件存放处</p>
+<h2 id="blog目录下-config-yml文件配置说明"><a href="#blog目录下-config-yml文件配置说明" class="headerlink" title="blog目录下_config.yml文件配置说明"></a>blog目录下_config.yml文件配置说明</h2><h1 id="Hexo-Configuration"><a href="#Hexo-Configuration" class="headerlink" title="Hexo Configuration"></a>Hexo Configuration</h1><h2 id="Docs-https-hexo-io-docs-configuration-html"><a href="#Docs-https-hexo-io-docs-configuration-html" class="headerlink" title="Docs: https://hexo.io/docs/configuration.html"></a>Docs: <a href="https://hexo.io/docs/configuration.html" target="_blank" rel="external">https://hexo.io/docs/configuration.html</a></h2><h2 id="Source-https-github-com-hexojs-hexo"><a href="#Source-https-github-com-hexojs-hexo" class="headerlink" title="Source: https://github.com/hexojs/hexo/"></a>Source: <a href="https://github.com/hexojs/hexo/" target="_blank" rel="external">https://github.com/hexojs/hexo/</a></h2><h1 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h1><p>  title: DreamMaker-HS # 个人博客的标题。html中head标签中的title<br>  subtitle: 勤思善问，可敌良师益友。# 子标题<br>  description: 博学而笃志，切问而静思.! # 描述<br>  author: HuaShan # 作者名<br>  language:<br>  timezone:</p>
+<h1 id="URL"><a href="#URL" class="headerlink" title="URL"></a>URL</h1><h2 id="If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘"><a href="#If-your-site-is-put-in-a-subdirectory-set-url-as-‘http-yoursite-com-child‘-and-root-as-‘-child-‘" class="headerlink" title="If your site is put in a subdirectory, set url as ‘http://yoursite.com/child‘ and root as ‘/child/‘"></a>If your site is put in a subdirectory, set url as ‘<a href="http://yoursite.com/child" target="_blank" rel="external">http://yoursite.com/child</a>‘ and root as ‘/child/‘</h2><p>  url: <a href="http://dhsmp.com">http://dhsmp.com</a> # 独立域名<br>  root: /<br>  permalink: :year/:month/:day/:title/<br>  permalink_defaults:</p>
+<h1 id="Directory"><a href="#Directory" class="headerlink" title="Directory"></a>Directory</h1><p>  source_dir: source<br>  public_dir: public<br>  tag_dir: tags<br>  archive_dir: archives<br>  category_dir: categories<br>  code_dir: downloads/code<br>  i18n_dir: :lang<br>  skip_render:</p>
+<h1 id="Writing"><a href="#Writing" class="headerlink" title="Writing"></a>Writing</h1><p>  new_post_name: :title.md # File name of new posts<br>  default_layout: post<br>  titlecase: false # Transform title into titlecase<br>  external_link: true # Open external links in new tab<br>  filename_case: 0<br>  render_drafts: false<br>  post_asset_folder: false<br>  relative_link: false<br>  future: true<br>  highlight:</p>
+<pre><code>enable: true
+line_number: true
+auto_detect: false
+tab_replace:
+</code></pre><h1 id="Category-amp-Tag"><a href="#Category-amp-Tag" class="headerlink" title="Category &amp; Tag"></a>Category &amp; Tag</h1><p>  default_category: uncategorized<br>  category_map:<br>  tag_map:</p>
+<h1 id="Date-Time-format"><a href="#Date-Time-format" class="headerlink" title="Date / Time format"></a>Date / Time format</h1><h2 id="Hexo-uses-Moment-js-to-parse-and-display-date"><a href="#Hexo-uses-Moment-js-to-parse-and-display-date" class="headerlink" title="Hexo uses Moment.js to parse and display date"></a>Hexo uses Moment.js to parse and display date</h2><h2 id="You-can-customize-the-date-format-as-defined-in"><a href="#You-can-customize-the-date-format-as-defined-in" class="headerlink" title="You can customize the date format as defined in"></a>You can customize the date format as defined in</h2><h2 id="http-momentjs-com-docs-displaying-format"><a href="#http-momentjs-com-docs-displaying-format" class="headerlink" title="http://momentjs.com/docs/#/displaying/format/"></a><a href="http://momentjs.com/docs/#/displaying/format/" target="_blank" rel="external">http://momentjs.com/docs/#/displaying/format/</a></h2><p>  date_format: YYYY-MM-DD<br>  time_format: HH:mm:ss</p>
+<h1 id="Pagination"><a href="#Pagination" class="headerlink" title="Pagination"></a>Pagination</h1><h2 id="Set-per-page-to-0-to-disable-pagination"><a href="#Set-per-page-to-0-to-disable-pagination" class="headerlink" title="Set per_page to 0 to disable pagination"></a>Set per_page to 0 to disable pagination</h2><p>  per_page: 10<br>  pagination_dir: page</p>
+<h1 id="Extensions"><a href="#Extensions" class="headerlink" title="Extensions"></a>Extensions</h1><h2 id="Plugins-https-hexo-io-plugins"><a href="#Plugins-https-hexo-io-plugins" class="headerlink" title="Plugins: https://hexo.io/plugins/"></a>Plugins: <a href="https://hexo.io/plugins/" target="_blank" rel="external">https://hexo.io/plugins/</a></h2><h2 id="Themes-https-hexo-io-themes"><a href="#Themes-https-hexo-io-themes" class="headerlink" title="Themes: https://hexo.io/themes/"></a>Themes: <a href="https://hexo.io/themes/" target="_blank" rel="external">https://hexo.io/themes/</a></h2><p>  theme: yilia # 主题，可以更改主题。默认是landscape</p>
+<h1 id="Deployment"><a href="#Deployment" class="headerlink" title="Deployment"></a>Deployment</h1><h2 id="Docs-https-hexo-io-docs-deployment-html"><a href="#Docs-https-hexo-io-docs-deployment-html" class="headerlink" title="Docs: https://hexo.io/docs/deployment.html"></a>Docs: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">https://hexo.io/docs/deployment.html</a></h2><h1 id="下面的配置需要添加"><a href="#下面的配置需要添加" class="headerlink" title="下面的配置需要添加"></a>下面的配置需要添加</h1><p>  deploy: # 部署</p>
+<pre><code>type:github # 部署类型
+repository:https://github.com/denghuashan/denghuashan.github.io.git # 仓库地址
+branch:master # 分支
+</code></pre><h2 id="绑定独立域名"><a href="#绑定独立域名" class="headerlink" title="绑定独立域名"></a>绑定独立域名</h2><p>  $ cd d:/hexo/blog/source/<br>  $ touch CNAME<br>  $ vim CNAME # 输入你的域名<br>  $ git add CNAME<br>  $ git commit -m “add CNAME”<br>  $ sh deploy.sh # 重新生成并提交<br>我是在阿里云上买的域名，操作基本是一样的。获取GitHub的IP地址，进入source目录下，添加CNAME文件。在域名注册提供商那里配置DNS解析。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-26/4808297.jpg" alt=""></p>
+<h2 id="其他高级技巧"><a href="#其他高级技巧" class="headerlink" title="其他高级技巧"></a>其他高级技巧</h2></li>
+<li>上面已经可以用独立域名进行访问了，其他的一些修改。在themes/(当前使用主题)/_config.yml文件进行修改配置。这里不在阐述。其他的一些特性，在这里只会提到，至于如何使用，请自行摸索。</li>
+<li>采用Markdown进行文章的编辑与编写</li>
+<li>使用的图床为七牛云存储 + 简易图床。<a href="https://portal.qiniu.com/signup?code=3lmipeyx3j782" title="七牛云存储" target="_blank" rel="external">https://portal.qiniu.com/signup?code=3lmipeyx3j782</a>，点这个连接注册，可以给我增加存储空间。谢谢了。</li>
+<li>添加404公益页面，推荐使用腾讯公益404。<a href="http://www.qq.com/404/" target="_blank" rel="external">http://www.qq.com/404/</a></li>
+<li>还可以添加一些其他的插件，如统计访问量、文章字数统计、文章评论与回复、打分，等等。</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2017/06/26/decrypt-blog/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+
+
+
+
   
     <article id="post-first-article" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">

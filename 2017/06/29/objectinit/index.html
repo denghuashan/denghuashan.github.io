@@ -95,16 +95,20 @@
 
 
 
-<meta name="description" content="一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。 随想 每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。 一个大目标，我希望在十年后能成为一个软件开发的小牛，让自己依然能高效而简洁地解决编程问题，但是不受企业低效的管理束缚且有能满足高质量生活的收入水平； 2017年">
+<meta name="description" content="从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。 一个很简单的Java类public class Student {      private String name = &amp;quot;haha&amp;quot;;     private int">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记住让自己心动时刻">
-<meta property="og:url" content="http://dhsmp.com/2017/06/21/first-article/index.html">
+<meta property="og:title" content="Java对象初始化的过程">
+<meta property="og:url" content="http://dhsmp.com/2017/06/29/objectinit/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。 随想 每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。 一个大目标，我希望在十年后能成为一个软件开发的小牛，让自己依然能高效而简洁地解决编程问题，但是不受企业低效的管理束缚且有能满足高质量生活的收入水平； 2017年">
-<meta property="og:updated_time" content="2017-06-26T12:03:22.606Z">
+<meta property="og:description" content="从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。 一个很简单的Java类public class Student {      private String name = &amp;quot;haha&amp;quot;;     private int">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/82172780.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/54828942.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/87231977.jpg">
+<meta property="og:updated_time" content="2017-06-29T03:06:44.989Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记住让自己心动时刻">
-<meta name="twitter:description" content="一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。 随想 每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。 一个大目标，我希望在十年后能成为一个软件开发的小牛，让自己依然能高效而简洁地解决编程问题，但是不受企业低效的管理束缚且有能满足高质量生活的收入水平； 2017年">
+<meta name="twitter:title" content="Java对象初始化的过程">
+<meta name="twitter:description" content="从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。 一个很简单的Java类public class Student {      private String name = &amp;quot;haha&amp;quot;;     private int">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/82172780.jpg">
 
 
 
@@ -132,13 +136,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/06/21/first-article/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/06/29/objectinit/"/>
 
 
 
 
 
-  <title>记住让自己心动时刻 | DreamMaker-HS</title>
+  <title>Java对象初始化的过程 | DreamMaker-HS</title>
   
 
 
@@ -267,7 +271,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/06/21/first-article/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/06/29/objectinit/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -284,7 +288,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">记住让自己心动时刻</h1>
+          <h1 class="post-title" itemprop="name headline">Java对象初始化的过程</h1>
         
 
         <div class="post-meta">
@@ -296,8 +300,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T15:37:44+08:00">
-                2017-06-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T08:53:15+08:00">
+                2017-06-29
               </time>
             
 
@@ -331,15 +335,68 @@
       
 
       
-        <p>一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。</p>
-<h2 id="随想"><a href="#随想" class="headerlink" title="随想"></a>随想</h2><ul>
-<li>每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。</li>
-<li>一个大目标，我希望在十年后能成为一个软件开发的小牛，让自己依然能高效而简洁地解决编程问题，但是不受企业低效的管理束缚且有能满足高质量生活的收入水平；</li>
-<li>2017年，希望自己能巩固好编程基础、Java语言核心特性。同时补习自考本科的文化知识。每个月定时的跟踪和调整这个小目标，激励自己前行；</li>
-<li>2019年，顺利自考本科通过。满足人生的一大憾事。（人生最痛苦的是，一辈子在后悔中度过）</li>
-<li>做一个终身学习者，希望个人博客的文章数能在50岁的时候足够修订成一本散文随记。</li>
-<li>个人博客采用node.js+hexo+github搭建的，如有兴趣可以自行百度或发送邮件给我。</li>
-</ul>
+        <p>从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。</p>
+<h2 id="一个很简单的Java类"><a href="#一个很简单的Java类" class="headerlink" title="一个很简单的Java类"></a>一个很简单的Java类</h2><pre><code>public class Student {
+
+    private String name = &quot;haha&quot;;
+    private int age;
+    private static String country = &quot;cn&quot;;
+
+    //无参构造函数
+    Student() {
+    }
+
+    //有参构造函数
+    Student(String name, int age) {
+        System.out.println(&quot;有参构造函数：&quot; + name + &quot;..&quot; + age);
+        this.name = name;
+        this.age = age;
+    }
+
+    //构造代码块
+    {
+        System.out.println(&quot;构造代码块：&quot; + name + &quot;..&quot; + age);
+    }
+
+    //静态代码块
+    static {
+        System.out.println(&quot;静态代码块：static..&quot;);
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void speak() {
+        System.out.println(this.name + &quot;...&quot; + this.age);
+    }
+
+    public void listen() {
+        speak();
+    }
+
+    public static void showCountry() {
+        System.out.println(&quot;country=&quot; + country);
+        method();
+    }
+
+    public static void method() {
+        System.out.println(&quot;method run&quot;);
+    }
+}
+</code></pre><h2 id="Student-s-new-Student-“zhangsan”-19"><a href="#Student-s-new-Student-“zhangsan”-19" class="headerlink" title="Student s = new Student(“zhangsan”, 19);"></a>Student s = new Student(“zhangsan”, 19);</h2><p><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/82172780.jpg" alt=""><br>上图中，在我们使用的时候，该句话都做了什么事情？（只谈论内存中的堆、栈区域，不涉及其他区域）<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/54828942.jpg" alt=""></p>
+<h2 id="文字结论"><a href="#文字结论" class="headerlink" title="文字结论"></a>文字结论</h2><ol>
+<li>当虚拟机读取到这句话的时候，首先看等号的左边。Student s，s是一个变量，虚拟机会在栈内存中开辟空间，存放s这个变量。</li>
+<li>当读取到等号的右边new Student(“zhangsan”, 19)。因为用到了Student类，虚拟机会编译Student.java文件，生成Student.class文件。俗称字节码文件，一个类只有一份字节码文件。（请自行区别.java文件跟类的概念）</li>
+<li>会把Student这个类的字节码从硬盘加载进内存。这里提一嘴，JVM中的类加载器Classloader。</li>
+<li>如果有静态代码块，就会随着类的加载而执行。静态成员（静态方法与静态属性，专业说话叫类变量）和普通方法也会随着类的加载而被加载。</li>
+<li>在堆内存中开辟空间，并分配内存地址。（内存地址是十六进制数）</li>
+<li>在堆内存中建立对象特有属性，并同时对特有属性进行默认初始化。</li>
+<li>对对象属性进行显示初始化。</li>
+<li>执行构造代码块，对所有对象进行初始化。</li>
+<li>执行对应的构造函数，对对象进行初始化。</li>
+<li>将内存地址赋给栈内存中的s变量。（栈内存中的变量指向堆内存中的变量，这就是Java中的指针）<h2 id="静态成员"><a href="#静态成员" class="headerlink" title="静态成员"></a>静态成员</h2>存放在方法区，在内存中只有一份。随着类的的加载而被加载，优先于对象存在，被所有的对象所共享，可以被类名直接调用，也可以被对象调用。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/87231977.jpg" alt=""><br>showCountry()方法中调用method()，就是直接省略了（Student.）<br>同样的，listen()方法中调用speak()，就是直接省略了（this.）<h2 id="如理解的描述有错，请务必告知。谢谢！"><a href="#如理解的描述有错，请务必告知。谢谢！" class="headerlink" title="如理解的描述有错，请务必告知。谢谢！"></a>如理解的描述有错，请务必告知。谢谢！</h2>对JVM感兴趣的，可以膜拜《深入理解Java虚拟机》一书。</li>
+</ol>
 
       
     </div>
@@ -397,15 +454,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/26/decrypt-blog/" rel="next" title="搭建个人博客站点解密">
+                <i class="fa fa-chevron-left"></i> 搭建个人博客站点解密
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/26/decrypt-blog/" rel="prev" title="搭建个人博客站点解密">
-                搭建个人博客站点解密 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -523,7 +580,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#随想"><span class="nav-number">1.</span> <span class="nav-text">随想</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个很简单的Java类"><span class="nav-number">1.</span> <span class="nav-text">一个很简单的Java类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Student-s-new-Student-“zhangsan”-19"><span class="nav-number">2.</span> <span class="nav-text">Student s = new Student(“zhangsan”, 19);</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字结论"><span class="nav-number">3.</span> <span class="nav-text">文字结论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态成员"><span class="nav-number">4.</span> <span class="nav-text">静态成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如理解的描述有错，请务必告知。谢谢！"><span class="nav-number">5.</span> <span class="nav-text">如理解的描述有错，请务必告知。谢谢！</span></a></li></ol></div>
             
 
           </div>

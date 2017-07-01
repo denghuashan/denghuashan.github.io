@@ -124,7 +124,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/80262158.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/20130851.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/51456213.jpg">
-<meta property="og:updated_time" content="2017-06-30T02:59:30.016Z">
+<meta property="og:updated_time" content="2017-07-01T12:17:22.217Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的List、Set、Map容器">
 <meta name="twitter:description" content="数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。 为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。 List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进">
@@ -530,7 +530,7 @@ class MyComparator implements Comparator&lt;Student&gt; {
     }
 }
 </code></pre></li>
-<li>TreeSet保证元素唯一性的依据就是compareTo()方法的return值。大小判断的依据也是该方法的返回值。正数代表大，负数代表小，0则表示是相同元素。<pre><code>//使用匿名内部类的方式，传递比较器
+<li><strong>TreeSet保证元素唯一性的依据就是compareTo()方法的return值。大小判断的依据也是该方法的返回值。正数代表大，负数代表小，0则表示是相同元素。</strong><pre><code>//使用匿名内部类的方式，传递比较器
 TreeSet&lt;String&gt; ts=new TreeSet&lt;String&gt;(new Comparator&lt;Student&gt;(){
     public int compare(Student o1, Student o2) {
         //自行定义比较规则
@@ -678,7 +678,7 @@ TreeSet&lt;String&gt; ts=new TreeSet&lt;String&gt;(new Comparator&lt;Student&gt;
                alt="HuaShan" />
           <p class="site-author-name" itemprop="name">HuaShan</p>
            
-              <p class="site-description motion-element" itemprop="description">博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明出处。如文章描述有错，请务必告知。谢谢！</p>
+              <p class="site-description motion-element" itemprop="description">博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！</p>
           
         </div>
         <nav class="site-state motion-element">
@@ -686,7 +686,7 @@ TreeSet&lt;String&gt; ts=new TreeSet&lt;String&gt;(new Comparator&lt;Student&gt;
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">5</span>
+                <span class="site-state-item-count">6</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>

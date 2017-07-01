@@ -95,16 +95,19 @@
 
 
 
-<meta name="description" content="一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。把以前的笔记再总结分享出来。 随想 每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。 一个大目标，我希望在十年后能成为一个软件开发的小牛，让自己依然能高效而简洁地解决编程问题，但是不受企业低效的管理束缚且有能满足高质量">
+<meta name="description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
 <meta property="og:type" content="article">
-<meta property="og:title" content="记住让自己心动时刻">
-<meta property="og:url" content="http://dhsmp.com/2017/06/21/first-article/index.html">
+<meta property="og:title" content="单例设计模式">
+<meta property="og:url" content="http://dhsmp.com/2017/07/01/single-design/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。把以前的笔记再总结分享出来。 随想 每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。 一个大目标，我希望在十年后能成为一个软件开发的小牛，让自己依然能高效而简洁地解决编程问题，但是不受企业低效的管理束缚且有能满足高质量">
-<meta property="og:updated_time" content="2017-06-30T07:08:18.693Z">
+<meta property="og:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/76859891.jpg">
+<meta property="og:updated_time" content="2017-07-01T12:46:15.129Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="记住让自己心动时刻">
-<meta name="twitter:description" content="一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。把以前的笔记再总结分享出来。 随想 每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。 一个大目标，我希望在十年后能成为一个软件开发的小牛，让自己依然能高效而简洁地解决编程问题，但是不受企业低效的管理束缚且有能满足高质量">
+<meta name="twitter:title" content="单例设计模式">
+<meta name="twitter:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg">
 
 
 
@@ -132,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/06/21/first-article/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/07/01/single-design/"/>
 
 
 
 
 
-  <title>记住让自己心动时刻 | DreamMaker-HS</title>
+  <title>单例设计模式 | DreamMaker-HS</title>
   
 
 
@@ -267,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/06/21/first-article/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/01/single-design/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -284,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">记住让自己心动时刻</h1>
+          <h1 class="post-title" itemprop="name headline">单例设计模式</h1>
         
 
         <div class="post-meta">
@@ -296,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T15:37:44+08:00">
-                2017-06-21
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T20:01:46+08:00">
+                2017-07-01
               </time>
             
 
@@ -331,14 +334,53 @@
       
 
       
-        <p>一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。把以前的笔记再总结分享出来。</p>
-<h2 id="随想"><a href="#随想" class="headerlink" title="随想"></a>随想</h2><ul>
-<li>每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。</li>
-<li>一个大目标，我希望在十年后能成为一个软件开发的小牛，让自己依然能高效而简洁地解决编程问题，但是不受企业低效的管理束缚且有能满足高质量生活的收入水平；</li>
-<li>2017年，希望自己能巩固好编程基础、Java语言核心特性。同时补习自考本科的文化知识。每个月定时的跟踪和调整这个小目标，激励自己前行；</li>
-<li>2019年，顺利自考本科通过。满足人生的一大憾事。（人生最痛苦的是，一辈子在后悔中度过）</li>
-<li>做一个终身学习者，希望个人博客的文章数能在50岁的时候足够修订成一本散文随记。</li>
-<li>个人博客采用node.js+hexo+github搭建的，如有兴趣可以自行百度或发送邮件给我。</li>
+        <p>Java中有23种设计模式。设计模式是针对问题最有效的解决方法。<br>单例设计模式：解决一个类在内存中只存在一个对象。</p>
+<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol>
+<li>禁止其他的应用程序，通过此类来创建对象。私有化构造函数。</li>
+<li>在本类里面创建对象。</li>
+<li><p>为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。</p>
+<h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><pre><code>class Single {
+    private static Single s = new Single();
+
+    private Single() {
+
+    }
+
+    public static Single getInstance() {
+        return s;
+    }
+}
+</code></pre><p>静态成员，随着类的加载而被加载。<strong>该类在加载进内存时候，就已经初始化一个对象。</strong>俗称：饿汉式。通过getInstance()即可获取该对象，并使用该对象。</p>
+<h2 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h2><pre><code>class Single {
+    private static Single s = null;
+
+    private Single() {
+
+    }
+
+    public static Single getInstance() {
+        if (s == null) {
+            synchronized (Single.class) {
+                if (s == null) {
+                    s = new Single();
+                }
+            }
+        }
+        return s;
+    }
+}
+</code></pre><p>静态成员，随着类的加载而被加载。该类在加载进内存时候，对象还不存在。通过getInstance()获取该对象的时候才会初始化。那么这时就会出现线程安全问题。这里需要明确一点：<strong>线程安全问题：只读不写没有该问题，有读有写就有该问题</strong>。这也是饿汉式为什么没有线程安全问题的原因。</p>
+<h3 id="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><a href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。" class="headerlink" title="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。"></a>synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</h3><h3 id="getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><a href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？" class="headerlink" title="getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？"></a>getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</h3><pre><code>public static Single getInstance() {
+    synchronized (Single.class) {
+        s = new Single();
+    }
+    return s;
+}
+</code></pre></li>
+</ol>
+<ul>
+<li>多线程中每一个线程调用getInstance()都会发生互斥。</li>
+<li>当有第一个线程进入到同步代码块创建一个对象的时候，刚走到return，互斥已经结束。第二个线程进入到同步代码块，这时又会创建一个对象。在内存中就会出现两个对象。<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4>加双重if，同步效率较高一点。<h2 id="Java中的示例"><a href="#Java中的示例" class="headerlink" title="Java中的示例"></a>Java中的示例</h2><h3 id="Runtime类，饿汉式"><a href="#Runtime类，饿汉式" class="headerlink" title="Runtime类，饿汉式"></a>Runtime类，饿汉式</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg" alt=""><h3 id="System类，懒汉式"><a href="#System类，懒汉式" class="headerlink" title="System类，懒汉式"></a>System类，懒汉式</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/76859891.jpg" alt=""></li>
 </ul>
 
       
@@ -397,15 +439,15 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
+              <a href="/2017/06/30/lock/" rel="next" title="Java中synchronized关键字与JDK1.5中显示Lock操作">
+                <i class="fa fa-chevron-left"></i> Java中synchronized关键字与JDK1.5中显示Lock操作
+              </a>
+            
           </div>
 
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/26/decrypt-blog/" rel="prev" title="搭建个人博客站点解密">
-                搭建个人博客站点解密 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -523,7 +565,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#随想"><span class="nav-number">1.</span> <span class="nav-text">随想</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">1.</span> <span class="nav-text">实现步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#饿汉式"><span class="nav-number">2.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#懒汉式"><span class="nav-number">3.</span> <span class="nav-text">懒汉式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><span class="nav-number">3.1.</span> <span class="nav-text">synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><span class="nav-number">3.2.</span> <span class="nav-text">getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#结论"><span class="nav-number">3.2.1.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的示例"><span class="nav-number">4.</span> <span class="nav-text">Java中的示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Runtime类，饿汉式"><span class="nav-number">4.1.</span> <span class="nav-text">Runtime类，饿汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System类，懒汉式"><span class="nav-number">4.2.</span> <span class="nav-text">System类，懒汉式</span></a></li></ol></li></ol></div>
             
 
           </div>

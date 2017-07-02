@@ -102,7 +102,7 @@
 <meta property="og:site_name" content="DreamMaker-HS">
 <meta property="og:description" content="明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。 代码import java.io.InputStream; import java.io.PrintWriter; import java.lang.reflect.InvocationHandler">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg">
-<meta property="og:updated_time" content="2017-07-02T13:33:30.609Z">
+<meta property="og:updated_time" content="2017-07-02T13:48:30.573Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用动态代理实现一个简单的数据库连接池">
 <meta name="twitter:description" content="明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。 代码import java.io.InputStream; import java.io.PrintWriter; import java.lang.reflect.InvocationHandler">
@@ -392,7 +392,10 @@ public class JdbcPool implements DataSource {
             System.out.println(&quot;池大小是:&quot; + list.size());
 
             //使用动态代理
-            return (Connection) Proxy.newProxyInstance(JdbcPool.class.getClassLoader(), conn.getClass().getInterfaces(), new InvocationHandler(){
+            return (Connection) Proxy.newProxyInstance(
+                    JdbcPool.class.getClassLoader(), 
+                    conn.getClass().getInterfaces(), 
+                    new InvocationHandler(){
                 @Override
                 public Object invoke(Object proxy, Method method, Object[] args)
                         throws Throwable {
@@ -463,7 +466,7 @@ public class JdbcPool implements DataSource {
     }
 
 }
-</code></pre><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>DataSource接口是必须要实现的。JdbcPool在加载进内存时候，就已经找数据库获取了10个数据库连接。getConnection()获取数据库连接，返回的就是Connection的一个代理对象出去。最终要做的事情是，拦截对close()方法的处理，当发现调用的是close()方法时，并不去执行释放连接，而是把连接返回到了LinkedList集合里面去了。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg" alt=""></p>
+</code></pre><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>DataSource接口是必须要实现的，上面那些未实现的方法这里不做说明，都是DataSource接口中需要实现的方法。<strong>JdbcPool在加载进内存时候，就已经找数据库获取了10个数据库连接。getConnection()获取数据库连接，返回的就是Connection的一个代理对象出去。最终要做的事情是，拦截对close()方法的处理，当发现调用的是close()方法时，并不去执行释放连接，而是把连接返回到了LinkedList集合里面去了。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg" alt=""></p>
 
       
     </div>

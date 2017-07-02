@@ -95,19 +95,19 @@
 
 
 
-<meta name="description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
+<meta name="description" content="之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。 装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。装饰模式比继承要灵活">
 <meta property="og:type" content="article">
-<meta property="og:title" content="单例设计模式">
-<meta property="og:url" content="http://dhsmp.com/2017/07/01/single-design/index.html">
+<meta property="og:title" content="装饰、代理设计模式">
+<meta property="og:url" content="http://dhsmp.com/2017/07/02/design-pattern/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/76859891.jpg">
-<meta property="og:updated_time" content="2017-07-01T13:08:01.311Z">
+<meta property="og:description" content="之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。 装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。装饰模式比继承要灵活">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/44995552.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/17140224.jpg">
+<meta property="og:updated_time" content="2017-07-02T13:28:07.535Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单例设计模式">
-<meta name="twitter:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
-<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg">
+<meta name="twitter:title" content="装饰、代理设计模式">
+<meta name="twitter:description" content="之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。 装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。装饰模式比继承要灵活">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/44995552.jpg">
 
 
 
@@ -135,13 +135,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/07/01/single-design/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/07/02/design-pattern/"/>
 
 
 
 
 
-  <title>单例设计模式 | DreamMaker-HS</title>
+  <title>装饰、代理设计模式 | DreamMaker-HS</title>
   
 
 
@@ -270,7 +270,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/01/single-design/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/02/design-pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -287,7 +287,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">单例设计模式</h1>
+          <h1 class="post-title" itemprop="name headline">装饰、代理设计模式</h1>
         
 
         <div class="post-meta">
@@ -299,8 +299,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T20:01:46+08:00">
-                2017-07-01
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T19:43:37+08:00">
+                2017-07-02
               </time>
             
 
@@ -334,53 +334,110 @@
       
 
       
-        <p>Java中有23种设计模式。<strong>设计模式是针对问题最有效的解决方法。</strong><br><strong>单例设计模式：解决一个类在内存中只存在一个对象。</strong></p>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol>
-<li>禁止其他的应用程序，通过此类来创建对象。私有化构造函数。</li>
-<li>在本类里面创建对象。</li>
-<li><p>为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。</p>
-<h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><pre><code>class Single {
-    private static Single s = new Single();
-
-    private Single() {
-
+        <p>之前在说单例设计模式的时候提到过，<strong>设计模式是针对问题最有效的解决方法。</strong>这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。</p>
+<h2 id="装饰设计模式"><a href="#装饰设计模式" class="headerlink" title="装饰设计模式"></a>装饰设计模式</h2><p>当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。<br>装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。<br>装饰模式比继承要灵活，避免了继承体系的臃肿。而且降低了类与类之间的关系。<br>装饰类因为只是增强已有对象，具备的功能和已有对象是相同的，只不过提供了更强的功能，所以装饰类和被装饰类通常属于一个体系。<br>        //装饰设计模式<br>        public class MyBufferedReader {<br>            private Reader r;</p>
+<pre><code>    MyBufferedReader(Reader r) {
+        this.r = r;
     }
 
-    public static Single getInstance() {
-        return s;
-    }
-}
-</code></pre><p>静态成员，随着类的加载而被加载。<strong>该类在加载进内存时候，就已经初始化一个对象。</strong>俗称：饿汉式。通过getInstance()即可获取该对象，并使用该对象。</p>
-<h2 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h2><pre><code>class Single {
-    private static Single s = null;
-
-    private Single() {
-
-    }
-
-    public static Single getInstance() {
-        if (s == null) {
-            synchronized (Single.class) {
-                if (s == null) {
-                    s = new Single();
-                }
-            }
+    public String MyReaderLine() throws IOException {
+        // 定义一个临时容器,原BufferedReader封装的是字符数组
+        StringBuilder sb = new StringBuilder();
+        int ch = 0;
+        while ((ch = r.read()) != -1) {
+            if (ch == &apos;\r&apos;)
+                continue;
+            if (ch == &apos;\n&apos;)
+                return sb.toString();
+            else
+                sb.append((char) ch);
         }
-        return s;
+        if (sb.length() != 0)
+            return sb.toString();
+        return null;
+    }
+
+    public int read(char[] cbuf, int off, int len) throws IOException {
+        return r.read(cbuf, off, len);
+    }
+
+    public void close() throws IOException {
+        r.close();
     }
 }
-</code></pre><p>静态成员，随着类的加载而被加载。该类在加载进内存时候，对象还不存在。通过getInstance()获取该对象的时候才会初始化。那么这时就会出现线程安全问题。这里需要明确一点：<strong>线程安全问题：只读不写没有该问题，有读有写就有该问题</strong>。这也是饿汉式为什么没有线程安全问题的原因。</p>
-<h3 id="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><a href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。" class="headerlink" title="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。"></a>synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</h3><h3 id="getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><a href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？" class="headerlink" title="getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？"></a>getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</h3><pre><code>public static Single getInstance() {
-    synchronized (Single.class) {
-        s = new Single();
-    }
-    return s;
+</code></pre><p>增强Reader，增强一个MyReaderLine（读一行）的方法，而其他的方法还是调用原来对象的方法。<br>工作中常用到可能是下图这种情况，有人写了一个工具类方法，但是功能不够强或比较繁琐。那我们不能直接去改这个工具类方法，因为这个工具类方法可能有很多地方进行了调用。要么写个子类进行覆盖，要么进行增强。这也是装饰的一种手法。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-2/44995552.jpg" alt=""></p>
+<h2 id="当一个Java对象方法不够用的时候，有如下方法解决此问题。"><a href="#当一个Java对象方法不够用的时候，有如下方法解决此问题。" class="headerlink" title="当一个Java对象方法不够用的时候，有如下方法解决此问题。"></a>当一个Java对象方法不够用的时候，有如下方法解决此问题。</h2><ul>
+<li>写一个子类，覆盖某个方法。如果父类已经封装了信息，不再建议使用此方法。</li>
+<li>写一个此类的包装类，增强某个方法。当包装方式比较复杂时，使用代理模式。</li>
+<li><p>使用代理模式，返回一个代理对象出去，拦截某个方法的调用，并对其进行增强。</p>
+<h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><p>代理模式有点类似明星与经纪人一样。<strong>这里主要讲动态代理。</strong>某个房地产公司想请某明星代言，直接找该明星的经纪人谈具体的细节，谈好之后，实际的代言是由明星去做。这是一个思路，那我们来看怎么实现。</p>
+<pre><code>//代理接口 
+public interface Subject {
+
+    String sing(String name);
+
+    String dance(String name);
 }
-</code></pre></li>
-</ol>
-<ul>
-<li>多线程中每一个线程调用getInstance()都会发生互斥。</li>
-<li>当有第一个线程进入到同步代码块创建一个对象的时候，刚走到return，互斥已经结束。第二个线程进入到同步代码块，这时又会创建一个对象。在内存中就会出现两个对象。<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4>加双重if，同步效率较高一点。<h2 id="Java中的示例"><a href="#Java中的示例" class="headerlink" title="Java中的示例"></a>Java中的示例</h2><h3 id="Runtime类，饿汉式"><a href="#Runtime类，饿汉式" class="headerlink" title="Runtime类，饿汉式"></a>Runtime类，饿汉式</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg" alt=""><h3 id="System类，懒汉式"><a href="#System类，懒汉式" class="headerlink" title="System类，懒汉式"></a>System类，懒汉式</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/76859891.jpg" alt=""></li>
+
+//明星
+public class Star implements Subject {
+
+    public String sing(String singName) {
+        System.out.println(&quot;Star sing()，唱&quot; + singName + &quot;歌!&quot;);
+        return &quot;飞吻!&quot;;
+    }
+
+    public String dance(String danceName) {
+        System.out.println(&quot;Star dance()，跳&quot; + danceName + &quot;舞!&quot;);
+        return &quot;多谢老板!&quot;;
+    }
+}
+
+//明星的经纪人
+public class StarProxy {
+
+    private Subject star = new Star();
+
+    public Subject getProxy(){
+
+        return (Subject) Proxy.newProxyInstance(StarProxy.class.getClassLoader(), star.getClass().getInterfaces(), new InvocationHandler() {
+
+            /**
+             * proxy:把代理对象自己传递进来
+             * method:把代理对象当前调用的方法传递进来
+             * args:把方法参数传递进来
+             **/
+            public Object invoke(Object proxy, Method method, Object[] args)
+                    throws Throwable {
+                // 编码指定返回代理对象的干的工作
+                if(method.getName().equals(&quot;sing&quot;)){
+                    //执行业务逻辑处理
+                    System.out.println(&quot;StarProxy，搞一万块钱来&quot;);
+                    return method.invoke(star, args);
+                }
+                if(method.getName().equals(&quot;dance&quot;)){
+                    //执行业务逻辑处理
+                    System.out.println(&quot;StarProxy，搞两万块钱来&quot;);
+                    return method.invoke(star, args);
+                }
+                return null;
+            }
+        });
+
+    }
+}
+
+public class Test {
+
+    public static void main(String[] args){
+
+        StarProxy proxy = new StarProxy();
+        Subject s = proxy.getProxy();
+        System.out.println(s.dance(&quot;拉丁&quot;));
+    }
+}
+</code></pre><p>运行如下：<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-2/17140224.jpg" alt=""><br>Proxy类的newProxyInstance()是JDK自带的动态代理，产生代理对象，基于接口进行代理，拦截对真实对象的访问。代理对象需要具备与真实对象相同的行为，代理对象最终还是找真实对象实现具体的行为。<br>newProxyInstance()方法接收三个参数，第一个是类加载器，第二个是哪个接口，第三个是干什么行为。<br>如果一个类没有接口，要使用动态代理，需要使用CGLib。<br>spring中两种进行了采用。</p>
+</li>
 </ul>
 
       
@@ -439,8 +496,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/30/lock/" rel="next" title="Java中synchronized关键字与JDK1.5中显示Lock操作">
-                <i class="fa fa-chevron-left"></i> Java中synchronized关键字与JDK1.5中显示Lock操作
+              <a href="/2017/07/01/cache-system/" rel="next" title="使用ReentrantReadWriteLock实现一个简单的缓存系统">
+                <i class="fa fa-chevron-left"></i> 使用ReentrantReadWriteLock实现一个简单的缓存系统
               </a>
             
           </div>
@@ -449,8 +506,8 @@
 
           <div class="post-nav-prev post-nav-item">
             
-              <a href="/2017/07/01/cache-system/" rel="prev" title="使用ReentrantReadWriteLock实现一个简单的缓存系统">
-                使用ReentrantReadWriteLock实现一个简单的缓存系统 <i class="fa fa-chevron-right"></i>
+              <a href="/2017/07/02/jdbc-pool/" rel="prev" title="使用动态代理实现一个简单的数据库连接池">
+                使用动态代理实现一个简单的数据库连接池 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -569,7 +626,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">1.</span> <span class="nav-text">实现步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#饿汉式"><span class="nav-number">2.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#懒汉式"><span class="nav-number">3.</span> <span class="nav-text">懒汉式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><span class="nav-number">3.1.</span> <span class="nav-text">synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><span class="nav-number">3.2.</span> <span class="nav-text">getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#结论"><span class="nav-number">3.2.1.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的示例"><span class="nav-number">4.</span> <span class="nav-text">Java中的示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Runtime类，饿汉式"><span class="nav-number">4.1.</span> <span class="nav-text">Runtime类，饿汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System类，懒汉式"><span class="nav-number">4.2.</span> <span class="nav-text">System类，懒汉式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#装饰设计模式"><span class="nav-number">1.</span> <span class="nav-text">装饰设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#当一个Java对象方法不够用的时候，有如下方法解决此问题。"><span class="nav-number">2.</span> <span class="nav-text">当一个Java对象方法不够用的时候，有如下方法解决此问题。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代理模式"><span class="nav-number">3.</span> <span class="nav-text">代理模式</span></a></li></ol></div>
             
 
           </div>

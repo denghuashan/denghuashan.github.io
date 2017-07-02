@@ -337,9 +337,8 @@
         
           
           明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。
-代码public class JdbcPool implements DataSource {
-
- 
+代码import java.io.InputStream;
+import java.io.Print
           ...
           <!--noindex-->
           <div class="post-button text-center">

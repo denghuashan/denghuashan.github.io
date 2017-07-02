@@ -103,7 +103,7 @@
 <meta property="og:description" content="之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。 装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。装饰模式比继承要灵活">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/44995552.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/17140224.jpg">
-<meta property="og:updated_time" content="2017-07-02T13:38:12.677Z">
+<meta property="og:updated_time" content="2017-07-02T13:42:25.196Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="装饰、代理设计模式">
 <meta name="twitter:description" content="之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。 装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。装饰模式比继承要灵活">
@@ -443,7 +443,7 @@ public class Test {
         System.out.println(s.dance(&quot;拉丁&quot;));
     }
 }
-</code></pre><p>运行如下：<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-2/17140224.jpg" alt=""><br>Proxy类的newProxyInstance()是JDK自带的动态代理，产生代理对象，基于接口进行代理，拦截对真实对象的访问。代理对象需要具备与真实对象相同的行为，代理对象最终还是找真实对象实现具体的行为。<br>newProxyInstance()方法接收三个参数，第一个是类加载器，第二个是哪个接口，第三个是干什么行为。<br>如果一个类没有接口，要使用动态代理，需要使用CGLib。<br>spring在AOP中两种进行了采用。</p>
+</code></pre><p>运行如下：<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-2/17140224.jpg" alt=""><br>Proxy类的newProxyInstance()是JDK自带的动态代理，产生代理对象，<strong>基于接口进行代理</strong>，拦截对真实对象的访问。代理对象需要具备与真实对象相同的行为，代理对象最终还是找真实对象实现具体的行为。<br>newProxyInstance()方法接收三个参数，第一个是类加载器，第二个是哪个接口，第三个是干什么行为。<br>如果一个类没有接口，要使用动态代理，需要使用CGLib。<br>spring在AOP中两种进行了采用。<br><strong>JDK返回出的代理对象是基于接口生成的。<br>CGLib返回出的代理对象是基于子类生成的，所以类不能被final修饰。</strong></p>
 </li>
 </ul>
 

@@ -95,15 +95,24 @@
 
 
 
-<meta name="description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DreamMaker-HS">
-<meta property="og:url" content="http://dhsmp.com/archives/2017/page/2/index.html">
+<meta name="description" content="这里贴一下以前对工厂、策略、观察者设计模式的代码实现。 简单工厂设计模式//此工厂返回service的代理 public class ServiceFactory {      private static final ServiceFactory instance = new ServiceFactory();      private ServiceFactory() {     }">
+<meta property="og:type" content="article">
+<meta property="og:title" content="工厂、策略、观察者设计模式">
+<meta property="og:url" content="http://dhsmp.com/2017/07/03/factory-design/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta property="og:description" content="这里贴一下以前对工厂、策略、观察者设计模式的代码实现。 简单工厂设计模式//此工厂返回service的代理 public class ServiceFactory {      private static final ServiceFactory instance = new ServiceFactory();      private ServiceFactory() {     }">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-3/49119105.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-3/87002138.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-3/38632718.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-3/56480395.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-3/39199368.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-3/37338187.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-3/16442258.jpg">
+<meta property="og:updated_time" content="2017-07-03T13:47:07.307Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DreamMaker-HS">
-<meta name="twitter:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta name="twitter:title" content="工厂、策略、观察者设计模式">
+<meta name="twitter:description" content="这里贴一下以前对工厂、策略、观察者设计模式的代码实现。 简单工厂设计模式//此工厂返回service的代理 public class ServiceFactory {      private static final ServiceFactory instance = new ServiceFactory();      private ServiceFactory() {     }">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-3/49119105.jpg">
 
 
 
@@ -131,13 +140,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/archives/2017/page/2/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/07/03/factory-design/"/>
 
 
 
 
 
-  <title>归档 | DreamMaker-HS</title>
+  <title>工厂、策略、观察者设计模式 | DreamMaker-HS</title>
   
 
 
@@ -162,7 +171,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -290,218 +299,390 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 10 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/03/factory-design/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuaShan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/20170622104033.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DreamMaker-HS">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">工厂、策略、观察者设计模式</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-03T15:45:47+08:00">
+                2017-07-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <p>这里贴一下以前对工厂、策略、观察者设计模式的代码实现。</p>
+<h2 id="简单工厂设计模式"><a href="#简单工厂设计模式" class="headerlink" title="简单工厂设计模式"></a>简单工厂设计模式</h2><pre><code>//此工厂返回service的代理
+public class ServiceFactory {
+
+    private static final ServiceFactory instance = new ServiceFactory();
+
+    private ServiceFactory() {
+    }
+
+    public static ServiceFactory getInstance() {
+        return instance;
+    }
+
+    //返回具体服务的代理对象
+    public &lt;T&gt; T createService(String className, Class&lt;T&gt; clazz, final User user) {
+        if (null == className || &quot;&quot;.equals(className.trim()) || null == clazz) {
+            return null;
+        }
+        try {
+            final T t = (T) Class.forName(className).newInstance();
+            return (T) Proxy.newProxyInstance(ServiceFactory.class
+                    .getClassLoader(), t.getClass().getInterfaces(),
+                    new InvocationHandler() {
+
+                        @Override
+                        public Object invoke(Object proxy, Method method,
+                                Object[] args) throws Throwable {
+                            // 1.判断用户调用的是什么方法
+                            String methodName = method.getName();
+                            // 2.反射出真实对象上相对应的方法
+                            Method m = t.getClass().getMethod(methodName,
+                                    method.getParameterTypes());
+                            // 3.看真实对象上相对应的方法是否有权限注解
+                            Permission p = m.getAnnotation(Permission.class);
+                            // 4.如果没有,代表访问该方法不需要权限,直接放行
+                            if (p == null) {
+                                return method.invoke(t, args);
+                            }
+                            // 5.如果有,得到该方法需要什么权限,
+                            String value = p.value();
+                            Privilege privilege = new Privilege();
+                            privilege.setName(value);
+                            // 6.得到用户的权限
+                            if (user == null) {
+                                throw new PrivilegeException(&quot;对不起,请先登录!&quot;);
+                            }
+                            BusinessService service = (BusinessService) t;
+                            List&lt;Privilege&gt; list = service
+                                    .getUserPrivilege(user.getId());
+                            // 7.检查用户是否有权限,如果有权限,放行
+                            if (list.contains(privilege)) {
+                                return method.invoke(t, args);
+                            }
+                            // 8.如果没有权限,则抛编译时异常,提示web层给用户一个友好提示
+                            throw new PrivilegeException(
+                                    &quot;对不起,您没有相对应的访问权限,请联系管理员!&quot;);
+
+                        }
+                    });
+
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+</code></pre><p>ServiceFactory提供一个创建服务方法。<strong>createService()，主要是运用反射产生具体的服务代理对象。代理对象在这里执行方法时，加了一段业务逻辑处理。其实这段代码采用了面向切面的思想（AOP思想），其主要目的实现解耦。获取执行方法上的注解。</strong><br><strong>spring中加在类上的@Service、@Controller、@Component、以及可以加在类上和方法上的@Transactional注解，原理都是类似的。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-7-3/49119105.jpg" alt=""></p>
+<h2 id="观察者设计模式"><a href="#观察者设计模式" class="headerlink" title="观察者设计模式"></a>观察者设计模式</h2><p>在说观察者设计模式之前，需要提一个东西。<br>事件监听：Event事件对象封装了事件源及动作。</p>
+<h3 id="事件监听机制"><a href="#事件监听机制" class="headerlink" title="事件监听机制"></a>事件监听机制</h3><ul>
+<li>事件监听涉及三个组件：事件源，事件对象，事件监听。</li>
+<li><p>当事件源上发生某一个动作时，它会调用事件监听器的一个方法，并在调用该方法时，把事件对象传递进去。</p>
+<h3 id="代码实现"><a href="#代码实现" class="headerlink" title="代码实现"></a>代码实现</h3><pre><code>//观察者设计模式
+public class ObserverDemo {
+
+    public static void main(String[] args) {
+        Person p = new Person();
+        System.out.println(&quot;Person对象：&quot; + p);
+
+        //注册一个监听器
+        p.registerListen(new PersonListen() {
+
+            //执行具体事件处理动作
+            @Override
+            public void doeat(Event e) {
+                Person person = e.getSource();
+                System.out.println(&quot;监听到事件源：&quot; + person + &quot;，调用eat()方法&quot;);
+            }
+
+            @Override
+            public void dorun(Event e) {
+                System.out.println(&quot;监听到事件源：调用eat()方法&quot;);
+            }
+        });
+        p.eat();
+        p.run();
+    }
+}
+
+class Person {
+    //事件监听器
+    private PersonListen personListen;
+
+    public void eat(){
+        System.out.println(&quot;Person eat()&quot;);
+        if (personListen != null) {
+            System.out.println(&quot;触发：personListen doeat()&quot;);
+            personListen.doeat(new Event(this));
+        }
+    }
+
+    public void run(){
+        System.out.println(&quot;Person run()&quot;);
+        if (personListen != null) {
+            System.out.println(&quot;触发：personListen dorun()&quot;);
+            personListen.dorun(new Event(this));
+        }
+    }
+
+    public void registerListen(PersonListen personListen){
+        this.personListen = personListen;
+    }
+}
+
+//事件监听接口
+interface PersonListen{
+    public void doeat(Event e);
+    public void dorun(Event e);
+}
+
+//事件对象
+class Event{
+
+    private Person source;
+
+    public Event() {
+    }
+
+    public Event(Person source) {
+        this.source = source;
+    }
+
+    public Person getSource() {
+        return source;
+    }
+
+    public void setSource(Person source) {
+        this.source = source;
+    }
+}
+</code></pre><h3 id="运行结果"><a href="#运行结果" class="headerlink" title="运行结果"></a>运行结果</h3><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-3/87002138.jpg" alt=""><br>Java中常用的各种监听都是观察者设计模式。</p>
+<h2 id="策略设计模式"><a href="#策略设计模式" class="headerlink" title="策略设计模式"></a>策略设计模式</h2><p>功能并不清楚对结果的处理方式，对结果的处理由调用者进行传入。而只是把对结果的处理方式做成接口，通过接口来约定双方的行为。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><pre><code>//通过接口约定双方的行为
+public interface ResultSetHandler {
+    Object handler(ResultSet rs);
+}
+
+//处理对单一对象的封装
+public class BeanHandler implements ResultSetHandler {
+
+    private Class clazz;
+    //用户把Bean传进来
+    public BeanHandler(Class clazz){
+        this.clazz = clazz;
+    }
+    @Override
+    public Object handler(ResultSet rs) {
+        try{
+            if(!rs.next()){
+                return null;
+            }
+            Object bean = clazz.newInstance();
+            //获取结果集的元信息
+            ResultSetMetaData metadata = rs.getMetaData();
+            //得到结果集中有几列数据
+            int ColumnCount = metadata.getColumnCount();
+            for(int i=0;i&lt;ColumnCount;i++){
+                //得到每列的列名
+                String ColumnName = metadata.getColumnName(i+1);
+                //通过列名获取每一列的数据
+                Object ColumnData = rs.getObject(i+1);
+                //反射出类中与列名对应的属性
+                Field f = clazz.getDeclaredField(ColumnName);
+                f.setAccessible(true);
+                f.set(bean, ColumnData);
+            }
+            return bean;
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+
+//处理对List的封装
+public class BeanListHandler implements ResultSetHandler {
+
+    private Class clazz;
+    //用户把Bean传进来
+    public BeanListHandler(Class clazz){
+        this.clazz = clazz;
+    }
+
+    @Override
+    public Object handler(ResultSet rs) {
+        try{
+            List list = new ArrayList();
+            while(rs.next()){
+                Object bean = clazz.newInstance();
+                ResultSetMetaData metadata = rs.getMetaData();
+                int count = metadata.getColumnCount();
+                for(int i=0;i&lt;count;i++){
+                    String name = metadata.getColumnName(i+1);
+                    Object value = rs.getObject(name);
+                    Field f = bean.getClass().getDeclaredField(name);
+                    f.setAccessible(true);
+                    f.set(bean, value);
+                }
+                list.add(bean);
+            }
+            return list.size() &gt; 0 ? list:null;
+        }catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+}
+</code></pre><p>封装对方法的具体细节<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-3/38632718.jpg" alt=""><br>处理对查询单一的对象，把具体的处理方式BeanHandler传入。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-3/56480395.jpg" alt=""><br>处理对查询一群的对象，把具体的处理方式BeanListHandler传入。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-3/39199368.jpg" alt=""><br><strong>上面这段代码是采用JDBC，运用元数据，实现一个简单的OR-Mapping映射类型的DB框架。</strong></p>
+<h3 id="Java中的运用"><a href="#Java中的运用" class="headerlink" title="Java中的运用"></a>Java中的运用</h3></li>
+<li>之前有说过TreeSet集合，可以对元素进行排序。但是它本身并不知道，元素该怎么排，而是由调用者，通过实现Comparator接口，把对元素进行排序方式进行传入，TreeSet按照给定的方式进行处理。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-3/37338187.jpg" alt=""></li>
+<li>mybatis中对于查询的处理，在一级缓存与二级缓存中也是使用策略模式，通过实现ResultHandler接口对查询结果进行处理。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-3/16442258.jpg" alt=""></li>
+</ul>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>谢谢你请我吃糖果</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/image/weixinpay.png" alt="HuaShan WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/image/alipaypicture.png" alt="HuaShan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/06/30/lock/" itemprop="url">
-              
-                <span itemprop="name">Java中synchronized关键字与JDK1.5中显示Lock操作</span>
-              
-            </a>
-        
-      </h2>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-30T11:00:37+08:00"
-              content="2017-06-30" >
-          06-30
-        </time>
-      </div>
+      
+    </div>
 
-    </header>
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/02/jdbc-pool/" rel="next" title="使用动态代理实现一个简单的数据库连接池">
+                <i class="fa fa-chevron-left"></i> 使用动态代理实现一个简单的数据库连接池
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/29/list-set-map/" itemprop="url">
-              
-                <span itemprop="name">Java的List、Set、Map容器</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-29T14:25:39+08:00"
-              content="2017-06-29" >
-          06-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/29/objectinit/" itemprop="url">
-              
-                <span itemprop="name">Java对象初始化的过程</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-29T08:53:15+08:00"
-              content="2017-06-29" >
-          06-29
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/26/decrypt-blog/" itemprop="url">
-              
-                <span itemprop="name">搭建个人博客站点解密</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-26T08:55:52+08:00"
-              content="2017-06-26" >
-          06-26
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/06/21/first-article/" itemprop="url">
-              
-                <span itemprop="name">记住让自己心动时刻</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-06-21T15:37:44+08:00"
-              content="2017-06-21" >
-          06-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/2017/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/archives/2017/">1</a><span class="page-number current">2</span>
-  </nav>
-
-
+    </div>
+  </div>
 
 
           </div>
@@ -509,6 +690,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -528,8 +713,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/20170622104033.png"
@@ -580,6 +774,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#简单工厂设计模式"><span class="nav-number">1.</span> <span class="nav-text">简单工厂设计模式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#观察者设计模式"><span class="nav-number">2.</span> <span class="nav-text">观察者设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#事件监听机制"><span class="nav-number">2.1.</span> <span class="nav-text">事件监听机制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#代码实现"><span class="nav-number">2.2.</span> <span class="nav-text">代码实现</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#运行结果"><span class="nav-number">2.3.</span> <span class="nav-text">运行结果</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#策略设计模式"><span class="nav-number">3.</span> <span class="nav-text">策略设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">3.1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Java中的运用"><span class="nav-number">3.2.</span> <span class="nav-text">Java中的运用</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -693,11 +903,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   

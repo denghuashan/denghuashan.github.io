@@ -105,7 +105,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-4/37413864.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-5/15865529.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-5/73718629.jpg">
-<meta property="og:updated_time" content="2017-07-05T02:21:08.664Z">
+<meta property="og:updated_time" content="2017-07-05T02:24:10.394Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP协议详解与回顾">
 <meta name="twitter:description" content="HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。 HTTP协议的版本：HTTP/1.0、HT">
@@ -385,7 +385,7 @@
 </code></pre><p>写一个简单的HTML文件，带一个form表单。</p>
 <h2 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h2><h3 id="get的请求方式"><a href="#get的请求方式" class="headerlink" title="get的请求方式"></a>get的请求方式</h3><pre><code>&lt;form action=&quot;http://127.0.0.1:10000&quot; method=&quot;get&quot;&gt;
 </code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg" alt=""><br>GET /?userName=jiujiu&amp;pass=123&amp;sex=nan&amp;hobby=sports&amp;country=CN<br>&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5 HTTP/1.1<br>Accept: text/html, application/xhtml+xml, <em>/</em><br>Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3<br>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>Accept-Encoding: gzip, deflate<br>Host: 127.0.0.1:10000<br>DNT: 1<br>Connection: Keep-Alive</p>
-<p><strong>Get方式的特点：传送的数据量受URL地址栏限制，传输的数据直接拼在URL地址后，以问号开始（?），多参数分隔以与符号开始（&amp;）。直接传输中文会乱码，HTPP头字段只接受ASCII码值数据。可以通过URLEncoder.encode()转换成ASCII码值。</strong></p>
+<p><strong>Get方式的特点：传送的数据量受URL地址栏限制，传输的数据直接拼在URL地址后，以问号开始（?），多参数分隔以与符号开始（&amp;）。直接传输中文会乱码，HTTP头字段只接受ASCII码值数据。jsp中可以通过URLEncoder.encode()转换成ASCII码值。</strong></p>
 <h3 id="post的请求方式"><a href="#post的请求方式" class="headerlink" title="post的请求方式"></a>post的请求方式</h3><pre><code>&lt;form action=&quot;http://127.0.0.1:10000&quot; method=&quot;post&quot;&gt;
 </code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/37413864.jpg" alt=""><br>POST / HTTP/1.1<br>Accept: text/html, application/xhtml+xml, <em>/</em><br>Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3<br>Content-Type: application/x-www-form-urlencoded<br>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>Accept-Encoding: gzip, deflate<br>Host: 127.0.0.1:10000<br>Content-Length: 105<br>DNT: 1<br>Connection: Keep-Alive<br>Cache-Control: no-cache</p>
 <p>userName=hehe&amp;pass=4321&amp;sex=nan&amp;hobby=sports&amp;country=CN&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5<br><strong>Post方式的特点：传送的数据量无限制。传输的数据是放在请求体中。</strong></p>

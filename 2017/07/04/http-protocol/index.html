@@ -95,40 +95,21 @@
 
 
 
-<meta name="description" content="数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。 为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。 List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进">
+<meta name="description" content="HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。 HTTP协议的版本：HTTP/1.0、HT">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java的List、Set、Map容器">
-<meta property="og:url" content="http://dhsmp.com/2017/06/29/list-set-map/index.html">
+<meta property="og:title" content="HTTP协议详解与回顾">
+<meta property="og:url" content="http://dhsmp.com/2017/07/04/http-protocol/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。 为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。 List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/82341510.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/41498922.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/16727816.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/4804146.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/65783057.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/74902215.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/88781430.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/9173022.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/67339313.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/53256137.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/62091792.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/30043730.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/12142177.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/74686508.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/80544320.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/522216.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/66471466.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/43450823.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/28889517.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/44677023.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/80262158.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/20130851.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/51456213.jpg">
-<meta property="og:updated_time" content="2017-07-04T07:17:29.945Z">
+<meta property="og:description" content="HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。 HTTP协议的版本：HTTP/1.0、HT">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-4/37413864.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-5/15865529.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-5/73718629.jpg">
+<meta property="og:updated_time" content="2017-07-05T02:14:35.504Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java的List、Set、Map容器">
-<meta name="twitter:description" content="数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。 为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。 List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进">
-<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/82341510.jpg">
+<meta name="twitter:title" content="HTTP协议详解与回顾">
+<meta name="twitter:description" content="HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。 HTTP协议的版本：HTTP/1.0、HT">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg">
 
 
 
@@ -156,13 +137,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/06/29/list-set-map/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/07/04/http-protocol/"/>
 
 
 
 
 
-  <title>Java的List、Set、Map容器 | DreamMaker-HS</title>
+  <title>HTTP协议详解与回顾 | DreamMaker-HS</title>
   
 
 
@@ -325,7 +306,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/06/29/list-set-map/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/04/http-protocol/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -342,7 +323,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java的List、Set、Map容器</h1>
+          <h1 class="post-title" itemprop="name headline">HTTP协议详解与回顾</h1>
         
 
         <div class="post-meta">
@@ -354,8 +335,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-29T14:25:39+08:00">
-                2017-06-29
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T16:25:25+08:00">
+                2017-07-04
               </time>
             
 
@@ -389,196 +370,50 @@
       
 
       
-        <p>数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。</p>
-<h2 id="为什么会出现这么多的容器呢？"><a href="#为什么会出现这么多的容器呢？" class="headerlink" title="为什么会出现这么多的容器呢？"></a>为什么会出现这么多的容器呢？</h2><p>因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。</p>
-<h2 id="List中常用的容器"><a href="#List中常用的容器" class="headerlink" title="List中常用的容器"></a>List中常用的容器</h2><p>该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进行判断是否为同相同元素，则需要重写equals()方法。</p>
-<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><ul>
-<li><strong>底层使用数组结构。elementData就是该集合存放数据的地方。分配的内存地址空间是连续的一片。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/82341510.jpg" alt=""></li>
-<li>特点：查询速度很快。但是增删稍慢。线程不安全。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/41498922.jpg" alt=""><br>拿着角标，即可获取到元素。就类似与现实生活中的门牌号。”去找到小明家”，这么多叫小明的，怎么找？”去找到小明家，他住XX街5号”。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/16727816.jpg" alt=""><br>在角标4的位子插入一个新元素，意味该角标位后面的所有元素都需要挪动一下。假设集合的容量很大，1000、10000、100000或者1000000（当然不能超过int的最大值），就这一个简单的操作，对内存的消耗是非常大的。删除也是同理。</li>
-<li><strong>自动扩容，每次都是把原来的数组复制进一个新数组中，新数组的长度增长量是原来的size的50%。</strong>看一下ArrayList的源码：<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/4804146.jpg" alt=""><br>自动扩容是发生在添加的时候。容量为当前size+1<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/65783057.jpg" alt=""><br>modCount这里不做详细说明，ConcurrentModificationException异常产生的原因就是因为它。如果size+1减去当前元素数组的长度大于0，则表示需要扩容。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/74902215.jpg" alt=""><br>第一个红线，新的容量为旧的容量加上旧的容量值右移一位。int数值的二进制右移一位，就是原来数值的一半。所以，扩容的增长量是原来的size的50%。第二个红线，调用Arrays.copyOf()方法。如下图，在原数组的基础上，新增一个数组。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/88781430.jpg" alt=""><h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3></li>
-<li><strong>底层使用链表结构，双链表。分配的内存地址空间是可以是碎片化空间。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/9173022.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/67339313.jpg" alt=""></li>
-<li><strong>特点：增删很快，查询很慢，线程不安全。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/53256137.jpg" alt=""><br>增加：让最后一个元素的next记录住当前新增元素的空间地址，并当前新增元素的prev记录上一个元素，last为当前元素地址。删除也是同理，直接让上一个元素的next为null，last为上一个元素地址。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/62091792.jpg" alt=""><br><strong>上图，get(int index)和remove(int index)方法中，二分原理。</strong><h3 id="ListIterator"><a href="#ListIterator" class="headerlink" title="ListIterator"></a>ListIterator</h3>List集合特有的迭代器。在迭代时，不可以通过集合对象的方法操作集合中的元素。因为会发生ConcurrentModificationException异常。所以，在迭代器时，只能用迭代器的方式操作元素，可是Iterator方法是有限的，只能对元素进行判断，取出，删除的操作，如果想要其他的操作如添加，修改等，就需要使用其子接口，ListIterator。该接口只能通过List集合的listIterator方法获取。<h2 id="实现简单的队列"><a href="#实现简单的队列" class="headerlink" title="实现简单的队列"></a>实现简单的队列</h2><pre><code>class MyQueue {
-    private LinkedList&lt;Object&gt; link;
-    MyQueue() {
-        link = new LinkedList&lt;Object&gt;();
-    }
-    public void myAdd(Object obj) {
-        link.offerFirst(obj);
-    }
-    public Object myGet() {
-        return link.pollLast();
-    }
-    public boolean isNull() {
-        return link.isEmpty();
+        <p> HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。<strong>HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务</strong>。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。<br> HTTP协议的版本：HTTP/1.0、HTTP/1.1</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>public class TcpSever {
+
+    public static void main(String[] args) throws Exception {
+        ServerSocket ss = new ServerSocket(10000);
+        Socket s = ss.accept();
+        InputStream in = s.getInputStream();
+        byte[] by = new byte[1024];
+        int len = in.read(by);
+        System.out.println(new String(by, 0, len));
     }
 }
-public class LinkedListTest {
-    public static void main(String[] args) {
-        MyQueue mq = new MyQueue();
-        mq.myAdd(&quot;java01&quot;);
-        mq.myAdd(&quot;java02&quot;);
-        mq.myAdd(&quot;java03&quot;);
-        mq.myAdd(&quot;java04&quot;);
-        while (!mq.isNull()) {
-        System.out.println(mq.myGet());
-        }
-    }
-}
-</code></pre><h2 id="Set中常用的容器"><a href="#Set中常用的容器" class="headerlink" title="Set中常用的容器"></a>Set中常用的容器</h2><strong>元素是无序(存入和取出的顺序不一定一致)，元素不可以重复。底层都是使用Map集合存储元素。</strong><h3 id="HashSet"><a href="#HashSet" class="headerlink" title="HashSet"></a>HashSet</h3></li>
-<li><p><strong>底层数据结构是哈希表，使用HashMap存储元素，只使用了HashMap的Key部分，未使用Value部分。是线程不安全的。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/30043730.jpg" alt=""></p>
-<h3 id="HashSet是如何保证元素唯一性的呢？"><a href="#HashSet是如何保证元素唯一性的呢？" class="headerlink" title="HashSet是如何保证元素唯一性的呢？"></a>HashSet是如何保证元素唯一性的呢？</h3><pre><code>class Person {
-    private String name;
-    private int age;
-
-    Person() {
-
-    }
-
-    Person1(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    public boolean equals(Object obj) {
-        if (!(obj instanceof Person1)) {
-            return false;
-        }
-        Person p = (Person) obj;
-        System.out.println(this.name + &quot;-equals-&quot; + p.name);
-        return this.name.equals(p.name) &amp;&amp; this.age == p.age;
-    }
-
-    public int hashCode() {
-        // System.out.println(this.name+&quot;...hashCode&quot;);
-        return name.hashCode() + age * 27;
-        //return age * 27;
-    }
-}
-
-public class HashSetTest {
-    public static void main(String[] args) {
-        HashSet&lt;Person&gt; hs = new HashSet&lt;Person&gt;();
-        hs.add(new Person(&quot;王五&quot;, 21));
-        hs.add(new Person(&quot;张三&quot;, 22));
-        hs.add(new Person(&quot;李四&quot;, 19));
-        hs.add(new Person(&quot;王五&quot;, 22));
-        for (Iterator&lt;Person&gt; it = hs.iterator(); it.hasNext();) {
-            Person p = it.next();
-            System.out.println(p.getName() + &quot;，&quot; + p.getAge());
-        }
-    }
-}
-</code></pre></li>
-<li>hashCode值采用name.hashCode() + age * 27<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/12142177.jpg" alt=""></li>
-<li>hashCode值采用age * 27，age相同就会进行比较，因最终equals不为true，视为不同元素。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/74686508.jpg" alt=""></li>
-<li>hashCode值采用age * 27，age相同就会进行比较，比较了两次，equals为true，视为相同元素，不存入。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/80544320.jpg" alt=""><h3 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h3><strong>HashSet是通过元素的两个方法，hashCode和equals来完成。<br>如果元素的HashCode值相同，才会判断equals是否为true。<br>如果元素的hashcode值不同，不会调用equals。<br>注意,对于判断元素是否存在，以及删除等操作，依赖的方法是元素的hashcode和equals方法。</strong><h3 id="TreeSet"><a href="#TreeSet" class="headerlink" title="TreeSet"></a>TreeSet</h3></li>
-<li><strong>底层数据结构是二叉树，使用TreeMap存储元素。是线程不安全的。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/522216.jpg" alt=""></li>
-<li><strong>特点：可以对集合内的元素进行排序。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/66471466.jpg" alt=""></li>
-<li><p>默认的排序规则是：按自然排序（左小右大）。下图是put方法中的一段代码。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/43450823.jpg" alt=""></p>
-<h3 id="排序重点，比较器或比较接口"><a href="#排序重点，比较器或比较接口" class="headerlink" title="排序重点，比较器或比较接口"></a>排序重点，比较器或比较接口</h3><pre><code>//如果想让TreeSet拥有其他的排序方式，有两钟方式。
-public class TreeSetDemo {
-    public static void main(String[] args) {
-        //TreeSet&lt;Student&gt; ts = new TreeSet&lt;Student&gt;();
-        //第二种方式：让集合具备比较性，将比较器对象作为参数传递给TreeSet集合的构造函数
-        TreeSet&lt;Student&gt; ts = new TreeSet&lt;Student&gt;(new MyComparator());
-        ts.add(new Student(&quot;王五&quot;, 21));
-        ts.add(new Student(&quot;李四&quot;, 20));
-        ts.add(new Student(&quot;张三&quot;, 23));
-        ts.add(new Student(&quot;王五&quot;, 21));
-        ts.add(new Student(&quot;马二&quot;, 19));
-        ts.add(new Student(&quot;李四&quot;, 19));
-        for (Iterator&lt;Student&gt; it = ts.iterator(); it.hasNext();) {
-            Student s = it.next();
-            System.out.println(s.getName() + &quot;，&quot; + s.getAge());
-        }
-    }
-}
-
-//第一种方式：让Student类实现Comparable接口，重写compareTo方法。强制让学生具备可比性
-class Student implements Comparable&lt;Student&gt; {
-    private String name;
-    private int age;
-
-    Student() {
-
-    }
-
-    Student(String name, int age) {
-        this.name = name;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
-
-    //重写compareTo()方法，自行定义比较规则
-    public int compareTo(Student o) {
-        if (this.age &gt; o.age)
-            return 1;
-        if (this.age == o.age) {
-            // 当主要条件满足时，判断次要条件
-            return this.name.compareTo(o.name);
-        }
-        return -1;
-    }
-}
-//自定义比较器，实现Comparator接口
-class MyComparator implements Comparator&lt;Student&gt; {
-
-    public int compare(Student o1, Student o2) {
-        //自行定义比较规则
-        int num = o1.getName().compareTo(o2.getName());
-        if (num == 0)
-            // 对象包装类调用compareTo()方法，判断次要条件
-            return new Integer(o1.getAge()).compareTo(new Integer(o2.getAge()));
-        return num;
-    }
-}
-</code></pre></li>
-<li><strong>TreeSet保证元素唯一性的依据就是compareTo()方法的return值。大小判断的依据也是该方法的返回值。正数代表大，负数代表小，0则表示是相同元素。</strong><pre><code>//使用匿名内部类的方式，传递比较器
-TreeSet&lt;String&gt; ts=new TreeSet&lt;String&gt;(new Comparator&lt;Student&gt;(){
-    public int compare(Student o1, Student o2) {
-        //自行定义比较规则
-        int num = o1.getName().compareTo(o2.getName());
-        if (num == 0)
-            // 对象包装类调用compareTo()方法，判断次要条件
-            return new Integer(o1.getAge()).compareTo(new Integer(o2.getAge()));
-        return num;
-    }
-});
-</code></pre><h2 id="Map中常用的容器"><a href="#Map中常用的容器" class="headerlink" title="Map中常用的容器"></a>Map中常用的容器</h2>上面已经说过。Set集合底层就是使用Map集合存储。Map集合被使用是因为具备映射关系。Map集合中，如果键相同，就会出现新值覆盖旧值。<h3 id="Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式："><a href="#Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式：" class="headerlink" title="Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式："></a>Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式：</h3></li>
-<li><strong>entrySet()：返回值类型为Set<map.entry<k, v="">&gt;；K为Key的类型，V为Value的类型。该方法将Map集合中的映射关系存入到Set集合中，而这个关系的数据类型就是Map.Entry。获取到Map.Entry关系对象，再调用特有方法getKey()、getValue()获取关系中的键和值。</map.entry<k,></strong>下图为HashMap对entrySet()的具体实现。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/28889517.jpg" alt=""></li>
-<li><strong>keySet()：返回值类型为Set<k>；K为Key的数据类型。该方法将Map集合中所有的键存入到Set集合中，因为Set具备迭代器。所以可以用迭代方式取出所有的键，再根据get(key)，获取每一个键对应的值。</k></strong>下图为HashMap对keySet()的具体实现。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/44677023.jpg" alt=""><h3 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h3><strong>底层使用哈希表数据结构，线程安全，效率低。内部实现使用synchronized关键字，同步方法。</strong>（有很多，可自行查看源码）<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/80262158.jpg" alt=""><br>不可以存入null键、null值。（key为null的时候，调用.hashCode会直接抛NullPointerException异常，所以没有再做判断）<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/20130851.jpg" alt=""><h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><strong>底层使用哈希表数据结构，允许存入null键、null值，线程不安全，效率高。</strong>（并发操作时，可能会发生内存溢出。后期再具体来谈使用HashMap出现内存溢出的情况。）<h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h3><strong>底层使用二叉树数据结构，线程不安全，可以用于给集合中的Key进行排序。compare()比较的就是key</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/51456213.jpg" alt=""></li>
-</ul>
+</code></pre><p>写一个简单的HTML文件，带一个form表单。</p>
+<h2 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h2><h3 id="get的请求方式"><a href="#get的请求方式" class="headerlink" title="get的请求方式"></a>get的请求方式</h3><pre><code>&lt;form action=&quot;http://127.0.0.1:10000&quot; method=&quot;get&quot;&gt;
+</code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg" alt=""><br>GET /?userName=jiujiu&amp;pass=123&amp;sex=nan&amp;hobby=sports&amp;country=CN<br>&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5 HTTP/1.1<br>Accept: text/html, application/xhtml+xml, <em>/</em><br>Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3<br>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>Accept-Encoding: gzip, deflate<br>Host: 127.0.0.1:10000<br>DNT: 1<br>Connection: Keep-Alive</p>
+<p><strong>Get方式的特点：传送的数据量受URL地址栏限制，传输的数据直接拼在URL地址后，以问号开始（?），多参数分隔以与符号开始（&amp;）。直接传输中文会乱码，HTPP头字段只接受ASCII码值数据。可以通过URLEncoder.encode()转换成ASCII码值。</strong></p>
+<h3 id="pst的请求方式"><a href="#pst的请求方式" class="headerlink" title="pst的请求方式"></a>pst的请求方式</h3><pre><code>&lt;form action=&quot;http://127.0.0.1:10000&quot; method=&quot;post&quot;&gt;
+</code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/37413864.jpg" alt=""><br>POST / HTTP/1.1<br>Accept: text/html, application/xhtml+xml, <em>/</em><br>Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3<br>Content-Type: application/x-www-form-urlencoded<br>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>Accept-Encoding: gzip, deflate<br>Host: 127.0.0.1:10000<br>Content-Length: 105<br>DNT: 1<br>Connection: Keep-Alive<br>Cache-Control: no-cache</p>
+<p>userName=hehe&amp;pass=4321&amp;sex=nan&amp;hobby=sports&amp;country=CN&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5<br><strong>Post方式的特点：传送的数据量无限制。传输的数据是放在请求体中。</strong></p>
+<h3 id="常用请求头说明"><a href="#常用请求头说明" class="headerlink" title="常用请求头说明"></a>常用请求头说明</h3><p><strong>请求头与请求体的分隔，是以一个空行隔开的。</strong><br><strong>第一行为请求行，包含请求方式与HTTP协议版本号。</strong><br>Accept: 浏览器所支持的数据类型。<br>Accept-Charset: 浏览器所支持的数据类型。<br>Accept-Encoding: 浏览器支持的压缩格式<br>Accept-Language: 浏览器支持的语言环境<br>Host: 想访问哪台主机<br>If-Modified-Since: 缓存数据的时间。浏览器为了提高性能，一般情况会缓存第一次的请求结果，在缓存数据时间内，会直接找本地缓存数据。<br>Referer: 客户机是从哪个页面来的。作用：服务器可以做判断，进行防盗链。<br>Connection: 请求完后是断开还是保持连接。</p>
+<h2 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h2><p>下图是一个IE插件，HttpWatch捕捉到的一次请求。左边是请求头，右边是响应头。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-5/15865529.jpg" alt=""></p>
+<h3 id="常用响应头说明"><a href="#常用响应头说明" class="headerlink" title="常用响应头说明"></a>常用响应头说明</h3><pre><code>HTTP/1.1 200 OK
+Server: bfe/1.0.8.18
+Date: Wed, 05 Jul 2017 01:49:57 GMT
+Content-Type: text/html; charset=utf-8
+Transfer-Encoding: chunked
+Connection: keep-alive
+Vary: Accept-Encoding
+Cache-Control: private
+Cxy_all: baidu+63b9ff6074957f7dc4b1c7d31442fcfd
+Expires: Wed, 05 Jul 2017 01:49:46 GMT
+X-Powered-By: HPHP
+X-UA-Compatible: IE=Edge,chrome=1
+Strict-Transport-Security: max-age=172800
+BDPAGETYPE: 1
+BDQID: 0xfafa4d1200006790
+BDUSERID: 0
+Set-Cookie: BDSVRTM=0; path=/
+Set-Cookie: BD_HOME=0; path=/
+Set-Cookie: H_PS_PSSID=1425_21115_17001_23632_20929; path=/; domain=.baidu.com
+Content-Encoding: gzip
+</code></pre><p><strong>第一行为状态行，状态码用于表示服务器对请求的处理结果。</strong><br>Location: 跳转到哪里，通常是跟状态码302一起出现。<br>Server: 告诉浏览器，服务器型号<br>Content-Encoding: 告诉浏览器，数据的压缩格式<br>Content-Length: 告诉浏览器，回送数据的长度<br>Content-Type: 告诉浏览器，回送数据的类型<br>Content-Language: 语言环境<br>Refresh: 告诉浏览器，定时刷新<br>Content-Dispostion: 告诉浏览器以下载方式打开数据<br>Transfer-Encoding: 数据是以分块方式回送的<br>Expires: -1<br>Cache-Control: no-cache<br>Pragma: no-cache<br>后面三个都是控制浏览器不要缓存。</p>
+<h3 id="常见的状态码"><a href="#常见的状态码" class="headerlink" title="常见的状态码"></a>常见的状态码</h3><p>100～199：表示成功接收请求，要求客户端继续提交下一次请求才能完成整个处理过程<br>200～299：表示成功接收请求并已完成整个处理过程，常用200（OK）<br>300～399：为完成请求，客户需进一步细化请求。例如，请求的资源已经移动一个新地址，常用302、304（未改动）和307（暂时重定向）<br>400～499：客户端的请求有错误，常用404（找不到资源）<br>500～599：服务器端出现错误，常用500（内部服务器错误）</p>
+<h3 id="响应体"><a href="#响应体" class="headerlink" title="响应体"></a>响应体</h3><p>响应体与响应体之间也是以一个空行分隔的。响应体的数据都是二进制数据，浏览器能解析。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-5/73718629.jpg" alt=""></p>
 
       
     </div>
@@ -636,8 +471,8 @@ TreeSet&lt;String&gt; ts=new TreeSet&lt;String&gt;(new Comparator&lt;Student&gt;
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/06/29/objectinit/" rel="next" title="Java对象初始化的过程">
-                <i class="fa fa-chevron-left"></i> Java对象初始化的过程
+              <a href="/2017/07/04/blocking-queue/" rel="next" title="阻塞队列的实现原理">
+                <i class="fa fa-chevron-left"></i> 阻塞队列的实现原理
               </a>
             
           </div>
@@ -645,10 +480,6 @@ TreeSet&lt;String&gt; ts=new TreeSet&lt;String&gt;(new Comparator&lt;Student&gt;
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/06/30/lock/" rel="prev" title="Java中synchronized关键字与JDK1.5中显示Lock操作">
-                Java中synchronized关键字与JDK1.5中显示Lock操作 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -766,7 +597,7 @@ TreeSet&lt;String&gt; ts=new TreeSet&lt;String&gt;(new Comparator&lt;Student&gt;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么会出现这么多的容器呢？"><span class="nav-number">1.</span> <span class="nav-text">为什么会出现这么多的容器呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List中常用的容器"><span class="nav-number">2.</span> <span class="nav-text">List中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">2.1.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList"><span class="nav-number">2.2.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ListIterator"><span class="nav-number">2.3.</span> <span class="nav-text">ListIterator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现简单的队列"><span class="nav-number">3.</span> <span class="nav-text">实现简单的队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set中常用的容器"><span class="nav-number">4.</span> <span class="nav-text">Set中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet"><span class="nav-number">4.1.</span> <span class="nav-text">HashSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet是如何保证元素唯一性的呢？"><span class="nav-number">4.2.</span> <span class="nav-text">HashSet是如何保证元素唯一性的呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-number">4.3.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeSet"><span class="nav-number">4.4.</span> <span class="nav-text">TreeSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序重点，比较器或比较接口"><span class="nav-number">4.5.</span> <span class="nav-text">排序重点，比较器或比较接口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map中常用的容器"><span class="nav-number">5.</span> <span class="nav-text">Map中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式："><span class="nav-number">5.1.</span> <span class="nav-text">Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hashtable"><span class="nav-number">5.2.</span> <span class="nav-text">Hashtable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap"><span class="nav-number">5.3.</span> <span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeMap"><span class="nav-number">5.4.</span> <span class="nav-text">TreeMap</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求头"><span class="nav-number">2.</span> <span class="nav-text">请求头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#get的请求方式"><span class="nav-number">2.1.</span> <span class="nav-text">get的请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#pst的请求方式"><span class="nav-number">2.2.</span> <span class="nav-text">pst的请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用请求头说明"><span class="nav-number">2.3.</span> <span class="nav-text">常用请求头说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应头"><span class="nav-number">3.</span> <span class="nav-text">响应头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用响应头说明"><span class="nav-number">3.1.</span> <span class="nav-text">常用响应头说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的状态码"><span class="nav-number">3.2.</span> <span class="nav-text">常见的状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应体"><span class="nav-number">3.3.</span> <span class="nav-text">响应体</span></a></li></ol></li></ol></div>
             
 
           </div>

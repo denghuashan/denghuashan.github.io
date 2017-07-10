@@ -106,7 +106,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/95628352.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/29996379.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/54148965.jpg">
-<meta property="og:updated_time" content="2017-07-10T07:48:31.193Z">
+<meta property="og:updated_time" content="2017-07-10T07:54:28.790Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL中InnoDB存储引擎的索引">
 <meta name="twitter:description" content="索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。 存储引擎支持的索引MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支持">
@@ -378,7 +378,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,673 字
+                  1,662 字
                 </span>
               
 
@@ -402,7 +402,7 @@
       
         <p><strong>索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。</strong>MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。</p>
 <h2 id="存储引擎支持的索引"><a href="#存储引擎支持的索引" class="headerlink" title="存储引擎支持的索引"></a>存储引擎支持的索引</h2><p>MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支持Hash、BTree索引。</p>
-<h2 id="索引的分类"><a href="#索引的分类" class="headerlink" title="索引的分类"></a>索引的分类</h2><ol>
+<h2 id="索引的分类"><a href="#索引的分类" class="headerlink" title="索引的分类"></a>索引的分类</h2><ul>
 <li>普通索引：MySQL中的基本索引类型，允许在定义所以的列中插入重复值和空值。</li>
 <li>唯一索引：索引列的值必须唯一，但允许有空值。如果是组合索引，则列值的组合必须唯一。主键索引是一种特殊的唯一索引，不允许有空值。</li>
 <li>单列索引：一个索引只包含单个列，一个表可以有多个单列索引。</li>
@@ -426,16 +426,8 @@
 <li>索引并非越多越好，这里不再阐述原因。</li>
 <li>避免对经常更新的表进行过多的索引，索引中的列尽可能少，而对经常用于查询的字段应该创建索引。</li>
 <li>数据量小的表最好不要使用索引。查询花费的时间可能比遍历索引的时间还要短。</li>
-<li>索引的选择性较低时，不应建立索引。<h2 id="索引的选择性"><a href="#索引的选择性" class="headerlink" title="索引的选择性"></a>索引的选择性</h2>所谓索引的选择性（Selectivity），是指不重复的索引值（也叫基数，Cardinality）与表记录数（#T）的比值：<br>Index Selectivity = Cardinality / #T<br>显然选择性的取值范围为(0, 1]，选择性越高的索引价值越大，这是由B+Tree的性质决定的。<br>数据如下图：<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/25808861.jpg" alt=""><br>以dept_no做为建立索引的选择性：<br> SELECT count(DISTINCT(dept_no))/count(<em>) AS Selectivity FROM employee;<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/95628352.jpg" alt=""><br>以e_no做为建立索引的选择性：<br> SELECT count(DISTINCT(e_no))/count(</em>) AS Selectivity FROM employee;<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/29996379.jpg" alt=""><br>可以对比出，在e_no列上建立索引的选择性更高。<br>当在e_no列上建立索引后，可以使用EXPLAIN语句查看索引是否正在使用。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/54148965.jpg" alt=""><pre><code>select_type：指定所使用的SELECT查询类型。
-table：指定数据库读取的数据表名字，它们按照被读取的先后顺序排列。
-type：指定了本数据表与其他数据表之间的关联关系。可能的取值有：system、const、eq_ref、ref、range、index、All。
-possible_keys：在搜索数据记录时可选用的各个索引。
-key_len：给出索引按字节计算的长度，key_len数值越小，表示越快。
-ref：给出了关联关系中另一个数据表里的列名称。
-rows：执行这个查询时预计会从这个数据表中读取的数据行的个数。
-extra：其他与关联操作有关的信息。
-</code></pre></li>
-</ol>
+<li>索引的选择性较低时，不应建立索引。<h2 id="索引的选择性"><a href="#索引的选择性" class="headerlink" title="索引的选择性"></a>索引的选择性</h2>所谓索引的选择性（Selectivity），是指不重复的索引值（也叫基数，Cardinality）与表记录数（#T）的比值：<br>Index Selectivity = Cardinality / #T<br>显然选择性的取值范围为(0, 1]，选择性越高的索引价值越大，这是由B+Tree的性质决定的。<br>数据如下图：<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/25808861.jpg" alt=""><br>以dept_no做为建立索引的选择性：<br>  SELECT count(DISTINCT(dept_no))/count(<em>) AS Selectivity FROM employee;<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/95628352.jpg" alt=""><br>以e_no做为建立索引的选择性：<br>  SELECT count(DISTINCT(e_no))/count(</em>) AS Selectivity FROM employee;<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/29996379.jpg" alt=""><br>可以对比出，在e_no列上建立索引的选择性更高。<br>当在e_no列上建立索引后，可以使用EXPLAIN语句查看索引是否正在使用。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/54148965.jpg" alt=""><h3 id="EXPLAIN语句输出结果的各个行解释"><a href="#EXPLAIN语句输出结果的各个行解释" class="headerlink" title="EXPLAIN语句输出结果的各个行解释"></a>EXPLAIN语句输出结果的各个行解释</h3>select_type：指定所使用的SELECT查询类型。<br>table：指定数据库读取的数据表名字，它们按照被读取的先后顺序排列。<br>type：指定了本数据表与其他数据表之间的关联关系。可能的取值有：system、const、eq_ref、ref、range、index、All。<br>possible_keys：在搜索数据记录时可选用的各个索引。<br>key_len：给出索引按字节计算的长度，key_len数值越小，表示越快。<br>ref：给出了关联关系中另一个数据表里的列名称。<br>rows：执行这个查询时预计会从这个数据表中读取的数据行的个数。<br>extra：其他与关联操作有关的信息。</li>
+</ul>
 
       
     </div>
@@ -634,7 +626,7 @@ extra：其他与关联操作有关的信息。
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储引擎支持的索引"><span class="nav-number">1.</span> <span class="nav-text">存储引擎支持的索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的分类"><span class="nav-number">2.</span> <span class="nav-text">索引的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的优点"><span class="nav-number">3.</span> <span class="nav-text">索引的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的缺点"><span class="nav-number">4.</span> <span class="nav-text">索引的缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#InnoDB存储引擎的索引实现"><span class="nav-number">5.</span> <span class="nav-text">InnoDB存储引擎的索引实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚集索引与非聚集索引"><span class="nav-number">6.</span> <span class="nav-text">聚集索引与非聚集索引</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#聚集索引和非聚集索引的区别"><span class="nav-number">6.1.</span> <span class="nav-text">聚集索引和非聚集索引的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的设计原则"><span class="nav-number">7.</span> <span class="nav-text">索引的设计原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的选择性"><span class="nav-number">8.</span> <span class="nav-text">索引的选择性</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储引擎支持的索引"><span class="nav-number">1.</span> <span class="nav-text">存储引擎支持的索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的分类"><span class="nav-number">2.</span> <span class="nav-text">索引的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的优点"><span class="nav-number">3.</span> <span class="nav-text">索引的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的缺点"><span class="nav-number">4.</span> <span class="nav-text">索引的缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#InnoDB存储引擎的索引实现"><span class="nav-number">5.</span> <span class="nav-text">InnoDB存储引擎的索引实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚集索引与非聚集索引"><span class="nav-number">6.</span> <span class="nav-text">聚集索引与非聚集索引</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#聚集索引和非聚集索引的区别"><span class="nav-number">6.1.</span> <span class="nav-text">聚集索引和非聚集索引的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的设计原则"><span class="nav-number">7.</span> <span class="nav-text">索引的设计原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的选择性"><span class="nav-number">8.</span> <span class="nav-text">索引的选择性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EXPLAIN语句输出结果的各个行解释"><span class="nav-number">8.1.</span> <span class="nav-text">EXPLAIN语句输出结果的各个行解释</span></a></li></ol></li></ol></div>
             
 
           </div>

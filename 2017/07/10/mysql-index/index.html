@@ -95,15 +95,22 @@
 
 
 
-<meta name="description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DreamMaker-HS">
-<meta property="og:url" content="http://dhsmp.com/archives/2017/07/index.html">
+<meta name="description" content="索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。 存储引擎支持的索引MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支持">
+<meta property="og:type" content="article">
+<meta property="og:title" content="MySQL中InnoDB存储引擎的索引">
+<meta property="og:url" content="http://dhsmp.com/2017/07/10/mysql-index/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta property="og:description" content="索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。 存储引擎支持的索引MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支持">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/19340849.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/25808861.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/95628352.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/29996379.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/54148965.jpg">
+<meta property="og:updated_time" content="2017-07-10T07:48:31.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DreamMaker-HS">
-<meta name="twitter:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta name="twitter:title" content="MySQL中InnoDB存储引擎的索引">
+<meta name="twitter:description" content="索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。 存储引擎支持的索引MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支持">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-10/19340849.jpg">
 
 
 
@@ -131,13 +138,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/archives/2017/07/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/07/10/mysql-index/"/>
 
 
 
 
 
-  <title>归档 | DreamMaker-HS</title>
+  <title>MySQL中InnoDB存储引擎的索引 | DreamMaker-HS</title>
   
 
 
@@ -162,7 +169,7 @@
     
   
 
-  <div class="container sidebar-position-left  page-archive  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -300,218 +307,232 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <span class="archive-move-on"></span>
+  <div id="posts" class="posts-expand">
+    
 
-    <span class="archive-page-counter">
-      
-      
-      
-        
-      
-      嗯..! 目前共计 14 篇日志。 继续努力。
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/10/mysql-index/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuaShan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/20170622104033.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DreamMaker-HS">
     </span>
 
     
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">MySQL中InnoDB存储引擎的索引</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-10T11:48:00+08:00">
+                2017-07-10
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,673 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    <div class="post-body" itemprop="articleBody">
 
       
       
-      
 
+      
+        <p><strong>索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。</strong>MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。</p>
+<h2 id="存储引擎支持的索引"><a href="#存储引擎支持的索引" class="headerlink" title="存储引擎支持的索引"></a>存储引擎支持的索引</h2><p>MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支持Hash、BTree索引。</p>
+<h2 id="索引的分类"><a href="#索引的分类" class="headerlink" title="索引的分类"></a>索引的分类</h2><ol>
+<li>普通索引：MySQL中的基本索引类型，允许在定义所以的列中插入重复值和空值。</li>
+<li>唯一索引：索引列的值必须唯一，但允许有空值。如果是组合索引，则列值的组合必须唯一。主键索引是一种特殊的唯一索引，不允许有空值。</li>
+<li>单列索引：一个索引只包含单个列，一个表可以有多个单列索引。</li>
+<li>组合索引：在表的多个字段组合上创建的索引，只有在查询条件中使用了这些字段的左边字段时，索引才会被使用。<strong>使用组合索引时遵循最左前缀集合。</strong></li>
+<li>全文索引：在定义索引的列上支持值的全文查找，允许在这些索引列中插入重复值和空值。全文索引可以在CHAR、VARCHAR或TEXT类型的列上创建。只有MyISAM存储引擎支持全文索引。</li>
+<li>空间索引：是对空间数据类型的字段建立的索引。创建空间索引的列，不允许有空值。只有MyISAM存储引擎支持空间索引。<h2 id="索引的优点"><a href="#索引的优点" class="headerlink" title="索引的优点"></a>索引的优点</h2></li>
+<li>通过创建唯一索引，可以保证数据库表中每一行数据的唯一性。</li>
+<li>可以大大加快数据的查询速度，这也是创建索引的最主要原因。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/19340849.jpg" alt=""><h2 id="索引的缺点"><a href="#索引的缺点" class="headerlink" title="索引的缺点"></a>索引的缺点</h2></li>
+<li>创建索引和维护索引要耗费时间，并且随着数据量的增加所耗费的时间也会增加。</li>
+<li>索引需要占用磁盘空间，即物理空间。如果有大量的索引，索引文件可能比数据文件更快达到最大文件尺寸。</li>
+<li>当对表中的数据进行增加、删除和修改时，索引也要动态的维护，降低了数据的维护速度。<h2 id="InnoDB存储引擎的索引实现"><a href="#InnoDB存储引擎的索引实现" class="headerlink" title="InnoDB存储引擎的索引实现"></a>InnoDB存储引擎的索引实现</h2></li>
+<li>InnoDB存储引擎使用B+Tree作为索引结构。在InnoDB中，表数据文件本身就是按B+Tree组织的一个索引结构。这个索引的key是数据表的主键，因此InnoDB表数据文件本身就是主索引。</li>
+<li>InnoDB的数据文件本身要按主键聚集，所以InnoDB要求表必须有主键。<strong>如果没有显示指定主键，InnoDB会为每一行生成一个隐藏的6个字节的ROWID，并以此作为主键。</strong>《MySQL的存储引擎》一章所提到的。</li>
+<li>在使用InnoDB存储引擎时，如果没有特别的需要，使用一个与业务无关的自增字段作为主键则是一个很好的选择。<h2 id="聚集索引与非聚集索引"><a href="#聚集索引与非聚集索引" class="headerlink" title="聚集索引与非聚集索引"></a>聚集索引与非聚集索引</h2></li>
+<li>聚集索引表记录的排列顺序与索引的排列顺序一致，优点是查询速度快，因为一旦具有第一个索引值的纪录被找到，具有连续索引值的记录也一定物理的紧跟其后。<br>聚集索引的缺点是对表进行修改速度较慢，这是为了保持表中的记录的物理顺序与索引的顺序一致，而把记录插入到数据页的相应位置，必须在数据页中进行数据重排，降低了执行速度。类似于数组。</li>
+<li>非聚集索引指定了表中记录的逻辑顺序，但记录的物理顺序和索引的顺序不一致，聚集索引和非聚集索引都采用了B+Tree的结构。非聚集索引比聚集索引层次多，添加记录不会引起数据顺序的重组。类似于链表。<h3 id="聚集索引和非聚集索引的区别"><a href="#聚集索引和非聚集索引的区别" class="headerlink" title="聚集索引和非聚集索引的区别"></a>聚集索引和非聚集索引的区别</h3></li>
+<li><strong>两者的根本区别是表记录的排列顺序和与索引的排列顺序是否一致。</strong></li>
+<li>聚集索引一个表只能有一个，而非聚集索引一个表可以存在多个。</li>
+<li>聚集索引存储记录是物理上连续存在，而非聚集索引是逻辑上的连续，物理存储并不连续。</li>
+<li>聚集索引查询数据速度快，插入数据速度慢；非聚集索引反之。<h2 id="索引的设计原则"><a href="#索引的设计原则" class="headerlink" title="索引的设计原则"></a>索引的设计原则</h2></li>
+<li>索引并非越多越好，这里不再阐述原因。</li>
+<li>避免对经常更新的表进行过多的索引，索引中的列尽可能少，而对经常用于查询的字段应该创建索引。</li>
+<li>数据量小的表最好不要使用索引。查询花费的时间可能比遍历索引的时间还要短。</li>
+<li>索引的选择性较低时，不应建立索引。<h2 id="索引的选择性"><a href="#索引的选择性" class="headerlink" title="索引的选择性"></a>索引的选择性</h2>所谓索引的选择性（Selectivity），是指不重复的索引值（也叫基数，Cardinality）与表记录数（#T）的比值：<br>Index Selectivity = Cardinality / #T<br>显然选择性的取值范围为(0, 1]，选择性越高的索引价值越大，这是由B+Tree的性质决定的。<br>数据如下图：<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/25808861.jpg" alt=""><br>以dept_no做为建立索引的选择性：<br> SELECT count(DISTINCT(dept_no))/count(<em>) AS Selectivity FROM employee;<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/95628352.jpg" alt=""><br>以e_no做为建立索引的选择性：<br> SELECT count(DISTINCT(e_no))/count(</em>) AS Selectivity FROM employee;<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/29996379.jpg" alt=""><br>可以对比出，在e_no列上建立索引的选择性更高。<br>当在e_no列上建立索引后，可以使用EXPLAIN语句查看索引是否正在使用。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-10/54148965.jpg" alt=""><pre><code>select_type：指定所使用的SELECT查询类型。
+table：指定数据库读取的数据表名字，它们按照被读取的先后顺序排列。
+type：指定了本数据表与其他数据表之间的关联关系。可能的取值有：system、const、eq_ref、ref、range、index、All。
+possible_keys：在搜索数据记录时可选用的各个索引。
+key_len：给出索引按字节计算的长度，key_len数值越小，表示越快。
+ref：给出了关联关系中另一个数据表里的列名称。
+rows：执行这个查询时预计会从这个数据表中读取的数据行的个数。
+extra：其他与关联操作有关的信息。
+</code></pre></li>
+</ol>
+
+      
+    </div>
+
+    <div>
       
         
-        <div class="collection-title">
-          <h2 class="archive-year motion-element" id="archive-year-2017">2017</h2>
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>谢谢你请我吃糖果</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/image/weixinpay.png" alt="HuaShan WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
       
       
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/image/alipaypicture.png" alt="HuaShan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
 
       
+    </div>
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
+    <div>
+      
         
-            <a class="post-title-link" href="/2017/07/10/mysql-index/" itemprop="url">
-              
-                <span itemprop="name">MySQL中InnoDB存储引擎的索引</span>
-              
-            </a>
-        
-      </h2>
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      HuaShan
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://dhsmp.com/2017/07/10/mysql-index/" title="MySQL中InnoDB存储引擎的索引">http://dhsmp.com/2017/07/10/mysql-index/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-10T11:48:00+08:00"
-              content="2017-07-10" >
-          07-10
-        </time>
-      </div>
 
-    </header>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/07/06/mysql-store-engine/" rel="next" title="MySQL的存储引擎">
+                <i class="fa fa-chevron-left"></i> MySQL的存储引擎
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </article>
 
 
 
-    
-
+    <div class="post-spread">
       
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/06/mysql-store-engine/" itemprop="url">
-              
-                <span itemprop="name">MySQL的存储引擎</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-06T11:39:32+08:00"
-              content="2017-07-06" >
-          07-06
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/04/http-protocol/" itemprop="url">
-              
-                <span itemprop="name">HTTP协议详解与回顾</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-04T16:25:25+08:00"
-              content="2017-07-04" >
-          07-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/04/blocking-queue/" itemprop="url">
-              
-                <span itemprop="name">阻塞队列的实现原理</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-04T14:31:26+08:00"
-              content="2017-07-04" >
-          07-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-      
-      
-      
-
-      
-      
-
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/07/03/factory-design/" itemprop="url">
-              
-                <span itemprop="name">工厂、策略、观察者设计模式</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-07-03T15:45:47+08:00"
-              content="2017-07-03" >
-          07-03
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-
-    
-
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/archives/2017/07/page/2/">2</a><a class="extend next" rel="next" href="/archives/2017/07/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
-
+    </div>
+  </div>
 
 
           </div>
@@ -519,6 +540,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -538,8 +563,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/20170622104033.png"
@@ -590,6 +624,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储引擎支持的索引"><span class="nav-number">1.</span> <span class="nav-text">存储引擎支持的索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的分类"><span class="nav-number">2.</span> <span class="nav-text">索引的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的优点"><span class="nav-number">3.</span> <span class="nav-text">索引的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的缺点"><span class="nav-number">4.</span> <span class="nav-text">索引的缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#InnoDB存储引擎的索引实现"><span class="nav-number">5.</span> <span class="nav-text">InnoDB存储引擎的索引实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚集索引与非聚集索引"><span class="nav-number">6.</span> <span class="nav-text">聚集索引与非聚集索引</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#聚集索引和非聚集索引的区别"><span class="nav-number">6.1.</span> <span class="nav-text">聚集索引和非聚集索引的区别</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的设计原则"><span class="nav-number">7.</span> <span class="nav-text">索引的设计原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的选择性"><span class="nav-number">8.</span> <span class="nav-text">索引的选择性</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -703,11 +753,9 @@
   
 
   
-  
-    <script type="text/javascript" id="motion.page.archive">
-      $('.archive-year').velocity('transition.slideLeftIn');
-    </script>
-  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
 
 
   

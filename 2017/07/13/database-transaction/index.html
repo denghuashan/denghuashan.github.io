@@ -116,22 +116,20 @@
 
 
 
-<meta name="description" content="HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。 HTTP协议的版本：HTTP/1.0、HT">
+<meta name="description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID）原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。隔离性 Isolation：并发访问数据库时，每">
 <meta property="og:type" content="article">
-<meta property="og:title" content="HTTP协议详解与回顾">
-<meta property="og:url" content="http://dhsmp.com/2017/07/04/http-protocol/index.html">
+<meta property="og:title" content="数据库的事务">
+<meta property="og:url" content="http://dhsmp.com/2017/07/13/database-transaction/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。 HTTP协议的版本：HTTP/1.0、HT">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-4/37413864.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-5/15865529.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-9/20851961.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-5/73718629.jpg">
-<meta property="og:updated_time" content="2017-07-09T12:18:12.603Z">
+<meta property="og:description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID）原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。隔离性 Isolation：并发访问数据库时，每">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-13/27095586.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-13/83446062.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-14/98846792.jpg">
+<meta property="og:updated_time" content="2017-07-14T07:05:27.557Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="HTTP协议详解与回顾">
-<meta name="twitter:description" content="HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。 HTTP协议的版本：HTTP/1.0、HT">
-<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg">
+<meta name="twitter:title" content="数据库的事务">
+<meta name="twitter:description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID）原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。隔离性 Isolation：并发访问数据库时，每">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-13/27095586.jpg">
 
 
 
@@ -159,13 +157,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/07/04/http-protocol/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/07/13/database-transaction/"/>
 
 
 
 
 
-  <title>HTTP协议详解与回顾 | DreamMaker-HS</title>
+  <title>数据库的事务 | DreamMaker-HS</title>
   
 
 
@@ -338,7 +336,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/04/http-protocol/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/13/database-transaction/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -355,7 +353,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">HTTP协议详解与回顾</h1>
+          <h1 class="post-title" itemprop="name headline">数据库的事务</h1>
         
 
         <div class="post-meta">
@@ -367,8 +365,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-04T16:25:25+08:00">
-                2017-07-04
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-13T21:06:23+08:00">
+                2017-07-13
               </time>
             
 
@@ -385,7 +383,7 @@
 
           
           
-             <span id="/2017/07/04/http-protocol/" class="leancloud_visitors" data-flag-title="HTTP协议详解与回顾">
+             <span id="/2017/07/13/database-transaction/" class="leancloud_visitors" data-flag-title="数据库的事务">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -410,7 +408,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,436 字
+                  1,575 字
                 </span>
               
 
@@ -432,59 +430,34 @@
       
 
       
-        <p> HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。<strong>HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务</strong>。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。<br> HTTP协议的版本：HTTP/1.0、HTTP/1.1版本</p>
-<h2 id="HTTP-1-1版本"><a href="#HTTP-1-1版本" class="headerlink" title="HTTP/1.1版本"></a>HTTP/1.1版本</h2><p>这个版本增加了持久连接，就是说之前版本的协议一次请求就是一次TCP连接，请求完成后这个连接就关闭掉了。众所周知TCP协议是可靠的，建立连接需要3次握手，断开连接需要4次挥手，并且TCP有流量控制和拥塞控制，有慢开始机制，刚建立连接时传输比较慢，这是比较耗费资源的。一个丰富的页面会有许多图片、表单和超链接。这样的话就会有多次的HTTP请求，所以在这个版本上默认不关闭TCP连接也不用声明Connection: keep-alive字段。如果确实要关闭可以指定Connection: close字段。还引入了管道机制，就是说在一个TCP连接里可以同时发送多个HTTP请求，而不必等待上一个请求响应成功再发送。还增加了PUT、PATCH、HEAD、 OPTIONS、DELETE等命令，丰富了客户端和服务端交互动作。还增加了Host字段。</p>
-<h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><h3 id="HTTP协议是无状态的"><a href="#HTTP协议是无状态的" class="headerlink" title="HTTP协议是无状态的"></a>HTTP协议是无状态的</h3><p>就是说每次HTTP请求都是独立的，任何两个请求之间没有什么必然的联系。但是在实际应用当中并不是完全这样的，引入了Cookie和Session机制来关联请求。</p>
-<h3 id="多次HTTP请求"><a href="#多次HTTP请求" class="headerlink" title="多次HTTP请求"></a>多次HTTP请求</h3><p>在客户端请求网页时多数情况下并不是一次请求就能成功的，服务端首先是响应HTML页面，然后浏览器收到响应之后发现HTML页面还引用了其他的资源，例如，CSS，JS文件，图片等等，还会自动发送HTTP请求这些需要的资源。现在的HTTP版本支持管道机制，可以同时请求和响应多个请求，大大提高了效率。</p>
-<h3 id="基于TCP协议"><a href="#基于TCP协议" class="headerlink" title="基于TCP协议"></a>基于TCP协议</h3><p>HTTP协议目的是规定客户端和服务端数据传输的格式和数据交互行为，并不负责数据传输的细节。底层是基于TCP实现的。现在使用的版本当中是默认持久连接的，也就是多次HTTP请求使用一个TCP连接。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>public class TcpSever {
-
-    public static void main(String[] args) throws Exception {
-        ServerSocket ss = new ServerSocket(10000);
-        Socket s = ss.accept();
-        InputStream in = s.getInputStream();
-        byte[] by = new byte[1024];
-        int len = in.read(by);
-        System.out.println(new String(by, 0, len));
-    }
-}
-</code></pre><p>写一个简单的HTML文件，带一个form表单。</p>
-<h2 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h2><h3 id="get的请求方式"><a href="#get的请求方式" class="headerlink" title="get的请求方式"></a>get的请求方式</h3><pre><code>&lt;form action=&quot;http://127.0.0.1:10000&quot; method=&quot;get&quot;&gt;
-</code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg" alt=""><br>GET /?userName=jiujiu&amp;pass=123&amp;sex=nan&amp;hobby=sports&amp;country=CN<br>&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5 HTTP/1.1<br>Accept: text/html, application/xhtml+xml, <em>/</em><br>Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3<br>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>Accept-Encoding: gzip, deflate<br>Host: 127.0.0.1:10000<br>DNT: 1<br>Connection: Keep-Alive</p>
-<p><strong>Get方式的特点：传送的数据量受URL地址栏限制，传输的数据直接拼在URL地址后，以问号开始（?），多参数分隔以与符号开始（&amp;）。直接传输中文会乱码，HTTP头字段只接受ASCII码值数据。jsp中可以通过URLEncoder.encode()转换成ASCII码值。</strong></p>
-<h3 id="post的请求方式"><a href="#post的请求方式" class="headerlink" title="post的请求方式"></a>post的请求方式</h3><pre><code>&lt;form action=&quot;http://127.0.0.1:10000&quot; method=&quot;post&quot;&gt;
-</code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/37413864.jpg" alt=""><br>POST / HTTP/1.1<br>Accept: text/html, application/xhtml+xml, <em>/</em><br>Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3<br>Content-Type: application/x-www-form-urlencoded<br>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>Accept-Encoding: gzip, deflate<br>Host: 127.0.0.1:10000<br>Content-Length: 105<br>DNT: 1<br>Connection: Keep-Alive<br>Cache-Control: no-cache</p>
-<p>userName=hehe&amp;pass=4321&amp;sex=nan&amp;hobby=sports&amp;country=CN&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5<br><strong>Post方式的特点：传送的数据量无限制。传输的数据是放在请求体中。</strong></p>
-<h3 id="常用请求头说明"><a href="#常用请求头说明" class="headerlink" title="常用请求头说明"></a>常用请求头说明</h3><p><strong>请求头与请求体的分隔，是以一个空行隔开的。</strong><br><strong>第一行为请求行，包含请求方式与HTTP协议版本号。</strong><br>Accept: 浏览器所支持的数据类型。<br>Accept-Charset: 浏览器所支持的数据类型。<br>Accept-Encoding: 浏览器支持的压缩格式<br>Accept-Language: 浏览器支持的语言环境<br>Host: 想访问哪台主机<br>If-Modified-Since: 缓存数据的时间。浏览器为了提高性能，一般情况会缓存第一次的请求结果，在缓存数据时间内，会直接找本地缓存数据。<br>Referer: 客户机是从哪个页面来的。作用：服务器可以做判断，进行防盗链。<br>Connection: 请求完后是断开还是保持连接。</p>
-<h2 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h2><p>下图是一个IE插件，HttpWatch捕捉到的一次请求。左边是请求头，右边是响应头。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-5/15865529.jpg" alt=""></p>
-<h3 id="常用响应头说明"><a href="#常用响应头说明" class="headerlink" title="常用响应头说明"></a>常用响应头说明</h3><pre><code>HTTP/1.1 200 OK
-Server: bfe/1.0.8.18
-Date: Wed, 05 Jul 2017 01:49:57 GMT
-Content-Type: text/html; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-Cache-Control: private
-Cxy_all: baidu+63b9ff6074957f7dc4b1c7d31442fcfd
-Expires: Wed, 05 Jul 2017 01:49:46 GMT
-X-Powered-By: HPHP
-X-UA-Compatible: IE=Edge,chrome=1
-Strict-Transport-Security: max-age=172800
-BDPAGETYPE: 1
-BDQID: 0xfafa4d1200006790
-BDUSERID: 0
-Set-Cookie: BDSVRTM=0; path=/
-Set-Cookie: BD_HOME=0; path=/
-Set-Cookie: H_PS_PSSID=1425_21115_17001_23632_20929; path=/; domain=.baidu.com
-Content-Encoding: gzip
-</code></pre><p><strong>第一行为状态行，状态码用于表示服务器对请求的处理结果。</strong><br>Location: 跳转到哪里，通常是跟状态码302一起出现。<br>Server: 告诉浏览器，服务器型号<br>Content-Encoding: 告诉浏览器，数据的压缩格式<br>Content-Length: 告诉浏览器，回送数据的长度<br>Content-Type: 告诉浏览器，回送数据的类型<br>Content-Language: 语言环境<br>Refresh: 告诉浏览器，定时刷新<br>Content-Dispostion: 告诉浏览器以下载方式打开数据<br>Transfer-Encoding: 数据是以分块方式回送的<br>Expires: -1<br>Cache-Control: no-cache<br>Pragma: no-cache<br>后面三个都是控制浏览器不要缓存。</p>
-<h3 id="常见的状态码"><a href="#常见的状态码" class="headerlink" title="常见的状态码"></a>常见的状态码</h3><p>100～199：表示成功接收请求，要求客户端继续提交下一次请求才能完成整个处理过程<br>200～299：表示成功接收请求并已完成整个处理过程，常用200（OK）<br>300～399：为完成请求，客户需进一步细化请求。例如，请求的资源已经移动一个新地址，常用302、304（未改动）和307（暂时重定向）<br>400～499：客户端的请求有错误，常用404（找不到资源）<br>500～599：服务器端出现错误，常用500（内部服务器错误）<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-9/20851961.jpg" alt=""></p>
-<h3 id="响应体"><a href="#响应体" class="headerlink" title="响应体"></a>响应体</h3><p>响应头与响应体之间也是以一个空行分隔的。响应体的数据都是二进制数据，浏览器能解析。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-5/73718629.jpg" alt=""></p>
-<h2 id="关于HTTP的常见问题及解答"><a href="#关于HTTP的常见问题及解答" class="headerlink" title="关于HTTP的常见问题及解答"></a>关于HTTP的常见问题及解答</h2><h3 id="GET和POST的区别"><a href="#GET和POST的区别" class="headerlink" title="GET和POST的区别"></a>GET和POST的区别</h3><ul>
-<li>从字面意思和HTTP的规范来看，GET用于获取资源信息而POST是用来更新资源信息。</li>
-<li>GET提交请求的数据实体会放在URL的后面，用?来分割，参数用&amp;连接，举个栗子：/index.html?name=wang&amp;login=1</li>
-<li>GET提交的数据长度是有限制的，因为URL长度有限制，具体的长度限制视浏览器而定。而POST没有。</li>
-<li>GET提交的数据不安全，因为参数都会暴露在URL上。<h3 id="408-Request-Timeout和504-Gateway-Timeout的区别"><a href="#408-Request-Timeout和504-Gateway-Timeout的区别" class="headerlink" title="408 Request Timeout和504 Gateway Timeout的区别"></a>408 Request Timeout和504 Gateway Timeout的区别</h3>408是说请求超时，就是建立连接之后再约定的时间内客户端没有发送请求到客户端到服务端。本质上原因在于客户端或者网络拥塞。504是网关超时，是说代理服务器把客户端请求转发到应用服务器后再约定的时间内没有收到应用服务器的响应。本质上原因在于服务端的响应过慢，也有可能是网络问题。<h3 id="Cookie和Session的区别和联系"><a href="#Cookie和Session的区别和联系" class="headerlink" title="Cookie和Session的区别和联系"></a>Cookie和Session的区别和联系</h3>Cookie和Session都是为了保存客户端和服务端之间的交互状态，实现机制不同，各有优缺点。首先一个最大的区别就是Cookie是保存在客户端而Session就保存在服务端的。Cookie是客户端请求服务端时服务器会将一些信息以键值对的形式返回给客户端，保存在浏览器中，交互的时候可以加上这些Cookie值。用Cookie就可以方便的做一些缓存。Cookie的缺点是大小和数量都有限制；Cookie是存在客户端的可能被禁用、删除、篡改，是不安全的；Cookie如果很大，每次要请求都要带上，这样就影响了传输效率。Session是基于Cookie来实现的，不同的是Session本身存在于服务端，但是每次传输的时候不会传输数据，只是把代表一个客户端的唯一ID（通常是JSESSIONID）写在客户端的Cookie中，这样每次传输这个ID就可以了。Session的优势就是传输数据量小，比较安全。但是Session也有缺点，就是如果Session不做特殊的处理容易失效、过期、丢失或者Session过多导致服务器内存溢出，并且要实现一个稳定可用安全的分布式Session框架也是有一定复杂度的。在实际使用中就要结合Cookie和Session的优缺点针对不同的问题来设计解决方案。</li>
+        <p><strong>事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。</strong></p>
+<h2 id="事务的四大特性（ACID）"><a href="#事务的四大特性（ACID）" class="headerlink" title="事务的四大特性（ACID）"></a>事务的四大特性（ACID）</h2><p>原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。<br>一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。<br>隔离性 Isolation：并发访问数据库时，每一个开启的事务，不能被其他事务的操作数据所干扰。并发事务之间要隔离。<br>持久性 Durability：一个事务一旦被提交，它对数据库中数据的改变就是持久性的。</p>
+<h2 id="MySQL数据库对事务的支持"><a href="#MySQL数据库对事务的支持" class="headerlink" title="MySQL数据库对事务的支持"></a>MySQL数据库对事务的支持</h2><p>start transaction；—-开启事务<br>sql语句；—-操作<br>commit;—-提交事务<br>rollback；—-回滚事务，可手动回滚事务。<br>数据库回滚：回滚到事务开始之前位置、状态。</p>
+<h2 id="模拟一个异常回滚示例"><a href="#模拟一个异常回滚示例" class="headerlink" title="模拟一个异常回滚示例"></a>模拟一个异常回滚示例</h2><p>因Oracle数据库对事务的支持与MySQL是有所差异化的。这里以MySQL为例来说明一下事务。<br><strong>start transaction是MySQL中事务的开启。</strong><br><strong>Oracle的事务开启是由第一条DML操作开启的。</strong><br>以一个简单的转账为例。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-13/27095586.jpg" alt=""><br>第一个红箭头，开启事务。<br>第二个红箭头，模拟aaa账户减100。<br>没有执行commit操作，假设程序出异常了。关掉这个窗口，重新进入查看。update语句并没有真正改变数据。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-13/83446062.jpg" alt=""></p>
+<h2 id="模拟一个正常执行示例"><a href="#模拟一个正常执行示例" class="headerlink" title="模拟一个正常执行示例"></a>模拟一个正常执行示例</h2><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-14/98846792.jpg" alt=""><br>第一个红箭头，开启事务。<br>中间执行了两个update操作。<br>最后commit，提交该事务。才会永久的保存在数据库中。没有收到commit，数据库则自动回滚了。</p>
+<h2 id="事务四大特性中的隔离性Isolation"><a href="#事务四大特性中的隔离性Isolation" class="headerlink" title="事务四大特性中的隔离性Isolation"></a>事务四大特性中的隔离性Isolation</h2><p>如果不考虑隔离性，可能会引发如下问题：</p>
+<ul>
+<li>脏读：一个事务读取了另外一个事务未提交的数据。</li>
+<li>不可重复读：在一个事务内，读取表中的某一行数据，多此读取的结果不同。（读取同一条记录，第一次读跟第二次读结果不一样）</li>
+<li>虚读（幻读）：在一个事务内读取到了别的事务插入的数据，导致前后读取不一致。（读取同一个表）<br><strong>不可重复读有些情况是正确的，有些情况是不正确的。</strong><h2 id="数据库定义的四种隔离级别"><a href="#数据库定义的四种隔离级别" class="headerlink" title="数据库定义的四种隔离级别"></a>数据库定义的四种隔离级别</h2></li>
+<li>Serializable：可避免脏读、不可重复读、虚读的情况发生。（类似互斥）</li>
+<li>Repeatable read：可避免脏读、不可重复读的情况发生。<strong>MySQL数据库默认的隔离级别。</strong></li>
+<li>Read committed：可避免脏读情况发生。<strong>Oracle数据库默认的隔离级别</strong></li>
+<li>Read uncommitted：最低级别，以上情况均无法保证。<br>隔离级别越高，性能越差。<br>数据库设置隔离级别：set transaction isolation level ‘隔离级别等级字段’;<br>查询当前事务的隔离级别：select @@tx_isolation;<br>这里就不挨个去做实验了。可以自行设置不同的隔离级，开两个控制台去做实验。<br><strong>Oracle数据库支持Read committed、Serializable两种事务隔离级别。</strong><h2 id="编程式事务与声明式事务"><a href="#编程式事务与声明式事务" class="headerlink" title="编程式事务与声明式事务"></a>编程式事务与声明式事务</h2></li>
+<li>编程式事务：事务的开启与提交，由程序员在代码中控制。传统的JDBC开启事务、回滚事务、提交事务的操作。编写程序式的事务管理可以清楚的定义事务的边界，可以实现细粒度的事务控制，</li>
+<li>声明式事务：事务的开启与提交，不由程序员控制，交由外部容器处理。spring对事务的支持，在配置文件中声明或采用注解即可。解除了事务和代码之间的耦合。<h2 id="本地事务与全局事务"><a href="#本地事务与全局事务" class="headerlink" title="本地事务与全局事务"></a>本地事务与全局事务</h2></li>
+<li>本地事务：在单个EIS或数据库的本地，并且限制在单个进程内的事务。本地事务不涉及多个数据来源。</li>
+<li>全局事务：资源管理器和协调的事务，可以跨越多个数据库和进程。<strong>采用二阶段提交协议保证事务的成功。</strong><h2 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h2></li>
+<li>分布式事务基于二阶段提交实现，二次提交协议。<strong>二阶段提交采用的是悲观锁策略，由于各个事务参与者需要等待响应最慢的参与者，因此性能比较差。在实际业务使用过程中，使用数据最终一致性替代传统的数据强一致性。使用带有事务功能的MQ做中间人角色。</strong><h2 id="二阶段提交"><a href="#二阶段提交" class="headerlink" title="二阶段提交"></a>二阶段提交</h2></li>
+<li>准备阶段：又称投票阶段。协调者询问所有参与者是否准备好提交，准备好恢复prepared，否则恢复non-prepared</li>
+<li>提交阶段：又称执行阶段。协调者如果在上一阶段收到参与者回复的prepared，则此阶段向所有参与者发送commit指令，否则发送rollback指令。<h2 id="数据一致模型（简单的说三种）"><a href="#数据一致模型（简单的说三种）" class="headerlink" title="数据一致模型（简单的说三种）"></a>数据一致模型（简单的说三种）</h2></li>
+<li>Weak 弱一致性：当你写入一个新值后，读的操作在数据副本上可能会读出来，也可能会读不出来。</li>
+<li>Eventually 最终一致性：当你写入一个新值后，有可能读不出来，但在某个时间保证最终能读出来。</li>
+<li>Strong 强一致性：新的数据一旦写入，在任意副本时刻都能读到新值。<h2 id="长事务"><a href="#长事务" class="headerlink" title="长事务"></a>长事务</h2></li>
+<li>一个事务花费很长时间不能够结束，就是一个长的事务，简称长事务。</li>
+<li>分布式事务中提到过一点，二阶段提交需要等待响应最慢的参与者。它有可能会变成一个长事务。</li>
+<li>Spring中，在业务方法中上声明@Transaction时，如果采用for循环调用dao进行insert、update也可能会造成长事务。</li>
+<li>Spring中，在service层的业务方法中上声明@Transaction时，调用另一个service的业务方法，如此去嵌套服务调用，也可能会造成长事务。Spring对于事务的提交，是方法执行完毕。在嵌套调用中，事务的时间由最外层业务方法执行的事务时间。</li>
 </ul>
 
       
@@ -535,7 +508,7 @@ Content-Encoding: gzip
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2017/07/04/http-protocol/" title="HTTP协议详解与回顾">http://dhsmp.com/2017/07/04/http-protocol/</a>
+      <a href="http://dhsmp.com/2017/07/13/database-transaction/" title="数据库的事务">http://dhsmp.com/2017/07/13/database-transaction/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -558,8 +531,8 @@ Content-Encoding: gzip
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/04/blocking-queue/" rel="next" title="阻塞队列的实现原理">
-                <i class="fa fa-chevron-left"></i> 阻塞队列的实现原理
+              <a href="/2017/07/11/mysql-optimize/" rel="next" title="MySQL的性能优化">
+                <i class="fa fa-chevron-left"></i> MySQL的性能优化
               </a>
             
           </div>
@@ -567,10 +540,6 @@ Content-Encoding: gzip
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/06/mysql-store-engine/" rel="prev" title="MySQL的存储引擎">
-                MySQL的存储引擎 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -688,7 +657,7 @@ Content-Encoding: gzip
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP-1-1版本"><span class="nav-number">1.</span> <span class="nav-text">HTTP/1.1版本</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#HTTP协议的特点"><span class="nav-number">2.</span> <span class="nav-text">HTTP协议的特点</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP协议是无状态的"><span class="nav-number">2.1.</span> <span class="nav-text">HTTP协议是无状态的</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#多次HTTP请求"><span class="nav-number">2.2.</span> <span class="nav-text">多次HTTP请求</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#基于TCP协议"><span class="nav-number">2.3.</span> <span class="nav-text">基于TCP协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">3.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#请求头"><span class="nav-number">4.</span> <span class="nav-text">请求头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#get的请求方式"><span class="nav-number">4.1.</span> <span class="nav-text">get的请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#post的请求方式"><span class="nav-number">4.2.</span> <span class="nav-text">post的请求方式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常用请求头说明"><span class="nav-number">4.3.</span> <span class="nav-text">常用请求头说明</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#响应头"><span class="nav-number">5.</span> <span class="nav-text">响应头</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#常用响应头说明"><span class="nav-number">5.1.</span> <span class="nav-text">常用响应头说明</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#常见的状态码"><span class="nav-number">5.2.</span> <span class="nav-text">常见的状态码</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#响应体"><span class="nav-number">5.3.</span> <span class="nav-text">响应体</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关于HTTP的常见问题及解答"><span class="nav-number">6.</span> <span class="nav-text">关于HTTP的常见问题及解答</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#GET和POST的区别"><span class="nav-number">6.1.</span> <span class="nav-text">GET和POST的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#408-Request-Timeout和504-Gateway-Timeout的区别"><span class="nav-number">6.2.</span> <span class="nav-text">408 Request Timeout和504 Gateway Timeout的区别</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Cookie和Session的区别和联系"><span class="nav-number">6.3.</span> <span class="nav-text">Cookie和Session的区别和联系</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的四大特性（ACID）"><span class="nav-number">1.</span> <span class="nav-text">事务的四大特性（ACID）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL数据库对事务的支持"><span class="nav-number">2.</span> <span class="nav-text">MySQL数据库对事务的支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模拟一个异常回滚示例"><span class="nav-number">3.</span> <span class="nav-text">模拟一个异常回滚示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模拟一个正常执行示例"><span class="nav-number">4.</span> <span class="nav-text">模拟一个正常执行示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务四大特性中的隔离性Isolation"><span class="nav-number">5.</span> <span class="nav-text">事务四大特性中的隔离性Isolation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库定义的四种隔离级别"><span class="nav-number">6.</span> <span class="nav-text">数据库定义的四种隔离级别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程式事务与声明式事务"><span class="nav-number">7.</span> <span class="nav-text">编程式事务与声明式事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地事务与全局事务"><span class="nav-number">8.</span> <span class="nav-text">本地事务与全局事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式事务"><span class="nav-number">9.</span> <span class="nav-text">分布式事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二阶段提交"><span class="nav-number">10.</span> <span class="nav-text">二阶段提交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据一致模型（简单的说三种）"><span class="nav-number">11.</span> <span class="nav-text">数据一致模型（简单的说三种）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#长事务"><span class="nav-number">12.</span> <span class="nav-text">长事务</span></a></li></ol></div>
             
 
           </div>

@@ -116,21 +116,21 @@
 
 
 
-<meta name="description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结一下对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Object">
+<meta name="description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Ob">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Java中泛型的认知与理解">
 <meta property="og:url" content="http://dhsmp.com/2017/08/07/about-generics/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结一下对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Object">
+<meta property="og:description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Ob">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/66448767.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/63360097.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/99826172.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/42285503.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/25281453.jpg">
-<meta property="og:updated_time" content="2017-08-09T15:32:50.434Z">
+<meta property="og:updated_time" content="2017-08-09T15:35:50.522Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Java中泛型的认知与理解">
-<meta name="twitter:description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结一下对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Object">
+<meta name="twitter:description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Ob">
 <meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/66448767.jpg">
 
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,150 字
+                  1,154 字
                 </span>
               
 
@@ -432,7 +432,7 @@
       
 
       
-        <p>近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结一下对JDK1.5引入的泛型的理解与使用。</p>
+        <p>近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。</p>
 <h2 id="为何会引入泛型"><a href="#为何会引入泛型" class="headerlink" title="为何会引入泛型"></a>为何会引入泛型</h2><pre><code>public class Tools{
     private Object obj;
 
@@ -452,7 +452,7 @@
         System.out.println(i);
     }
 }
-</code></pre><p><strong>上面这段代码，稍微有点经验，都知道会抛异常java.lang.ClassCastException。但是抛异常的时机确是在运行期。JVM在编译这段代码时，是可以通过的。tools.getObj()获取到对象时，需要程序员手动进行类型转换。这是早期关于Object做法。所以，泛型有了它的用武之地。</strong></p>
+</code></pre><p><strong>上面这段代码，稍微有点经验，都知道会抛异常java.lang.ClassCastException。但是抛异常的时机却是在运行期。JVM在编译这段代码时，是可以通过的。tools.getObj()获取到对象时，需要程序员手动进行类型转换。这是早期关于Object做法。所以，泛型有了它的用武之地。</strong></p>
 <h2 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h2><pre><code>public class Utils&lt;T&gt; {
     private T t;
 

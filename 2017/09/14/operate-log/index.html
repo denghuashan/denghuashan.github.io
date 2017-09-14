@@ -116,15 +116,27 @@
 
 
 
-<meta name="description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DreamMaker-HS">
-<meta property="og:url" content="http://dhsmp.com/index.html">
+<meta name="description" content="在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。 实现思路 采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。 工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。 工具类中的比较只能对基本数据类型、基本数">
+<meta property="og:type" content="article">
+<meta property="og:title" content="表单修改的操作记录 OperateLog">
+<meta property="og:url" content="http://dhsmp.com/2017/09/14/operate-log/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta property="og:description" content="在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。 实现思路 采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。 工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。 工具类中的比较只能对基本数据类型、基本数">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/74946581.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/22204390.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/93442222.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/70444357.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/97567651.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/55753844.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/3972531.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/51257277.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/95736222.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/45014357.jpg">
+<meta property="og:updated_time" content="2017-09-14T10:40:49.969Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DreamMaker-HS">
-<meta name="twitter:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta name="twitter:title" content="表单修改的操作记录 OperateLog">
+<meta name="twitter:description" content="在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。 实现思路 采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。 工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。 工具类中的比较只能对基本数据类型、基本数">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/74946581.jpg">
 
 
 
@@ -152,13 +164,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/09/14/operate-log/"/>
 
 
 
 
 
-  <title>DreamMaker-HS</title>
+  <title>表单修改的操作记录 OperateLog | DreamMaker-HS</title>
   
 
 
@@ -183,9 +195,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -322,9 +332,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -350,9 +360,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/14/operate-log/" itemprop="url">表单修改的操作记录 OperateLog</a></h1>
+          <h1 class="post-title" itemprop="name headline">表单修改的操作记录 OperateLog</h1>
         
 
         <div class="post-meta">
@@ -429,335 +437,86 @@
       
 
       
-        
-          
-          在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。
-实现思路
-采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。
-工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/09/14/operate-log/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+        <p>在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。</p>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><ul>
+<li>采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。</li>
+<li>工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。<br>在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。</li>
+<li>工具类中的比较只能对基本数据类型、基本数据类型的包装类型、Date类型进行比较。数组、集合、关联对象是不会进行比较的。这是欠缺的地方，欢迎补充。<h2 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h2><strong>点击查询：（模拟项目中查询数据）</strong></li>
+</ul>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/74946581.jpg" alt=""></p>
+<p><strong>回显数据：（模拟项目中表单回显数据）</strong></p>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/22204390.jpg" alt=""></p>
+<p><strong>修改数据：（模拟项目中表单修改数据）修改了4项，点击修改，提交到后台</strong></p>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/93442222.jpg" alt=""></p>
+<p><strong>修改数据的操作记录</strong></p>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/70444357.jpg" alt=""></p>
+<p><strong>再来一次</strong></p>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/97567651.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/55753844.jpg" alt=""></p>
+<p><strong>显示操作记录</strong></p>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/3972531.jpg" alt=""></p>
+<h2 id="代码示例图"><a href="#代码示例图" class="headerlink" title="代码示例图"></a>代码示例图</h2><p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/51257277.jpg" alt=""><br>在属性上加入注解，指定属性的中文名。<br><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/95736222.jpg" alt=""><br>工具类中的代码，可以参照这套思路去扩展。<br><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/45014357.jpg" alt=""></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>代码已放到仓库中。<a href="https://github.com/denghuashan/OperateLog" target="_blank" rel="external">https://github.com/denghuashan/OperateLog</a></li>
+<li>欢迎指正或进行扩展。</li>
+</ul>
+
       
     </div>
 
     <div>
       
+        
+
+      
     </div>
 
     <div>
       
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/08/07/about-generics/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HuaShan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/20170622104033.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DreamMaker-HS">
-    </span>
-
-    
-      <header class="post-header">
-
         
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/08/07/about-generics/" itemprop="url">关于Java中泛型的认知与理解</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-08-07T09:59:56+08:00">
-                2017-08-07
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/08/07/about-generics/" class="leancloud_visitors" data-flag-title="关于Java中泛型的认知与理解">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  1,154 字
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>谢谢你请我吃糖果</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/image/weixinpay.png" alt="HuaShan WeChat Pay"/>
+          <p>微信打赏</p>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
       
       
-
-      
-        
-          
-          近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。
-为何会引入泛型public class Tools{
-    private Object obj;
-
-    public Object getObj() {
-  
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/08/07/about-generics/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/13/database-transaction/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HuaShan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/20170622104033.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DreamMaker-HS">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/13/database-transaction/" itemprop="url">关系型数据库的事务</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-13T21:06:23+08:00">
-                2017-07-13
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/07/13/database-transaction/" class="leancloud_visitors" data-flag-title="关系型数据库的事务">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  1,575 字
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/image/alipaypicture.png" alt="HuaShan Alipay"/>
+          <p>支付宝打赏</p>
         </div>
-      </header>
-    
+      
+    </div>
+  </div>
 
-    <div class="post-body" itemprop="articleBody">
 
       
-      
+    </div>
 
+    <div>
       
         
-          
-          事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。
-事务的四大特性（ACID）原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。一致性 Consistency：事务必须使数据库从一个一致性状
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/13/database-transaction/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      HuaShan
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://dhsmp.com/2017/09/14/operate-log/" title="表单修改的操作记录 OperateLog">http://dhsmp.com/2017/09/14/operate-log/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
 
-    <div>
-      
-    </div>
 
-    <div>
-      
-    </div>
-
-    <div>
       
     </div>
 
@@ -765,323 +524,38 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/11/mysql-optimize/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HuaShan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/20170622104033.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DreamMaker-HS">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/11/mysql-optimize/" itemprop="url">MySQL的性能优化</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-11T20:20:22+08:00">
-                2017-07-11
-              </time>
+              <a href="/2017/08/07/about-generics/" rel="next" title="关于Java中泛型的认知与理解">
+                <i class="fa fa-chevron-left"></i> 关于Java中泛型的认知与理解
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/07/11/mysql-optimize/" class="leancloud_visitors" data-flag-title="MySQL的性能优化">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  2,027 字
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-          MySQL的性能优化包括查询速度优化，更新速度优化，MySQL服务器优化等。如果是SQL查询很慢，可以开启MySQL的慢查询日志。通过慢查询日志，可以找出执行时间较长、执行效率较低的语句，然后进行优化。
-EXPLAIN分析通过EXPLAIN语句对查询语句进行分析，找出查询语句的执行瓶颈。上一章稍微介
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/11/mysql-optimize/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/10/mysql-index/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HuaShan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/20170622104033.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DreamMaker-HS">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/07/10/mysql-index/" itemprop="url">MySQL中InnoDB存储引擎的索引</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-10T11:48:00+08:00">
-                2017-07-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/07/10/mysql-index/" class="leancloud_visitors" data-flag-title="MySQL中InnoDB存储引擎的索引">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  1,662 字
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。
-存储
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2017/07/10/mysql-index/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
+    <div class="post-spread">
       
     </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-  </section>
-
-  
-  <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav>
-
+  </div>
 
 
           </div>
@@ -1089,6 +563,10 @@ EXPLAIN分析通过EXPLAIN语句对查询语句进行分析，找出查询语句
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -1108,8 +586,17 @@ EXPLAIN分析通过EXPLAIN语句对查询语句进行分析，找出查询语句
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/20170622104033.png"
@@ -1160,6 +647,22 @@ EXPLAIN分析通过EXPLAIN语句对查询语句进行分析，找出查询语句
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现思路"><span class="nav-number">1.</span> <span class="nav-text">实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例图"><span class="nav-number">2.</span> <span class="nav-text">示例图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例图"><span class="nav-number">3.</span> <span class="nav-text">代码示例图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -1288,10 +791,10 @@ EXPLAIN分析通过EXPLAIN语句对查询语句进行分析，找出查询语句
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 

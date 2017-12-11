@@ -116,12 +116,12 @@
 
 
 
-<meta name="description" content="数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。 为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。 List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进">
+<meta name="description" content="数组的缺陷 数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。 数组的第一个缺陷，在与其长度必须事先指定，且一旦定义就不能再更改。 数组的第二个缺陷，其存储的数据类型是固定的类型，单一类型数据的存储。为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Java的List、Set、Map容器">
 <meta property="og:url" content="http://dhsmp.com/2017/06/29/list-set-map/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。 为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。 List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进">
+<meta property="og:description" content="数组的缺陷 数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。 数组的第一个缺陷，在与其长度必须事先指定，且一旦定义就不能再更改。 数组的第二个缺陷，其存储的数据类型是固定的类型，单一类型数据的存储。为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/82341510.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/41498922.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/16727816.jpg">
@@ -145,10 +145,10 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/80262158.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/20130851.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/51456213.jpg">
-<meta property="og:updated_time" content="2017-07-04T07:17:29.945Z">
+<meta property="og:updated_time" content="2017-12-11T06:13:19.969Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的List、Set、Map容器">
-<meta name="twitter:description" content="数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。 为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。 List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进">
+<meta name="twitter:description" content="数组的缺陷 数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。 数组的第一个缺陷，在与其长度必须事先指定，且一旦定义就不能再更改。 数组的第二个缺陷，其存储的数据类型是固定的类型，单一类型数据的存储。为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。List中常用的容器该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引">
 <meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/82341510.jpg">
 
 
@@ -428,7 +428,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,290 字
+                  2,332 字
                 </span>
               
 
@@ -450,10 +450,10 @@
       
 
       
-        <p>数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。数组的缺陷在与长度固定，数据类型固定。集合可自动扩容。</p>
-<h2 id="为什么会出现这么多的容器呢？"><a href="#为什么会出现这么多的容器呢？" class="headerlink" title="为什么会出现这么多的容器呢？"></a>为什么会出现这么多的容器呢？</h2><p>因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。</p>
-<h2 id="List中常用的容器"><a href="#List中常用的容器" class="headerlink" title="List中常用的容器"></a>List中常用的容器</h2><p>该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进行判断是否为同相同元素，则需要重写equals()方法。</p>
-<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3><ul>
+        <h2 id="数组的缺陷"><a href="#数组的缺陷" class="headerlink" title="数组的缺陷"></a>数组的缺陷</h2><ul>
+<li>数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。</li>
+<li>数组的第一个缺陷，在与其长度必须事先指定，且一旦定义就不能再更改。</li>
+<li>数组的第二个缺陷，其存储的数据类型是固定的类型，单一类型数据的存储。<h2 id="为什么会出现这么多的容器呢？"><a href="#为什么会出现这么多的容器呢？" class="headerlink" title="为什么会出现这么多的容器呢？"></a>为什么会出现这么多的容器呢？</h2>因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。<h2 id="List中常用的容器"><a href="#List中常用的容器" class="headerlink" title="List中常用的容器"></a>List中常用的容器</h2>该容器体系存放元素是有序的，元素可以重复。因为该集合体系有索引。List集合判断元素是否相同，依据的是元素的equals()方法。如果需要依据自己的条件进行判断是否为同相同元素，则需要重写equals()方法。<h3 id="ArrayList"><a href="#ArrayList" class="headerlink" title="ArrayList"></a>ArrayList</h3></li>
 <li><strong>底层使用数组结构。elementData就是该集合存放数据的地方。分配的内存地址空间是连续的一片。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/82341510.jpg" alt=""></li>
 <li>特点：查询速度很快。但是增删稍慢。线程不安全。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/41498922.jpg" alt=""><br>拿着角标，即可获取到元素。就类似与现实生活中的门牌号。”去找到小明家”，这么多叫小明的，怎么找？”去找到小明家，他住XX街5号”。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/16727816.jpg" alt=""><br>在角标4的位子插入一个新元素，意味该角标位后面的所有元素都需要挪动一下。假设集合的容量很大，1000、10000、100000或者1000000（当然不能超过int的最大值），就这一个简单的操作，对内存的消耗是非常大的。删除也是同理。</li>
 <li><strong>自动扩容，每次都是把原来的数组复制进一个新数组中，新数组的长度增长量是原来的size的50%。</strong>看一下ArrayList的源码：<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/4804146.jpg" alt=""><br>自动扩容是发生在添加的时候。容量为当前size+1<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/65783057.jpg" alt=""><br>modCount这里不做详细说明，ConcurrentModificationException异常产生的原因就是因为它。如果size+1减去当前元素数组的长度大于0，则表示需要扩容。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/74902215.jpg" alt=""><br>第一个红线，新的容量为旧的容量加上旧的容量值右移一位。int数值的二进制右移一位，就是原来数值的一半。所以，扩容的增长量是原来的size的50%。第二个红线，调用Arrays.copyOf()方法。如下图，在原数组的基础上，新增一个数组。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/88781430.jpg" alt=""><h3 id="LinkedList"><a href="#LinkedList" class="headerlink" title="LinkedList"></a>LinkedList</h3></li>
@@ -842,7 +842,7 @@ TreeSet&lt;String&gt; ts=new TreeSet&lt;String&gt;(new Comparator&lt;Student&gt;
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么会出现这么多的容器呢？"><span class="nav-number">1.</span> <span class="nav-text">为什么会出现这么多的容器呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List中常用的容器"><span class="nav-number">2.</span> <span class="nav-text">List中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">2.1.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList"><span class="nav-number">2.2.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ListIterator"><span class="nav-number">2.3.</span> <span class="nav-text">ListIterator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现简单的队列"><span class="nav-number">3.</span> <span class="nav-text">实现简单的队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set中常用的容器"><span class="nav-number">4.</span> <span class="nav-text">Set中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet"><span class="nav-number">4.1.</span> <span class="nav-text">HashSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet是如何保证元素唯一性的呢？"><span class="nav-number">4.2.</span> <span class="nav-text">HashSet是如何保证元素唯一性的呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-number">4.3.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeSet"><span class="nav-number">4.4.</span> <span class="nav-text">TreeSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序重点，比较器或比较接口"><span class="nav-number">4.5.</span> <span class="nav-text">排序重点，比较器或比较接口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map中常用的容器"><span class="nav-number">5.</span> <span class="nav-text">Map中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式："><span class="nav-number">5.1.</span> <span class="nav-text">Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hashtable"><span class="nav-number">5.2.</span> <span class="nav-text">Hashtable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap"><span class="nav-number">5.3.</span> <span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeMap"><span class="nav-number">5.4.</span> <span class="nav-text">TreeMap</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#数组的缺陷"><span class="nav-number">1.</span> <span class="nav-text">数组的缺陷</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#为什么会出现这么多的容器呢？"><span class="nav-number">2.</span> <span class="nav-text">为什么会出现这么多的容器呢？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#List中常用的容器"><span class="nav-number">3.</span> <span class="nav-text">List中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#ArrayList"><span class="nav-number">3.1.</span> <span class="nav-text">ArrayList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#LinkedList"><span class="nav-number">3.2.</span> <span class="nav-text">LinkedList</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ListIterator"><span class="nav-number">3.3.</span> <span class="nav-text">ListIterator</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#实现简单的队列"><span class="nav-number">4.</span> <span class="nav-text">实现简单的队列</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Set中常用的容器"><span class="nav-number">5.</span> <span class="nav-text">Set中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet"><span class="nav-number">5.1.</span> <span class="nav-text">HashSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashSet是如何保证元素唯一性的呢？"><span class="nav-number">5.2.</span> <span class="nav-text">HashSet是如何保证元素唯一性的呢？</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#结论"><span class="nav-number">5.3.</span> <span class="nav-text">结论</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeSet"><span class="nav-number">5.4.</span> <span class="nav-text">TreeSet</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排序重点，比较器或比较接口"><span class="nav-number">5.5.</span> <span class="nav-text">排序重点，比较器或比较接口</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Map中常用的容器"><span class="nav-number">6.</span> <span class="nav-text">Map中常用的容器</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式："><span class="nav-number">6.1.</span> <span class="nav-text">Map集合的取值原理：将Map集合转成Set集合，再通过迭代器取出。取值的两种方式：</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Hashtable"><span class="nav-number">6.2.</span> <span class="nav-text">Hashtable</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HashMap"><span class="nav-number">6.3.</span> <span class="nav-text">HashMap</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TreeMap"><span class="nav-number">6.4.</span> <span class="nav-text">TreeMap</span></a></li></ol></li></ol></div>
             
 
           </div>

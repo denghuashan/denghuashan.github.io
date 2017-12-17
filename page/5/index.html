@@ -116,18 +116,15 @@
 
 
 
-<meta name="description" content="明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。 代码import java.io.InputStream; import java.io.PrintWriter; import java.lang.reflect.InvocationHandler">
-<meta property="og:type" content="article">
-<meta property="og:title" content="使用动态代理实现一个简单的数据库连接池">
-<meta property="og:url" content="http://dhsmp.com/2017/07/02/jdbc-pool/index.html">
+<meta name="description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta property="og:type" content="website">
+<meta property="og:title" content="DreamMaker-HS">
+<meta property="og:url" content="http://dhsmp.com/page/5/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。 代码import java.io.InputStream; import java.io.PrintWriter; import java.lang.reflect.InvocationHandler">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg">
-<meta property="og:updated_time" content="2017-07-02T13:48:30.573Z">
+<meta property="og:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用动态代理实现一个简单的数据库连接池">
-<meta name="twitter:description" content="明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。 代码import java.io.InputStream; import java.io.PrintWriter; import java.lang.reflect.InvocationHandler">
-<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg">
+<meta name="twitter:title" content="DreamMaker-HS">
+<meta name="twitter:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
 
 
 
@@ -155,13 +152,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/07/02/jdbc-pool/"/>
+  <link rel="canonical" href="http://dhsmp.com/page/5/"/>
 
 
 
 
 
-  <title>使用动态代理实现一个简单的数据库连接池 | DreamMaker-HS</title>
+  <title>DreamMaker-HS</title>
   
 
 
@@ -186,7 +183,9 @@
     
   
 
-  <div class="container sidebar-position-left page-post-detail ">
+  <div class="container sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -323,9 +322,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-
-  <div id="posts" class="posts-expand">
+  <section id="posts" class="posts-expand">
     
+      
 
   
 
@@ -334,7 +333,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/02/jdbc-pool/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/06/21/first-article/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -351,7 +350,9 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用动态代理实现一个简单的数据库连接池</h1>
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/21/first-article/" itemprop="url">记住让自己心动时刻</a></h1>
         
 
         <div class="post-meta">
@@ -363,8 +364,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T21:15:38+08:00">
-                2017-07-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-21T15:37:44+08:00">
+                2017-06-21
               </time>
             
 
@@ -381,7 +382,7 @@
 
           
           
-             <span id="/2017/07/02/jdbc-pool/" class="leancloud_visitors" data-flag-title="使用动态代理实现一个简单的数据库连接池">
+             <span id="/2017/06/21/first-article/" class="leancloud_visitors" data-flag-title="记住让自己心动时刻">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  708 字
+                  345 字
                 </span>
               
 
@@ -428,198 +429,33 @@
       
 
       
-        <p>明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>import java.io.InputStream;
-import java.io.PrintWriter;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
-import java.util.LinkedList;
-import java.util.Properties;
-import java.util.logging.Logger;
-import javax.sql.DataSource;
-
-public class JdbcPool implements DataSource {
-
-    //使用LinkedList集合,会使用到大量的增删改查
-    private static LinkedList&lt;Connection&gt; list = new LinkedList&lt;Connection&gt;();
-
-    static{
-        try{
-            //读取数据库连接的必要配置
-            InputStream in = JdbcPool.class.getClassLoader().getResourceAsStream(&quot;db.properties&quot;);
-            Properties prop = new Properties();
-            prop.load(in);
-            String driver= prop.getProperty(&quot;driver&quot;);
-            String url = prop.getProperty(&quot;url&quot;);
-            String username = prop.getProperty(&quot;username&quot;);
-            String password = prop.getProperty(&quot;password&quot;);
-            //加载驱动
-            Class.forName(driver);
-
-            //找数据要多少个链接,就循环多少次
-            for(int i=0;i&lt;10;i++){
-                Connection conn = DriverManager.getConnection(url, username, password);
-                //把链接存入集合中
-                System.out.println(&quot;获取到了链接:&quot;+conn);
-                list.add(conn);
-            }
-        }catch (Exception e) {
-            throw new ExceptionInInitializerError(e);
-        }
-    }
-
-    /*
-    1.写一个子类,覆盖close方法
-    2.写一个Connection的包装类,增强close方法
-    3.用动态代理,返回一个代理对象出去,拦截close方法的调用,对close方法进行增强
-
-     */
-    public Connection getConnection() throws SQLException {
-
-        //proxyConnection.commit()  proxyConnection.rollback
-        if(list.size()&gt;0){
-            final Connection conn = list.removeFirst();   //myconnection.commit
-            System.out.println(&quot;池大小是:&quot; + list.size());
-
-            //使用动态代理
-            return (Connection) Proxy.newProxyInstance(
-                    JdbcPool.class.getClassLoader(), 
-                    conn.getClass().getInterfaces(), 
-                    new InvocationHandler(){
-                @Override
-                public Object invoke(Object proxy, Method method, Object[] args)
-                        throws Throwable {
-                    if(!method.getName().equals(&quot;close&quot;)){
-                        return method.invoke(conn, args);
-                    }else{
-                        list.add(conn);
-                        System.out.println(conn + &quot;被还给池了！！&quot;);
-                        System.out.println(&quot;池大小为&quot; + list.size());
-                        return null;
-                    }
-                }
-            });
-
-        }else{
-            throw new RuntimeException(&quot;对不起，数据库忙&quot;);
-        }
-
-    }
-
-    @Override
-    public PrintWriter getLogWriter() throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public void setLogWriter(PrintWriter out) throws SQLException {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void setLoginTimeout(int seconds) throws SQLException {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public int getLoginTimeout() throws SQLException {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public boolean isWrapperFor(Class&lt;?&gt; iface) throws SQLException {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public Connection getConnection(String username, String password)
-            throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-}
-</code></pre><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>DataSource接口是必须要实现的，上面那些未实现的方法这里不做说明，都是DataSource接口中需要实现的方法。<strong>JdbcPool在加载进内存时候，就已经找数据库获取了10个数据库连接。getConnection()获取数据库连接，返回的就是Connection的一个代理对象出去。最终要做的事情是，拦截对close()方法的处理，当发现调用的是close()方法时，并不去执行释放连接，而是把连接返回到了LinkedList集合里面去了。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg" alt=""></p>
-
+        
+          
+          一直都想建立自己的个人博客站点。只是在近两个月付诸了行动。今天也能算是一个里程碑。顺便记录一下自己的感想，以及对自我的计划。把以前的笔记再总结分享出来。
+随想
+每天晚上8点到10点，都是自己的学习时间。看书、敲一些跟工作无关的代码。这事，每天都在坚持。不打算放弃它。
+一个大目标，我希望在十年后能成为
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/06/21/first-article/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
 
     <div>
       
-        
-
-      
     </div>
 
     <div>
       
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>谢谢你请我吃糖果</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/image/weixinpay.png" alt="HuaShan WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/image/alipaypicture.png" alt="HuaShan Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
-  </div>
-
-
-      
     </div>
 
     <div>
-      
-        
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      HuaShan
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2017/07/02/jdbc-pool/" title="使用动态代理实现一个简单的数据库连接池">http://dhsmp.com/2017/07/02/jdbc-pool/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-
-
       
     </div>
 
@@ -627,42 +463,25 @@ public class JdbcPool implements DataSource {
       
 
       
-      
+
       
 
       
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2017/07/02/design-pattern/" rel="next" title="装饰、代理设计模式">
-                <i class="fa fa-chevron-left"></i> 装饰、代理设计模式
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/03/factory-design/" rel="prev" title="工厂、策略、观察者设计模式">
-                工厂、策略、观察者设计模式 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
       
-
-      
+        <div class="post-eof"></div>
       
     </footer>
   </article>
 
 
+    
+  </section>
 
-    <div class="post-spread">
-      
-    </div>
-  </div>
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/4/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="space">&hellip;</span><a class="page-number" href="/page/4/">4</a><span class="page-number current">5</span>
+  </nav>
+
 
 
           </div>
@@ -670,10 +489,6 @@ public class JdbcPool implements DataSource {
 
 
           
-  <div class="comments" id="comments">
-    
-  </div>
-
 
         </div>
         
@@ -693,17 +508,8 @@ public class JdbcPool implements DataSource {
       
 
       
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目录
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            站点概览
-          </li>
-        </ul>
-      
 
-      <section class="site-overview sidebar-panel">
+      <section class="site-overview sidebar-panel sidebar-panel-active">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/20170622104033.png"
@@ -754,22 +560,6 @@ public class JdbcPool implements DataSource {
 
       </section>
 
-      
-      <!--noindex-->
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc">
-
-            
-              
-            
-
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li></ol></div>
-            
-
-          </div>
-        </section>
-      <!--/noindex-->
       
 
       
@@ -898,10 +688,10 @@ public class JdbcPool implements DataSource {
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-
+  
 
   
 

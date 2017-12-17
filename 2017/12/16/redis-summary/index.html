@@ -116,18 +116,34 @@
 
 
 
-<meta name="description" content="明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。 代码import java.io.InputStream; import java.io.PrintWriter; import java.lang.reflect.InvocationHandler">
+<meta name="description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 大量算法会拉低系统的运行速度，并且会消耗系统资源 在海量数据的增删改查时会显得无能为力，很可能会宕机 在海量数据环境下对数据表进行维护、扩展，也会变得无能为力例如：update product set cna">
 <meta property="og:type" content="article">
-<meta property="og:title" content="使用动态代理实现一个简单的数据库连接池">
-<meta property="og:url" content="http://dhsmp.com/2017/07/02/jdbc-pool/index.html">
+<meta property="og:title" content="redis的总结与回顾">
+<meta property="og:url" content="http://dhsmp.com/2017/12/16/redis-summary/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。 代码import java.io.InputStream; import java.io.PrintWriter; import java.lang.reflect.InvocationHandler">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg">
-<meta property="og:updated_time" content="2017-07-02T13:48:30.573Z">
+<meta property="og:description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 大量算法会拉低系统的运行速度，并且会消耗系统资源 在海量数据的增删改查时会显得无能为力，很可能会宕机 在海量数据环境下对数据表进行维护、扩展，也会变得无能为力例如：update product set cna">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/40941534.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/50559517.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/68840915.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/58240855.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/30177891.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/3039823.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/24933226.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/91327662.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/25163537.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/45080117.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/42130847.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/45206447.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/99156695.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/41605092.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/35379556.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/72603207.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/7326511.jpg">
+<meta property="og:updated_time" content="2017-12-17T15:14:56.206Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="使用动态代理实现一个简单的数据库连接池">
-<meta name="twitter:description" content="明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。 代码import java.io.InputStream; import java.io.PrintWriter; import java.lang.reflect.InvocationHandler">
-<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg">
+<meta name="twitter:title" content="redis的总结与回顾">
+<meta name="twitter:description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 大量算法会拉低系统的运行速度，并且会消耗系统资源 在海量数据的增删改查时会显得无能为力，很可能会宕机 在海量数据环境下对数据表进行维护、扩展，也会变得无能为力例如：update product set cna">
+<meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/40941534.jpg">
 
 
 
@@ -155,13 +171,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/07/02/jdbc-pool/"/>
+  <link rel="canonical" href="http://dhsmp.com/2017/12/16/redis-summary/"/>
 
 
 
 
 
-  <title>使用动态代理实现一个简单的数据库连接池 | DreamMaker-HS</title>
+  <title>redis的总结与回顾 | DreamMaker-HS</title>
   
 
 
@@ -334,7 +350,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/02/jdbc-pool/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/12/16/redis-summary/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -351,7 +367,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">使用动态代理实现一个简单的数据库连接池</h1>
+          <h1 class="post-title" itemprop="name headline">redis的总结与回顾</h1>
         
 
         <div class="post-meta">
@@ -363,8 +379,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T21:15:38+08:00">
-                2017-07-02
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-12-16T11:32:28+08:00">
+                2017-12-16
               </time>
             
 
@@ -381,7 +397,7 @@
 
           
           
-             <span id="/2017/07/02/jdbc-pool/" class="leancloud_visitors" data-flag-title="使用动态代理实现一个简单的数据库连接池">
+             <span id="/2017/12/16/redis-summary/" class="leancloud_visitors" data-flag-title="redis的总结与回顾">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -406,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  708 字
+                  2,568 字
                 </span>
               
 
@@ -428,140 +444,48 @@
       
 
       
-        <p>明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>import java.io.InputStream;
-import java.io.PrintWriter;
-import java.lang.reflect.InvocationHandler;
-import java.lang.reflect.Method;
-import java.lang.reflect.Proxy;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
-import java.sql.SQLFeatureNotSupportedException;
-import java.util.LinkedList;
-import java.util.Properties;
-import java.util.logging.Logger;
-import javax.sql.DataSource;
-
-public class JdbcPool implements DataSource {
-
-    //使用LinkedList集合,会使用到大量的增删改查
-    private static LinkedList&lt;Connection&gt; list = new LinkedList&lt;Connection&gt;();
-
-    static{
-        try{
-            //读取数据库连接的必要配置
-            InputStream in = JdbcPool.class.getClassLoader().getResourceAsStream(&quot;db.properties&quot;);
-            Properties prop = new Properties();
-            prop.load(in);
-            String driver= prop.getProperty(&quot;driver&quot;);
-            String url = prop.getProperty(&quot;url&quot;);
-            String username = prop.getProperty(&quot;username&quot;);
-            String password = prop.getProperty(&quot;password&quot;);
-            //加载驱动
-            Class.forName(driver);
-
-            //找数据要多少个链接,就循环多少次
-            for(int i=0;i&lt;10;i++){
-                Connection conn = DriverManager.getConnection(url, username, password);
-                //把链接存入集合中
-                System.out.println(&quot;获取到了链接:&quot;+conn);
-                list.add(conn);
-            }
-        }catch (Exception e) {
-            throw new ExceptionInInitializerError(e);
-        }
-    }
-
-    /*
-    1.写一个子类,覆盖close方法
-    2.写一个Connection的包装类,增强close方法
-    3.用动态代理,返回一个代理对象出去,拦截close方法的调用,对close方法进行增强
-
-     */
-    public Connection getConnection() throws SQLException {
-
-        //proxyConnection.commit()  proxyConnection.rollback
-        if(list.size()&gt;0){
-            final Connection conn = list.removeFirst();   //myconnection.commit
-            System.out.println(&quot;池大小是:&quot; + list.size());
-
-            //使用动态代理
-            return (Connection) Proxy.newProxyInstance(
-                    JdbcPool.class.getClassLoader(), 
-                    conn.getClass().getInterfaces(), 
-                    new InvocationHandler(){
-                @Override
-                public Object invoke(Object proxy, Method method, Object[] args)
-                        throws Throwable {
-                    if(!method.getName().equals(&quot;close&quot;)){
-                        return method.invoke(conn, args);
-                    }else{
-                        list.add(conn);
-                        System.out.println(conn + &quot;被还给池了！！&quot;);
-                        System.out.println(&quot;池大小为&quot; + list.size());
-                        return null;
-                    }
-                }
-            });
-
-        }else{
-            throw new RuntimeException(&quot;对不起，数据库忙&quot;);
-        }
-
-    }
-
-    @Override
-    public PrintWriter getLogWriter() throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public void setLogWriter(PrintWriter out) throws SQLException {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public void setLoginTimeout(int seconds) throws SQLException {
-        // TODO Auto-generated method stub
-
-    }
-
-    @Override
-    public int getLoginTimeout() throws SQLException {
-        // TODO Auto-generated method stub
-        return 0;
-    }
-
-    @Override
-    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public &lt;T&gt; T unwrap(Class&lt;T&gt; iface) throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-    @Override
-    public boolean isWrapperFor(Class&lt;?&gt; iface) throws SQLException {
-        // TODO Auto-generated method stub
-        return false;
-    }
-
-    @Override
-    public Connection getConnection(String username, String password)
-            throws SQLException {
-        // TODO Auto-generated method stub
-        return null;
-    }
-
-}
-</code></pre><h2 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h2><p>DataSource接口是必须要实现的，上面那些未实现的方法这里不做说明，都是DataSource接口中需要实现的方法。<strong>JdbcPool在加载进内存时候，就已经找数据库获取了10个数据库连接。getConnection()获取数据库连接，返回的就是Connection的一个代理对象出去。最终要做的事情是，拦截对close()方法的处理，当发现调用的是close()方法时，并不去执行释放连接，而是把连接返回到了LinkedList集合里面去了。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-7-2/16826945.jpg" alt=""></p>
+        <h2 id="关系型数据库（Mysql、Oracle）"><a href="#关系型数据库（Mysql、Oracle）" class="headerlink" title="关系型数据库（Mysql、Oracle）"></a>关系型数据库（Mysql、Oracle）</h2><h3 id="优点"><a href="#优点" class="headerlink" title="优点"></a>优点</h3><ul>
+<li>数据之间有关系，进行数据的操作时非常方便。</li>
+<li>有事务操作，保证了数据的完整性。<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3></li>
+<li>因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。</li>
+<li>大量算法会拉低系统的运行速度，并且会消耗系统资源</li>
+<li>在海量数据的增删改查时会显得无能为力，很可能会宕机</li>
+<li>在海量数据环境下对数据表进行维护、扩展，也会变得无能为力<br>例如：<br>update product set cname = ‘手机数码’;//修改所有数据<br>把商品表的cname字段，由varchar(64),char(100);//更改表字段属性<h2 id="非关系型数据库（NoSQL）"><a href="#非关系型数据库（NoSQL）" class="headerlink" title="非关系型数据库（NoSQL）"></a>非关系型数据库（NoSQL）</h2>No不是单词no，是not only的缩写。设计之初是为了替代关系型数据库。足见其野心。<h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3></li>
+<li>海量数据的增删改查，非常轻松</li>
+<li>海量数据的维护非常轻松<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3></li>
+<li>数据与数据之间没有关系，所以不能一目了然</li>
+<li>没有强大的事务，保证数据的完整和安全<h2 id="redis概述"><a href="#redis概述" class="headerlink" title="redis概述"></a>redis概述</h2>key-value结构的数据，类似Java中的Map，默认占用6379端口。共有5钟数据类型。string、hash、list、set、有序的set集合。<h2 id="redis在Linux中的安装"><a href="#redis在Linux中的安装" class="headerlink" title="redis在Linux中的安装"></a>redis在Linux中的安装</h2></li>
+</ul>
+<ol>
+<li>redis是C语言开发，编译依赖gcc环境，需检查Linux环境是否有安装gcc<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/40941534.jpg" alt=""><br>如果提示”bash: gcc: command not found”，则需要安装gcc环境。<br>命令：yum install gcc-c++<br>如果提示是否下载，输入y。<br>如果提示是否安装，输入y。</li>
+<li>把redis的压缩文件上传至Linux服务器，解压的文件目录并进行编译<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/50559517.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/68840915.jpg" alt=""></li>
+<li>执行安装<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/58240855.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/30177891.jpg" alt=""></li>
+<li>拷贝配置文件至安装目录中<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/3039823.jpg" alt=""><br><strong>redis启动需要一个配置文件，可以修改端口号等配置。如果没有配置文件redis也可以启动，启用的是默认配置，不方修改端口号等配置。</strong></li>
+<li>bin文件夹下的文件<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/24933226.jpg" alt=""><br><strong>redis-benchmark        —-性能测试工具<br>redis-check-aof        —-AOF文件修复工具<br>redis-check-dump    —-RDB文件检查工具（快照持久化文件）<br>redis-cli            —-命令行客户端<br>redis-server        —-redis服务器启动命令</strong></li>
+<li>前端启动服务<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/91327662.jpg" alt=""><br><strong>该启动方式有硬伤：无法进行集群部署</strong></li>
+<li>连接redis<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/25163537.jpg" alt=""><br><strong>可以在上图的命令中加入参数 -h ip地址 -p 端口进行指定连接</strong></li>
+<li>后端启动服务<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/45080117.jpg" alt=""><br>修改redis.conf配置文件的daemonize为yes即可<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/42130847.jpg" alt=""><br>如果无法启动修改配置supervised yes为supervised no。按上图进行后端启动。<h2 id="redis的5种数据类型"><a href="#redis的5种数据类型" class="headerlink" title="redis的5种数据类型"></a>redis的5种数据类型</h2><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/45206447.jpg" alt=""><h3 id="String"><a href="#String" class="headerlink" title="String"></a>String</h3>字符串类型是redis中最为基础、常用的数据存储类型，<strong>它在redis中是二进制安全的</strong>，value最多可以容纳的数据长度是512M。<br>二进制安全和数据安全是没有关系的。<br>关系型数据库，二进制是不安全的。会出现乱码丢失数据。<br>以MySQL为例，它能指定数据的存储的字符集。服务器在拿到表中的数据时，很可能因为解码的码表不一致，导致出现数据的乱码。<br>redis直接存储的二进制数据，不会对数据再进行编解码操作。<h4 id="常用的命令"><a href="#常用的命令" class="headerlink" title="常用的命令"></a>常用的命令</h4>set key value：赋值、修改操作，key相同则覆盖，新值覆盖旧值。<br>del key：删除成功返回1（integer），key不存在返回0（integer）<br>getset key value：先取后赋值<br>incr key：递增1，非数字则报错<br>decr key：递减1，非数字则报错<br>append key value：类似StringBuffer的append<br>incrby key number：递增指定的数值<br>decrby key number：递减指定的数值</li>
+</ol>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/99156695.jpg" alt=""></p>
+<h3 id="hash"><a href="#hash" class="headerlink" title="hash"></a>hash</h3><p>hash类型可以看成是具有String key和String value的map容器。非常适合于存储值对象的信息。占用的磁盘空间极少。其表现形式是{uname:”zhangsna”,age:”19”,sex:”man”}</p>
+<h4 id="常用的命令-1"><a href="#常用的命令-1" class="headerlink" title="常用的命令"></a>常用的命令</h4><p>hset key field value：赋值操作，为key的某个字段赋值。<br>hset key field value [field2 value2 …]：为key的多个字段进行赋值。<br>hmget key field1 field2 …：获取key中多个field的值<br>hgetall key：获取key中所有的filed-value<br>del key：删除整个hash<br>hkeys key：获取key所有的filed<br>hvals key：获取key所有的value</p>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/41605092.jpg" alt=""></p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>链表结构，redis的操作中，最多的操作就是进行元素的增删，它的使用环境是做大数据集合的增删、任务队列。可查看<a href="http://dhsmp.com/2017/06/29/list-set-map/">《Java的List、Set、Map容器》</a>一文</p>
+<h4 id="常用的命令-2"><a href="#常用的命令-2" class="headerlink" title="常用的命令"></a>常用的命令</h4><p>lpush key value [value2 …]：赋值，从左侧开始添加（每次添加都是从左侧开始）<br>rpush key value [value2 …]：赋值，从右侧开始添加（每次添加都是从右侧开始）<br>lrange key start end：获取key链表中从start到end的元素值（含头又含尾）。start为0，end为-1时，表示取整个链表的元素值。<br>lpop key：从左侧开始删除<br>rpop key：从右侧开始删除<br>llen key：返回指定的key关联的链表中元素数量<br>rpoplpush source destination：将链表中的尾部元素弹出并添加到头部（循环）</p>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/35379556.jpg" alt=""></p>
+<h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>在redis中，可以将set类型看作为没有排序的字符集合。set可包含的最大元素数量是4294967295。set集合中不允许出现重复的元素，可在服务端完成多个set之间的聚合计算操作。效率极高。</p>
+<h4 id="常用的命令-3"><a href="#常用的命令-3" class="headerlink" title="常用的命令"></a>常用的命令</h4><p>sadd key value [value2 …]：赋值<br>smembers key：获取set集合key中所有的成员<br>sismember key member：判断参数中指定的成员是否在该set中，返回1表示存在、0表示不存在<br>srem key member [member2 …]：删除set中指定的成员<br>sdiff key1 key2 …：返回key1与key2中相差的成员，而且与key的顺序有关。返回差集<br>sinter key1 key2 …：返回交集<br>sunion key1 key2 …：返回并集<br>scard key：获取set集合key中成员的数量<br>srandmember key：随机返回set中的一个成员<br>sdiffstore destination key1 key2 …：将返回的差集成员存储在destination上<br>sunionstore destination key1 key2 …：将返回的差集成员存储在destination上</p>
+<h3 id="有序set"><a href="#有序set" class="headerlink" title="有序set"></a>有序set</h3><p>有序，不重复。在集合元素上分配分数，每个元素都需要手动赋予一个分数。</p>
+<h4 id="常用的命令-4"><a href="#常用的命令-4" class="headerlink" title="常用的命令"></a>常用的命令</h4><p>zadd key score member score2 member …：赋值<br>zscore key member：返回指定成员的分数<br>zrange key start end [withscores]：获取集合中角标为start-end的成员，分数由小到大<br>zrevrange key start end [withscores]：获取集合中角标为start-end的成员，分数由大到小<br>zrem key member [member2 …]：移除集合中指定的成员<br>zremrangebyrank key start stop：按照排名范围删除元素<br>zremrangebyscore key min max：按照分数范围删除元素<br>zcount key min max：获取分数在min-max之间的成员<br>zrank key member：返回成员在集合中排名，索引从小到大<br>zrevrank key member：返回成员在集合中的排序，索引从大到小</p>
+<h2 id="通用命令"><a href="#通用命令" class="headerlink" title="通用命令"></a>通用命令</h2><p>keys *：*号表示0个或多个任意字符<br>keys ?：?号表示1个字符（任意）<br>del key1 key2 …：删除对应的key<br>exists key：判断key是否存在，1表示存在，0表示不存在<br>rename key newkey：为key重命名<br>type key：获取指定key的值类型<br>expire key：设置key的生存时间<br>ttl key：查看key所剩的超时时间。如果没有设置超时，返回-1。如果返回-2，表示超时不存在。<br>quit：退出客户端<br>dbsize：返回当前数据库中key的数目<br>info：查看redis的信息</p>
+<h2 id="消息订阅与发布"><a href="#消息订阅与发布" class="headerlink" title="消息订阅与发布"></a>消息订阅与发布</h2><p>subscribe channel：订阅频道<br>psubscribe channel*：批量订阅频道，*是通配符，订阅以channel部分的值为开头的频道<br>publish channel content：在指定的频道中发布消息</p>
+<h2 id="多数据库"><a href="#多数据库" class="headerlink" title="多数据库"></a>多数据库</h2><p>redis默认有16个数据库，名称从0、1、2…15。在redis上所做的所有数据操作，默认在0号数据库上操作的。命令config get databases可查看数据的个数。<strong>数据库和数据库之间，是不能共享键值对。</strong>命令select 数据库名，切换数据库。move key dbname：将当前库的key移植到指定的数据库中。flushdb，清空当前数据库。flushall，清空redis服务器的数据。</p>
+<h2 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h2><p>关系型数据库的事务，是为了保证数据的完整性、保证数据安全。可查看<a href="http://dhsmp.com/2017/07/13/database-transaction/">《关系型数据库的事务》</a>一文。<br>redis的事务，是为了进行redis语句的批量执行。<br>multi：开启事务，用于标记事务的开始，其后执行的命令都将被存入命令队列。<br>exec：提交事务，执行批量化操作<br>discard：事务回滚，不执行批量化操作</p>
+<h2 id="redis的两种持久化策略"><a href="#redis的两种持久化策略" class="headerlink" title="redis的两种持久化策略"></a>redis的两种持久化策略</h2><h3 id="RDB"><a href="#RDB" class="headerlink" title="RDB"></a>RDB</h3><p>redis默认的持久化机制。安装目录下的dump.rdb文件。相当于照快照，保存的是一种状态。<br>优点：快照保存速度极快，还原数据速度极快。适用灾难备份。<br>缺点：小内存机器不适合使用。<br>RDB机制，符合要求就会照快照（随时随地启动），会占用一部分系统资源（突然的），很可能内存不足直接宕机。适用于内存<br>服务器正常关闭时，照快照。./bin/redis-cli shutdown<br>key满足一定条件，照快照。</p>
+<p>redis.conf的配置，第二列是时间（秒），第三列是发生变化的key的个数。达到，则会在时间到达后照快照。<br><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/72603207.jpg" alt=""></p>
+<h3 id="AOF"><a href="#AOF" class="headerlink" title="AOF"></a>AOF</h3><p>使用日志功能保存数据操作。默认AOF机制是关闭的。<strong>AOF操作，只会保存导致对应key发生变化的语句（增、删。改），保存的是语句不是数据。</strong>一个key在操作中可能出现10次的变化，如key保存的value变了，日志就会有对应的每次发生变化的语句。<br>优点：持续占用极少量的内存资源。<br>缺点：日志文件会特别大，不适用于灾难恢复。数据恢复效率远远低于RDB，适用于内存较小的计算机。</p>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/7326511.jpg" alt=""></p>
+<p>redis.conf文件中把appendonly no修改为appendonly yes，开启AOF机制<br>appendfsync always        –每修改同步，只要有key变化语句，就进行AOF保存数据。比较安全，浪费效率<br>appendfsync everysec    –每秒进行一次AOF保存数据。安全性低，节省系统资源（默认机制）<br>appendfsync no            –不同步，不进行任何持久化操作。不安全</p>
 
       
     </div>
@@ -611,7 +535,7 @@ public class JdbcPool implements DataSource {
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2017/07/02/jdbc-pool/" title="使用动态代理实现一个简单的数据库连接池">http://dhsmp.com/2017/07/02/jdbc-pool/</a>
+      <a href="http://dhsmp.com/2017/12/16/redis-summary/" title="redis的总结与回顾">http://dhsmp.com/2017/12/16/redis-summary/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -634,8 +558,8 @@ public class JdbcPool implements DataSource {
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/07/02/design-pattern/" rel="next" title="装饰、代理设计模式">
-                <i class="fa fa-chevron-left"></i> 装饰、代理设计模式
+              <a href="/2017/11/22/thoughts/" rel="next" title="云栖大会广东分会感想">
+                <i class="fa fa-chevron-left"></i> 云栖大会广东分会感想
               </a>
             
           </div>
@@ -643,10 +567,6 @@ public class JdbcPool implements DataSource {
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/07/03/factory-design/" rel="prev" title="工厂、策略、观察者设计模式">
-                工厂、策略、观察者设计模式 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -764,7 +684,7 @@ public class JdbcPool implements DataSource {
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#原理"><span class="nav-number">2.</span> <span class="nav-text">原理</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系型数据库（Mysql、Oracle）"><span class="nav-number">1.</span> <span class="nav-text">关系型数据库（Mysql、Oracle）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点"><span class="nav-number">1.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点"><span class="nav-number">1.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#非关系型数据库（NoSQL）"><span class="nav-number">2.</span> <span class="nav-text">非关系型数据库（NoSQL）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#优点-1"><span class="nav-number">2.1.</span> <span class="nav-text">优点</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#缺点-1"><span class="nav-number">2.2.</span> <span class="nav-text">缺点</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis概述"><span class="nav-number">3.</span> <span class="nav-text">redis概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis在Linux中的安装"><span class="nav-number">4.</span> <span class="nav-text">redis在Linux中的安装</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis的5种数据类型"><span class="nav-number">5.</span> <span class="nav-text">redis的5种数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#String"><span class="nav-number">5.1.</span> <span class="nav-text">String</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的命令"><span class="nav-number">5.1.1.</span> <span class="nav-text">常用的命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#hash"><span class="nav-number">5.2.</span> <span class="nav-text">hash</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的命令-1"><span class="nav-number">5.2.1.</span> <span class="nav-text">常用的命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#list"><span class="nav-number">5.3.</span> <span class="nav-text">list</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的命令-2"><span class="nav-number">5.3.1.</span> <span class="nav-text">常用的命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#set"><span class="nav-number">5.4.</span> <span class="nav-text">set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的命令-3"><span class="nav-number">5.4.1.</span> <span class="nav-text">常用的命令</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#有序set"><span class="nav-number">5.5.</span> <span class="nav-text">有序set</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#常用的命令-4"><span class="nav-number">5.5.1.</span> <span class="nav-text">常用的命令</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#通用命令"><span class="nav-number">6.</span> <span class="nav-text">通用命令</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#消息订阅与发布"><span class="nav-number">7.</span> <span class="nav-text">消息订阅与发布</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多数据库"><span class="nav-number">8.</span> <span class="nav-text">多数据库</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务"><span class="nav-number">9.</span> <span class="nav-text">事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#redis的两种持久化策略"><span class="nav-number">10.</span> <span class="nav-text">redis的两种持久化策略</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#RDB"><span class="nav-number">10.1.</span> <span class="nav-text">RDB</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#AOF"><span class="nav-number">10.2.</span> <span class="nav-text">AOF</span></a></li></ol></li></ol></div>
             
 
           </div>

@@ -116,12 +116,12 @@
 
 
 
-<meta name="description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 大量算法会拉低系统的运行速度，并且会消耗系统资源 在海量数据的增删改查时会显得无能为力，很可能会宕机 在海量数据环境下对数据表进行维护、扩展，也会变得无能为力例如：update product set cna">
+<meta name="description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 数据的存储与使用，访问量大时IO的资源消耗较大。 大量算法会拉低系统的运行速度，并且会消耗系统资源。 在海量数据的增删改查时会显得无能为力，很可能会宕机。 在海量数据环境下对数据表进行维护、扩展，也会变得无能">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis的总结与回顾">
 <meta property="og:url" content="http://dhsmp.com/2017/12/16/redis-summary/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 大量算法会拉低系统的运行速度，并且会消耗系统资源 在海量数据的增删改查时会显得无能为力，很可能会宕机 在海量数据环境下对数据表进行维护、扩展，也会变得无能为力例如：update product set cna">
+<meta property="og:description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 数据的存储与使用，访问量大时IO的资源消耗较大。 大量算法会拉低系统的运行速度，并且会消耗系统资源。 在海量数据的增删改查时会显得无能为力，很可能会宕机。 在海量数据环境下对数据表进行维护、扩展，也会变得无能">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/40941534.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/50559517.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/68840915.jpg">
@@ -139,10 +139,10 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/35379556.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/72603207.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/7326511.jpg">
-<meta property="og:updated_time" content="2017-12-17T15:22:05.936Z">
+<meta property="og:updated_time" content="2017-12-18T12:29:24.687Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="redis的总结与回顾">
-<meta name="twitter:description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 大量算法会拉低系统的运行速度，并且会消耗系统资源 在海量数据的增删改查时会显得无能为力，很可能会宕机 在海量数据环境下对数据表进行维护、扩展，也会变得无能为力例如：update product set cna">
+<meta name="twitter:description" content="关系型数据库（Mysql、Oracle）优点 数据之间有关系，进行数据的操作时非常方便。 有事务操作，保证了数据的完整性。缺点 因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。 数据的存储与使用，访问量大时IO的资源消耗较大。 大量算法会拉低系统的运行速度，并且会消耗系统资源。 在海量数据的增删改查时会显得无能为力，很可能会宕机。 在海量数据环境下对数据表进行维护、扩展，也会变得无能">
 <meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-12-17/40941534.jpg">
 
 
@@ -422,7 +422,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,565 字
+                  2,592 字
                 </span>
               
 
@@ -448,8 +448,9 @@
 <li>数据之间有关系，进行数据的操作时非常方便。</li>
 <li>有事务操作，保证了数据的完整性。<h3 id="缺点"><a href="#缺点" class="headerlink" title="缺点"></a>缺点</h3></li>
 <li>因为数据和数据之间有关系的，而这种关系是由底层大量算法所保证。</li>
-<li>大量算法会拉低系统的运行速度，并且会消耗系统资源</li>
-<li>在海量数据的增删改查时会显得无能为力，很可能会宕机</li>
+<li>数据的存储与使用，访问量大时IO的资源消耗较大。</li>
+<li>大量算法会拉低系统的运行速度，并且会消耗系统资源。</li>
+<li>在海量数据的增删改查时会显得无能为力，很可能会宕机。</li>
 <li>在海量数据环境下对数据表进行维护、扩展，也会变得无能为力<br>例如：<br>update product set cname = ‘手机数码’;//修改所有数据<br>把商品表的cname字段，由varchar(64),char(100);//更改表字段属性<h2 id="非关系型数据库（NoSQL）"><a href="#非关系型数据库（NoSQL）" class="headerlink" title="非关系型数据库（NoSQL）"></a>非关系型数据库（NoSQL）</h2>No不是单词no，是not only的缩写。设计之初是为了替代关系型数据库。足见其野心。<h3 id="优点-1"><a href="#优点-1" class="headerlink" title="优点"></a>优点</h3></li>
 <li>海量数据的增删改查，非常轻松</li>
 <li>海量数据的维护非常轻松<h3 id="缺点-1"><a href="#缺点-1" class="headerlink" title="缺点"></a>缺点</h3></li>
@@ -460,7 +461,7 @@
 <h3 id="hash"><a href="#hash" class="headerlink" title="hash"></a>hash</h3><p>hash类型可以看成是具有String key和String value的map容器。非常适合于存储值对象的信息。占用的磁盘空间极少。其表现形式是{uname:”zhangsna”,age:”19”,sex:”man”}</p>
 <h4 id="常用的命令-1"><a href="#常用的命令-1" class="headerlink" title="常用的命令"></a>常用的命令</h4><p>hset key field value：赋值操作，为key的某个字段赋值。<br>hset key field value [field2 value2 …]：为key的多个字段进行赋值。<br>hmget key field1 field2 …：获取key中多个field的值<br>hgetall key：获取key中所有的filed-value<br>del key：删除整个hash<br>hkeys key：获取key所有的filed<br>hvals key：获取key所有的value</p>
 <p><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/41605092.jpg" alt=""></p>
-<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>链表结构，redis的操作中，最多的操作就是进行元素的增删，它的使用环境是做大数据集合的增删、任务队列。可查看<a href="http://dhsmp.com/2017/06/29/list-set-map/">《Java的List、Set、Map容器》</a>一文</p>
+<h3 id="list"><a href="#list" class="headerlink" title="list"></a>list</h3><p>链表结构，redis的操作中，最多的操作就是进行元素的增删，它的使用环境是做大数据集合的增删、任务队列。关于链表结构，可查看<a href="http://dhsmp.com/2017/06/29/list-set-map/">《Java的List、Set、Map容器》</a>一文</p>
 <h4 id="常用的命令-2"><a href="#常用的命令-2" class="headerlink" title="常用的命令"></a>常用的命令</h4><p>lpush key value [value2 …]：赋值，从左侧开始添加（每次添加都是从左侧开始）<br>rpush key value [value2 …]：赋值，从右侧开始添加（每次添加都是从右侧开始）<br>lrange key start end：获取key链表中从start到end的元素值（含头又含尾）。start为0，end为-1时，表示取整个链表的元素值。<br>lpop key：从左侧开始删除<br>rpop key：从右侧开始删除<br>llen key：返回指定的key关联的链表中元素数量<br>rpoplpush source destination：将链表中的尾部元素弹出并添加到头部（循环）</p>
 <p><img src="http://orxmumro7.bkt.clouddn.com/17-12-17/35379556.jpg" alt=""></p>
 <h3 id="set"><a href="#set" class="headerlink" title="set"></a>set</h3><p>在redis中，可以将set类型看作为没有排序的字符集合。set可包含的最大元素数量是4294967295。set集合中不允许出现重复的元素，可在服务端完成多个set之间的聚合计算操作。效率极高。</p>
@@ -707,7 +708,13 @@
 
 <div class="powered-by">
 <i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
-    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+    总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    访问人数<span id="busuanzi_value_site_uv"></span>人次
 </span>
 </div>
 
@@ -722,6 +729,7 @@
     NexT.Muse
   </a>
 </div>
+
 
 <div class="theme-info">
   <div class="powered-by"></div>

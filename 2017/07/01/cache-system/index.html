@@ -116,22 +116,22 @@
 
 
 
-<meta name="description" content="之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。 代码跟注释如下public class CacheSystem {      public static void main(String[] args) {         CacheUtil cacheUtil">
+<meta name="description" content="之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。 代码跟注释如下12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
 <meta property="og:type" content="article">
 <meta property="og:title" content="使用ReentrantReadWriteLock实现一个简单的缓存原理">
 <meta property="og:url" content="http://dhsmp.com/2017/07/01/cache-system/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。 代码跟注释如下public class CacheSystem {      public static void main(String[] args) {         CacheUtil cacheUtil">
+<meta property="og:description" content="之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。 代码跟注释如下12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/41824102.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/84892823.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/24857576.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/7971953.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/84363510.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/56670130.jpg">
-<meta property="og:updated_time" content="2017-07-06T02:13:54.201Z">
+<meta property="og:updated_time" content="2018-01-26T02:27:28.020Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ReentrantReadWriteLock实现一个简单的缓存原理">
-<meta name="twitter:description" content="之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。 代码跟注释如下public class CacheSystem {      public static void main(String[] args) {         CacheUtil cacheUtil">
+<meta name="twitter:description" content="之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。 代码跟注释如下12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
 <meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/41824102.jpg">
 
 
@@ -411,7 +411,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  492 字
+                  493 字
                 </span>
               
 
@@ -434,66 +434,8 @@
 
       
         <p>之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。</p>
-<h2 id="代码跟注释如下"><a href="#代码跟注释如下" class="headerlink" title="代码跟注释如下"></a>代码跟注释如下</h2><pre><code>public class CacheSystem {
-
-    public static void main(String[] args) {
-        CacheUtil cacheUtil = new CacheUtil();
-        cacheUtil.getObject(&quot;1&quot;);
-    }
-}
-
-class CacheUtil {
-    // 本地存放缓存对象的集合
-    private Map&lt;String, Object&gt; cacheMap = new HashMap&lt;String, Object&gt;();
-    // 读写锁
-    private ReadWriteLock rwl = new ReentrantReadWriteLock();
-
-    // 获取数据
-    public Object getObject(String id) {
-        // 先上读锁
-        rwl.readLock().lock();
-        Object object = null;
-        try {
-            object = cacheMap.get(id);
-            if (null == object) {
-                // 发现缓存集合中没有数据，释放读锁
-                rwl.readLock().unlock();
-                // 上写锁
-                rwl.writeLock().lock();
-                try {
-                    if (null == object) {
-                        object = &quot;往数据库查询出数据&quot;;
-                        cacheMap.put(id, object);
-                    }
-                } finally {
-                    rwl.writeLock().unlock();
-                    System.out.println(&quot;写锁释放了！&quot;);
-                }
-                // 重新上读锁
-                System.out.println(&quot;重新上读锁了！&quot;);
-                rwl.readLock().lock();
-            }
-
-        } finally {
-            System.out.println(&quot;读锁释放了！&quot;);
-            rwl.readLock().unlock();
-        }
-        return object;
-    }
-
-    // 更新数据
-    public void updateObject(Object obj) {
-        //获取更新对象的ID
-        String id = &quot;1&quot;;//伪代码obj.getId();
-        Object object = getObject(id);
-        //缓存中有数据，避免数据不一致。清空缓存保存的数据
-        if(null != object){
-            cacheMap.remove(id);
-        }
-        System.out.println(&quot;更新数据库中数据&quot;);
-    }
-}
-</code></pre><h2 id="mybatis中的缓存"><a href="#mybatis中的缓存" class="headerlink" title="mybatis中的缓存"></a>mybatis中的缓存</h2><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/41824102.jpg" alt=""></p>
+<h2 id="代码跟注释如下"><a href="#代码跟注释如下" class="headerlink" title="代码跟注释如下"></a>代码跟注释如下</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">CacheSystem</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		CacheUtil cacheUtil = <span class="keyword">new</span> CacheUtil();</div><div class="line">		cacheUtil.getObject(<span class="string">"1"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">CacheUtil</span> </span>&#123;</div><div class="line">	<span class="comment">// 本地存放缓存对象的集合</span></div><div class="line">	<span class="keyword">private</span> Map&lt;String, Object&gt; cacheMap = <span class="keyword">new</span> HashMap&lt;String, Object&gt;();</div><div class="line">	<span class="comment">// 读写锁</span></div><div class="line">	<span class="keyword">private</span> ReadWriteLock rwl = <span class="keyword">new</span> ReentrantReadWriteLock();</div><div class="line"></div><div class="line">	<span class="comment">// 获取数据</span></div><div class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">getObject</span><span class="params">(String id)</span> </span>&#123;</div><div class="line">		<span class="comment">// 先上读锁</span></div><div class="line">		rwl.readLock().lock();</div><div class="line">		Object object = <span class="keyword">null</span>;</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			object = cacheMap.get(id);</div><div class="line">			<span class="keyword">if</span> (<span class="keyword">null</span> == object) &#123;</div><div class="line">				<span class="comment">// 发现缓存集合中没有数据，释放读锁</span></div><div class="line">				rwl.readLock().unlock();</div><div class="line">				<span class="comment">// 上写锁</span></div><div class="line">				rwl.writeLock().lock();</div><div class="line">				<span class="keyword">try</span> &#123;</div><div class="line">					<span class="keyword">if</span> (<span class="keyword">null</span> == object) &#123;</div><div class="line">						object = <span class="string">"往数据库查询出数据"</span>;</div><div class="line">						cacheMap.put(id, object);</div><div class="line">					&#125;</div><div class="line">				&#125; <span class="keyword">finally</span> &#123;</div><div class="line">					rwl.writeLock().unlock();</div><div class="line">					System.out.println(<span class="string">"写锁释放了！"</span>);</div><div class="line">				&#125;</div><div class="line">				<span class="comment">// 重新上读锁</span></div><div class="line">				System.out.println(<span class="string">"重新上读锁了！"</span>);</div><div class="line">				rwl.readLock().lock();</div><div class="line">			&#125;</div><div class="line"></div><div class="line">		&#125; <span class="keyword">finally</span> &#123;</div><div class="line">			System.out.println(<span class="string">"读锁释放了！"</span>);</div><div class="line">			rwl.readLock().unlock();</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> object;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 更新数据</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">updateObject</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line">		<span class="comment">//获取更新对象的ID</span></div><div class="line">		String id = <span class="string">"1"</span>;<span class="comment">//伪代码obj.getId();</span></div><div class="line">		Object object = getObject(id);</div><div class="line">		<span class="comment">//缓存中有数据，避免数据不一致。清空缓存保存的数据</span></div><div class="line">		<span class="keyword">if</span>(<span class="keyword">null</span> != object)&#123;</div><div class="line">			cacheMap.remove(id);</div><div class="line">		&#125;</div><div class="line">		System.out.println(<span class="string">"更新数据库中数据"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="mybatis中的缓存"><a href="#mybatis中的缓存" class="headerlink" title="mybatis中的缓存"></a>mybatis中的缓存</h2><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/41824102.jpg" alt=""></p>
 <ul>
 <li>一级缓存是SqlSession级别的缓存。在操作数据库时需要构造 sqlSession对象，在对象中有一个数据结构（HashMap）用于存储缓存数据。不同的sqlSession之间的缓存数据区域（HashMap）是互相不影响的。</li>
 <li>二级缓存是mapper级别的缓存，多个SqlSession去操作同一个Mapper的sql语句，多个SqlSession可以共用二级缓存，二级缓存是跨SqlSession的。<strong>二级缓存是以namespace来划分的，一个namespace有一个二级缓存。</strong><h3 id="一级缓存工作原理"><a href="#一级缓存工作原理" class="headerlink" title="一级缓存工作原理"></a>一级缓存工作原理</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/84892823.jpg" alt=""><br>查询时会创建一个唯一的Key。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/24857576.jpg" alt=""><br>查询缓存Map中是否有对象<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/7971953.jpg" alt=""><br>更新时，执行删除缓存数据<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/84363510.jpg" alt=""><h3 id="一级缓存实现类PerpetualCache类"><a href="#一级缓存实现类PerpetualCache类" class="headerlink" title="一级缓存实现类PerpetualCache类"></a>一级缓存实现类PerpetualCache类</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/56670130.jpg" alt=""><h2 id="二级缓存需要单独配置，不做过多说明"><a href="#二级缓存需要单独配置，不做过多说明" class="headerlink" title="二级缓存需要单独配置，不做过多说明"></a>二级缓存需要单独配置，不做过多说明</h2>mybatis提供了Cache接口，可对接不同的缓存厂商。如redis、memcached、ehcache。</li>
@@ -749,8 +691,8 @@ class CacheUtil {
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-/image/20170622104033.png"></i>
   </span>

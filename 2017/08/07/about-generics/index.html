@@ -116,21 +116,21 @@
 
 
 
-<meta name="description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Ob">
+<meta name="description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型12345678910111213141516171819public class Tools&amp;#123;	private Object obj;	public Object getObj() &amp;#123;		return obj;	&amp;#125;	pu">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关于Java中泛型的认知与理解">
 <meta property="og:url" content="http://dhsmp.com/2017/08/07/about-generics/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Ob">
+<meta property="og:description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型12345678910111213141516171819public class Tools&amp;#123;	private Object obj;	public Object getObj() &amp;#123;		return obj;	&amp;#125;	pu">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/66448767.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/63360097.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/99826172.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/42285503.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/25281453.jpg">
-<meta property="og:updated_time" content="2017-08-09T15:35:50.522Z">
+<meta property="og:updated_time" content="2018-01-26T02:26:00.318Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关于Java中泛型的认知与理解">
-<meta name="twitter:description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型public class Tools{     private Object obj;      public Object getObj() {         return obj;     }      public void setObj(Ob">
+<meta name="twitter:description" content="近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。 为何会引入泛型12345678910111213141516171819public class Tools&amp;#123;	private Object obj;	public Object getObj() &amp;#123;		return obj;	&amp;#125;	pu">
 <meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-8-9/66448767.jpg">
 
 
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,154 字
+                  1,160 字
                 </span>
               
 
@@ -433,92 +433,15 @@
 
       
         <p>近期看了《深入理解Java虚拟机》中对语法糖、泛型（称伪泛型）的一些介绍，顺便总结梳理一下以前对JDK1.5引入的泛型的理解与使用。</p>
-<h2 id="为何会引入泛型"><a href="#为何会引入泛型" class="headerlink" title="为何会引入泛型"></a>为何会引入泛型</h2><pre><code>public class Tools{
-    private Object obj;
-
-    public Object getObj() {
-        return obj;
-    }
-
-    public void setObj(Object obj) {
-        this.obj = obj;
-    }
-
-    public static void main(String[] args) {
-        Tools tools = new Tools();
-        tools.setObj(&quot;这是Object&quot;);
-        Object obj2 = tools.getObj();
-        Integer i = (Integer) obj2;
-        System.out.println(i);
-    }
-}
-</code></pre><p><strong>上面这段代码，稍微有点经验，都知道会抛异常java.lang.ClassCastException。但是抛异常的时机却是在运行期。JVM在编译这段代码时，是可以通过的。tools.getObj()获取到对象时，需要程序员手动进行类型转换。这是早期关于Object做法。所以，泛型有了它的用武之地。</strong></p>
-<h2 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h2><pre><code>public class Utils&lt;T&gt; {
-    private T t;
-
-    public void setObject(T t) {
-        this.t = t;
-    }
-
-    public T getObject() {
-        return t;
-    }
-
-    public static void main(String[] args) {
-        Utils&lt;Singer&gt; utils1 = new Utils&lt;Singer&gt;();
-        utils1.setObject(new Singer());
-        Singer s = utils1.getObject();
-    }
-}
-
-class Singer {
-
-}
-
-class Worker {
-
-}
-</code></pre><p><strong>utils1.getObject()时不用进行类型强转。因为它的类型是在new Utils<singer>()时就已经确定了。</singer></strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/66448767.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/63360097.jpg" alt=""><br><strong>直接在编译期就进行了安全提示。</strong></p>
-<h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><pre><code>public class Demo {
-    // 泛型方法
-    public &lt;T&gt; void show(T t) {
-        System.out.println(&quot;show:::&quot; + t);
-    }
-
-    public static void main(String[] args) {
-        Demo demo = new Demo();
-        demo.show(&quot;haha&quot;);
-        demo.show(new Tools());
-    }
-}
-</code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/99826172.jpg" alt=""></p>
+<h2 id="为何会引入泛型"><a href="#为何会引入泛型" class="headerlink" title="为何会引入泛型"></a>为何会引入泛型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Tools</span></span>&#123;</div><div class="line">	<span class="keyword">private</span> Object obj;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">getObj</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> obj;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setObj</span><span class="params">(Object obj)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.obj = obj;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Tools tools = <span class="keyword">new</span> Tools();</div><div class="line">		tools.setObj(<span class="string">"这是Object"</span>);</div><div class="line">		Object obj2 = tools.getObj();</div><div class="line">		Integer i = (Integer) obj2;</div><div class="line">		System.out.println(i);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>上面这段代码，稍微有点经验，都知道会抛异常java.lang.ClassCastException。但是抛异常的时机却是在运行期。JVM在编译这段代码时，是可以通过的。tools.getObj()获取到对象时，需要程序员手动进行类型转换。这是早期关于Object做法。所以，泛型有了它的用武之地。</strong></p>
+<h2 id="泛型类"><a href="#泛型类" class="headerlink" title="泛型类"></a>泛型类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Utils</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">	<span class="keyword">private</span> T t;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setObject</span><span class="params">(T t)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.t = t;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> T <span class="title">getObject</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> t;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Utils&lt;Singer&gt; utils1 = <span class="keyword">new</span> Utils&lt;Singer&gt;();</div><div class="line">		utils1.setObject(<span class="keyword">new</span> Singer());</div><div class="line">		Singer s = utils1.getObject();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Singer</span> </span>&#123;</div><div class="line">	</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Worker</span> </span>&#123;</div><div class="line"></div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>utils1.getObject()时不用进行类型强转。因为它的类型是在new Utils<singer>()时就已经确定了。</singer></strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/66448767.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/63360097.jpg" alt=""><br><strong>直接在编译期就进行了安全提示。</strong></p>
+<h2 id="泛型方法"><a href="#泛型方法" class="headerlink" title="泛型方法"></a>泛型方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</div><div class="line">	<span class="comment">// 泛型方法</span></div><div class="line">	<span class="keyword">public</span> &lt;T&gt; <span class="function"><span class="keyword">void</span> <span class="title">show</span><span class="params">(T t)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"show:::"</span> + t);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Demo demo = <span class="keyword">new</span> Demo();</div><div class="line">		demo.show(<span class="string">"haha"</span>);</div><div class="line">		demo.show(<span class="keyword">new</span> Tools());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/99826172.jpg" alt=""></p>
 <p><strong>泛型方法，它的类型是调用方法时，由实参决定的。</strong></p>
-<h2 id="泛型类，泛型方法"><a href="#泛型类，泛型方法" class="headerlink" title="泛型类，泛型方法"></a>泛型类，泛型方法</h2><pre><code>public class Demo&lt;T&gt; {
-    // 该方法跟着定义的泛型类走，固定类型
-    public void show(T t) {
-        System.out.println(&quot;show---&gt;&quot; + t);
-    }
-
-    // 泛型方法
-    public &lt;W&gt; void print(W w) {
-        System.out.println(&quot;print---&gt;&quot; + w);
-    }
-
-    // 静态泛型方法
-    public static &lt;Q&gt; void say(Q q) {
-        System.out.println(&quot;say---&gt;&quot; + q);
-    }
-
-    public static void main(String[] args) {
-        Demo&lt;String&gt; demo = new Demo&lt;String&gt;();
-        demo.show(&quot;haha1&quot;);
-        demo.print(2008);
-        demo.print(&quot;haha2&quot;);
-        Demo.say(3.1415926);
-        Demo.say(&quot;haha3&quot;);
-    }
-}
-</code></pre><p>实际运行结果如下：<br><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/42285503.jpg" alt=""><br><strong>show()方法的类型是跟着Demo上面定义的T走的，所以可以隐藏该方法的泛型。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/25281453.jpg" alt=""><br><strong>print()方法的类型是由实参决定的。</strong><br><strong>say()方法的类型也是由实参决定的。</strong></p>
+<h2 id="泛型类，泛型方法"><a href="#泛型类，泛型方法" class="headerlink" title="泛型类，泛型方法"></a>泛型类，泛型方法</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">	<span class="comment">// 该方法跟着定义的泛型类走，固定类型</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">show</span><span class="params">(T t)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"show---&gt;"</span> + t);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 泛型方法</span></div><div class="line">	<span class="keyword">public</span> &lt;W&gt; <span class="function"><span class="keyword">void</span> <span class="title">print</span><span class="params">(W w)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"print---&gt;"</span> + w);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="comment">// 静态泛型方法</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> &lt;Q&gt; <span class="function"><span class="keyword">void</span> <span class="title">say</span><span class="params">(Q q)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"say---&gt;"</span> + q);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		Demo&lt;String&gt; demo = <span class="keyword">new</span> Demo&lt;String&gt;();</div><div class="line">		demo.show(<span class="string">"haha1"</span>);</div><div class="line">		demo.print(<span class="number">2008</span>);</div><div class="line">		demo.print(<span class="string">"haha2"</span>);</div><div class="line">		Demo.say(<span class="number">3.1415926</span>);</div><div class="line">		Demo.say(<span class="string">"haha3"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>实际运行结果如下：<br><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/42285503.jpg" alt=""><br><strong>show()方法的类型是跟着Demo上面定义的T走的，所以可以隐藏该方法的泛型。</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-8-9/25281453.jpg" alt=""><br><strong>print()方法的类型是由实参决定的。</strong><br><strong>say()方法的类型也是由实参决定的。</strong></p>
 <h2 id="关于泛型的总结"><a href="#关于泛型的总结" class="headerlink" title="关于泛型的总结"></a>关于泛型的总结</h2><ul>
 <li>用于解决安全问题，是一个安全机制。类型安全机制。</li>
 <li>将运行时期出现的问题java.lang.ClassCastException转移到了编译期。</li>
@@ -528,61 +451,15 @@ class Worker {
 <li>泛型类定义的泛型，在整个类中有效。如果该泛型被方法使用，那么泛型类的对象在明确要操作的具体类型后，该方法要操作的数据类型就已经固定了。</li>
 <li>为了让不同的方法可以操作不同类型，而且类型不确定。那么可以将泛型定义在方法上。</li>
 <li>静态方法是不可以访问类上定义的泛型。如果静态方法操作的数据类型不确定，可以将泛型定义在该方法上。</li>
-<li><p>泛型类每次都是在建立对象时才会被明确，由对象带着类型去运行。</p>
-<h2 id="实际使用场景一"><a href="#实际使用场景一" class="headerlink" title="实际使用场景一"></a>实际使用场景一</h2><pre><code>public class WebUtils {
-
-    //把request中的数据封装到bean中
-    public static &lt;T&gt; T request2Bean(HttpServletRequest request,Class&lt;T&gt; clazz){
-        try{
-            T t = clazz.newInstance();
-            Enumeration e = request.getParameterNames();
-            while(e.hasMoreElements()){
-                String name= (String) e.nextElement();
-                String value = request.getParameter(name);
-                BeanUtils.setProperty(t, name, value);
-            }
-            return t;
-        }catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    4}
-}
-</code></pre><p><strong>使用静态泛型方法把request中的请求参数，通过反射+BeanUtils，直接封装成对象并返回。</strong></p>
-<h2 id="实际使用场景二"><a href="#实际使用场景二" class="headerlink" title="实际使用场景二"></a>实际使用场景二</h2><pre><code>public class DaoFactory {
-
-    private DaoFactory(){}
-    private static final DaoFactory instance = new DaoFactory();
-
-    public static DaoFactory getInstance(){
-        return instance;
-    }
-
-    public &lt;T&gt; T createDao(String className,Class&lt;T&gt; clazz){
-        try {
-            return (T) Class.forName(className).newInstance();
-        } catch (Exception e) {
-            throw new RuntimeException(e);
-        }
-    }
-
-}
-</code></pre><p><strong>使用工厂设计模式+泛型方法。</strong></p>
-<h2 id="实际使用场景三"><a href="#实际使用场景三" class="headerlink" title="实际使用场景三"></a>实际使用场景三</h2><pre><code>class BaseDao&lt;T&gt; {
-    // 把最共性的方法，抽取到该基类中来
-    public List&lt;T&gt; findAll() {
-        System.out.println(&quot;findAll---&gt;&quot;);
-        return new ArrayList&lt;T&gt;();
-    }
-}
-
-public class DemoDao extends BaseDao&lt;Demo&gt; {
-    public static void main(String[] args) {
-        DemoDao demoDao = new DemoDao();
-        System.out.println(demoDao.findAll());
-    }
-}
-</code></pre><p><strong>在new DemoDao的时候，DemoDao继承基类中的findAll()方法就明确是操作Demo这种类型的数据了。</strong></p>
-<h2 id="泛型中的通配符与限定（用于泛型扩展）"><a href="#泛型中的通配符与限定（用于泛型扩展）" class="headerlink" title="泛型中的通配符与限定（用于泛型扩展）"></a>泛型中的通配符与限定（用于泛型扩展）</h2></li>
+<li>泛型类每次都是在建立对象时才会被明确，由对象带着类型去运行。<h2 id="实际使用场景一"><a href="#实际使用场景一" class="headerlink" title="实际使用场景一"></a>实际使用场景一</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebUtils</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="comment">//把request中的数据封装到bean中</span></div><div class="line">	<span class="keyword">public</span> <span class="keyword">static</span> &lt;T&gt; <span class="function">T <span class="title">request2Bean</span><span class="params">(HttpServletRequest request,Class&lt;T&gt; clazz)</span></span>&#123;</div><div class="line">		<span class="keyword">try</span>&#123;</div><div class="line">			T t = clazz.newInstance();</div><div class="line">			Enumeration e = request.getParameterNames();</div><div class="line">			<span class="keyword">while</span>(e.hasMoreElements())&#123;</div><div class="line">				String name= (String) e.nextElement();</div><div class="line">				String value = request.getParameter(name);</div><div class="line">				BeanUtils.setProperty(t, name, value);</div><div class="line">			&#125;</div><div class="line">			<span class="keyword">return</span> t;</div><div class="line">		&#125;<span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p><strong>使用静态泛型方法把request中的请求参数，通过反射+BeanUtils，直接封装成对象并返回。</strong></p>
+<h2 id="实际使用场景二"><a href="#实际使用场景二" class="headerlink" title="实际使用场景二"></a>实际使用场景二</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DaoFactory</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">DaoFactory</span><span class="params">()</span></span>&#123;&#125;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> <span class="keyword">final</span> DaoFactory instance = <span class="keyword">new</span> DaoFactory();</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> DaoFactory <span class="title">getInstance</span><span class="params">()</span></span>&#123;</div><div class="line">		<span class="keyword">return</span> instance;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="keyword">public</span> &lt;T&gt; <span class="function">T <span class="title">createDao</span><span class="params">(String className,Class&lt;T&gt; clazz)</span></span>&#123;</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			<span class="keyword">return</span> (T) Class.forName(className).newInstance();</div><div class="line">		&#125; <span class="keyword">catch</span> (Exception e) &#123;</div><div class="line">			<span class="keyword">throw</span> <span class="keyword">new</span> RuntimeException(e);</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>使用工厂设计模式+泛型方法。</strong></p>
+<h2 id="实际使用场景三"><a href="#实际使用场景三" class="headerlink" title="实际使用场景三"></a>实际使用场景三</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">BaseDao</span>&lt;<span class="title">T</span>&gt; </span>&#123;</div><div class="line">	<span class="comment">// 把最共性的方法，抽取到该基类中来</span></div><div class="line">	<span class="function"><span class="keyword">public</span> List&lt;T&gt; <span class="title">findAll</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"findAll---&gt;"</span>);</div><div class="line">		<span class="keyword">return</span> <span class="keyword">new</span> ArrayList&lt;T&gt;();</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">DemoDao</span> <span class="keyword">extends</span> <span class="title">BaseDao</span>&lt;<span class="title">Demo</span>&gt; </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		DemoDao demoDao = <span class="keyword">new</span> DemoDao();</div><div class="line">		System.out.println(demoDao.findAll());</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p><strong>在new DemoDao的时候，DemoDao继承基类中的findAll()方法就明确是操作Demo这种类型的数据了。</strong></p>
+<h2 id="泛型中的通配符与限定（用于泛型扩展）"><a href="#泛型中的通配符与限定（用于泛型扩展）" class="headerlink" title="泛型中的通配符与限定（用于泛型扩展）"></a>泛型中的通配符与限定（用于泛型扩展）</h2><ul>
 <li>?通配符，可以理解为占位符。?表示不确定类型。T表示为具体类型，传什么就是什么类型。</li>
 <li>? extends E：表示可以接收E类型或者E类型的子类型。称为泛型的上限。</li>
 <li>? super E：表示可以接收E类型或者E类型的父类型。称为泛型的下限。</li>
@@ -838,8 +715,8 @@ public class DemoDao extends BaseDao&lt;Demo&gt; {
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-/image/20170622104033.png"></i>
   </span>

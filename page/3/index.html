@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  366 字
+                  367 字
                 </span>
               
 
@@ -432,10 +432,7 @@
         
           
           在这里贴一下有界阻塞队列的实现代码，总结一下自己的理解。
-代码public class BoundedBuffer {
-    //锁对象
-    final Lock lock = new ReentrantLock();
-    final Condition notFull = lock.ne
+代码12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849public class BoundedBuffer &#1
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -559,7 +556,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,369 字
+                  1,378 字
                 </span>
               
 
@@ -584,10 +581,7 @@
         
           
           这里贴一下以前对工厂、策略、观察者设计模式的代码实现。
-简单工厂设计模式//此工厂返回service的代理
-public class ServiceFactory {
-
-    private static final ServiceFactory instance = new ServiceFac
+简单工厂设计模式123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657585960616
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -711,7 +705,7 @@ public class ServiceFactory {
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  708 字
+                  709 字
                 </span>
               
 
@@ -736,8 +730,7 @@ public class ServiceFactory {
         
           
           明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。
-代码import java.io.InputStream;
-import java.io.Print
+代码123456789101112131415161718192021222324252627282
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -861,7 +854,7 @@ import java.io.Print
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,119 字
+                  1,121 字
                 </span>
               
 
@@ -1010,7 +1003,7 @@ import java.io.Print
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  492 字
+                  493 字
                 </span>
               
 
@@ -1035,9 +1028,7 @@ import java.io.Print
         
           
           之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。
-代码跟注释如下public class CacheSystem {
-
-    public static void 
+代码跟注释如下123456789101112131415161718192021222324252627282930
           ...
           <!--noindex-->
           <div class="post-button text-center">
@@ -1206,8 +1197,8 @@ import java.io.Print
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-/image/20170622104033.png"></i>
   </span>

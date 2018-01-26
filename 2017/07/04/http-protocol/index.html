@@ -127,7 +127,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-5/15865529.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-9/20851961.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-5/73718629.jpg">
-<meta property="og:updated_time" content="2017-07-09T12:18:12.603Z">
+<meta property="og:updated_time" content="2018-01-26T02:40:15.485Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HTTP协议详解与回顾">
 <meta name="twitter:description" content="HTTP（超文本传输协议）是一个基于请求与响应模式的、无状态的、应用层的协议，常基于TCP的连接方式，HTTP1.1版本中给出一种持续连接的机制，绝大多数的Web开发，都是构建在HTTP协议之上的Web应用。HTTP请求的有三次握手建立连接，四次挥手断开连接。最终都是为了进行可靠传输服务。这里不做过多说明，如有兴趣，请参阅《TCP/IP详解》三本神书。 HTTP协议的版本：HTTP/1.0、HT">
@@ -410,7 +410,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,436 字
+                  2,409 字
                 </span>
               
 
@@ -437,47 +437,18 @@
 <h2 id="HTTP协议的特点"><a href="#HTTP协议的特点" class="headerlink" title="HTTP协议的特点"></a>HTTP协议的特点</h2><h3 id="HTTP协议是无状态的"><a href="#HTTP协议是无状态的" class="headerlink" title="HTTP协议是无状态的"></a>HTTP协议是无状态的</h3><p>就是说每次HTTP请求都是独立的，任何两个请求之间没有什么必然的联系。但是在实际应用当中并不是完全这样的，引入了Cookie和Session机制来关联请求。</p>
 <h3 id="多次HTTP请求"><a href="#多次HTTP请求" class="headerlink" title="多次HTTP请求"></a>多次HTTP请求</h3><p>在客户端请求网页时多数情况下并不是一次请求就能成功的，服务端首先是响应HTML页面，然后浏览器收到响应之后发现HTML页面还引用了其他的资源，例如，CSS，JS文件，图片等等，还会自动发送HTTP请求这些需要的资源。现在的HTTP版本支持管道机制，可以同时请求和响应多个请求，大大提高了效率。</p>
 <h3 id="基于TCP协议"><a href="#基于TCP协议" class="headerlink" title="基于TCP协议"></a>基于TCP协议</h3><p>HTTP协议目的是规定客户端和服务端数据传输的格式和数据交互行为，并不负责数据传输的细节。底层是基于TCP实现的。现在使用的版本当中是默认持久连接的，也就是多次HTTP请求使用一个TCP连接。</p>
-<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><pre><code>public class TcpSever {
-
-    public static void main(String[] args) throws Exception {
-        ServerSocket ss = new ServerSocket(10000);
-        Socket s = ss.accept();
-        InputStream in = s.getInputStream();
-        byte[] by = new byte[1024];
-        int len = in.read(by);
-        System.out.println(new String(by, 0, len));
-    }
-}
-</code></pre><p>写一个简单的HTML文件，带一个form表单。</p>
-<h2 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h2><h3 id="get的请求方式"><a href="#get的请求方式" class="headerlink" title="get的请求方式"></a>get的请求方式</h3><pre><code>&lt;form action=&quot;http://127.0.0.1:10000&quot; method=&quot;get&quot;&gt;
-</code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg" alt=""><br>GET /?userName=jiujiu&amp;pass=123&amp;sex=nan&amp;hobby=sports&amp;country=CN<br>&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5 HTTP/1.1<br>Accept: text/html, application/xhtml+xml, <em>/</em><br>Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3<br>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>Accept-Encoding: gzip, deflate<br>Host: 127.0.0.1:10000<br>DNT: 1<br>Connection: Keep-Alive</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TcpSever</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> Exception </span>&#123;</div><div class="line">		ServerSocket ss = <span class="keyword">new</span> ServerSocket(<span class="number">10000</span>);</div><div class="line">		Socket s = ss.accept();</div><div class="line">		InputStream in = s.getInputStream();</div><div class="line">		<span class="keyword">byte</span>[] by = <span class="keyword">new</span> <span class="keyword">byte</span>[<span class="number">1024</span>];</div><div class="line">		<span class="keyword">int</span> len = in.read(by);</div><div class="line">		System.out.println(<span class="keyword">new</span> String(by, <span class="number">0</span>, len));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>写一个简单的HTML文件，带一个form表单。</p>
+<h2 id="请求头"><a href="#请求头" class="headerlink" title="请求头"></a>请求头</h2><h3 id="get的请求方式"><a href="#get的请求方式" class="headerlink" title="get的请求方式"></a>get的请求方式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"http://127.0.0.1:10000"</span> method=<span class="string">"get"</span>&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/94144700.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">GET /?userName=jiujiu&amp;pass=123&amp;sex=nan&amp;hobby=sports&amp;country=CN</div><div class="line">&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5 HTTP/1.1</div><div class="line">Accept: text/html, application/xhtml+xml, */*</div><div class="line">Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3</div><div class="line">User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko</div><div class="line">Accept-Encoding: gzip, deflate</div><div class="line">Host: 127.0.0.1:10000</div><div class="line">DNT: 1</div><div class="line">Connection: Keep-Alive</div></pre></td></tr></table></figure></p>
 <p><strong>Get方式的特点：传送的数据量受URL地址栏限制，传输的数据直接拼在URL地址后，以问号开始（?），多参数分隔以与符号开始（&amp;）。直接传输中文会乱码，HTTP头字段只接受ASCII码值数据。jsp中可以通过URLEncoder.encode()转换成ASCII码值。</strong></p>
-<h3 id="post的请求方式"><a href="#post的请求方式" class="headerlink" title="post的请求方式"></a>post的请求方式</h3><pre><code>&lt;form action=&quot;http://127.0.0.1:10000&quot; method=&quot;post&quot;&gt;
-</code></pre><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/37413864.jpg" alt=""><br>POST / HTTP/1.1<br>Accept: text/html, application/xhtml+xml, <em>/</em><br>Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3<br>Content-Type: application/x-www-form-urlencoded<br>User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko<br>Accept-Encoding: gzip, deflate<br>Host: 127.0.0.1:10000<br>Content-Length: 105<br>DNT: 1<br>Connection: Keep-Alive<br>Cache-Control: no-cache</p>
-<p>userName=hehe&amp;pass=4321&amp;sex=nan&amp;hobby=sports&amp;country=CN&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5<br><strong>Post方式的特点：传送的数据量无限制。传输的数据是放在请求体中。</strong></p>
+<h3 id="post的请求方式"><a href="#post的请求方式" class="headerlink" title="post的请求方式"></a>post的请求方式</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;form action=<span class="string">"http://127.0.0.1:10000"</span> method=<span class="string">"post"</span>&gt;</div></pre></td></tr></table></figure>
+<p><img src="http://orxmumro7.bkt.clouddn.com/17-7-4/37413864.jpg" alt=""><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">POST / HTTP/1.1</div><div class="line">Accept: text/html, application/xhtml+xml, */*</div><div class="line">Accept-Language: zh-Hans-CN,zh-Hans;q=0.8,en-US;q=0.5,en;q=0.3</div><div class="line">Content-Type: application/x-www-form-urlencoded</div><div class="line">User-Agent: Mozilla/5.0 (Windows NT 6.3; WOW64; Trident/7.0; rv:11.0) like Gecko</div><div class="line">Accept-Encoding: gzip, deflate</div><div class="line">Host: 127.0.0.1:10000</div><div class="line">Content-Length: 105</div><div class="line">DNT: 1</div><div class="line">Connection: Keep-Alive</div><div class="line">Cache-Control: no-cache</div><div class="line"></div><div class="line">userName=hehe&amp;pass=4321&amp;sex=nan&amp;hobby=sports&amp;country=CN&amp;province=GZ&amp;area=GZ&amp;btn1=%CC%E1%BD%BB%B1%ED%B5%A5</div></pre></td></tr></table></figure></p>
+<p><strong>Post方式的特点：传送的数据量无限制。传输的数据是放在请求体中。</strong></p>
 <h3 id="常用请求头说明"><a href="#常用请求头说明" class="headerlink" title="常用请求头说明"></a>常用请求头说明</h3><p><strong>请求头与请求体的分隔，是以一个空行隔开的。</strong><br><strong>第一行为请求行，包含请求方式与HTTP协议版本号。</strong><br>Accept: 浏览器所支持的数据类型。<br>Accept-Charset: 浏览器所支持的数据类型。<br>Accept-Encoding: 浏览器支持的压缩格式<br>Accept-Language: 浏览器支持的语言环境<br>Host: 想访问哪台主机<br>If-Modified-Since: 缓存数据的时间。浏览器为了提高性能，一般情况会缓存第一次的请求结果，在缓存数据时间内，会直接找本地缓存数据。<br>Referer: 客户机是从哪个页面来的。作用：服务器可以做判断，进行防盗链。<br>Connection: 请求完后是断开还是保持连接。</p>
 <h2 id="响应头"><a href="#响应头" class="headerlink" title="响应头"></a>响应头</h2><p>下图是一个IE插件，HttpWatch捕捉到的一次请求。左边是请求头，右边是响应头。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-5/15865529.jpg" alt=""></p>
-<h3 id="常用响应头说明"><a href="#常用响应头说明" class="headerlink" title="常用响应头说明"></a>常用响应头说明</h3><pre><code>HTTP/1.1 200 OK
-Server: bfe/1.0.8.18
-Date: Wed, 05 Jul 2017 01:49:57 GMT
-Content-Type: text/html; charset=utf-8
-Transfer-Encoding: chunked
-Connection: keep-alive
-Vary: Accept-Encoding
-Cache-Control: private
-Cxy_all: baidu+63b9ff6074957f7dc4b1c7d31442fcfd
-Expires: Wed, 05 Jul 2017 01:49:46 GMT
-X-Powered-By: HPHP
-X-UA-Compatible: IE=Edge,chrome=1
-Strict-Transport-Security: max-age=172800
-BDPAGETYPE: 1
-BDQID: 0xfafa4d1200006790
-BDUSERID: 0
-Set-Cookie: BDSVRTM=0; path=/
-Set-Cookie: BD_HOME=0; path=/
-Set-Cookie: H_PS_PSSID=1425_21115_17001_23632_20929; path=/; domain=.baidu.com
-Content-Encoding: gzip
-</code></pre><p><strong>第一行为状态行，状态码用于表示服务器对请求的处理结果。</strong><br>Location: 跳转到哪里，通常是跟状态码302一起出现。<br>Server: 告诉浏览器，服务器型号<br>Content-Encoding: 告诉浏览器，数据的压缩格式<br>Content-Length: 告诉浏览器，回送数据的长度<br>Content-Type: 告诉浏览器，回送数据的类型<br>Content-Language: 语言环境<br>Refresh: 告诉浏览器，定时刷新<br>Content-Dispostion: 告诉浏览器以下载方式打开数据<br>Transfer-Encoding: 数据是以分块方式回送的<br>Expires: -1<br>Cache-Control: no-cache<br>Pragma: no-cache<br>后面三个都是控制浏览器不要缓存。</p>
+<h3 id="常用响应头说明"><a href="#常用响应头说明" class="headerlink" title="常用响应头说明"></a>常用响应头说明</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">HTTP/1.1 200 OK</div><div class="line">Server: bfe/1.0.8.18</div><div class="line">Date: Wed, 05 Jul 2017 01:49:57 GMT</div><div class="line">Content-Type: text/html; charset=utf-8</div><div class="line">Transfer-Encoding: chunked</div><div class="line">Connection: keep-alive</div><div class="line">Vary: Accept-Encoding</div><div class="line">Cache-Control: private</div><div class="line">Cxy_all: baidu+63b9ff6074957f7dc4b1c7d31442fcfd</div><div class="line">Expires: Wed, 05 Jul 2017 01:49:46 GMT</div><div class="line">X-Powered-By: HPHP</div><div class="line">X-UA-Compatible: IE=Edge,chrome=1</div><div class="line">Strict-Transport-Security: max-age=172800</div><div class="line">BDPAGETYPE: 1</div><div class="line">BDQID: 0xfafa4d1200006790</div><div class="line">BDUSERID: 0</div><div class="line">Set-Cookie: BDSVRTM=0; path=/</div><div class="line">Set-Cookie: BD_HOME=0; path=/</div><div class="line">Set-Cookie: H_PS_PSSID=1425_21115_17001_23632_20929; path=/; domain=.baidu.com</div><div class="line">Content-Encoding: gzip</div></pre></td></tr></table></figure>
+<p><strong>第一行为状态行，状态码用于表示服务器对请求的处理结果。</strong><br>Location: 跳转到哪里，通常是跟状态码302一起出现。<br>Server: 告诉浏览器，服务器型号<br>Content-Encoding: 告诉浏览器，数据的压缩格式<br>Content-Length: 告诉浏览器，回送数据的长度<br>Content-Type: 告诉浏览器，回送数据的类型<br>Content-Language: 语言环境<br>Refresh: 告诉浏览器，定时刷新<br>Content-Dispostion: 告诉浏览器以下载方式打开数据<br>Transfer-Encoding: 数据是以分块方式回送的<br>Expires: -1<br>Cache-Control: no-cache<br>Pragma: no-cache<br>后面三个都是控制浏览器不要缓存。</p>
 <h3 id="常见的状态码"><a href="#常见的状态码" class="headerlink" title="常见的状态码"></a>常见的状态码</h3><p>100～199：表示成功接收请求，要求客户端继续提交下一次请求才能完成整个处理过程<br>200～299：表示成功接收请求并已完成整个处理过程，常用200（OK）<br>300～399：为完成请求，客户需进一步细化请求。例如，请求的资源已经移动一个新地址，常用302、304（未改动）和307（暂时重定向）<br>400～499：客户端的请求有错误，常用404（找不到资源）<br>500～599：服务器端出现错误，常用500（内部服务器错误）<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-9/20851961.jpg" alt=""></p>
 <h3 id="响应体"><a href="#响应体" class="headerlink" title="响应体"></a>响应体</h3><p>响应头与响应体之间也是以一个空行分隔的。响应体的数据都是二进制数据，浏览器能解析。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-5/73718629.jpg" alt=""></p>
 <h2 id="关于HTTP的常见问题及解答"><a href="#关于HTTP的常见问题及解答" class="headerlink" title="关于HTTP的常见问题及解答"></a>关于HTTP的常见问题及解答</h2><h3 id="GET和POST的区别"><a href="#GET和POST的区别" class="headerlink" title="GET和POST的区别"></a>GET和POST的区别</h3><ul>
@@ -737,8 +708,8 @@ Content-Encoding: gzip
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-/image/20170622104033.png"></i>
   </span>

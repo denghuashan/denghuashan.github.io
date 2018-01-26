@@ -126,7 +126,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-11/86876313.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-11/5376216.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-11/27796159.jpg">
-<meta property="og:updated_time" content="2017-07-11T15:03:25.333Z">
+<meta property="og:updated_time" content="2018-01-26T02:46:35.932Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL的性能优化">
 <meta name="twitter:description" content="MySQL的性能优化包括查询速度优化，更新速度优化，MySQL服务器优化等。如果是SQL查询很慢，可以开启MySQL的慢查询日志。通过慢查询日志，可以找出执行时间较长、执行效率较低的语句，然后进行优化。 EXPLAIN分析通过EXPLAIN语句对查询语句进行分析，找出查询语句的执行瓶颈。上一章稍微介绍过EXPLAIN语句，这里再详细阐述一下。基本语法：EXPLAIN SELECT select_o">
@@ -409,7 +409,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  2,027 字
+                  2,034 字
                 </span>
               
 
@@ -437,21 +437,16 @@
 <li>id：SELECT识别符。SELECT的查询序列号。</li>
 <li>select_type：SELECT语句的类型。取值说明如下：<br>SIMPLE表示简单查询，不包括连接查询和子查询。<br>PRIMARY表示主查询，或者是最外层的查询语句。<br>UNION表示连接查询的第二个或后面的查询语句。<br>DEPENDENT UNION表示连接查询中的第二个或后面的SELECT语句，取决于外面的查询。<br>UNION RESULT表示连接查询的结果。<br>SUBQUERY表示子查询中的第一个SELECT语句。<br>DERIVED表示导出表的SELECT中的子查询。</li>
 <li>table：表示查询的表</li>
-<li>type：表示表的连接类型。取值说明如下：（从最佳类型到最差类型排序）<br>system，该表示仅有一行的系统表。<br>const：数据表最多只有一个匹配行，它将在查询开始时被读取。查询速度很快，因为只读取一次。<pre><code>示例SQL：
-SELECT * FROM tb_name WHERE primary_key=?;
-SELECT * FROM tb_name WHERE primary_key_part1=? AND primary_key_part2=?;
-</code></pre>eq_ref：对于每个来自前面的表的行组合，从该表中读取一行。可以用于使用”=”操作符比较带索引的列。<pre><code>示例SQL：
-SELECT * FROM ref_tb,other_tb WHERE ref_tb.key_column=other_tb.column;
-SELECT * FROM ref_tb,other_tb WHERE ref_tb.key_column_part1=other_tb.column AND ref_tb.key_column_part2=?;
-</code></pre>ref：对于来自前面的表的任意行组合，将从该表中读取所有匹配的行。可以用于使用”=”或”&lt;=&gt;”操作符带索引的列。<pre><code>示例SQL：
-SELECT * FROM ref_tb WHERE key_column=expr;
-SELECT * FROM ref_tb,other_tb WHERE ref_tb.key_column=other_tb.column;
-SELECT * FROM ref_tb,other_tb WHERE ref_tb.key_column_part1=other_tb.column AND ref_tb.key_column_part2=?;
-</code></pre>ref_or_null：如同ref，专门搜索包含NULL值的行。<pre><code>示例SQL：
-SELECT * FROM ref_tb WHERE key_column=expr OR key_column IS NULL;
-</code></pre>index_merge：使用了索引合并优化方法。key列中包含了使用的索引清单。<br>unique_subquery：索引查找函数，可以完全替换子查询。可以下面形式的IN子查询<pre><code>value IN(SELECT primary_key FROM tb WHERE some_expr)
-</code></pre>index_subquery：可以替换IN子查询，只适合下列形式的子查询中的非唯一索引。<pre><code>value IN(SELECT key_column FROM tb WHERE some_expr)
-</code></pre>range：只检索给定范围的行，使用一个索引来选择行。key列显示使用了哪个索引。当使用”=”，”&lt;&gt;”，”&gt;”，”&gt;=”，”&lt;”，”&lt;=”，”IS NULL”，”&lt;=&gt;”，”BETWEEN”，”IN”操作符，用常量比较关键字列时，类型为range。<br><strong>index：只扫描索引树。<br>ALL：对于前面的表的任意行组合，进行完整的全表扫描。</strong></li>
+<li>type：表示表的连接类型。取值说明如下：（从最佳类型到最差类型排序）<br>system，该表示仅有一行的系统表。<br>const：数据表最多只有一个匹配行，它将在查询开始时被读取。查询速度很快，因为只读取一次。<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">示例SQL：</div><div class="line">SELECT * FROM tb_name WHERE primary_key=?;</div><div class="line">SELECT * FROM tb_name WHERE primary_key_part1=? AND primary_key_part2=?;</div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>eq_ref：对于每个来自前面的表的行组合，从该表中读取一行。可以用于使用”=”操作符比较带索引的列。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">示例SQL：</div><div class="line">SELECT * FROM ref_tb,other_tb WHERE ref_tb.key_column=other_tb.column;</div><div class="line">SELECT * FROM ref_tb,other_tb WHERE ref_tb.key_column_part1=other_tb.column AND ref_tb.key_column_part2=?;</div></pre></td></tr></table></figure></p>
+<p>ref：对于来自前面的表的任意行组合，将从该表中读取所有匹配的行。可以用于使用”=”或”&lt;=&gt;”操作符带索引的列。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">示例SQL：</div><div class="line">SELECT * FROM ref_tb WHERE key_column=expr;</div><div class="line">SELECT * FROM ref_tb,other_tb WHERE ref_tb.key_column=other_tb.column;</div><div class="line">SELECT * FROM ref_tb,other_tb WHERE ref_tb.key_column_part1=other_tb.column AND ref_tb.key_column_part2=?;</div></pre></td></tr></table></figure></p>
+<p>ref_or_null：如同ref，专门搜索包含NULL值的行。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">示例SQL：</div><div class="line">SELECT * FROM ref_tb WHERE key_column=expr OR key_column IS NULL;</div></pre></td></tr></table></figure></p>
+<p>index_merge：使用了索引合并优化方法。key列中包含了使用的索引清单。<br>unique_subquery：索引查找函数，可以完全替换子查询。可以下面形式的IN子查询<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">value IN(SELECT primary_key FROM tb WHERE some_expr)</div></pre></td></tr></table></figure></p>
+<p>index_subquery：可以替换IN子查询，只适合下列形式的子查询中的非唯一索引。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">value IN(SELECT key_column FROM tb WHERE some_expr)</div></pre></td></tr></table></figure></p>
+<p>range：只检索给定范围的行，使用一个索引来选择行。key列显示使用了哪个索引。当使用”=”，”&lt;&gt;”，”&gt;”，”&gt;=”，”&lt;”，”&lt;=”，”IS NULL”，”&lt;=&gt;”，”BETWEEN”，”IN”操作符，用常量比较关键字列时，类型为range。<br><strong>index：只扫描索引树。<br>ALL：对于前面的表的任意行组合，进行完整的全表扫描。</strong></p>
+<ul>
 <li>possible_keys：能使用哪个索引在该表中找到行。NULL则没有相关的索引。</li>
 <li>key：实际查询时使用到的索引。NULL则没有选择所有。</li>
 <li>key_len：索引自动按字节计算的长度。数值越小，表示越快。</li>
@@ -720,8 +715,8 @@ SELECT * FROM ref_tb WHERE key_column=expr OR key_column IS NULL;
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-/image/20170622104033.png"></i>
   </span>

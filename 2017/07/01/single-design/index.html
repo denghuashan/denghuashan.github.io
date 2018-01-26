@@ -116,18 +116,18 @@
 
 
 
-<meta name="description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
+<meta name="description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。饿汉式1234567891011class Single &amp;#123;	private static Single s = new S">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单例设计模式">
 <meta property="og:url" content="http://dhsmp.com/2017/07/01/single-design/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
+<meta property="og:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。饿汉式1234567891011class Single &amp;#123;	private static Single s = new S">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/76859891.jpg">
-<meta property="og:updated_time" content="2017-07-01T13:08:01.311Z">
+<meta property="og:updated_time" content="2018-01-26T02:49:31.849Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单例设计模式">
-<meta name="twitter:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。 饿汉式class Single {     private static Single s = new Single();">
+<meta name="twitter:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。饿汉式1234567891011class Single &amp;#123;	private static Single s = new S">
 <meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg">
 
 
@@ -407,7 +407,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  517 字
+                  520 字
                 </span>
               
 
@@ -433,46 +433,13 @@
 <h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol>
 <li>禁止其他的应用程序，通过此类来创建对象。私有化构造函数。</li>
 <li>在本类里面创建对象。</li>
-<li><p>为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。</p>
-<h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><pre><code>class Single {
-    private static Single s = new Single();
-
-    private Single() {
-
-    }
-
-    public static Single getInstance() {
-        return s;
-    }
-}
-</code></pre><p>静态成员，随着类的加载而被加载。<strong>该类在加载进内存时候，就已经初始化一个对象。</strong>俗称：饿汉式。通过getInstance()即可获取该对象，并使用该对象。</p>
-<h2 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h2><pre><code>class Single {
-    private static Single s = null;
-
-    private Single() {
-
-    }
-
-    public static Single getInstance() {
-        if (s == null) {
-            synchronized (Single.class) {
-                if (s == null) {
-                    s = new Single();
-                }
-            }
-        }
-        return s;
-    }
-}
-</code></pre><p>静态成员，随着类的加载而被加载。该类在加载进内存时候，对象还不存在。通过getInstance()获取该对象的时候才会初始化。那么这时就会出现线程安全问题。这里需要明确一点：<strong>线程安全问题：只读不写没有该问题，有读有写就有该问题</strong>。这也是饿汉式为什么没有线程安全问题的原因。</p>
-<h3 id="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><a href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。" class="headerlink" title="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。"></a>synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</h3><h3 id="getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><a href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？" class="headerlink" title="getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？"></a>getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</h3><pre><code>public static Single getInstance() {
-    synchronized (Single.class) {
-        s = new Single();
-    }
-    return s;
-}
-</code></pre></li>
+<li>为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。<h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Single</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single s = <span class="keyword">new</span> Single();</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> s;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
 </ol>
+<p>静态成员，随着类的加载而被加载。<strong>该类在加载进内存时候，就已经初始化一个对象。</strong>俗称：饿汉式。通过getInstance()即可获取该对象，并使用该对象。</p>
+<h2 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Single</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single s = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">synchronized</span> (Single.class) &#123;</div><div class="line">				<span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</div><div class="line">					s = <span class="keyword">new</span> Single();</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> s;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>静态成员，随着类的加载而被加载。该类在加载进内存时候，对象还不存在。通过getInstance()获取该对象的时候才会初始化。那么这时就会出现线程安全问题。这里需要明确一点：<strong>线程安全问题：只读不写没有该问题，有读有写就有该问题</strong>。这也是饿汉式为什么没有线程安全问题的原因。</p>
+<h3 id="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><a href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。" class="headerlink" title="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。"></a>synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</h3><h3 id="getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><a href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？" class="headerlink" title="getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？"></a>getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">synchronized</span> (Single.class) &#123;</div><div class="line">		s = <span class="keyword">new</span> Single();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> s;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li>多线程中每一个线程调用getInstance()都会发生互斥。</li>
 <li>当有第一个线程进入到同步代码块创建一个对象的时候，刚走到return，互斥已经结束。第二个线程进入到同步代码块，这时又会创建一个对象。在内存中就会出现两个对象。<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4>加双重if，同步效率较高一点。<h2 id="Java中的示例"><a href="#Java中的示例" class="headerlink" title="Java中的示例"></a>Java中的示例</h2><h3 id="Runtime类，饿汉式"><a href="#Runtime类，饿汉式" class="headerlink" title="Runtime类，饿汉式"></a>Runtime类，饿汉式</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg" alt=""><h3 id="System类，懒汉式"><a href="#System类，懒汉式" class="headerlink" title="System类，懒汉式"></a>System类，懒汉式</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/76859891.jpg" alt=""></li>
@@ -728,8 +695,8 @@
         <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
 <div class="copyright" >
   
-  &copy; 
-  <span itemprop="copyrightYear">2017</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2018</span>
   <span class="with-love">
     <i class="fa fa-/image/20170622104033.png"></i>
   </span>

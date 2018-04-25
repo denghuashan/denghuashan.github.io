@@ -145,7 +145,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/80262158.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/20130851.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/51456213.jpg">
-<meta property="og:updated_time" content="2018-03-10T12:10:01.410Z">
+<meta property="og:updated_time" content="2018-04-25T09:07:06.839Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的List、Set、Map容器">
 <meta name="twitter:description" content="数组的特点 数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。 数组的长度必须事先指定，且一旦定义就不能再更改。 数组的存储的数据类型是固定的类型，单一类型数据的存储。 数组的内存分配，一次性分配一片连续的内存空间。连续的内存空间有多大，就在于数组的长度有多长。为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。List中常用的容器">
@@ -279,7 +279,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            所有文章
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -396,6 +406,39 @@
           </span>
 
           
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/数据结构/" itemprop="url" rel="index">
+                    <span itemprop="name">数据结构</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
 
           
             
@@ -477,7 +520,7 @@
 <h3 id="排序重点，比较器或比较接口"><a href="#排序重点，比较器或比较接口" class="headerlink" title="排序重点，比较器或比较接口"></a>排序重点，比较器或比较接口</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//如果想让TreeSet拥有其他的排序方式，有两钟方式。</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TreeSetDemo</span> </span>&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</div><div class="line">		<span class="comment">//TreeSet&lt;Student&gt; ts = new TreeSet&lt;Student&gt;();</span></div><div class="line">		<span class="comment">//第二种方式：让集合具备比较性，将比较器对象作为参数传递给TreeSet集合的构造函数</span></div><div class="line">		TreeSet&lt;Student&gt; ts = <span class="keyword">new</span> TreeSet&lt;Student&gt;(<span class="keyword">new</span> MyComparator());</div><div class="line">		ts.add(<span class="keyword">new</span> Student(<span class="string">"王五"</span>, <span class="number">21</span>));</div><div class="line">		ts.add(<span class="keyword">new</span> Student(<span class="string">"李四"</span>, <span class="number">20</span>));</div><div class="line">		ts.add(<span class="keyword">new</span> Student(<span class="string">"张三"</span>, <span class="number">23</span>));</div><div class="line">		ts.add(<span class="keyword">new</span> Student(<span class="string">"王五"</span>, <span class="number">21</span>));</div><div class="line">		ts.add(<span class="keyword">new</span> Student(<span class="string">"马二"</span>, <span class="number">19</span>));</div><div class="line">		ts.add(<span class="keyword">new</span> Student(<span class="string">"李四"</span>, <span class="number">19</span>));</div><div class="line">		<span class="keyword">for</span> (Iterator&lt;Student&gt; it = ts.iterator(); it.hasNext();) &#123;</div><div class="line">			Student s = it.next();</div><div class="line">			System.out.println(s.getName() + <span class="string">"，"</span> + s.getAge());</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//第一种方式：让Student类实现Comparable接口，重写compareTo方法。强制让学生具备可比性</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Student</span> <span class="keyword">implements</span> <span class="title">Comparable</span>&lt;<span class="title">Student</span>&gt; </span>&#123;</div><div class="line">	<span class="keyword">private</span> String name;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line"></div><div class="line">	Student() &#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	Student(String name, <span class="keyword">int</span> age) &#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">getName</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getAge</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> age;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setAge</span><span class="params">(<span class="keyword">int</span> age)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//重写compareTo()方法，自行定义比较规则</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compareTo</span><span class="params">(Student o)</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>.age &gt; o.age)</div><div class="line">			<span class="keyword">return</span> <span class="number">1</span>;</div><div class="line">		<span class="keyword">if</span> (<span class="keyword">this</span>.age == o.age) &#123;</div><div class="line">			<span class="comment">// 当主要条件满足时，判断次要条件</span></div><div class="line">			<span class="keyword">return</span> <span class="keyword">this</span>.name.compareTo(o.name);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> -<span class="number">1</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"><span class="comment">//自定义比较器，实现Comparator接口</span></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComparator</span> <span class="keyword">implements</span> <span class="title">Comparator</span>&lt;<span class="title">Student</span>&gt; </span>&#123;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student o1, Student o2)</span> </span>&#123;</div><div class="line">		<span class="comment">//自行定义比较规则</span></div><div class="line">		<span class="keyword">int</span> num = o1.getName().compareTo(o2.getName());</div><div class="line">		<span class="keyword">if</span> (num == <span class="number">0</span>)</div><div class="line">			<span class="comment">// 对象包装类调用compareTo()方法，判断次要条件</span></div><div class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Integer(o1.getAge()).compareTo(<span class="keyword">new</span> Integer(o2.getAge()));</div><div class="line">		<span class="keyword">return</span> num;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 </li>
 <li><p><strong>TreeSet保证元素唯一性的依据就是compareTo()方法的return值。大小判断的依据也是该方法的返回值。正数代表大，负数代表小，0则表示是相同元素。</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用匿名内部类的方式，传递比较器</span></div><div class="line">TreeSet&lt;String&gt; ts=<span class="keyword">new</span> TreeSet&lt;String&gt;(<span class="keyword">new</span> Comparator&lt;Student&gt;()&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student o1, Student o2)</span> </span>&#123;</div><div class="line">		<span class="comment">//自行定义比较规则</span></div><div class="line">		<span class="keyword">int</span> num = o1.getName().compareTo(o2.getName());</div><div class="line">		<span class="keyword">if</span> (num == <span class="number">0</span>)</div><div class="line">			<span class="comment">// 对象包装类调用compareTo()方法，判断次要条件</span></div><div class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Integer(o1.getAge()).compareTo(<span class="keyword">new</span> Integer(o2.getAge()));</div><div class="line">		<span class="keyword">return</span> num;</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//使用匿名内部类的方式，传递比较器</span></div><div class="line">TreeSet&lt;String&gt; ts = <span class="keyword">new</span> TreeSet&lt;String&gt;(<span class="keyword">new</span> Comparator&lt;Student&gt;()&#123;</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">compare</span><span class="params">(Student o1, Student o2)</span> </span>&#123;</div><div class="line">		<span class="comment">//自行定义比较规则</span></div><div class="line">		<span class="keyword">int</span> num = o1.getName().compareTo(o2.getName());</div><div class="line">		<span class="keyword">if</span> (num == <span class="number">0</span>)</div><div class="line">			<span class="comment">// 对象包装类调用compareTo()方法，判断次要条件</span></div><div class="line">			<span class="keyword">return</span> <span class="keyword">new</span> Integer(o1.getAge()).compareTo(<span class="keyword">new</span> Integer(o2.getAge()));</div><div class="line">		<span class="keyword">return</span> num;</div><div class="line">	&#125;</div><div class="line">&#125;);</div></pre></td></tr></table></figure>
 </li>
 </ul>
 <h2 id="Map中常用的容器"><a href="#Map中常用的容器" class="headerlink" title="Map中常用的容器"></a>Map中常用的容器</h2><p>上面已经说过。Set集合底层就是使用Map集合存储。Map集合被使用是因为具备映射关系。Map集合中，如果键相同，就会出现新值覆盖旧值。</p>
@@ -641,12 +684,21 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
@@ -757,7 +809,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共34.1k字</span>
+  <span class="post-count">全站共38.6k字</span>
 </div>
 
 

@@ -132,7 +132,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/51257277.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/95736222.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/45014357.jpg">
-<meta property="og:updated_time" content="2017-09-14T10:40:49.969Z">
+<meta property="og:updated_time" content="2018-04-25T02:09:29.130Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="表单修改的操作记录 OperateLog">
 <meta name="twitter:description" content="在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。 实现思路 采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。 工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。 工具类中的比较只能对基本数据类型、基本数">
@@ -266,7 +266,17 @@
             
               <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
             
-            所有文章
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
           </a>
         </li>
       
@@ -382,6 +392,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -615,12 +647,21 @@
           
             <div class="site-state-item site-state-posts">
               <a href="/archives">
-                <span class="site-state-item-count">23</span>
+                <span class="site-state-item-count">24</span>
                 <span class="site-state-item-name">日志</span>
               </a>
             </div>
           
 
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">13</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
           
 
           
@@ -731,7 +772,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共34.1k字</span>
+  <span class="post-count">全站共38.6k字</span>
 </div>
 
 

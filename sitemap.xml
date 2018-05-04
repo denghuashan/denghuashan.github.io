@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dhsmp.com/tags/index.html</loc>
+    
+    <lastmod>2018-05-04T02:02:35.343Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dhsmp.com/2017/06/29/list-set-map/</loc>
+    
+    <lastmod>2018-05-02T07:26:12.850Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dhsmp.com/2018/03/29/implement/</loc>
     
     <lastmod>2018-04-26T10:58:25.537Z</lastmod>
@@ -16,23 +30,9 @@
   </url>
   
   <url>
-    <loc>http://dhsmp.com/2017/06/29/list-set-map/</loc>
-    
-    <lastmod>2018-04-25T09:07:06.839Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://dhsmp.com/about/index.html</loc>
     
     <lastmod>2018-04-25T02:22:00.109Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dhsmp.com/tags/index.html</loc>
-    
-    <lastmod>2018-04-25T02:21:25.618Z</lastmod>
     
   </url>
   

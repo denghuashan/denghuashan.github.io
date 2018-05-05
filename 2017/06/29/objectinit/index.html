@@ -125,7 +125,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/82172780.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/54828942.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/87231977.jpg">
-<meta property="og:updated_time" content="2018-04-25T02:09:22.104Z">
+<meta property="og:updated_time" content="2018-05-04T14:30:00.281Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java对象初始化的过程">
 <meta name="twitter:description" content="从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。 一个很简单的Java类12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
@@ -497,8 +497,10 @@
 <li><strong>对对象属性进行显示初始化。</strong></li>
 <li><strong>执行构造代码块，对所有对象进行初始化。</strong></li>
 <li><strong>执行对应的构造函数，对对象进行初始化。</strong></li>
-<li><strong>将内存地址赋给栈内存中的s变量。（栈内存中的变量指向堆内存中的变量，这就是Java中的指针）</strong><h2 id="静态成员"><a href="#静态成员" class="headerlink" title="静态成员"></a>静态成员</h2>存放在方法区，在内存中只有一份。随着类的的加载而被加载，优先于对象存在，被所有的对象所共享，可以被类名直接调用，也可以被对象调用。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/87231977.jpg" alt=""><br>showCountry()方法中调用method()，就是直接省略了（Student.）<br>同样的，listen()方法中调用speak()，就是直接省略了（this.）<h2 id="如理解的描述有错，请务必告知。谢谢！"><a href="#如理解的描述有错，请务必告知。谢谢！" class="headerlink" title="如理解的描述有错，请务必告知。谢谢！"></a>如理解的描述有错，请务必告知。谢谢！</h2><strong>对象初始化的过程远比本人用文字描述出来的复杂。Classloader、内存空间分配策略、内存模型等一系列问题。本人只是用文字，简单并肤浅的去描述了这么一个过程。便于更好的理解与记忆。</strong><br>对JVM感兴趣的，可以膜拜《深入理解Java虚拟机》一书。</li>
+<li><strong>将内存地址赋给栈内存中的s变量。（栈内存中的变量指向堆内存中的变量，这就是Java中的指针）</strong></li>
 </ol>
+<h2 id="静态成员"><a href="#静态成员" class="headerlink" title="静态成员"></a>静态成员</h2><p>存放在方法区，在内存中只有一份。随着类的的加载而被加载，优先于对象存在，被所有的对象所共享，可以被类名直接调用，也可以被对象调用。<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/87231977.jpg" alt=""><br>showCountry()方法中调用method()，就是直接省略了（Student.）<br>同样的，listen()方法中调用speak()，就是直接省略了（this.）</p>
+<h2 id="如理解的描述有错，请务必告知。谢谢！"><a href="#如理解的描述有错，请务必告知。谢谢！" class="headerlink" title="如理解的描述有错，请务必告知。谢谢！"></a>如理解的描述有错，请务必告知。谢谢！</h2><p><strong>对象初始化的过程远比本人用文字描述出来的复杂。Classloader、内存空间分配策略、内存模型等一系列问题。本人只是用文字，简单并肤浅的去描述了这么一个过程。便于更好的理解与记忆。</strong><br>对JVM感兴趣的，可以膜拜《深入理解Java虚拟机》一书。</p>
 
       
     </div>

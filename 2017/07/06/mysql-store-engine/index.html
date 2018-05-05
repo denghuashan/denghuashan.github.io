@@ -126,7 +126,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-6/95248368.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-6/79780212.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-6/45072585.jpg">
-<meta property="og:updated_time" content="2018-04-25T02:15:08.084Z">
+<meta property="og:updated_time" content="2018-05-04T14:29:28.604Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="MySQL的存储引擎">
 <meta name="twitter:description" content="数据库存储引擎是数据库底层软件组件。不同的存储引擎提供不同的存储机制、索引技巧、锁定水平等功能。MySQL的核心就是存储引擎。 查看MySQL支持的引擎类型在MySQL中，不需要在整个服务器中使用同一种存储引擎，针对具体要求，可以对每一个表使用不同的存储引擎。MySQL5.6支持的存储引擎有：InnoDB、MyISAM、Memory、Merge、Archive、Federated、CSV、BLAC">
@@ -441,7 +441,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  1,190 字
+                  1,191 字
                 </span>
               
 
@@ -492,7 +492,10 @@
 <li>InnoDB给MySQL提供了具有提交、回滚和崩溃恢复能力的事务安全（ACID兼容）存储引擎。InnoDB锁定在行级并且也在SELECT语句中提供一个类似Oracle的非锁定读。在SQL查询中，可以将InnoDB类型的表与其他MySQL的表的类型混合起来。</li>
 <li>InnoDB是为处理巨大数据量的最大性能设计。它的CPU效率可能是任何其他基于磁盘的关系数据库引擎所不能匹敌的。</li>
 <li>InnoDB存储引擎完全与MySQL服务器整合，InnoDB存储引擎为在主内存中缓存数据和索引而维持它自己的缓冲区。InnoDB将它的表和索引在一个逻辑表空间中，表空间可以包含数个文件。</li>
-<li><strong>InnoDB支持外键完整性约束。存储表中的数据时，每张表的存储都是按主键顺序存放，如果没有显示指定主键，InnoDB会为每一行生成一个隐藏的6个字节的ROWID，并以此作为主键。建议InnoDB的主键采用数据库自增策略。后期再补充InnoDB的索引</strong><h3 id="MyISAM存储引擎"><a href="#MyISAM存储引擎" class="headerlink" title="MyISAM存储引擎"></a>MyISAM存储引擎</h3>MyISAM基于ISAM存储引擎，并对其进行扩展。MyISAM拥有较高的插入、查询速度，但不支持事务。在MySQL5.5.5之前的版本中，MyISAM是默认存储引擎。<br>主要特性有：</li>
+<li><strong>InnoDB支持外键完整性约束。存储表中的数据时，每张表的存储都是按主键顺序存放，如果没有显示指定主键，InnoDB会为每一行生成一个隐藏的6个字节的ROWID，并以此作为主键。建议InnoDB的主键采用数据库自增策略。后期再补充InnoDB的索引</strong></li>
+</ul>
+<h3 id="MyISAM存储引擎"><a href="#MyISAM存储引擎" class="headerlink" title="MyISAM存储引擎"></a>MyISAM存储引擎</h3><p>MyISAM基于ISAM存储引擎，并对其进行扩展。MyISAM拥有较高的插入、查询速度，但不支持事务。在MySQL5.5.5之前的版本中，MyISAM是默认存储引擎。<br>主要特性有：</p>
+<ul>
 <li>大文件（达63位文件长度）在支持大文件的文件系统和操作系统上被支持。</li>
 <li>当把删除和更新及插入操作混合使用的时候，动态尺寸的行产生更少碎片。这要通过合并相邻被删除的块。若下一个块被删除，就扩展下一块来自动完成。</li>
 <li>每个MyISAM表最大索引数是64，这可以通过重新编译来改变。每个索引最大的列数是16个。</li>
@@ -504,7 +507,10 @@
 <li>可以把数据文件和索引文件放在不同目录。</li>
 <li>每个字符列可以有不同的字符集。</li>
 <li>有VARCHAR的表可以固定或动态记录长度。</li>
-<li>VARCHAR和CHAR列可以多达64KB。<h3 id="Memory存储引擎"><a href="#Memory存储引擎" class="headerlink" title="Memory存储引擎"></a>Memory存储引擎</h3>Memory存储引擎将表中的数据，存储到内存中。为查询和引用其他表数据提供快速访问。<br>主要特性有：</li>
+<li>VARCHAR和CHAR列可以多达64KB。</li>
+</ul>
+<h3 id="Memory存储引擎"><a href="#Memory存储引擎" class="headerlink" title="Memory存储引擎"></a>Memory存储引擎</h3><p>Memory存储引擎将表中的数据，存储到内存中。为查询和引用其他表数据提供快速访问。<br>主要特性有：</p>
+<ul>
 <li>每一个表可以有多达32个索引，每个索引16列，以及500字节的最大键长度。</li>
 <li>执行哈希（Hash）索引和BTree索引。</li>
 <li>在一个Memory表中可以有非唯一键。</li>
@@ -512,8 +518,11 @@
 <li>不支持BLOB和TEXT列。</li>
 <li>支持AUTO_INCREMENT列、可以对包含NULL值的列建立索引。</li>
 <li>表内容被存在内存中。</li>
-<li>当不在需要表的内容时，要释放被表使用的内存，应该执行DELETE FROM或TRAUNCATE TABLE，或删除整个表（DROP TABLE）。（这里不阐述DELETE、TRAUNCATE、DROP之间的区别）<h2 id="存储引擎的选择"><a href="#存储引擎的选择" class="headerlink" title="存储引擎的选择"></a>存储引擎的选择</h2><img src="http://orxmumro7.bkt.clouddn.com/17-7-6/95248368.jpg" alt=""><h2 id="更改数据表存储引擎"><a href="#更改数据表存储引擎" class="headerlink" title="更改数据表存储引擎"></a>更改数据表存储引擎</h2>查看数据表存储引擎，使用SHOW CREATE TABLE &lt;表名\G&gt;，语句进查看。（“\G”是参数，使结果更加直观，易于查看）<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-6/79780212.jpg" alt=""><br>更新数据表存储引擎，使用ALTER TABLE &lt;表名&gt; ENGINE=&lt;存储引擎名&gt;;<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-6/45072585.jpg" alt=""><h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><strong>MySQL中外键约束是用来保证数据的参照完整性，如果表之间需要关联外键，却指定了不同的存储引擎，这些表之间是不能创建外键约束的。</strong></li>
+<li>当不在需要表的内容时，要释放被表使用的内存，应该执行DELETE FROM或TRAUNCATE TABLE，或删除整个表（DROP TABLE）。（这里不阐述DELETE、TRAUNCATE、DROP之间的区别）</li>
 </ul>
+<h2 id="存储引擎的选择"><a href="#存储引擎的选择" class="headerlink" title="存储引擎的选择"></a>存储引擎的选择</h2><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-6/95248368.jpg" alt=""></p>
+<h2 id="更改数据表存储引擎"><a href="#更改数据表存储引擎" class="headerlink" title="更改数据表存储引擎"></a>更改数据表存储引擎</h2><p>查看数据表存储引擎，使用SHOW CREATE TABLE &lt;表名\G&gt;，语句进查看。（“\G”是参数，使结果更加直观，易于查看）<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-6/79780212.jpg" alt=""><br>更新数据表存储引擎，使用ALTER TABLE &lt;表名&gt; ENGINE=&lt;存储引擎名&gt;;<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-6/45072585.jpg" alt=""></p>
+<h3 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h3><p><strong>MySQL中外键约束是用来保证数据的参照完整性，如果表之间需要关联外键，却指定了不同的存储引擎，这些表之间是不能创建外键约束的。</strong></p>
 
       
     </div>

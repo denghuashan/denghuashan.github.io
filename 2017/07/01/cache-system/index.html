@@ -128,7 +128,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/7971953.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/84363510.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/56670130.jpg">
-<meta property="og:updated_time" content="2018-04-25T02:06:51.045Z">
+<meta property="og:updated_time" content="2018-05-04T14:15:27.618Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="使用ReentrantReadWriteLock实现一个简单的缓存原理">
 <meta name="twitter:description" content="之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。 代码跟注释如下12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
@@ -492,8 +492,11 @@
 <h2 id="mybatis中的缓存"><a href="#mybatis中的缓存" class="headerlink" title="mybatis中的缓存"></a>mybatis中的缓存</h2><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/41824102.jpg" alt=""></p>
 <ul>
 <li>一级缓存是SqlSession级别的缓存。在操作数据库时需要构造 sqlSession对象，在对象中有一个数据结构（HashMap）用于存储缓存数据。不同的sqlSession之间的缓存数据区域（HashMap）是互相不影响的。</li>
-<li>二级缓存是mapper级别的缓存，多个SqlSession去操作同一个Mapper的sql语句，多个SqlSession可以共用二级缓存，二级缓存是跨SqlSession的。<strong>二级缓存是以namespace来划分的，一个namespace有一个二级缓存。</strong><h3 id="一级缓存工作原理"><a href="#一级缓存工作原理" class="headerlink" title="一级缓存工作原理"></a>一级缓存工作原理</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/84892823.jpg" alt=""><br>查询时会创建一个唯一的Key。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/24857576.jpg" alt=""><br>查询缓存Map中是否有对象<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/7971953.jpg" alt=""><br>更新时，执行删除缓存数据<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/84363510.jpg" alt=""><h3 id="一级缓存实现类PerpetualCache类"><a href="#一级缓存实现类PerpetualCache类" class="headerlink" title="一级缓存实现类PerpetualCache类"></a>一级缓存实现类PerpetualCache类</h3><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/56670130.jpg" alt=""><h2 id="二级缓存需要单独配置，不做过多说明"><a href="#二级缓存需要单独配置，不做过多说明" class="headerlink" title="二级缓存需要单独配置，不做过多说明"></a>二级缓存需要单独配置，不做过多说明</h2>mybatis提供了Cache接口，可对接不同的缓存厂商。如redis、memcached、ehcache。</li>
+<li>二级缓存是mapper级别的缓存，多个SqlSession去操作同一个Mapper的sql语句，多个SqlSession可以共用二级缓存，二级缓存是跨SqlSession的。<strong>二级缓存是以namespace来划分的，一个namespace有一个二级缓存。</strong></li>
 </ul>
+<h3 id="一级缓存工作原理"><a href="#一级缓存工作原理" class="headerlink" title="一级缓存工作原理"></a>一级缓存工作原理</h3><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/84892823.jpg" alt=""><br>查询时会创建一个唯一的Key。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/24857576.jpg" alt=""><br>查询缓存Map中是否有对象<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/7971953.jpg" alt=""><br>更新时，执行删除缓存数据<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/84363510.jpg" alt=""></p>
+<h3 id="一级缓存实现类PerpetualCache类"><a href="#一级缓存实现类PerpetualCache类" class="headerlink" title="一级缓存实现类PerpetualCache类"></a>一级缓存实现类PerpetualCache类</h3><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-1/56670130.jpg" alt=""></p>
+<h2 id="二级缓存需要单独配置，不做过多说明"><a href="#二级缓存需要单独配置，不做过多说明" class="headerlink" title="二级缓存需要单独配置，不做过多说明"></a>二级缓存需要单独配置，不做过多说明</h2><p>mybatis提供了Cache接口，可对接不同的缓存厂商。如redis、memcached、ehcache。</p>
 
       
     </div>

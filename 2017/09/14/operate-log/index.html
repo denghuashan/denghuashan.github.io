@@ -132,7 +132,7 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/51257277.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/95736222.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-9-14/45014357.jpg">
-<meta property="og:updated_time" content="2018-04-25T02:09:29.130Z">
+<meta property="og:updated_time" content="2018-05-04T14:30:09.372Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="表单修改的操作记录 OperateLog">
 <meta name="twitter:description" content="在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。 实现思路 采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。 工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。 工具类中的比较只能对基本数据类型、基本数">
@@ -495,8 +495,9 @@
 <h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><ul>
 <li>采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。</li>
 <li>工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。<br>在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。</li>
-<li>工具类中的比较只能对基本数据类型、基本数据类型的包装类型、Date类型进行比较。数组、集合、关联对象是不会进行比较的。这是欠缺的地方，欢迎补充。<h2 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h2><strong>点击查询：（模拟项目中查询数据）</strong></li>
+<li>工具类中的比较只能对基本数据类型、基本数据类型的包装类型、Date类型进行比较。数组、集合、关联对象是不会进行比较的。这是欠缺的地方，欢迎补充。</li>
 </ul>
+<h2 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h2><p><strong>点击查询：（模拟项目中查询数据）</strong></p>
 <p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/74946581.jpg" alt=""></p>
 <p><strong>回显数据：（模拟项目中表单回显数据）</strong></p>
 <p><img src="http://orxmumro7.bkt.clouddn.com/17-9-14/22204390.jpg" alt=""></p>

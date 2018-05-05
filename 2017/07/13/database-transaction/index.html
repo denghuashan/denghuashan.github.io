@@ -116,19 +116,19 @@
 
 
 
-<meta name="description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID）原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。隔离性 Isolation：并发访问数据库时，每">
+<meta name="description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID） 原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。 一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。 隔离性 Isolation：并发访问数据库">
 <meta property="og:type" content="article">
 <meta property="og:title" content="关系型数据库的事务">
 <meta property="og:url" content="http://dhsmp.com/2017/07/13/database-transaction/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID）原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。隔离性 Isolation：并发访问数据库时，每">
+<meta property="og:description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID） 原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。 一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。 隔离性 Isolation：并发访问数据库">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-13/27095586.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-13/83446062.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-14/98846792.jpg">
-<meta property="og:updated_time" content="2018-04-25T02:07:04.528Z">
+<meta property="og:updated_time" content="2018-05-04T14:18:10.780Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="关系型数据库的事务">
-<meta name="twitter:description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID）原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。隔离性 Isolation：并发访问数据库时，每">
+<meta name="twitter:description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID） 原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。 一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。 隔离性 Isolation：并发访问数据库">
 <meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-13/27095586.jpg">
 
 
@@ -485,8 +485,19 @@
 
       
         <p><strong>事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。</strong></p>
-<h2 id="事务的四大特性（ACID）"><a href="#事务的四大特性（ACID）" class="headerlink" title="事务的四大特性（ACID）"></a>事务的四大特性（ACID）</h2><p>原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。<br>一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。<br>隔离性 Isolation：并发访问数据库时，每一个开启的事务，不能被其他事务的操作数据所干扰。并发事务之间要隔离。<br>持久性 Durability：一个事务一旦被提交，它对数据库中数据的改变就是持久性的。</p>
-<h2 id="MySQL数据库对事务的支持"><a href="#MySQL数据库对事务的支持" class="headerlink" title="MySQL数据库对事务的支持"></a>MySQL数据库对事务的支持</h2><p>start transaction；—-开启事务<br>sql语句；—-操作<br>commit;—-提交事务<br>rollback；—-回滚事务，可手动回滚事务。<br>数据库回滚：回滚到事务开始之前位置、状态。</p>
+<h2 id="事务的四大特性（ACID）"><a href="#事务的四大特性（ACID）" class="headerlink" title="事务的四大特性（ACID）"></a>事务的四大特性（ACID）</h2><ul>
+<li>原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。</li>
+<li>一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。</li>
+<li>隔离性 Isolation：并发访问数据库时，每一个开启的事务，不能被其他事务的操作数据所干扰。并发事务之间要隔离。</li>
+<li>持久性 Durability：一个事务一旦被提交，它对数据库中数据的改变就是持久性的。</li>
+</ul>
+<h2 id="MySQL数据库对事务的支持"><a href="#MySQL数据库对事务的支持" class="headerlink" title="MySQL数据库对事务的支持"></a>MySQL数据库对事务的支持</h2><ul>
+<li>start transaction；—-开启事务</li>
+<li>sql语句；—-操作</li>
+<li>commit;—-提交事务</li>
+<li>rollback；—-回滚事务，可手动回滚事务。</li>
+<li>数据库回滚：回滚到事务开始之前位置、状态。</li>
+</ul>
 <h2 id="模拟一个异常回滚示例"><a href="#模拟一个异常回滚示例" class="headerlink" title="模拟一个异常回滚示例"></a>模拟一个异常回滚示例</h2><p>因Oracle数据库对事务的支持与MySQL是有所差异化的。这里以MySQL为例来说明一下事务。<br><strong>start transaction是MySQL中事务的开启。</strong><br><strong>Oracle的事务开启是由第一条DML操作开启的。</strong><br>以一个简单的转账为例。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-13/27095586.jpg" alt=""><br>第一个红箭头，开启事务。<br>第二个红箭头，模拟aaa账户减100。<br>没有执行commit操作，假设程序出异常了。关掉这个窗口，重新进入查看。update语句并没有真正改变数据。<br><img src="http://orxmumro7.bkt.clouddn.com/17-7-13/83446062.jpg" alt=""></p>
 <h2 id="模拟一个正常执行示例"><a href="#模拟一个正常执行示例" class="headerlink" title="模拟一个正常执行示例"></a>模拟一个正常执行示例</h2><p><img src="http://orxmumro7.bkt.clouddn.com/17-7-14/98846792.jpg" alt=""><br>第一个红箭头，开启事务。<br>中间执行了两个update操作。<br>最后commit，提交该事务。才会永久的保存在数据库中。没有收到commit，数据库则自动回滚了。</p>
 <h2 id="事务四大特性中的隔离性Isolation"><a href="#事务四大特性中的隔离性Isolation" class="headerlink" title="事务四大特性中的隔离性Isolation"></a>事务四大特性中的隔离性Isolation</h2><p>如果不考虑隔离性，可能会引发如下问题：</p>
@@ -497,17 +508,28 @@
 <li>Serializable：可避免脏读、不可重复读、虚读的情况发生。（类似互斥）</li>
 <li>Repeatable read：可避免脏读、不可重复读的情况发生。<strong>MySQL数据库默认的隔离级别。</strong></li>
 <li>Read committed：可避免脏读情况发生。<strong>Oracle数据库默认的隔离级别</strong></li>
-<li>Read uncommitted：最低级别，以上情况均无法保证。<br>隔离级别越高，性能越差。<br>数据库设置隔离级别：set transaction isolation level ‘隔离级别等级字段’;<br>查询当前事务的隔离级别：select @@tx_isolation;<br>这里就不挨个去做实验了。可以自行设置不同的隔离级，开两个控制台去做实验。<br><strong>Oracle数据库支持Read committed、Serializable两种事务隔离级别。</strong><h2 id="编程式事务与声明式事务"><a href="#编程式事务与声明式事务" class="headerlink" title="编程式事务与声明式事务"></a>编程式事务与声明式事务</h2></li>
+<li>Read uncommitted：最低级别，以上情况均无法保证。</li>
+</ul>
+<p>隔离级别越高，性能越差。<br>数据库设置隔离级别：set transaction isolation level ‘隔离级别等级字段’;<br>查询当前事务的隔离级别：select @@tx_isolation;<br>这里就不挨个去做实验了。可以自行设置不同的隔离级，开两个控制台去做实验。<br><strong>Oracle数据库支持Read committed、Serializable两种事务隔离级别。</strong></p>
+<h2 id="编程式事务与声明式事务"><a href="#编程式事务与声明式事务" class="headerlink" title="编程式事务与声明式事务"></a>编程式事务与声明式事务</h2><ul>
 <li>编程式事务：事务的开启与提交，由程序员在代码中控制。传统的JDBC开启事务、回滚事务、提交事务的操作。编写程序式的事务管理可以清楚的定义事务的边界，可以实现细粒度的事务控制，</li>
 <li>声明式事务：事务的开启与提交，不由程序员控制，交由外部容器处理。spring对事务的支持，在配置文件中声明或采用注解即可。解除了事务和代码之间的耦合。<h2 id="本地事务与全局事务"><a href="#本地事务与全局事务" class="headerlink" title="本地事务与全局事务"></a>本地事务与全局事务</h2></li>
 <li>本地事务：在单个EIS或数据库的本地，并且限制在单个进程内的事务。本地事务不涉及多个数据来源。</li>
-<li>全局事务：资源管理器和协调的事务，可以跨越多个数据库和进程。<strong>采用二阶段提交协议保证事务的成功。</strong><h2 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h2></li>
-<li>分布式事务基于二阶段提交实现，二次提交协议。<strong>二阶段提交采用的是悲观锁策略，由于各个事务参与者需要等待响应最慢的参与者，因此性能比较差。在实际业务使用过程中，使用数据最终一致性替代传统的数据强一致性。使用带有事务功能的MQ做中间人角色。</strong><h2 id="二阶段提交"><a href="#二阶段提交" class="headerlink" title="二阶段提交"></a>二阶段提交</h2></li>
+<li>全局事务：资源管理器和协调的事务，可以跨越多个数据库和进程。<strong>采用二阶段提交协议保证事务的成功。</strong></li>
+</ul>
+<h2 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h2><ul>
+<li>分布式事务基于二阶段提交实现，二次提交协议。<strong>二阶段提交采用的是悲观锁策略，由于各个事务参与者需要等待响应最慢的参与者，因此性能比较差。在实际业务使用过程中，使用数据最终一致性替代传统的数据强一致性。使用带有事务功能的MQ做中间人角色。</strong></li>
+</ul>
+<h2 id="二阶段提交"><a href="#二阶段提交" class="headerlink" title="二阶段提交"></a>二阶段提交</h2><ul>
 <li>准备阶段：又称投票阶段。协调者询问所有参与者是否准备好提交，准备好恢复prepared，否则恢复non-prepared</li>
-<li>提交阶段：又称执行阶段。协调者如果在上一阶段收到参与者回复的prepared，则此阶段向所有参与者发送commit指令，否则发送rollback指令。<h2 id="数据一致模型（简单的说三种）"><a href="#数据一致模型（简单的说三种）" class="headerlink" title="数据一致模型（简单的说三种）"></a>数据一致模型（简单的说三种）</h2></li>
+<li>提交阶段：又称执行阶段。协调者如果在上一阶段收到参与者回复的prepared，则此阶段向所有参与者发送commit指令，否则发送rollback指令。</li>
+</ul>
+<h2 id="数据一致模型（简单的说三种）"><a href="#数据一致模型（简单的说三种）" class="headerlink" title="数据一致模型（简单的说三种）"></a>数据一致模型（简单的说三种）</h2><ul>
 <li>Weak 弱一致性：当你写入一个新值后，读的操作在数据副本上可能会读出来，也可能会读不出来。</li>
 <li>Eventually 最终一致性：当你写入一个新值后，有可能读不出来，但在某个时间保证最终能读出来。</li>
-<li>Strong 强一致性：新的数据一旦写入，在任意副本时刻都能读到新值。<h2 id="长事务"><a href="#长事务" class="headerlink" title="长事务"></a>长事务</h2></li>
+<li>Strong 强一致性：新的数据一旦写入，在任意副本时刻都能读到新值。</li>
+</ul>
+<h2 id="长事务"><a href="#长事务" class="headerlink" title="长事务"></a>长事务</h2><ul>
 <li>一个事务花费很长时间不能够结束，就是一个长的事务，简称长事务。</li>
 <li>分布式事务中提到过一点，二阶段提交需要等待响应最慢的参与者。它有可能会变成一个长事务。</li>
 <li>Spring中，在业务方法中上声明@Transaction时，如果采用for循环调用dao进行insert、update也可能会造成长事务。</li>

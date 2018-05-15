@@ -1131,16 +1131,6 @@ pre .javascript .function {
   border-bottom: none;
   border-bottom: 1px solid #fc6423;
 }
-.post-expand li a {
-  color: #0593d3;
-  border-bottom: none;
-  border-bottom: 1px solid #0593d3;
-}
-.post-expand li a:hover {
-  color: #fc6423;
-  border-bottom: none;
-  border-bottom: 1px solid #fc6423;
-}
 .posts-expand {
   padding-top: 40px;
 }
@@ -1211,6 +1201,16 @@ pre .javascript .function {
 }
 .posts-expand .fancybox img {
   margin: 0 auto;
+}
+.post-expand a {
+  color: #0593d3;
+  border-bottom: none;
+  border-bottom: 1px solid #0593d3;
+}
+.post-expand a:hover {
+  color: #fc6423;
+  border-bottom: none;
+  border-bottom: 1px solid #fc6423;
 }
 @media (max-width: 767px) {
   .posts-collapse {
@@ -1822,7 +1822,7 @@ pre .javascript .function {
   width: 4px;
   height: 4px;
   border-radius: 50%;
-  background: #1affa6;
+  background: #6affcb;
 }
 .links-of-blogroll {
   font-size: 13px;

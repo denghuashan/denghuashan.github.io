@@ -116,18 +116,18 @@
 
 
 
-<meta name="description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。  饿汉式1234567891011class Single &amp;#123;	private static Single s = new">
+<meta name="description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
 <meta property="og:type" content="article">
 <meta property="og:title" content="单例设计模式">
 <meta property="og:url" content="http://dhsmp.com/2017/07/01/single-design/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。  饿汉式1234567891011class Single &amp;#123;	private static Single s = new">
+<meta property="og:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/76859891.jpg">
-<meta property="og:updated_time" content="2018-05-04T14:31:47.633Z">
+<meta property="og:updated_time" content="2018-05-28T09:38:37.263Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="单例设计模式">
-<meta name="twitter:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个对象。 实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。  饿汉式1234567891011class Single &amp;#123;	private static Single s = new">
+<meta name="twitter:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
 <meta name="twitter:image" content="http://orxmumro7.bkt.clouddn.com/17-7-1/68605968.jpg">
 
 
@@ -439,7 +439,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  520 字
+                  578 字
                 </span>
               
 
@@ -483,7 +483,12 @@
       
 
       
-        <p>Java中有23种设计模式。<strong>设计模式是针对问题最有效的解决方法。</strong><br><strong>单例设计模式：解决一个类在内存中只存在一个对象。</strong></p>
+        <p>Java中有23种设计模式。<strong>设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。</strong>其应用场景如下：</p>
+<ul>
+<li>在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。</li>
+<li>在整个程序空间使用全局变量，共享资源。</li>
+<li>节省对象的创建时间等等。</li>
+</ul>
 <h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol>
 <li>禁止其他的应用程序，通过此类来创建对象。私有化构造函数。</li>
 <li>在本类里面创建对象。</li>
@@ -764,7 +769,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共40.5k字</span>
+  <span class="post-count">全站共40.6k字</span>
 </div>
 
 <!--

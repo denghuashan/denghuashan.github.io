@@ -3,6 +3,43 @@
 
 
     
+    
+  <url>
+    <loc>http://dhsmp.com/2017/07/01/single-design/</loc>
+    <lastmod>2018-05-28T09:38:37.263Z</lastmod>
+    <data>
+        <display>
+        <title>单例设计模式</title>
+        <pubTime>2017-07-01T12:01:46.247Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="设计模式" url="http://dhsmp.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://dhsmp.com/2017/07/03/factory-design/</loc>
+    <lastmod>2018-05-28T09:34:16.894Z</lastmod>
+    <data>
+        <display>
+        <title>工厂、策略、观察者设计模式</title>
+        <pubTime>2017-07-03T07:45:47.410Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="设计模式" url="http://dhsmp.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://dhsmp.com/2018/05/12/shell/</loc>
     <lastmod>2018-05-24T09:11:04.633Z</lastmod>
@@ -20,7 +57,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://dhsmp.com/2018/03/29/implement/</loc>
@@ -79,24 +115,6 @@
           
              
               <breadCrumb title="Java" url="http://dhsmp.com/categories/%E9%9A%8F%E7%AC%94/Java/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dhsmp.com/2017/07/01/single-design/</loc>
-    <lastmod>2018-05-04T14:31:47.633Z</lastmod>
-    <data>
-        <display>
-        <title>单例设计模式</title>
-        <pubTime>2017-07-01T12:01:46.247Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="设计模式" url="http://dhsmp.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
           
         </display>
     </data>
@@ -262,24 +280,6 @@
            
              
               <breadCrumb title="随笔" url="http://dhsmp.com/categories/%E9%9A%8F%E7%AC%94/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dhsmp.com/2017/07/03/factory-design/</loc>
-    <lastmod>2018-05-04T14:20:14.528Z</lastmod>
-    <data>
-        <display>
-        <title>工厂、策略、观察者设计模式</title>
-        <pubTime>2017-07-03T07:45:47.410Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="设计模式" url="http://dhsmp.com/categories/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/"/>
           
         </display>
     </data>

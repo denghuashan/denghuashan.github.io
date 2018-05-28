@@ -2,16 +2,30 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://dhsmp.com/2018/05/12/shell/</loc>
+    <loc>http://dhsmp.com/tags/index.html</loc>
     
-    <lastmod>2018-05-24T09:11:04.633Z</lastmod>
+    <lastmod>2018-05-28T13:35:27.852Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://dhsmp.com/tags/index.html</loc>
+    <loc>http://dhsmp.com/2017/07/01/single-design/</loc>
     
-    <lastmod>2018-05-23T08:13:32.983Z</lastmod>
+    <lastmod>2018-05-28T09:38:37.263Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dhsmp.com/2017/07/03/factory-design/</loc>
+    
+    <lastmod>2018-05-28T09:34:16.894Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dhsmp.com/2018/05/12/shell/</loc>
+    
+    <lastmod>2018-05-24T09:11:04.633Z</lastmod>
     
   </url>
   
@@ -33,13 +47,6 @@
     <loc>http://dhsmp.com/2018/01/25/webservice-summary/</loc>
     
     <lastmod>2018-05-04T14:34:10.838Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dhsmp.com/2017/07/01/single-design/</loc>
-    
-    <lastmod>2018-05-04T14:31:47.633Z</lastmod>
     
   </url>
   
@@ -103,13 +110,6 @@
     <loc>http://dhsmp.com/2017/06/21/first-article/</loc>
     
     <lastmod>2018-05-04T14:20:51.832Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dhsmp.com/2017/07/03/factory-design/</loc>
-    
-    <lastmod>2018-05-04T14:20:14.528Z</lastmod>
     
   </url>
   

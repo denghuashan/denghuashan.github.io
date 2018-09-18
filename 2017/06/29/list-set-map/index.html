@@ -144,14 +144,15 @@
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/43450823.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/28889517.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/44677023.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/80262158.jpg">
-<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/20130851.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/18-9-18/33064940.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/18-9-18/86301722.jpg">
+<meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/18-9-18/55770584.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/18-9-16/35368764.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/18-9-16/53085151.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/18-9-16/82405145.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/18-9-16/67717158.jpg">
 <meta property="og:image" content="http://orxmumro7.bkt.clouddn.com/17-6-29/51456213.jpg">
-<meta property="og:updated_time" content="2018-09-16T00:16:25.472Z">
+<meta property="og:updated_time" content="2018-09-18T07:41:07.594Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Java的List、Set、Map容器">
 <meta name="twitter:description" content="数组的特点 数据多了用对象存储，对象多了就用数组或集合存储。使用容器的最基本规则。 数组的长度必须事先指定，且一旦定义就不能再更改。 数组的存储的数据类型是固定的类型，单一类型数据的存储。 数组的内存分配，一次性分配一片连续的内存空间。连续的内存空间有多大，就在于数组的长度有多长。  为什么会出现这么多的容器呢？因为每一个容器对数据的存储方式都有不同，这个存储方式称之为：数据结构。 List中常用">
@@ -417,8 +418,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-09-16T08:16:25+08:00">
-                2018-09-16
+              <time title="更新于" itemprop="dateModified" datetime="2018-09-18T15:41:07+08:00">
+                2018-09-18
               </time>
             
           </span>
@@ -576,7 +577,7 @@
 <li><strong>entrySet()：返回值类型为Set<map.entry<k, v="">&gt;；K为Key的类型，V为Value的类型。该方法将Map集合中的映射关系存入到Set集合中，而这个关系的数据类型就是Map.Entry。获取到Map.Entry关系对象，再调用特有方法getKey()、getValue()获取关系中的键和值。</map.entry<k,></strong>下图为HashMap对entrySet()的具体实现。<img src="http://orxmumro7.bkt.clouddn.com/17-6-29/28889517.jpg" alt=""></li>
 <li><strong>keySet()：返回值类型为Set<k>；K为Key的数据类型。该方法将Map集合中所有的键存入到Set集合中，因为Set具备迭代器。所以可以用迭代方式取出所有的键，再根据get(key)，获取每一个键对应的值。</k></strong>下图为HashMap对keySet()的具体实现。<img src="http://orxmumro7.bkt.clouddn.com/17-6-29/44677023.jpg" alt=""></li>
 </ul>
-<h3 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h3><p><strong>底层使用哈希表数据结构，线程安全，效率低。内部实现使用synchronized关键字，同步方法。</strong>（有很多，可自行查看源码）<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/80262158.jpg" alt=""><br>不可以存入null键、null值。（key为null的时候，调用.hashCode会直接抛NullPointerException异常，所以没有再做判断）<br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/20130851.jpg" alt=""></p>
+<h3 id="Hashtable"><a href="#Hashtable" class="headerlink" title="Hashtable"></a>Hashtable</h3><p><strong>底层使用哈希表数据结构，线程安全，效率低。内部实现使用synchronized关键字，同步方法。</strong>（有很多，可自行查看源码）<br><img src="http://orxmumro7.bkt.clouddn.com/18-9-18/33064940.jpg" alt=""><br>不可以存入null键、null值。（key为null的时候，调用.hashCode会直接抛NullPointerException异常，所以没有再做判断）<br><img src="http://orxmumro7.bkt.clouddn.com/18-9-18/86301722.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/18-9-18/55770584.jpg" alt=""></p>
 <h3 id="HashMap"><a href="#HashMap" class="headerlink" title="HashMap"></a>HashMap</h3><p><strong>底层使用哈希表数据结构，允许存入null键、null值，线程不安全，效率高。</strong>（并发操作时，可能会发生内存溢出。后期再具体来谈使用HashMap出现内存溢出的情况。）<br><img src="http://orxmumro7.bkt.clouddn.com/18-9-16/35368764.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/18-9-16/53085151.jpg" alt=""><br>看到这里，其实也就明白了为什么HashMap允许存入null键、null值了。因为Key、Value是作为一个Node对象的属性来被存储的。而更有意思的是那个Node对象，采用的是树结构。TreeNode是其子类，而且还是使用红黑树，有意思吧。红黑树其中一个特点就是，子树之间的高度差不超过1。这样保证了元素的饱和存储。<br><img src="http://orxmumro7.bkt.clouddn.com/18-9-16/82405145.jpg" alt=""><br><img src="http://orxmumro7.bkt.clouddn.com/18-9-16/67717158.jpg" alt=""></p>
 <h3 id="TreeMap"><a href="#TreeMap" class="headerlink" title="TreeMap"></a>TreeMap</h3><p><strong>底层使用二叉树数据结构，线程不安全，可以用于给集合中的Key进行排序。compare()比较的就是key</strong><br><img src="http://orxmumro7.bkt.clouddn.com/17-6-29/51456213.jpg" alt=""></p>
 

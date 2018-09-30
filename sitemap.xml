@@ -2,9 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dhsmp.com/2018/08/26/data_struct_tree/</loc>
+    
+    <lastmod>2018-09-30T06:00:43.328Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dhsmp.com/2018/02/26/data_struct/</loc>
+    
+    <lastmod>2018-09-30T05:56:46.077Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dhsmp.com/tags/index.html</loc>
     
-    <lastmod>2018-09-29T12:40:31.172Z</lastmod>
+    <lastmod>2018-09-30T01:05:30.300Z</lastmod>
     
   </url>
   
@@ -159,13 +173,6 @@
     <loc>http://dhsmp.com/2017/07/13/database-transaction/</loc>
     
     <lastmod>2018-05-04T14:18:10.780Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dhsmp.com/2018/02/26/data_struct/</loc>
-    
-    <lastmod>2018-05-04T14:15:44.453Z</lastmod>
     
   </url>
   

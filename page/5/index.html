@@ -343,7 +343,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2018/10/28/database-transaction/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/02/jdbc-pool/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -362,7 +362,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/28/database-transaction/" itemprop="url">��ϵ�����ݿ�������</a></h1>
+                <a class="post-title-link" href="/2017/07/02/jdbc-pool/" itemprop="url">使用动态代理实现一个简单的数据库连接池</a></h1>
         
 		
         <div class="post-meta">
@@ -374,8 +374,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T21:15:38+08:00">
+                2017-07-02
               </time>
             
 
@@ -390,8 +390,8 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
+              <time title="更新于" itemprop="dateModified" datetime="2018-04-25T10:14:29+08:00">
+                2018-04-25
               </time>
             
           </span>
@@ -416,6 +416,17 @@
 
                 
                 
+                  ， 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/SQL/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
               
             </span>
           
@@ -426,7 +437,7 @@
 
           
           
-             <span id="/2018/10/28/database-transaction/" class="leancloud_visitors" data-flag-title="��ϵ�����ݿ�������">
+             <span id="/2017/07/02/jdbc-pool/" class="leancloud_visitors" data-flag-title="使用动态代理实现一个简单的数据库连接池">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -451,7 +462,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  201 字
+                  709 字
                 </span>
               
 
@@ -479,13 +490,12 @@
       
         
           
-          ������ָ�߼��ϵ�һ���������������������ĸ�����ԪҪôȫ���ɹ���Ҫôȫ��ʧ�ܡ��������������þ��ǰѶ���SQL������Ϊһ��������ִ�С�
-�������Ĵ����ԣ�ACID��
-ԭ���� Atomicty��������һ
+          明确一点：数据库连接是一个重量级的对象，每一个连接的建立是一个复杂且很消耗资源的事情。为了复用已经创建好的连接，出现了池技术。连接池、线程池、对象池等等。这里采用动态代理实现一个简单的数据库连接池。
+代码123456789101112131415161718192021222324252627282
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/10/28/database-transaction/#more" rel="contents">
+            <a class="btn" href="/2017/07/02/jdbc-pool/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -529,7 +539,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2018/10/28/cache-system/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/02/design-pattern/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -548,7 +558,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/28/cache-system/" itemprop="url">ʹ��ReentrantReadWriteLockʵ��һ���򵥵Ļ���ԭ��</a></h1>
+                <a class="post-title-link" href="/2017/07/02/design-pattern/" itemprop="url">装饰、代理设计模式</a></h1>
         
 		
         <div class="post-meta">
@@ -560,8 +570,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-02T19:43:37+08:00">
+                2017-07-02
               </time>
             
 
@@ -576,8 +586,193 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-04T22:19:42+08:00">
+                2018-05-04
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/02/design-pattern/" class="leancloud_visitors" data-flag-title="装饰、代理设计模式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  1,121 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+	
+	<div>
+	  
+	</div>
+	
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。
+装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/02/design-pattern/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+	
+	
+	
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/01/cache-system/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuaShan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/20170622104033.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DreamMaker-HS">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/07/01/cache-system/" itemprop="url">使用ReentrantReadWriteLock实现一个简单的缓存原理</a></h1>
+        
+		
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T21:34:09+08:00">
+                2017-07-01
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-04T22:15:27+08:00">
+                2018-05-04
               </time>
             
           </span>
@@ -612,7 +807,7 @@
 
           
           
-             <span id="/2018/10/28/cache-system/" class="leancloud_visitors" data-flag-title="ʹ��ReentrantReadWriteLockʵ��һ���򵥵Ļ���ԭ��">
+             <span id="/2017/07/01/cache-system/" class="leancloud_visitors" data-flag-title="使用ReentrantReadWriteLock实现一个简单的缓存原理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -637,7 +832,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  176 字
+                  493 字
                 </span>
               
 
@@ -665,12 +860,12 @@
       
         
           
-          ֮ǰ˵��Lock��ReentrantReadWriteLock��Lock��ʵ���࣬���Ի�ȡ������д����������ReentrantReadWriteLock��һ���򵥵Ļ���ϵͳԭ��ʵ�֡�
-������ע������123456789101112131415161
+          之前说过Lock，ReentrantReadWriteLock是Lock的实现类，可以获取读锁与写锁。这里用ReentrantReadWriteLock做一个简单的缓存系统原理实现。
+代码跟注释如下123456789101112131415161718192021222324252627282930
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/10/28/cache-system/#more" rel="contents">
+            <a class="btn" href="/2017/07/01/cache-system/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -714,7 +909,7 @@
   
 
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2018/10/28/blocking-queue/">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/07/01/single-design/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="HuaShan">
@@ -733,7 +928,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2018/10/28/blocking-queue/" itemprop="url">�������е�ʵ��ԭ��</a></h1>
+                <a class="post-title-link" href="/2017/07/01/single-design/" itemprop="url">单例设计模式</a></h1>
         
 		
         <div class="post-meta">
@@ -745,8 +940,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-07-01T20:01:46+08:00">
+                2017-07-01
               </time>
             
 
@@ -761,8 +956,199 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-28T17:38:37+08:00">
+                2018-05-28
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2017/07/01/single-design/" class="leancloud_visitors" data-flag-title="单例设计模式">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  578 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+	
+	<div>
+	  
+	</div>
+	
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+          Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：
+
+在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。
+在整个程序空间使用全局变量，共享资源。
+节省对象的创建时间等等。
+
+实现步骤
+禁止其他的应
+          ...
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2017/07/01/single-design/#more" rel="contents">
+              阅读全文 &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+	
+	
+	
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/06/30/lock/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuaShan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/20170622104033.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DreamMaker-HS">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2017/06/30/lock/" itemprop="url">Java中synchronized关键字与JDK1.5中显示Lock操作</a></h1>
+        
+		
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-06-30T11:00:37+08:00">
+                2017-06-30
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-05-04T22:26:05+08:00">
+                2018-05-04
               </time>
             
           </span>
@@ -797,7 +1183,7 @@
 
           
           
-             <span id="/2018/10/28/blocking-queue/" class="leancloud_visitors" data-flag-title="�������е�ʵ��ԭ��">
+             <span id="/2017/06/30/lock/" class="leancloud_visitors" data-flag-title="Java中synchronized关键字与JDK1.5中显示Lock操作">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -822,7 +1208,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  156 字
+                  1,098 字
                 </span>
               
 
@@ -850,391 +1236,16 @@
       
         
           
-          ��������һ���н�����������ʵ�ִ��룬�ܽ�һ���Լ������⡣�ײ��õ������飬��ʵ����һ��ѭ�����С��ʺ϶Բ���ʱ�����ݴ�����
-����123456789101112131415161718192021222324252627282930
+          本文主要是总结synchronized关键字与JDK1.5中Lock的操作。这里不谈论线程安全问题，线程安全问题是一个比较广而深的问题（volatile关键字、JMM内存模型、线程与主内存和工作内存的交互关系等）。同步使用的前提：
+
+必须是两个或者两个以上的线程。
+必须是多个线程使用同一个锁。
+
+这
           ...
           <!--noindex-->
           <div class="post-button text-center">
-            <a class="btn" href="/2018/10/28/blocking-queue/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-	
-	
-	
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2018/10/28/about-generics/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HuaShan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/20170622104033.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DreamMaker-HS">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/28/about-generics/" itemprop="url">����Java�з��͵���֪������</a></h1>
-        
-		
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/����/" itemprop="url" rel="index">
-                    <span itemprop="name">����</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/10/28/about-generics/" class="leancloud_visitors" data-flag-title="����Java�з��͵���֪������">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  408 字
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-	
-	<div>
-	  
-	</div>
-	
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          ���ڿ��ˡ���������Java���������ж��﷨�ǡ����ͣ���α���ͣ���һЩ���ܣ�˳���ܽ�����һ����ǰ��JDK1.5�����ķ��͵�������ʹ�á�
-Ϊ�λ����뷺��12345678910111213141516171819public c
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/28/about-generics/#more" rel="contents">
-              阅读全文 &raquo;
-            </a>
-          </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-	
-	
-	
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2018/10/15/annual-summary-2018/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HuaShan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/20170622104033.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DreamMaker-HS">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/10/15/annual-summary-2018/" itemprop="url">2018�����ܽ�</a></h1>
-        
-		
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-15T15:04:17+08:00">
-                2018-10-15
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
-                2018-10-28
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/����/" itemprop="url" rel="index">
-                    <span itemprop="name">����</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2018/10/15/annual-summary-2018/" class="leancloud_visitors" data-flag-title="2018�����ܽ�">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  113 字
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
-    
-	
-	<div>
-	  
-	</div>
-	
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-          2018��Ŀ��1��Ŀ��
-�����Կ�4�±���
-�Ķ�����ѧ֮·����һ��
-�Ķ�������֮�⡷�ڶ���
-�Ķ��̲ġ����ݽṹ��
-
-1�½�չ
-����һƪ�������µ�����
-�����Կ�4�±���
-�Ķ�����ѧ֮·����һ��
-�Ķ�������֮
-          ...
-          <!--noindex-->
-          <div class="post-button text-center">
-            <a class="btn" href="/2018/10/15/annual-summary-2018/#more" rel="contents">
+            <a class="btn" href="/2017/06/30/lock/#more" rel="contents">
               阅读全文 &raquo;
             </a>
           </div>
@@ -1329,7 +1340,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">18</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -1431,7 +1442,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共14.0k字</span>
+  <span class="post-count">全站共44.5k字</span>
 </div>
 
 <!--

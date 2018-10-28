@@ -116,18 +116,18 @@
 
 
 
-<meta name="description" content="֮ǰ��˵��������ģʽ��ʱ���ᵽ��������ģʽ��������������Ч�Ľ��������������ٻع�һ���Լ���Ϥ��װ�Ρ����������������ԡ��۲�������ģʽ����˵װ�Ρ���������ģʽ�� װ������ģʽ����Ҫ�����еĶ������й�����ǿʱ�����Զ����࣬�����ж������룬�������ж��">
+<meta name="description" content="之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。 装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。装饰模式比继承要灵活">
 <meta property="og:type" content="article">
-<meta property="og:title" content="װ�Ρ���������ģʽ">
+<meta property="og:title" content="装饰、代理设计模式">
 <meta property="og:url" content="http://dhsmp.com/2018/10/28/design-pattern/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="֮ǰ��˵��������ģʽ��ʱ���ᵽ��������ģʽ��������������Ч�Ľ��������������ٻع�һ���Լ���Ϥ��װ�Ρ����������������ԡ��۲�������ģʽ����˵װ�Ρ���������ģʽ�� װ������ģʽ����Ҫ�����еĶ������й�����ǿʱ�����Զ����࣬�����ж������룬�������ж��">
+<meta property="og:description" content="之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。 装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。装饰模式比继承要灵活">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/44995552.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/17140224.jpg">
-<meta property="og:updated_time" content="2018-10-27T16:24:53.161Z">
+<meta property="og:updated_time" content="2018-10-28T00:40:25.384Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="װ�Ρ���������ģʽ">
-<meta name="twitter:description" content="֮ǰ��˵��������ģʽ��ʱ���ᵽ��������ģʽ��������������Ч�Ľ��������������ٻع�һ���Լ���Ϥ��װ�Ρ����������������ԡ��۲�������ģʽ����˵װ�Ρ���������ģʽ�� װ������ģʽ����Ҫ�����еĶ������й�����ǿʱ�����Զ����࣬�����ж������룬�������ж��">
+<meta name="twitter:title" content="装饰、代理设计模式">
+<meta name="twitter:description" content="之前在说单例设计模式的时候提到过，设计模式是针对问题最有效的解决方法。这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。 装饰设计模式当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。装饰模式比继承要灵活">
 <meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/44995552.jpg">
 
 
@@ -162,7 +162,7 @@
 
 
 
-  <title>װ�Ρ���������ģʽ | DreamMaker-HS</title>
+  <title>装饰、代理设计模式 | DreamMaker-HS</title>
   
 
 
@@ -362,7 +362,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">װ�Ρ���������ģʽ</h1>
+          <h1 class="post-title" itemprop="name headline">装饰、代理设计模式</h1>
         
 		
         <div class="post-meta">
@@ -374,7 +374,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -390,7 +390,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -409,8 +409,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/����gʽ/" itemprop="url" rel="index">
-                    <span itemprop="name">����ģʽ</span>
+                  <a href="/categories/设计模式/" itemprop="url" rel="index">
+                    <span itemprop="name">设计模式</span>
                   </a>
                 </span>
 
@@ -426,7 +426,7 @@
 
           
           
-             <span id="/2018/10/28/design-pattern/" class="leancloud_visitors" data-flag-title="װ�Ρ���������ģʽ">
+             <span id="/2018/10/28/design-pattern/" class="leancloud_visitors" data-flag-title="装饰、代理设计模式">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -451,7 +451,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  293 字
+                  1,121 字
                 </span>
               
 
@@ -477,7 +477,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2018/10/28/design-pattern/" title="װ�Ρ���������ģʽ">http://dhsmp.com/2018/10/28/design-pattern/</a>
+      <a href="http://dhsmp.com/2018/10/28/design-pattern/" title="装饰、代理设计模式">http://dhsmp.com/2018/10/28/design-pattern/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -495,17 +495,17 @@
       
 
       
-        <p>֮ǰ��˵��������ģʽ��ʱ���ᵽ����<strong>����ģʽ��������������Ч�Ľ���������</strong>�����ٻع�һ���Լ���Ϥ��װ�Ρ����������������ԡ��۲�������ģʽ����˵װ�Ρ���������ģʽ��</p>
-<h2 id="װ������gʽ"><a href="#װ������gʽ" class="headerlink" title="װ������ģʽ"></a>װ������ģʽ</h2><p>����Ҫ�����еĶ������й�����ǿʱ�����Զ����࣬�����ж������룬�������ж����Ĺ��ܣ��ṩ��ǿ���ܡ���ô�Զ����ĸ�����Ϊװ���ࡣ<br>װ���ࡣͨ����ͨ�����췽�����ձ�װ�εĶ��󣬲����ڱ�װ�ζ����Ĺ��ܣ��ṩ��ǿ�Ĺ��ܡ�<br>װ��ģʽ�ȼ̳�Ҫ��������˼̳���ϵ��ӷ�ס����ҽ�����������֮���Ĺ�ϵ��<br>װ������Ϊֻ����ǿ���ж��󣬾߱��Ĺ��ܺ����ж�������ͬ�ģ�ֻ�����ṩ�˸�ǿ�Ĺ��ܣ�����װ�����ͱ�װ����ͨ������һ����ϵ��</p>
-<h3 id="����"><a href="#����" class="headerlink" title="����"></a>����</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//װ������ģʽ</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBufferedReader</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> Reader r;</div><div class="line"></div><div class="line">	MyBufferedReader(Reader r) &#123;</div><div class="line">		<span class="keyword">this</span>.r = r;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">MyReaderLine</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">		<span class="comment">// ����һ����ʱ����,ԭBufferedReader��װ�����ַ�����</span></div><div class="line">		StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line">		<span class="keyword">int</span> ch = <span class="number">0</span>;</div><div class="line">		<span class="keyword">while</span> ((ch = r.read()) != -<span class="number">1</span>) &#123;</div><div class="line">			<span class="keyword">if</span> (ch == <span class="string">'\r'</span>)</div><div class="line">				<span class="keyword">continue</span>;</div><div class="line">			<span class="keyword">if</span> (ch == <span class="string">'\n'</span>)</div><div class="line">				<span class="keyword">return</span> sb.toString();</div><div class="line">			<span class="keyword">else</span></div><div class="line">				sb.append((<span class="keyword">char</span>) ch);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (sb.length() != <span class="number">0</span>)</div><div class="line">			<span class="keyword">return</span> sb.toString();</div><div class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span>[] cbuf, <span class="keyword">int</span> off, <span class="keyword">int</span> len)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">		<span class="keyword">return</span> r.read(cbuf, off, len);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">		r.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>��ǿReader����ǿһ��MyReaderLine����һ�У��ķ������������ķ������ǵ���ԭ�������ķ�����<br>�����г��õ���������ͼ��������������д��һ�������෽�������ǹ��ܲ���ǿ���ȽϷ����������ǲ���ֱ��ȥ�����������෽������Ϊ���������෽�������кܶ��ط������˵��á�Ҫôд���������и��ǣ�Ҫô������ǿ����Ҳ��װ�ε�һ���ַ���<br><img src="https://dhsmp.nos-eastchina1.126.net/44995552.jpg" alt=""></p>
-<h2 id="��һ��Java���󷽷������o�ʱ���������·������������⡣"><a href="#��һ��Java���󷽷������o�ʱ���������·������������⡣" class="headerlink" title="��һ��Java���󷽷������õ�ʱ���������·������������⡣"></a>��һ��Java���󷽷������õ�ʱ���������·������������⡣</h2><ul>
-<li>дһ�����࣬����ĳ�����������������Ѿ���װ����Ϣ�����ٽ���ʹ�ô˷�����</li>
-<li>дһ�������İ�װ�࣬��ǿĳ������������װ��ʽ�Ƚϸ���ʱ��ʹ�ô���ģʽ��</li>
-<li>ʹ�ô���ģʽ������һ������������ȥ������ĳ�������ĵ��ã�������������ǿ��</li>
+        <p>之前在说单例设计模式的时候提到过，<strong>设计模式是针对问题最有效的解决方法。</strong>这里再回顾一下自己熟悉的装饰、代理、工厂、策略、观察者设计模式。先说装饰、代理设计模式。</p>
+<h2 id="装饰设计模式"><a href="#装饰设计模式" class="headerlink" title="装饰设计模式"></a>装饰设计模式</h2><p>当想要对已有的对象进行功能增强时，可以定义类，将已有对象传入，基于已有对象的功能，提供加强功能。那么自定义的该类称为装饰类。<br>装饰类。通常会通过构造方法接收被装饰的对象，并基于被装饰对象的功能，提供更强的功能。<br>装饰模式比继承要灵活，避免了继承体系的臃肿。而且降低了类与类之间的关系。<br>装饰类因为只是增强已有对象，具备的功能和已有对象是相同的，只不过提供了更强的功能，所以装饰类和被装饰类通常属于一个体系。</p>
+<h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//装饰设计模式</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyBufferedReader</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> Reader r;</div><div class="line"></div><div class="line">	MyBufferedReader(Reader r) &#123;</div><div class="line">		<span class="keyword">this</span>.r = r;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">MyReaderLine</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">		<span class="comment">// 定义一个临时容器,原BufferedReader封装的是字符数组</span></div><div class="line">		StringBuilder sb = <span class="keyword">new</span> StringBuilder();</div><div class="line">		<span class="keyword">int</span> ch = <span class="number">0</span>;</div><div class="line">		<span class="keyword">while</span> ((ch = r.read()) != -<span class="number">1</span>) &#123;</div><div class="line">			<span class="keyword">if</span> (ch == <span class="string">'\r'</span>)</div><div class="line">				<span class="keyword">continue</span>;</div><div class="line">			<span class="keyword">if</span> (ch == <span class="string">'\n'</span>)</div><div class="line">				<span class="keyword">return</span> sb.toString();</div><div class="line">			<span class="keyword">else</span></div><div class="line">				sb.append((<span class="keyword">char</span>) ch);</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">if</span> (sb.length() != <span class="number">0</span>)</div><div class="line">			<span class="keyword">return</span> sb.toString();</div><div class="line">		<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">read</span><span class="params">(<span class="keyword">char</span>[] cbuf, <span class="keyword">int</span> off, <span class="keyword">int</span> len)</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">		<span class="keyword">return</span> r.read(cbuf, off, len);</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">close</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</div><div class="line">		r.close();</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>增强Reader，增强一个MyReaderLine（读一行）的方法，而其他的方法还是调用原来对象的方法。<br>工作中常用到可能是下图这种情况，有人写了一个工具类方法，但是功能不够强或比较繁琐。那我们不能直接去改这个工具类方法，因为这个工具类方法可能有很多地方进行了调用。要么写个子类进行覆盖，要么进行增强。这也是装饰的一种手法。<br><img src="https://dhsmp.nos-eastchina1.126.net/44995552.jpg" alt=""></p>
+<h2 id="当一个Java对象方法不够用的时候，有如下方法解决此问题。"><a href="#当一个Java对象方法不够用的时候，有如下方法解决此问题。" class="headerlink" title="当一个Java对象方法不够用的时候，有如下方法解决此问题。"></a>当一个Java对象方法不够用的时候，有如下方法解决此问题。</h2><ul>
+<li>写一个子类，覆盖某个方法。如果父类已经封装了信息，不再建议使用此方法。</li>
+<li>写一个此类的包装类，增强某个方法。当包装方式比较复杂时，使用代理模式。</li>
+<li>使用代理模式，返回一个代理对象出去，拦截某个方法的调用，并对其进行增强。</li>
 </ul>
-<h2 id="����gʽ"><a href="#����gʽ" class="headerlink" title="����ģʽ"></a>����ģʽ</h2><p>����ģʽ�е����������뾭����һ����<strong>������Ҫ����̬������</strong>ĳ�����ز���˾����ĳ���Ǵ��ԣ�ֱ���Ҹ����ǵľ�����̸������ϸ�ڣ�̸��֮����ʵ�ʵĴ�����������ȥ��������һ��˼·��������������ôʵ�֡�<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//�����ӿ� </span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function">String <span class="title">sing</span><span class="params">(String name)</span></span>;</div><div class="line"></div><div class="line">	<span class="function">String <span class="title">dance</span><span class="params">(String name)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//����</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Star</span> <span class="keyword">implements</span> <span class="title">Subject</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">sing</span><span class="params">(String singName)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"Star sing()����"</span> + singName + <span class="string">"��!"</span>);</div><div class="line">		<span class="keyword">return</span> <span class="string">"����!"</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">dance</span><span class="params">(String danceName)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"Star dance()����"</span> + danceName + <span class="string">"��!"</span>);</div><div class="line">		<span class="keyword">return</span> <span class="string">"��л�ϰ�!"</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//���ǵľ�����</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StarProxy</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">private</span> Subject star = <span class="keyword">new</span> Star();</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> Subject <span class="title">getProxy</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">		<span class="keyword">return</span> (Subject) Proxy.newProxyInstance(</div><div class="line">				StarProxy.class.getClassLoader(), </div><div class="line">				star.getClass().getInterfaces(), </div><div class="line">				<span class="keyword">new</span> InvocationHandler() &#123;</div><div class="line">			</div><div class="line">			<span class="comment">/**</span></div><div class="line">			 * proxy:�Ѵ��������Լ����ݽ���</div><div class="line">			 * method:�Ѵ���������ǰ���õķ������ݽ���</div><div class="line">			 * args:�ѷ����������ݽ���</div><div class="line">			 **/</div><div class="line">			<span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span></span></div><div class="line">					<span class="keyword">throws</span> Throwable &#123;</div><div class="line">				<span class="comment">// ����ָ�����ش��������ĸɵĹ���</span></div><div class="line">				<span class="keyword">if</span>(method.getName().equals(<span class="string">"sing"</span>))&#123;</div><div class="line">					<span class="comment">//ִ��ҵ���߼�����</span></div><div class="line">					System.out.println(<span class="string">"StarProxy����һ����Ǯ��"</span>);</div><div class="line">					<span class="keyword">return</span> method.invoke(star, args);</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">if</span>(method.getName().equals(<span class="string">"dance"</span>))&#123;</div><div class="line">					<span class="comment">//ִ��ҵ���߼�����</span></div><div class="line">					System.out.println(<span class="string">"StarProxy����������Ǯ��"</span>);</div><div class="line">					<span class="keyword">return</span> method.invoke(star, args);</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;);</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">		</div><div class="line">		StarProxy proxy = <span class="keyword">new</span> StarProxy();</div><div class="line">		Subject s = proxy.getProxy();</div><div class="line">		System.out.println(s.dance(<span class="string">"����"</span>));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>�������£�<br><img src="https://dhsmp.nos-eastchina1.126.net/17140224.jpg" alt=""><br>Proxy����newProxyInstance()��JDK�Դ��Ķ�̬��������������������<strong>���ڽӿڽ��д���</strong>�����ض���ʵ�����ķ��ʡ�����������Ҫ�߱�����ʵ������ͬ����Ϊ�������������ջ�������ʵ����ʵ�־�������Ϊ��<br>newProxyInstance()��������������������һ���������������ڶ������ĸ��ӿڣ��������Ǹ�ʲô��Ϊ��<br>����һ����û�нӿڣ�Ҫʹ�ö�̬��������Ҫʹ��CGLib��<br>spring��AOP�����ֽ����˲��á�<br><strong>JDK���س��Ĵ��������ǻ��ڽӿ����ɵġ�<br>CGLib���س��Ĵ��������ǻ����������ɵģ������಻�ܱ�final���Ρ�</strong></p>
+<h2 id="代理模式"><a href="#代理模式" class="headerlink" title="代理模式"></a>代理模式</h2><p>代理模式有点类似明星与经纪人一样。<strong>这里主要讲动态代理。</strong>某个房地产公司想请某明星代言，直接找该明星的经纪人谈具体的细节，谈好之后，实际的代言是由明星去做。这是一个思路，那我们来看怎么实现。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//代理接口 </span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">Subject</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function">String <span class="title">sing</span><span class="params">(String name)</span></span>;</div><div class="line"></div><div class="line">	<span class="function">String <span class="title">dance</span><span class="params">(String name)</span></span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//明星</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Star</span> <span class="keyword">implements</span> <span class="title">Subject</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">sing</span><span class="params">(String singName)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"Star sing()，唱"</span> + singName + <span class="string">"歌!"</span>);</div><div class="line">		<span class="keyword">return</span> <span class="string">"飞吻!"</span>;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> String <span class="title">dance</span><span class="params">(String danceName)</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"Star dance()，跳"</span> + danceName + <span class="string">"舞!"</span>);</div><div class="line">		<span class="keyword">return</span> <span class="string">"多谢老板!"</span>;</div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//明星的经纪人</span></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">StarProxy</span> </span>&#123;</div><div class="line">	</div><div class="line">	<span class="keyword">private</span> Subject star = <span class="keyword">new</span> Star();</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> Subject <span class="title">getProxy</span><span class="params">()</span></span>&#123;</div><div class="line">		</div><div class="line">		<span class="keyword">return</span> (Subject) Proxy.newProxyInstance(</div><div class="line">				StarProxy.class.getClassLoader(), </div><div class="line">				star.getClass().getInterfaces(), </div><div class="line">				<span class="keyword">new</span> InvocationHandler() &#123;</div><div class="line">			</div><div class="line">			<span class="comment">/**</span></div><div class="line">			 * proxy:把代理对象自己传递进来</div><div class="line">			 * method:把代理对象当前调用的方法传递进来</div><div class="line">			 * args:把方法参数传递进来</div><div class="line">			 **/</div><div class="line">			<span class="function"><span class="keyword">public</span> Object <span class="title">invoke</span><span class="params">(Object proxy, Method method, Object[] args)</span></span></div><div class="line">					<span class="keyword">throws</span> Throwable &#123;</div><div class="line">				<span class="comment">// 编码指定返回代理对象的干的工作</span></div><div class="line">				<span class="keyword">if</span>(method.getName().equals(<span class="string">"sing"</span>))&#123;</div><div class="line">					<span class="comment">//执行业务逻辑处理</span></div><div class="line">					System.out.println(<span class="string">"StarProxy，搞一万块钱来"</span>);</div><div class="line">					<span class="keyword">return</span> method.invoke(star, args);</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">if</span>(method.getName().equals(<span class="string">"dance"</span>))&#123;</div><div class="line">					<span class="comment">//执行业务逻辑处理</span></div><div class="line">					System.out.println(<span class="string">"StarProxy，搞两万块钱来"</span>);</div><div class="line">					<span class="keyword">return</span> method.invoke(star, args);</div><div class="line">				&#125;</div><div class="line">				<span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">			&#125;</div><div class="line">		&#125;);</div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</div><div class="line">		</div><div class="line">		StarProxy proxy = <span class="keyword">new</span> StarProxy();</div><div class="line">		Subject s = proxy.getProxy();</div><div class="line">		System.out.println(s.dance(<span class="string">"拉丁"</span>));</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>运行如下：<br><img src="https://dhsmp.nos-eastchina1.126.net/17140224.jpg" alt=""><br>Proxy类的newProxyInstance()是JDK自带的动态代理，产生代理对象，<strong>基于接口进行代理</strong>，拦截对真实对象的访问。代理对象需要具备与真实对象相同的行为，代理对象最终还是找真实对象实现具体的行为。<br>newProxyInstance()方法接收三个参数，第一个是类加载器，第二个是哪个接口，第三个是干什么行为。<br>如果一个类没有接口，要使用动态代理，需要使用CGLib。<br>spring在AOP中两种进行了采用。<br><strong>JDK返回出的代理对象是基于接口生成的。<br>CGLib返回出的代理对象是基于子类生成的，所以类不能被final修饰。</strong></p>
 
       
     </div>
@@ -562,8 +562,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-			  <a href="/2018/10/28/evolution/" rel="prev" title="Ӧ�õı�Ǩ">
-				<i class="fa fa-chevron-left"></i> Ӧ�õı�Ǩ
+			  <a href="/2018/10/28/evolution/" rel="prev" title="应用的变迁">
+				<i class="fa fa-chevron-left"></i> 应用的变迁
               </a>
             
           </div>
@@ -572,8 +572,8 @@
 
           <div class="post-nav-prev post-nav-item">
 			
-			  <a href="/2018/10/28/decrypt-blog/" rel="next" title="����˲���վ������">
-				����˲���վ������ <i class="fa fa-chevron-right"></i>
+			  <a href="/2018/10/28/decrypt-blog/" rel="next" title="搭建个人博客站点解密">
+				搭建个人博客站点解密 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -657,7 +657,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -723,7 +723,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#װ������gʽ"><span class="nav-number">1.</span> <span class="nav-text">װ������ģʽ</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#����"><span class="nav-number">1.1.</span> <span class="nav-text">����</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#��һ��Java���󷽷������o�ʱ���������·������������⡣"><span class="nav-number">2.</span> <span class="nav-text">��һ��Java���󷽷������õ�ʱ���������·������������⡣</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����gʽ"><span class="nav-number">3.</span> <span class="nav-text">����ģʽ</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#装饰设计模式"><span class="nav-number">1.</span> <span class="nav-text">装饰设计模式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#代码"><span class="nav-number">1.1.</span> <span class="nav-text">代码</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#当一个Java对象方法不够用的时候，有如下方法解决此问题。"><span class="nav-number">2.</span> <span class="nav-text">当一个Java对象方法不够用的时候，有如下方法解决此问题。</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代理模式"><span class="nav-number">3.</span> <span class="nav-text">代理模式</span></a></li></ol></div>
             
 
           </div>
@@ -775,7 +775,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共14.0k字</span>
+  <span class="post-count">全站共46.0k字</span>
 </div>
 
 <!--

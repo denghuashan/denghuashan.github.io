@@ -116,12 +116,12 @@
 
 
 
-<meta name="description" content="�ڱ�����������ʱ�������޸ġ���¼ס���޸ĵ��ֶΣ���ֵ����ֵ�� ʵ��˼· ���÷���+ע�⡣д��һ�������ࡣ��ǰ�˰ѱ������ݴ�ǰ̨���뵽��̨�󡣰�request������ԭʼ��¼�����������бȽϡ� �������еķ������÷��䣬��ȡԭʼ�����ϵ��ֶε�ֵ���ٸ�request�е���������ֵ�">
+<meta name="description" content="在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。 实现思路 采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。 工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。 工具类中的比较只能对基本数据类型、基本数">
 <meta property="og:type" content="article">
-<meta property="og:title" content="�����޸ĵĲ�����¼ OperateLog">
+<meta property="og:title" content="表单修改的操作记录 OperateLog">
 <meta property="og:url" content="http://dhsmp.com/2018/10/28/operate-log/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="�ڱ�����������ʱ�������޸ġ���¼ס���޸ĵ��ֶΣ���ֵ����ֵ�� ʵ��˼· ���÷���+ע�⡣д��һ�������ࡣ��ǰ�˰ѱ������ݴ�ǰ̨���뵽��̨�󡣰�request������ԭʼ��¼�����������бȽϡ� �������еķ������÷��䣬��ȡԭʼ�����ϵ��ֶε�ֵ���ٸ�request�е���������ֵ�">
+<meta property="og:description" content="在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。 实现思路 采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。 工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。 工具类中的比较只能对基本数据类型、基本数">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/74946581.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/22204390.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/93442222.jpg">
@@ -132,10 +132,10 @@
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/51257277.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/95736222.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/45014357.jpg">
-<meta property="og:updated_time" content="2018-10-27T16:24:53.215Z">
+<meta property="og:updated_time" content="2018-10-28T00:40:25.485Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="�����޸ĵĲ�����¼ OperateLog">
-<meta name="twitter:description" content="�ڱ�����������ʱ�������޸ġ���¼ס���޸ĵ��ֶΣ���ֵ����ֵ�� ʵ��˼· ���÷���+ע�⡣д��һ�������ࡣ��ǰ�˰ѱ������ݴ�ǰ̨���뵽��̨�󡣰�request������ԭʼ��¼�����������бȽϡ� �������еķ������÷��䣬��ȡԭʼ�����ϵ��ֶε�ֵ���ٸ�request�е���������ֵ�">
+<meta name="twitter:title" content="表单修改的操作记录 OperateLog">
+<meta name="twitter:description" content="在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。 实现思路 采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。 工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。 工具类中的比较只能对基本数据类型、基本数">
 <meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/74946581.jpg">
 
 
@@ -170,7 +170,7 @@
 
 
 
-  <title>�����޸ĵĲ�����¼ OperateLog | DreamMaker-HS</title>
+  <title>表单修改的操作记录 OperateLog | DreamMaker-HS</title>
   
 
 
@@ -370,7 +370,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">�����޸ĵĲ�����¼ OperateLog</h1>
+          <h1 class="post-title" itemprop="name headline">表单修改的操作记录 OperateLog</h1>
         
 		
         <div class="post-meta">
@@ -382,7 +382,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -398,7 +398,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -434,7 +434,7 @@
 
           
           
-             <span id="/2018/10/28/operate-log/" class="leancloud_visitors" data-flag-title="�����޸ĵĲ�����¼ OperateLog">
+             <span id="/2018/10/28/operate-log/" class="leancloud_visitors" data-flag-title="表单修改的操作记录 OperateLog">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -459,7 +459,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  41 字
+                  350 字
                 </span>
               
 
@@ -485,7 +485,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2018/10/28/operate-log/" title="�����޸ĵĲ�����¼ OperateLog">http://dhsmp.com/2018/10/28/operate-log/</a>
+      <a href="http://dhsmp.com/2018/10/28/operate-log/" title="表单修改的操作记录 OperateLog">http://dhsmp.com/2018/10/28/operate-log/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -503,28 +503,28 @@
       
 
       
-        <p>�ڱ�����������ʱ�������޸ġ���¼ס���޸ĵ��ֶΣ���ֵ����ֵ��</p>
-<h2 id="ʵ��˼·"><a href="#ʵ��˼·" class="headerlink" title="ʵ��˼·"></a>ʵ��˼·</h2><ul>
-<li>���÷���+ע�⡣д��һ�������ࡣ��ǰ�˰ѱ������ݴ�ǰ̨���뵽��̨�󡣰�request������ԭʼ��¼�����������бȽϡ�</li>
-<li>�������еķ������÷��䣬��ȡԭʼ�����ϵ��ֶε�ֵ���ٸ�request�е���������ֵ���бȽϡ�<br>��ԭʼ�������У�ʹ��ע�⣬����Ҫ���бȽϵ��ֶΣ�����ע�⣬�������ֶ���������</li>
-<li>�������еıȽ�ֻ�ܶԻ����������͡������������͵İ�װ���͡�Date���ͽ��бȽϡ����顢���ϡ����������ǲ������бȽϵġ�����Ƿȱ�ĵط�����ӭ���䡣</li>
+        <p>在表单回显数据时，点击修改。记录住被修改的字段，旧值与新值。</p>
+<h2 id="实现思路"><a href="#实现思路" class="headerlink" title="实现思路"></a>实现思路</h2><ul>
+<li>采用反射+注解。写了一个工具类。当前端把表单数据从前台带入到后台后。把request对象跟原始记录对象传入进行比较。</li>
+<li>工具类中的方法采用反射，获取原始对象上的字段的值。再跟request中的请求参数值进行比较。<br>在原始对象类中，使用注解，对需要进行比较的字段，加入注解，并设置字段中文名。</li>
+<li>工具类中的比较只能对基本数据类型、基本数据类型的包装类型、Date类型进行比较。数组、集合、关联对象是不会进行比较的。这是欠缺的地方，欢迎补充。</li>
 </ul>
-<h2 id="ʾ��ͼ"><a href="#ʾ��ͼ" class="headerlink" title="ʾ��ͼ"></a>ʾ��ͼ</h2><p><strong>������ѯ����ģ����Ŀ�в�ѯ���ݣ�</strong></p>
+<h2 id="示例图"><a href="#示例图" class="headerlink" title="示例图"></a>示例图</h2><p><strong>点击查询：（模拟项目中查询数据）</strong></p>
 <p><img src="https://dhsmp.nos-eastchina1.126.net/74946581.jpg" alt=""></p>
-<p><strong>�������ݣ���ģ����Ŀ�б����������ݣ�</strong></p>
+<p><strong>回显数据：（模拟项目中表单回显数据）</strong></p>
 <p><img src="https://dhsmp.nos-eastchina1.126.net/22204390.jpg" alt=""></p>
-<p><strong>�޸����ݣ���ģ����Ŀ�б����޸����ݣ��޸���4������޸ģ��ύ����̨</strong></p>
+<p><strong>修改数据：（模拟项目中表单修改数据）修改了4项，点击修改，提交到后台</strong></p>
 <p><img src="https://dhsmp.nos-eastchina1.126.net/93442222.jpg" alt=""></p>
-<p><strong>�޸����ݵĲ�����¼</strong></p>
+<p><strong>修改数据的操作记录</strong></p>
 <p><img src="https://dhsmp.nos-eastchina1.126.net/70444357.jpg" alt=""></p>
-<p><strong>����һ��</strong></p>
+<p><strong>再来一次</strong></p>
 <p><img src="https://dhsmp.nos-eastchina1.126.net/97567651.jpg" alt=""><br><img src="https://dhsmp.nos-eastchina1.126.net/55753844.jpg" alt=""></p>
-<p><strong>��ʾ������¼</strong></p>
+<p><strong>显示操作记录</strong></p>
 <p><img src="https://dhsmp.nos-eastchina1.126.net/3972531.jpg" alt=""></p>
-<h2 id="����ʾ��ͼ"><a href="#����ʾ��ͼ" class="headerlink" title="����ʾ��ͼ"></a>����ʾ��ͼ</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/51257277.jpg" alt=""><br>�������ϼ���ע�⣬ָ�����Ե���������<br><img src="https://dhsmp.nos-eastchina1.126.net/95736222.jpg" alt=""><br>�������еĴ��룬���Բ�������˼·ȥ��չ��<br><img src="https://dhsmp.nos-eastchina1.126.net/45014357.jpg" alt=""></p>
-<h2 id="�ܽ�"><a href="#�ܽ�" class="headerlink" title="�ܽ�"></a>�ܽ�</h2><ul>
-<li>�����ѷŵ��ֿ��С�<a href="https://github.com/denghuashan/OperateLog" target="_blank" rel="external">https://github.com/denghuashan/OperateLog</a></li>
-<li>��ӭָ����������չ��</li>
+<h2 id="代码示例图"><a href="#代码示例图" class="headerlink" title="代码示例图"></a>代码示例图</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/51257277.jpg" alt=""><br>在属性上加入注解，指定属性的中文名。<br><img src="https://dhsmp.nos-eastchina1.126.net/95736222.jpg" alt=""><br>工具类中的代码，可以参照这套思路去扩展。<br><img src="https://dhsmp.nos-eastchina1.126.net/45014357.jpg" alt=""></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>代码已放到仓库中。<a href="https://github.com/denghuashan/OperateLog" target="_blank" rel="external">https://github.com/denghuashan/OperateLog</a></li>
+<li>欢迎指正或进行扩展。</li>
 </ul>
 
       
@@ -582,8 +582,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-			  <a href="/2018/10/28/redis-summary/" rel="prev" title="redis���ܽ����ع�">
-				<i class="fa fa-chevron-left"></i> redis���ܽ����ع�
+			  <a href="/2018/10/28/redis-summary/" rel="prev" title="redis的总结与回顾">
+				<i class="fa fa-chevron-left"></i> redis的总结与回顾
               </a>
             
           </div>
@@ -592,8 +592,8 @@
 
           <div class="post-nav-prev post-nav-item">
 			
-			  <a href="/2018/10/28/objectinit/" rel="next" title="Java������ʼ���Ĺ���">
-				Java������ʼ���Ĺ��� <i class="fa fa-chevron-right"></i>
+			  <a href="/2018/10/28/objectinit/" rel="next" title="Java对象初始化的过程">
+				Java对象初始化的过程 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -677,7 +677,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -743,7 +743,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ʵ��˼·"><span class="nav-number">1.</span> <span class="nav-text">ʵ��˼·</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ʾ��ͼ"><span class="nav-number">2.</span> <span class="nav-text">ʾ��ͼ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����ʾ��ͼ"><span class="nav-number">3.</span> <span class="nav-text">����ʾ��ͼ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�ܽ�"><span class="nav-number">4.</span> <span class="nav-text">�ܽ�</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现思路"><span class="nav-number">1.</span> <span class="nav-text">实现思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#示例图"><span class="nav-number">2.</span> <span class="nav-text">示例图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#代码示例图"><span class="nav-number">3.</span> <span class="nav-text">代码示例图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">4.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
@@ -795,7 +795,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共14.0k字</span>
+  <span class="post-count">全站共46.0k字</span>
 </div>
 
 <!--

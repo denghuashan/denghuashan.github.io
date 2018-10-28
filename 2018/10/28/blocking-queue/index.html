@@ -116,19 +116,19 @@
 
 
 
-<meta name="description" content="��������һ���н�����������ʵ�ִ��룬�ܽ�һ���Լ������⡣�ײ��õ������飬��ʵ����һ��ѭ�����С��ʺ϶Բ���ʱ�����ݴ����� ����12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
+<meta name="description" content="在这里贴一下有界阻塞队列的实现代码，总结一下自己的理解。底层用的是数组，其实就是一个循环队列。适合对并发时的数据处理。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657package thread;import java.util.c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="�������е�ʵ��ԭ��">
+<meta property="og:title" content="阻塞队列的实现原理">
 <meta property="og:url" content="http://dhsmp.com/2018/10/28/blocking-queue/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="��������һ���н�����������ʵ�ִ��룬�ܽ�һ���Լ������⡣�ײ��õ������飬��ʵ����һ��ѭ�����С��ʺ϶Բ���ʱ�����ݴ����� ����12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
+<meta property="og:description" content="在这里贴一下有界阻塞队列的实现代码，总结一下自己的理解。底层用的是数组，其实就是一个循环队列。适合对并发时的数据处理。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657package thread;import java.util.c">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/12343882.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/27460039.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/38205197.jpg">
-<meta property="og:updated_time" content="2018-10-27T16:24:53.108Z">
+<meta property="og:updated_time" content="2018-10-28T00:40:25.292Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="�������е�ʵ��ԭ��">
-<meta name="twitter:description" content="��������һ���н�����������ʵ�ִ��룬�ܽ�һ���Լ������⡣�ײ��õ������飬��ʵ����һ��ѭ�����С��ʺ϶Բ���ʱ�����ݴ����� ����12345678910111213141516171819202122232425262728293031323334353637383940414243444546474849505152535455">
+<meta name="twitter:title" content="阻塞队列的实现原理">
+<meta name="twitter:description" content="在这里贴一下有界阻塞队列的实现代码，总结一下自己的理解。底层用的是数组，其实就是一个循环队列。适合对并发时的数据处理。 代码123456789101112131415161718192021222324252627282930313233343536373839404142434445464748495051525354555657package thread;import java.util.c">
 <meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/12343882.jpg">
 
 
@@ -163,7 +163,7 @@
 
 
 
-  <title>�������е�ʵ��ԭ�� | DreamMaker-HS</title>
+  <title>阻塞队列的实现原理 | DreamMaker-HS</title>
   
 
 
@@ -363,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">�������е�ʵ��ԭ��</h1>
+          <h1 class="post-title" itemprop="name headline">阻塞队列的实现原理</h1>
         
 		
         <div class="post-meta">
@@ -375,7 +375,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -391,7 +391,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -427,7 +427,7 @@
 
           
           
-             <span id="/2018/10/28/blocking-queue/" class="leancloud_visitors" data-flag-title="�������е�ʵ��ԭ��">
+             <span id="/2018/10/28/blocking-queue/" class="leancloud_visitors" data-flag-title="阻塞队列的实现原理">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -452,7 +452,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  156 字
+                  445 字
                 </span>
               
 
@@ -478,7 +478,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2018/10/28/blocking-queue/" title="�������е�ʵ��ԭ��">http://dhsmp.com/2018/10/28/blocking-queue/</a>
+      <a href="http://dhsmp.com/2018/10/28/blocking-queue/" title="阻塞队列的实现原理">http://dhsmp.com/2018/10/28/blocking-queue/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -496,10 +496,10 @@
       
 
       
-        <p>��������һ��<strong>�н���������</strong>��ʵ�ִ��룬�ܽ�һ���Լ������⡣�ײ��õ������飬��ʵ����һ��ѭ�����С��ʺ϶Բ���ʱ�����ݴ�����</p>
-<h2 id="����"><a href="#����" class="headerlink" title="����"></a>����</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> thread;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.concurrent.locks.Condition;</div><div class="line"><span class="keyword">import</span> java.util.concurrent.locks.Lock;</div><div class="line"><span class="keyword">import</span> java.util.concurrent.locks.ReentrantLock;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BoundedBuffer</span> </span>&#123;</div><div class="line">	<span class="comment">//������</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Lock lock = <span class="keyword">new</span> ReentrantLock();</div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Condition notFull = lock.newCondition();</div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Condition notEmpty = lock.newCondition();</div><div class="line">	<span class="comment">//����������������ֵΪ100</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Object[] items = <span class="keyword">new</span> Object[<span class="number">100</span>];</div><div class="line">	</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> putptr, takeptr, count;</div><div class="line">	</div><div class="line">	<span class="comment">//�������Ŷ���</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Object x)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</div><div class="line">		lock.lock();</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			<span class="keyword">while</span> (count == items.length)&#123;</div><div class="line">				<span class="comment">//���ˣ����еȴ�</span></div><div class="line">				notFull.await();</div><div class="line">			&#125;</div><div class="line">			items[putptr] = x;</div><div class="line">			<span class="keyword">if</span> (++putptr == items.length)&#123;</div><div class="line">				<span class="comment">//����λ�õ�ָ��Ҫ��������ֵ�ˣ����ص�ԭ��</span></div><div class="line">				putptr = <span class="number">0</span>;</div><div class="line">			&#125;</div><div class="line">			++count;</div><div class="line">			<span class="comment">//���źţ��ÿյ���</span></div><div class="line">			notEmpty.signal();</div><div class="line">		&#125; <span class="keyword">finally</span> &#123;</div><div class="line">			lock.unlock();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">take</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</div><div class="line">		lock.lock();</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			<span class="keyword">while</span> (count == <span class="number">0</span>)&#123;</div><div class="line">				<span class="comment">//���ˣ����еȴ��������Ѿ�ȡ���ˡ�</span></div><div class="line">				notEmpty.await();</div><div class="line">			&#125;</div><div class="line">			Object x = items[takeptr];</div><div class="line">			<span class="keyword">if</span> (++takeptr == items.length)&#123;</div><div class="line">				<span class="comment">//ȡ��λ�õ�ָ��Ҫ��������ֵ�ˣ����ص�ԭ��</span></div><div class="line">				takeptr = <span class="number">0</span>;</div><div class="line">			&#125;</div><div class="line">			--count;</div><div class="line">			<span class="comment">//���źţ���������</span></div><div class="line">			notFull.signal();</div><div class="line">			<span class="keyword">return</span> x;</div><div class="line">		&#125; <span class="keyword">finally</span> &#123;</div><div class="line">			lock.unlock();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="����-1"><a href="#����-1" class="headerlink" title="����"></a>����</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/12343882.jpg" alt=""><br>����ȡ���Σ���һ�ξ�ȡ���ˣ��ڶ��ξ��ڵȴ��������ݡ�</p>
-<h2 id="����-2"><a href="#����-2" class="headerlink" title="����"></a>����</h2><p><strong>��һ���򵥵�����˵���������������������ṩ�Ľӿڲ��������߷�ֵ������60����ʱͻȻ��80������������Ҫ�������������е�Ӧ�ó����ͳ����ˡ���Ҫ��������Ŀ�ģ������𵽻��������á���һ����ȡһ�����ڴ���ʵ��ʱ���ж϶����Ƿ��Ѿ������˺��ж϶����Ƿ��Ѿ�ȡ����ʱ����while������һ��СС��ϸ�ڡ��ڵȴ� Condition ʱ���������������ٻ��ѡ�����ͨ����Ϊ�Ի���ƽ̨�������ò���</strong><br><img src="https://dhsmp.nos-eastchina1.126.net/27460039.jpg" alt=""><br><img src="https://dhsmp.nos-eastchina1.126.net/38205197.jpg" alt=""></p>
+        <p>在这里贴一下<strong>有界阻塞队列</strong>的实现代码，总结一下自己的理解。底层用的是数组，其实就是一个循环队列。适合对并发时的数据处理。</p>
+<h2 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">package</span> thread;</div><div class="line"></div><div class="line"><span class="keyword">import</span> java.util.concurrent.locks.Condition;</div><div class="line"><span class="keyword">import</span> java.util.concurrent.locks.Lock;</div><div class="line"><span class="keyword">import</span> java.util.concurrent.locks.ReentrantLock;</div><div class="line"></div><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">BoundedBuffer</span> </span>&#123;</div><div class="line">	<span class="comment">//锁对象</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Lock lock = <span class="keyword">new</span> ReentrantLock();</div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Condition notFull = lock.newCondition();</div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Condition notEmpty = lock.newCondition();</div><div class="line">	<span class="comment">//阻塞队列最大容量值为100</span></div><div class="line">	<span class="keyword">private</span> <span class="keyword">final</span> Object[] items = <span class="keyword">new</span> Object[<span class="number">100</span>];</div><div class="line">	</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> putptr, takeptr, count;</div><div class="line">	</div><div class="line">	<span class="comment">//缓冲存放对象</span></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">put</span><span class="params">(Object x)</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</div><div class="line">		lock.lock();</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			<span class="keyword">while</span> (count == items.length)&#123;</div><div class="line">				<span class="comment">//满了，进行等待</span></div><div class="line">				notFull.await();</div><div class="line">			&#125;</div><div class="line">			items[putptr] = x;</div><div class="line">			<span class="keyword">if</span> (++putptr == items.length)&#123;</div><div class="line">				<span class="comment">//存放位置的指针要超过容量值了，则回到原点</span></div><div class="line">				putptr = <span class="number">0</span>;</div><div class="line">			&#125;</div><div class="line">			++count;</div><div class="line">			<span class="comment">//发信号，让空的走</span></div><div class="line">			notEmpty.signal();</div><div class="line">		&#125; <span class="keyword">finally</span> &#123;</div><div class="line">			lock.unlock();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">	<span class="function"><span class="keyword">public</span> Object <span class="title">take</span><span class="params">()</span> <span class="keyword">throws</span> InterruptedException </span>&#123;</div><div class="line">		lock.lock();</div><div class="line">		<span class="keyword">try</span> &#123;</div><div class="line">			<span class="keyword">while</span> (count == <span class="number">0</span>)&#123;</div><div class="line">				<span class="comment">//空了，进行等待。队列已经取完了。</span></div><div class="line">				notEmpty.await();</div><div class="line">			&#125;</div><div class="line">			Object x = items[takeptr];</div><div class="line">			<span class="keyword">if</span> (++takeptr == items.length)&#123;</div><div class="line">				<span class="comment">//取出位置的指针要超过容量值了，则回到原点</span></div><div class="line">				takeptr = <span class="number">0</span>;</div><div class="line">			&#125;</div><div class="line">			--count;</div><div class="line">			<span class="comment">//发信号，让满的走</span></div><div class="line">			notFull.signal();</div><div class="line">			<span class="keyword">return</span> x;</div><div class="line">		&#125; <span class="keyword">finally</span> &#123;</div><div class="line">			lock.unlock();</div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="测试"><a href="#测试" class="headerlink" title="测试"></a>测试</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/12343882.jpg" alt=""><br>这里取两次，第一次就取完了，第二次就在等待放入数据。</p>
+<h2 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h2><p><strong>举一个简单的栗子说明，假设服务器或对外提供的接口并发的最高峰值访问是60，这时突然有80个访问请求需要处理。阻塞队列的应用场景就出现了。主要的作用与目的，就是起到缓冲的作用。存一个，取一个。在代码实现时，判断队列是否已经放满了和判断队列是否已经取空了时用了while，这是一个小小的细节。在等待 Condition 时，允许发生“虚假唤醒”，这通常作为对基础平台语义的让步。</strong><br><img src="https://dhsmp.nos-eastchina1.126.net/27460039.jpg" alt=""><br><img src="https://dhsmp.nos-eastchina1.126.net/38205197.jpg" alt=""></p>
 
       
     </div>
@@ -556,8 +556,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-			  <a href="/2018/10/28/cache-system/" rel="prev" title="ʹ��ReentrantReadWriteLockʵ��һ���򵥵Ļ���ԭ��">
-				<i class="fa fa-chevron-left"></i> ʹ��ReentrantReadWriteLockʵ��һ���򵥵Ļ���ԭ��
+			  <a href="/2018/10/28/cache-system/" rel="prev" title="使用ReentrantReadWriteLock实现一个简单的缓存原理">
+				<i class="fa fa-chevron-left"></i> 使用ReentrantReadWriteLock实现一个简单的缓存原理
               </a>
             
           </div>
@@ -566,8 +566,8 @@
 
           <div class="post-nav-prev post-nav-item">
 			
-			  <a href="/2018/10/28/about-generics/" rel="next" title="����Java�з��͵���֪������">
-				����Java�з��͵���֪������ <i class="fa fa-chevron-right"></i>
+			  <a href="/2018/10/28/about-generics/" rel="next" title="关于Java中泛型的认知与理解">
+				关于Java中泛型的认知与理解 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -651,7 +651,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -717,7 +717,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#����"><span class="nav-number">1.</span> <span class="nav-text">����</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����-1"><span class="nav-number">2.</span> <span class="nav-text">����</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����-2"><span class="nav-number">3.</span> <span class="nav-text">����</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#代码"><span class="nav-number">1.</span> <span class="nav-text">代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#测试"><span class="nav-number">2.</span> <span class="nav-text">测试</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#结论"><span class="nav-number">3.</span> <span class="nav-text">结论</span></a></li></ol></div>
             
 
           </div>
@@ -769,7 +769,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共14.0k字</span>
+  <span class="post-count">全站共46.0k字</span>
 </div>
 
 <!--

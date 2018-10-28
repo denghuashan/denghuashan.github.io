@@ -116,21 +116,21 @@
 
 
 
-<meta name="description" content="�����Ƕ����ݿ⣬����һ�л����е�ֵ����������һ�ֽṹ��ʹ���������������ݿ����ض����ݵĲ�ѯ�ٶȡ�������һ�������ġ��洢�ڴ����ϵ����ݿ��ṹ���������Ŷ����ݱ������м�¼������ָ�롣MySQL�ٷ��������Ķ���Ϊ��������Index���ǰ���MySQL��Ч��ȡ���ݵ���">
+<meta name="description" content="索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。 存储引擎支持的索引 MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL��InnoDB�洢����������">
+<meta property="og:title" content="MySQL中InnoDB存储引擎的索引">
 <meta property="og:url" content="http://dhsmp.com/2018/10/28/mysql-index/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="�����Ƕ����ݿ⣬����һ�л����е�ֵ����������һ�ֽṹ��ʹ���������������ݿ����ض����ݵĲ�ѯ�ٶȡ�������һ�������ġ��洢�ڴ����ϵ����ݿ��ṹ���������Ŷ����ݱ������м�¼������ָ�롣MySQL�ٷ��������Ķ���Ϊ��������Index���ǰ���MySQL��Ч��ȡ���ݵ���">
+<meta property="og:description" content="索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。 存储引擎支持的索引 MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/19340849.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/25808861.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/95628352.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/29996379.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/54148965.jpg">
-<meta property="og:updated_time" content="2018-10-27T16:24:53.201Z">
+<meta property="og:updated_time" content="2018-10-28T00:40:25.448Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="MySQL��InnoDB�洢����������">
-<meta name="twitter:description" content="�����Ƕ����ݿ⣬����һ�л����е�ֵ����������һ�ֽṹ��ʹ���������������ݿ����ض����ݵĲ�ѯ�ٶȡ�������һ�������ġ��洢�ڴ����ϵ����ݿ��ṹ���������Ŷ����ݱ������м�¼������ָ�롣MySQL�ٷ��������Ķ���Ϊ��������Index���ǰ���MySQL��Ч��ȡ���ݵ���">
+<meta name="twitter:title" content="MySQL中InnoDB存储引擎的索引">
+<meta name="twitter:description" content="索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。 存储引擎支持的索引 MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支">
 <meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/19340849.jpg">
 
 
@@ -165,7 +165,7 @@
 
 
 
-  <title>MySQL��InnoDB�洢���������� | DreamMaker-HS</title>
+  <title>MySQL中InnoDB存储引擎的索引 | DreamMaker-HS</title>
   
 
 
@@ -365,7 +365,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">MySQL��InnoDB�洢����������</h1>
+          <h1 class="post-title" itemprop="name headline">MySQL中InnoDB存储引擎的索引</h1>
         
 		
         <div class="post-meta">
@@ -377,7 +377,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -393,7 +393,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -429,7 +429,7 @@
 
           
           
-             <span id="/2018/10/28/mysql-index/" class="leancloud_visitors" data-flag-title="MySQL��InnoDB�洢����������">
+             <span id="/2018/10/28/mysql-index/" class="leancloud_visitors" data-flag-title="MySQL中InnoDB存储引擎的索引">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -454,7 +454,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  239 字
+                  1,663 字
                 </span>
               
 
@@ -480,7 +480,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2018/10/28/mysql-index/" title="MySQL��InnoDB�洢����������">http://dhsmp.com/2018/10/28/mysql-index/</a>
+      <a href="http://dhsmp.com/2018/10/28/mysql-index/" title="MySQL中InnoDB存储引擎的索引">http://dhsmp.com/2018/10/28/mysql-index/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -498,50 +498,50 @@
       
 
       
-        <p><strong>�����Ƕ����ݿ⣬����һ�л����е�ֵ����������һ�ֽṹ��ʹ���������������ݿ����ض����ݵĲ�ѯ�ٶȡ�������һ�������ġ��洢�ڴ����ϵ����ݿ��ṹ���������Ŷ����ݱ������м�¼������ָ�롣</strong>MySQL�ٷ��������Ķ���Ϊ��������Index���ǰ���MySQL��Ч��ȡ���ݵ����ݽṹ�������ı��ʣ����������ݽṹ��</p>
-<h2 id="�洢����֧�ֵ�����"><a href="#�洢����֧�ֵ�����" class="headerlink" title="�洢����֧�ֵ�����"></a>�洢����֧�ֵ�����</h2><ul>
-<li>MyISAM��InnoDBֻ֧��BTree������Memory��Heap�洢��������֧��Hash��BTree������</li>
+        <p><strong>索引是对数据库，表中一列或多列的值进行排序的一种结构，使用索引可提高数据库中特定数据的查询速度。索引是一个单独的、存储在磁盘上的数据库结构，它包含着对数据表中所有记录的引用指针。</strong>MySQL官方对索引的定义为：索引（Index）是帮助MySQL高效获取数据的数据结构。索引的本质：索引是数据结构。</p>
+<h2 id="存储引擎支持的索引"><a href="#存储引擎支持的索引" class="headerlink" title="存储引擎支持的索引"></a>存储引擎支持的索引</h2><ul>
+<li>MyISAM、InnoDB只支持BTree索引，Memory、Heap存储引擎可以支持Hash、BTree索引。</li>
 </ul>
-<h2 id="�����k���"><a href="#�����k���" class="headerlink" title="�����ķ���"></a>�����ķ���</h2><ul>
-<li>��ͨ������MySQL�еĻ����������ͣ������ڶ������Ե����в����ظ�ֵ�Ϳ�ֵ��</li>
-<li>Ψһ�����������е�ֵ����Ψһ���������п�ֵ����������������������ֵ�����ϱ���Ψһ������������һ��������Ψһ�������������п�ֵ��</li>
-<li>����������һ������ֻ���������У�һ���������ж�������������</li>
-<li>�����������ڱ��Ķ����ֶ������ϴ�����������ֻ���ڲ�ѯ������ʹ������Щ�ֶε������ֶ�ʱ�������Żᱻʹ�á�<strong>ʹ����������ʱ��ѭ����ǰ׺���ϡ�</strong></li>
-<li>ȫ���������ڶ�������������֧��ֵ��ȫ�Ĳ��ң���������Щ�������в����ظ�ֵ�Ϳ�ֵ��ȫ������������CHAR��VARCHAR��TEXT���͵����ϴ�����ֻ��MyISAM�洢����֧��ȫ��������</li>
-<li>�ռ��������ǶԿռ��������͵��ֶν����������������ռ��������У��������п�ֵ��ֻ��MyISAM�洢����֧�ֿռ�������</li>
+<h2 id="索引的分类"><a href="#索引的分类" class="headerlink" title="索引的分类"></a>索引的分类</h2><ul>
+<li>普通索引：MySQL中的基本索引类型，允许在定义所以的列中插入重复值和空值。</li>
+<li>唯一索引：索引列的值必须唯一，但允许有空值。如果是组合索引，则列值的组合必须唯一。主键索引是一种特殊的唯一索引，不允许有空值。</li>
+<li>单列索引：一个索引只包含单个列，一个表可以有多个单列索引。</li>
+<li>组合索引：在表的多个字段组合上创建的索引，只有在查询条件中使用了这些字段的左边字段时，索引才会被使用。<strong>使用组合索引时遵循最左前缀集合。</strong></li>
+<li>全文索引：在定义索引的列上支持值的全文查找，允许在这些索引列中插入重复值和空值。全文索引可以在CHAR、VARCHAR或TEXT类型的列上创建。只有MyISAM存储引擎支持全文索引。</li>
+<li>空间索引：是对空间数据类型的字段建立的索引。创建空间索引的列，不允许有空值。只有MyISAM存储引擎支持空间索引。</li>
 </ul>
-<h2 id="�������w�"><a href="#�������w�" class="headerlink" title="�������ŵ�"></a>�������ŵ�</h2><ul>
-<li>ͨ������Ψһ���������Ա�֤���ݿ�����ÿһ�����ݵ�Ψһ�ԡ�</li>
-<li>���Դ����ӿ����ݵĲ�ѯ�ٶȣ���Ҳ�Ǵ�������������Ҫԭ����<img src="https://dhsmp.nos-eastchina1.126.net/19340849.jpg" alt=""></li>
+<h2 id="索引的优点"><a href="#索引的优点" class="headerlink" title="索引的优点"></a>索引的优点</h2><ul>
+<li>通过创建唯一索引，可以保证数据库表中每一行数据的唯一性。</li>
+<li>可以大大加快数据的查询速度，这也是创建索引的最主要原因。<img src="https://dhsmp.nos-eastchina1.126.net/19340849.jpg" alt=""></li>
 </ul>
-<h2 id="������o��"><a href="#������o��" class="headerlink" title="������ȱ��"></a>������ȱ��</h2><ul>
-<li>����������ά������Ҫ�ķ�ʱ�䣬�����������������������ķѵ�ʱ��Ҳ�����ӡ�</li>
-<li>������Ҫռ�ô��̿ռ䣬�������ռ䡣�����д����������������ļ����ܱ������ļ������ﵽ�����ļ��ߴ硣</li>
-<li>���Ա��е����ݽ������ӡ�ɾ�����޸�ʱ������ҲҪ��̬��ά�������������ݵ�ά���ٶȡ�</li>
+<h2 id="索引的缺点"><a href="#索引的缺点" class="headerlink" title="索引的缺点"></a>索引的缺点</h2><ul>
+<li>创建索引和维护索引要耗费时间，并且随着数据量的增加所耗费的时间也会增加。</li>
+<li>索引需要占用磁盘空间，即物理空间。如果有大量的索引，索引文件可能比数据文件更快达到最大文件尺寸。</li>
+<li>当对表中的数据进行增加、删除和修改时，索引也要动态的维护，降低了数据的维护速度。</li>
 </ul>
-<h2 id="InnoDB�洢����������ʵ��"><a href="#InnoDB�洢����������ʵ��" class="headerlink" title="InnoDB�洢����������ʵ��"></a>InnoDB�洢����������ʵ��</h2><ul>
-<li>InnoDB�洢����ʹ��B+Tree��Ϊ�����ṹ����InnoDB�У��������ļ��������ǰ�B+Tree��֯��һ�������ṹ������������key�����ݱ�������������InnoDB�������ļ�����������������</li>
-<li>InnoDB�������ļ�����Ҫ�������ۼ�������InnoDBҪ����������������<strong>����û����ʾָ��������InnoDB��Ϊÿһ������һ�����ص�6���ֽڵ�ROWID�����Դ���Ϊ������</strong>��MySQL�Ĵ洢���桷һ�����ᵽ�ġ�</li>
-<li>��ʹ��InnoDB�洢����ʱ������û���ر�����Ҫ��ʹ��һ����ҵ���޹ص������ֶ���Ϊ��������һ���ܺõ�ѡ����</li>
+<h2 id="InnoDB存储引擎的索引实现"><a href="#InnoDB存储引擎的索引实现" class="headerlink" title="InnoDB存储引擎的索引实现"></a>InnoDB存储引擎的索引实现</h2><ul>
+<li>InnoDB存储引擎使用B+Tree作为索引结构。在InnoDB中，表数据文件本身就是按B+Tree组织的一个索引结构。这个索引的key是数据表的主键，因此InnoDB表数据文件本身就是主索引。</li>
+<li>InnoDB的数据文件本身要按主键聚集，所以InnoDB要求表必须有主键。<strong>如果没有显示指定主键，InnoDB会为每一行生成一个隐藏的6个字节的ROWID，并以此作为主键。</strong>《MySQL的存储引擎》一章所提到的。</li>
+<li>在使用InnoDB存储引擎时，如果没有特别的需要，使用一个与业务无关的自增字段作为主键则是一个很好的选择。</li>
 </ul>
-<h2 id="�ۼ��������Oۼ�����"><a href="#�ۼ��������Oۼ�����" class="headerlink" title="�ۼ��������Ǿۼ�����"></a>�ۼ��������Ǿۼ�����</h2><ul>
-<li>�ۼ���������¼������˳��������������˳��һ�£��ŵ��ǲ�ѯ�ٶȿ죬��Ϊһ�����е�һ������ֵ�ļ�¼���ҵ���������������ֵ�ļ�¼Ҳһ�������Ľ���������<br>�ۼ�������ȱ���ǶԱ������޸��ٶȽ���������Ϊ�˱��ֱ��еļ�¼������˳����������˳��һ�£����Ѽ�¼���뵽����ҳ����Ӧλ�ã�����������ҳ�н����������ţ�������ִ���ٶȡ����������顣</li>
-<li>�Ǿۼ�����ָ���˱��м�¼���߼�˳�򣬵���¼������˳����������˳����һ�£��ۼ������ͷǾۼ�������������B+Tree�Ľṹ���Ǿۼ������Ⱦۼ��������ζ࣬���Ӽ�¼������������˳�������顣������������</li>
+<h2 id="聚集索引与非聚集索引"><a href="#聚集索引与非聚集索引" class="headerlink" title="聚集索引与非聚集索引"></a>聚集索引与非聚集索引</h2><ul>
+<li>聚集索引表记录的排列顺序与索引的排列顺序一致，优点是查询速度快，因为一旦具有第一个索引值的纪录被找到，具有连续索引值的记录也一定物理的紧跟其后。<br>聚集索引的缺点是对表进行修改速度较慢，这是为了保持表中的记录的物理顺序与索引的顺序一致，而把记录插入到数据页的相应位置，必须在数据页中进行数据重排，降低了执行速度。类似于数组。</li>
+<li>非聚集索引指定了表中记录的逻辑顺序，但记录的物理顺序和索引的顺序不一致，聚集索引和非聚集索引都采用了B+Tree的结构。非聚集索引比聚集索引层次多，添加记录不会引起数据顺序的重组。类似于链表。</li>
 </ul>
-<h2 id="�ۼ������ͷOۼ�����������"><a href="#�ۼ������ͷOۼ�����������" class="headerlink" title="�ۼ������ͷǾۼ�����������"></a>�ۼ������ͷǾۼ�����������</h2><ul>
-<li><strong>���ߵĸ��������Ǳ���¼������˳����������������˳���Ƿ�һ�¡�</strong></li>
-<li>�ۼ�����һ����ֻ����һ�������Ǿۼ�����һ�������Դ��ڶ�����</li>
-<li>�ۼ������洢��¼���������������ڣ����Ǿۼ��������߼��ϵ������������洢����������</li>
-<li>�ۼ�������ѯ�����ٶȿ죬���������ٶ������Ǿۼ�������֮��</li>
+<h2 id="聚集索引和非聚集索引的区别"><a href="#聚集索引和非聚集索引的区别" class="headerlink" title="聚集索引和非聚集索引的区别"></a>聚集索引和非聚集索引的区别</h2><ul>
+<li><strong>两者的根本区别是表记录的排列顺序和与索引的排列顺序是否一致。</strong></li>
+<li>聚集索引一个表只能有一个，而非聚集索引一个表可以存在多个。</li>
+<li>聚集索引存储记录是物理上连续存在，而非聚集索引是逻辑上的连续，物理存储并不连续。</li>
+<li>聚集索引查询数据速度快，插入数据速度慢；非聚集索引反之。</li>
 </ul>
-<h2 id="����������ԭ��"><a href="#����������ԭ��" class="headerlink" title="����������ԭ��"></a>����������ԭ��</h2><ul>
-<li>��������Խ��Խ�ã����ﲻ�ٲ���ԭ����</li>
-<li>�����Ծ������µı����й����������������е��о������٣����Ծ������ڲ�ѯ���ֶ�Ӧ�ô���������</li>
-<li>������С�ı����ò�Ҫʹ����������ѯ���ѵ�ʱ�����ܱȱ���������ʱ�仹Ҫ�̡�</li>
-<li>������ѡ���Խϵ�ʱ����Ӧ����������</li>
+<h2 id="索引的设计原则"><a href="#索引的设计原则" class="headerlink" title="索引的设计原则"></a>索引的设计原则</h2><ul>
+<li>索引并非越多越好，这里不再阐述原因。</li>
+<li>避免对经常更新的表进行过多的索引，索引中的列尽可能少，而对经常用于查询的字段应该创建索引。</li>
+<li>数据量小的表最好不要使用索引。查询花费的时间可能比遍历索引的时间还要短。</li>
+<li>索引的选择性较低时，不应建立索引。</li>
 </ul>
-<h2 id="������ѡ����"><a href="#������ѡ����" class="headerlink" title="������ѡ����"></a>������ѡ����</h2><p><strong>��ν������ѡ���ԣ�Selectivity������ָ���ظ�������ֵ��Ҳ�л�����Cardinality��������¼����#T���ı�ֵ</strong>��Index Selectivity = Cardinality / #T<br>��Ȼѡ���Ե�ȡֵ��ΧΪ(0, 1]��ѡ����Խ�ߵ�������ֵԽ����������B+Tree�����ʾ����ġ�<br>��������ͼ��<br><img src="https://dhsmp.nos-eastchina1.126.net/25808861.jpg" alt=""><br>��dept_no��Ϊ����������ѡ���ԣ�<br>SELECT count(DISTINCT(dept_no))/count(<em>) AS Selectivity FROM employee;<br><img src="https://dhsmp.nos-eastchina1.126.net/95628352.jpg" alt=""><br>��e_no��Ϊ����������ѡ���ԣ�<br>SELECT count(DISTINCT(e_no))/count(</em>) AS Selectivity FROM employee;<br><img src="https://dhsmp.nos-eastchina1.126.net/29996379.jpg" alt=""><br>���ԶԱȳ�����e_no���Ͻ���������ѡ���Ը��ߡ�<br>����e_no���Ͻ��������󣬿���ʹ��EXPLAIN�����鿴�����Ƿ�����ʹ�á�<br><img src="https://dhsmp.nos-eastchina1.126.net/54148965.jpg" alt=""></p>
-<h3 id="EXPLAIN�������������ĸ����н���"><a href="#EXPLAIN�������������ĸ����н���" class="headerlink" title="EXPLAIN�������������ĸ����н���"></a>EXPLAIN�������������ĸ����н���</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">select_type��ָ����ʹ�õ�SELECT��ѯ���͡�</div><div class="line">table��ָ�����ݿ���ȡ�����ݱ����֣����ǰ��ձ���ȡ���Ⱥ�˳�����С�</div><div class="line">type��ָ���˱����ݱ����������ݱ�֮���Ĺ�����ϵ�����ܵ�ȡֵ�У�system��const��eq_ref��ref��range��index��All��</div><div class="line">possible_keys�����������ݼ�¼ʱ��ѡ�õĸ���������</div><div class="line">key_len�������������ֽڼ����ĳ��ȣ�key_len��ֵԽС����ʾԽ�졣</div><div class="line">ref�������˹�����ϵ����һ�����ݱ����������ơ�</div><div class="line">rows��ִ��������ѯʱԤ�ƻ����������ݱ��ж�ȡ�������еĸ�����</div><div class="line">extra�����������������йص���Ϣ��</div></pre></td></tr></table></figure>
+<h2 id="索引的选择性"><a href="#索引的选择性" class="headerlink" title="索引的选择性"></a>索引的选择性</h2><p><strong>所谓索引的选择性（Selectivity），是指不重复的索引值（也叫基数，Cardinality）与表记录数（#T）的比值</strong>：Index Selectivity = Cardinality / #T<br>显然选择性的取值范围为(0, 1]，选择性越高的索引价值越大，这是由B+Tree的性质决定的。<br>数据如下图：<br><img src="https://dhsmp.nos-eastchina1.126.net/25808861.jpg" alt=""><br>以dept_no做为建立索引的选择性：<br>SELECT count(DISTINCT(dept_no))/count(<em>) AS Selectivity FROM employee;<br><img src="https://dhsmp.nos-eastchina1.126.net/95628352.jpg" alt=""><br>以e_no做为建立索引的选择性：<br>SELECT count(DISTINCT(e_no))/count(</em>) AS Selectivity FROM employee;<br><img src="https://dhsmp.nos-eastchina1.126.net/29996379.jpg" alt=""><br>可以对比出，在e_no列上建立索引的选择性更高。<br>当在e_no列上建立索引后，可以使用EXPLAIN语句查看索引是否正在使用。<br><img src="https://dhsmp.nos-eastchina1.126.net/54148965.jpg" alt=""></p>
+<h3 id="EXPLAIN语句输出结果的各个行解释"><a href="#EXPLAIN语句输出结果的各个行解释" class="headerlink" title="EXPLAIN语句输出结果的各个行解释"></a>EXPLAIN语句输出结果的各个行解释</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">select_type：指定所使用的SELECT查询类型。</div><div class="line">table：指定数据库读取的数据表名字，它们按照被读取的先后顺序排列。</div><div class="line">type：指定了本数据表与其他数据表之间的关联关系。可能的取值有：system、const、eq_ref、ref、range、index、All。</div><div class="line">possible_keys：在搜索数据记录时可选用的各个索引。</div><div class="line">key_len：给出索引按字节计算的长度，key_len数值越小，表示越快。</div><div class="line">ref：给出了关联关系中另一个数据表里的列名称。</div><div class="line">rows：执行这个查询时预计会从这个数据表中读取的数据行的个数。</div><div class="line">extra：其他与关联操作有关的信息。</div></pre></td></tr></table></figure>
 
       
     </div>
@@ -598,8 +598,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-			  <a href="/2018/10/28/mysql-optimize/" rel="prev" title="MySQL�������Ż�">
-				<i class="fa fa-chevron-left"></i> MySQL�������Ż�
+			  <a href="/2018/10/28/mysql-optimize/" rel="prev" title="MySQL的性能优化">
+				<i class="fa fa-chevron-left"></i> MySQL的性能优化
               </a>
             
           </div>
@@ -608,8 +608,8 @@
 
           <div class="post-nav-prev post-nav-item">
 			
-			  <a href="/2018/10/28/lock/" rel="next" title="Java��synchronized�ؼ�����JDK1.5����ʾLock����">
-				Java��synchronized�ؼ�����JDK1.5����ʾLock���� <i class="fa fa-chevron-right"></i>
+			  <a href="/2018/10/28/lock/" rel="next" title="Java中synchronized关键字与JDK1.5中显示Lock操作">
+				Java中synchronized关键字与JDK1.5中显示Lock操作 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -693,7 +693,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -759,7 +759,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#�洢����֧�ֵ�����"><span class="nav-number">1.</span> <span class="nav-text">�洢����֧�ֵ�����</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�����k���"><span class="nav-number">2.</span> <span class="nav-text">�����ķ���</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�������w�"><span class="nav-number">3.</span> <span class="nav-text">�������ŵ�</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#������o��"><span class="nav-number">4.</span> <span class="nav-text">������ȱ��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#InnoDB�洢����������ʵ��"><span class="nav-number">5.</span> <span class="nav-text">InnoDB�洢����������ʵ��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�ۼ��������Oۼ�����"><span class="nav-number">6.</span> <span class="nav-text">�ۼ��������Ǿۼ�����</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�ۼ������ͷOۼ�����������"><span class="nav-number">7.</span> <span class="nav-text">�ۼ������ͷǾۼ�����������</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����������ԭ��"><span class="nav-number">8.</span> <span class="nav-text">����������ԭ��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#������ѡ����"><span class="nav-number">9.</span> <span class="nav-text">������ѡ����</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EXPLAIN�������������ĸ����н���"><span class="nav-number">9.1.</span> <span class="nav-text">EXPLAIN�������������ĸ����н���</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#存储引擎支持的索引"><span class="nav-number">1.</span> <span class="nav-text">存储引擎支持的索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的分类"><span class="nav-number">2.</span> <span class="nav-text">索引的分类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的优点"><span class="nav-number">3.</span> <span class="nav-text">索引的优点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的缺点"><span class="nav-number">4.</span> <span class="nav-text">索引的缺点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#InnoDB存储引擎的索引实现"><span class="nav-number">5.</span> <span class="nav-text">InnoDB存储引擎的索引实现</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚集索引与非聚集索引"><span class="nav-number">6.</span> <span class="nav-text">聚集索引与非聚集索引</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#聚集索引和非聚集索引的区别"><span class="nav-number">7.</span> <span class="nav-text">聚集索引和非聚集索引的区别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的设计原则"><span class="nav-number">8.</span> <span class="nav-text">索引的设计原则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#索引的选择性"><span class="nav-number">9.</span> <span class="nav-text">索引的选择性</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#EXPLAIN语句输出结果的各个行解释"><span class="nav-number">9.1.</span> <span class="nav-text">EXPLAIN语句输出结果的各个行解释</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -811,7 +811,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共14.0k字</span>
+  <span class="post-count">全站共46.0k字</span>
 </div>
 
 <!--

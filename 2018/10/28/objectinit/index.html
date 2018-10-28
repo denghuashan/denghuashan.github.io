@@ -116,19 +116,19 @@
 
 
 
-<meta name="description" content="��ѧJava��ʼ����һֱ���εļ�ס��һ�仰��”��������������������·�����߶�Զ��”����Ȼ��ʱ���Ǻ����ס������ҵ���һֱ�������������ϰһ��Java������ʼ���Ĺ��̣������������Ե�֪ʶ����ͼ�ĵķ�ʽȥ���������� һ���ܼ򵥵�Java��12345678910111213141">
+<meta name="description" content="从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。 一个很简单的Java类12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java������ʼ���Ĺ���">
+<meta property="og:title" content="Java对象初始化的过程">
 <meta property="og:url" content="http://dhsmp.com/2018/10/28/objectinit/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="��ѧJava��ʼ����һֱ���εļ�ס��һ�仰��”��������������������·�����߶�Զ��”����Ȼ��ʱ���Ǻ����ס������ҵ���һֱ�������������ϰһ��Java������ʼ���Ĺ��̣������������Ե�֪ʶ����ͼ�ĵķ�ʽȥ���������� һ���ܼ򵥵�Java��12345678910111213141">
+<meta property="og:description" content="从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。 一个很简单的Java类12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/82172780.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/54828942.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/87231977.jpg">
-<meta property="og:updated_time" content="2018-10-27T16:24:53.212Z">
+<meta property="og:updated_time" content="2018-10-28T00:40:25.476Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java������ʼ���Ĺ���">
-<meta name="twitter:description" content="��ѧJava��ʼ����һֱ���εļ�ס��һ�仰��”��������������������·�����߶�Զ��”����Ȼ��ʱ���Ǻ����ס������ҵ���һֱ�������������ϰһ��Java������ʼ���Ĺ��̣������������Ե�֪ʶ����ͼ�ĵķ�ʽȥ���������� һ���ܼ򵥵�Java��12345678910111213141">
+<meta name="twitter:title" content="Java对象初始化的过程">
+<meta name="twitter:description" content="从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。 一个很简单的Java类12345678910111213141516171819202122232425262728293031323334353637383940414243444546">
 <meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/82172780.jpg">
 
 
@@ -163,7 +163,7 @@
 
 
 
-  <title>Java������ʼ���Ĺ��� | DreamMaker-HS</title>
+  <title>Java对象初始化的过程 | DreamMaker-HS</title>
   
 
 
@@ -363,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">Java������ʼ���Ĺ���</h1>
+          <h1 class="post-title" itemprop="name headline">Java对象初始化的过程</h1>
         
 		
         <div class="post-meta">
@@ -375,7 +375,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -391,7 +391,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -427,7 +427,7 @@
 
           
           
-             <span id="/2018/10/28/objectinit/" class="leancloud_visitors" data-flag-title="Java������ʼ���Ĺ���">
+             <span id="/2018/10/28/objectinit/" class="leancloud_visitors" data-flag-title="Java对象初始化的过程">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -452,7 +452,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  202 字
+                  824 字
                 </span>
               
 
@@ -478,7 +478,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2018/10/28/objectinit/" title="Java������ʼ���Ĺ���">http://dhsmp.com/2018/10/28/objectinit/</a>
+      <a href="http://dhsmp.com/2018/10/28/objectinit/" title="Java对象初始化的过程">http://dhsmp.com/2018/10/28/objectinit/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -496,23 +496,23 @@
       
 
       
-        <p>��ѧJava��ʼ����һֱ���εļ�ס��һ�仰��”��������������������·�����߶�Զ��”����Ȼ��ʱ���Ǻ����ס������ҵ���һֱ�������������ϰһ��Java������ʼ���Ĺ��̣������������Ե�֪ʶ����ͼ�ĵķ�ʽȥ����������</p>
-<h2 id="һ���ܼ򵥵�Java��"><a href="#һ���ܼ򵥵�Java��" class="headerlink" title="һ���ܼ򵥵�Java��"></a>һ���ܼ򵥵�Java��</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> String name = <span class="string">"haha"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String country = <span class="string">"cn"</span>;</div><div class="line">	</div><div class="line">	<span class="comment">//�޲ι��캯��</span></div><div class="line">	Student() &#123;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//�вι��캯��</span></div><div class="line">	Student(String name, <span class="keyword">int</span> age) &#123;</div><div class="line">		System.out.println(<span class="string">"�вι��캯����"</span> + name + <span class="string">".."</span> + age);</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//����������</span></div><div class="line">	&#123;</div><div class="line">		System.out.println(<span class="string">"���������飺"</span> + name + <span class="string">".."</span> + age);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//��̬������</span></div><div class="line">	<span class="keyword">static</span> &#123;</div><div class="line">		System.out.println(<span class="string">"��̬�����飺static.."</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="keyword">this</span>.name + <span class="string">"..."</span> + <span class="keyword">this</span>.age);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">listen</span><span class="params">()</span> </span>&#123;</div><div class="line">		speak();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">showCountry</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"country="</span> + country);</div><div class="line">		method();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"method run"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h2 id="Student-s-new-Student-“zhangsan”-19"><a href="#Student-s-new-Student-“zhangsan”-19" class="headerlink" title="Student s = new Student(“zhangsan”, 19);"></a>Student s = new Student(“zhangsan”, 19);</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/82172780.jpg" alt=""><br>��ͼ�У�������ʹ�õ�ʱ�򣬸þ仰������ʲô���飿��̸ֻ���ڴ��еĶѡ�ջ���򣬲��漰����������<br><img src="https://dhsmp.nos-eastchina1.126.net/54828942.jpg" alt=""></p>
-<h2 id="���ֽ���"><a href="#���ֽ���" class="headerlink" title="���ֽ���"></a>���ֽ���</h2><ol>
-<li><strong>����������ȡ�����仰��ʱ�������ȿ��Ⱥŵ����ߡ�Student s��s��һ������������������ջ�ڴ��п��ٿռ䣬����s����������</strong></li>
-<li><strong>����ȡ���Ⱥŵ��ұ�new Student(“zhangsan”, 19)����Ϊ�õ���Student�࣬������������Student.java�ļ�������Student.class�ļ����׳��ֽ����ļ���һ����ֻ��һ���ֽ����ļ���������������.java�ļ������ĸ��</strong></li>
-<li><strong>����Student���������ֽ�����Ӳ�̼��ؽ��ڴ档������һ�죬JVM�е���������Classloader��</strong></li>
-<li><strong>�����о�̬�����飬�ͻ��������ļ��ض�ִ�С���̬��Ա����̬�����뾲̬���ԣ�רҵ˵����������������ͨ����Ҳ���������ļ��ض������ء�</strong></li>
-<li><strong>�ڶ��ڴ��п��ٿռ䣬�������ڴ���ַ�����ڴ���ַ��ʮ����������</strong></li>
-<li><strong>�ڶ��ڴ��н��������������ԣ���ͬʱ���������Խ���Ĭ�ϳ�ʼ����</strong></li>
-<li><strong>�Զ������Խ�����ʾ��ʼ����</strong></li>
-<li><strong>ִ�й��������飬�����ж������г�ʼ����</strong></li>
-<li><strong>ִ�ж�Ӧ�Ĺ��캯�����Զ������г�ʼ����</strong></li>
-<li><strong>���ڴ���ַ����ջ�ڴ��е�s��������ջ�ڴ��еı���ָ�����ڴ��еı�����������Java�е�ָ�룩</strong></li>
+        <p>从学Java开始，就一直牢牢的记住着一句话。”基础决定了你在这条道路上能走多远。”，虽然当时不是很明白。但庆幸的是一直都放在心里。再温习一下Java对象初始化的过程，把这种理解性的知识，用图文的方式去描述出来。</p>
+<h2 id="一个很简单的Java类"><a href="#一个很简单的Java类" class="headerlink" title="一个很简单的Java类"></a>一个很简单的Java类</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Student</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">private</span> String name = <span class="string">"haha"</span>;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">int</span> age;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> String country = <span class="string">"cn"</span>;</div><div class="line">	</div><div class="line">	<span class="comment">//无参构造函数</span></div><div class="line">	Student() &#123;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//有参构造函数</span></div><div class="line">	Student(String name, <span class="keyword">int</span> age) &#123;</div><div class="line">		System.out.println(<span class="string">"有参构造函数："</span> + name + <span class="string">".."</span> + age);</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">		<span class="keyword">this</span>.age = age;</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//构造代码块</span></div><div class="line">	&#123;</div><div class="line">		System.out.println(<span class="string">"构造代码块："</span> + name + <span class="string">".."</span> + age);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="comment">//静态代码块</span></div><div class="line">	<span class="keyword">static</span> &#123;</div><div class="line">		System.out.println(<span class="string">"静态代码块：static.."</span>);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">setName</span><span class="params">(String name)</span> </span>&#123;</div><div class="line">		<span class="keyword">this</span>.name = name;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">speak</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="keyword">this</span>.name + <span class="string">"..."</span> + <span class="keyword">this</span>.age);</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">listen</span><span class="params">()</span> </span>&#123;</div><div class="line">		speak();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">showCountry</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"country="</span> + country);</div><div class="line">		method();</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123;</div><div class="line">		System.out.println(<span class="string">"method run"</span>);</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="Student-s-new-Student-“zhangsan”-19"><a href="#Student-s-new-Student-“zhangsan”-19" class="headerlink" title="Student s = new Student(“zhangsan”, 19);"></a>Student s = new Student(“zhangsan”, 19);</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/82172780.jpg" alt=""><br>上图中，在我们使用的时候，该句话都做了什么事情？（只谈论内存中的堆、栈区域，不涉及其他区域）<br><img src="https://dhsmp.nos-eastchina1.126.net/54828942.jpg" alt=""></p>
+<h2 id="文字结论"><a href="#文字结论" class="headerlink" title="文字结论"></a>文字结论</h2><ol>
+<li><strong>当虚拟机读取到这句话的时候，首先看等号的左边。Student s，s是一个变量，虚拟机会在栈内存中开辟空间，存放s这个变量。</strong></li>
+<li><strong>当读取到等号的右边new Student(“zhangsan”, 19)。因为用到了Student类，虚拟机会编译Student.java文件，生成Student.class文件。俗称字节码文件，一个类只有一份字节码文件。（请自行区别.java文件跟类的概念）</strong></li>
+<li><strong>会把Student这个类的字节码从硬盘加载进内存。这里提一嘴，JVM中的类加载器Classloader。</strong></li>
+<li><strong>如果有静态代码块，就会随着类的加载而执行。静态成员（静态方法与静态属性，专业说话叫类变量）和普通方法也会随着类的加载而被加载。</strong></li>
+<li><strong>在堆内存中开辟空间，并分配内存地址。（内存地址是十六进制数）</strong></li>
+<li><strong>在堆内存中建立对象特有属性，并同时对特有属性进行默认初始化。</strong></li>
+<li><strong>对对象属性进行显示初始化。</strong></li>
+<li><strong>执行构造代码块，对所有对象进行初始化。</strong></li>
+<li><strong>执行对应的构造函数，对对象进行初始化。</strong></li>
+<li><strong>将内存地址赋给栈内存中的s变量。（栈内存中的变量指向堆内存中的变量，这就是Java中的指针）</strong></li>
 </ol>
-<h2 id="��̬��Ա"><a href="#��̬��Ա" class="headerlink" title="��̬��Ա"></a>��̬��Ա</h2><p>�����ڷ����������ڴ���ֻ��һ�ݡ��������ĵļ��ض������أ������ڶ������ڣ������еĶ��������������Ա�����ֱ�ӵ��ã�Ҳ���Ա��������á�<br><img src="https://dhsmp.nos-eastchina1.126.net/87231977.jpg" alt=""><br>showCountry()�����е���method()������ֱ��ʡ���ˣ�Student.��<br>ͬ���ģ�listen()�����е���speak()������ֱ��ʡ���ˣ�this.��</p>
-<h2 id="�������������д��������ظ�֪��лл��"><a href="#�������������д��������ظ�֪��лл��" class="headerlink" title="�������������д��������ظ�֪��лл��"></a>�������������д��������ظ�֪��лл��</h2><p><strong>������ʼ���Ĺ���Զ�ȱ������������������ĸ��ӡ�Classloader���ڴ��ռ��������ԡ��ڴ�ģ�͵�һϵ�����⡣����ֻ�������֣��򵥲���ǳ��ȥ��������ôһ�����̡����ڸ��õ����������䡣</strong><br>��JVM����Ȥ�ģ�����Ĥ�ݡ���������Java��������һ�顣</p>
+<h2 id="静态成员"><a href="#静态成员" class="headerlink" title="静态成员"></a>静态成员</h2><p>存放在方法区，在内存中只有一份。随着类的的加载而被加载，优先于对象存在，被所有的对象所共享，可以被类名直接调用，也可以被对象调用。<br><img src="https://dhsmp.nos-eastchina1.126.net/87231977.jpg" alt=""><br>showCountry()方法中调用method()，就是直接省略了（Student.）<br>同样的，listen()方法中调用speak()，就是直接省略了（this.）</p>
+<h2 id="如理解的描述有错，请务必告知。谢谢！"><a href="#如理解的描述有错，请务必告知。谢谢！" class="headerlink" title="如理解的描述有错，请务必告知。谢谢！"></a>如理解的描述有错，请务必告知。谢谢！</h2><p><strong>对象初始化的过程远比本人用文字描述出来的复杂。Classloader、内存空间分配策略、内存模型等一系列问题。本人只是用文字，简单并肤浅的去描述了这么一个过程。便于更好的理解与记忆。</strong><br>对JVM感兴趣的，可以膜拜《深入理解Java虚拟机》一书。</p>
 
       
     </div>
@@ -569,8 +569,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-			  <a href="/2018/10/28/operate-log/" rel="prev" title="�����޸ĵĲ�����¼ OperateLog">
-				<i class="fa fa-chevron-left"></i> �����޸ĵĲ�����¼ OperateLog
+			  <a href="/2018/10/28/operate-log/" rel="prev" title="表单修改的操作记录 OperateLog">
+				<i class="fa fa-chevron-left"></i> 表单修改的操作记录 OperateLog
               </a>
             
           </div>
@@ -579,8 +579,8 @@
 
           <div class="post-nav-prev post-nav-item">
 			
-			  <a href="/2018/10/28/mysql-store-engine/" rel="next" title="MySQL�Ĵ洢����">
-				MySQL�Ĵ洢���� <i class="fa fa-chevron-right"></i>
+			  <a href="/2018/10/28/mysql-store-engine/" rel="next" title="MySQL的存储引擎">
+				MySQL的存储引擎 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -664,7 +664,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -730,7 +730,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#һ���ܼ򵥵�Java��"><span class="nav-number">1.</span> <span class="nav-text">һ���ܼ򵥵�Java��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Student-s-new-Student-“zhangsan”-19"><span class="nav-number">2.</span> <span class="nav-text">Student s = new Student(“zhangsan”, 19);</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#���ֽ���"><span class="nav-number">3.</span> <span class="nav-text">���ֽ���</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#��̬��Ա"><span class="nav-number">4.</span> <span class="nav-text">��̬��Ա</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�������������д��������ظ�֪��лл��"><span class="nav-number">5.</span> <span class="nav-text">�������������д��������ظ�֪��лл��</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#一个很简单的Java类"><span class="nav-number">1.</span> <span class="nav-text">一个很简单的Java类</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Student-s-new-Student-“zhangsan”-19"><span class="nav-number">2.</span> <span class="nav-text">Student s = new Student(“zhangsan”, 19);</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文字结论"><span class="nav-number">3.</span> <span class="nav-text">文字结论</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#静态成员"><span class="nav-number">4.</span> <span class="nav-text">静态成员</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#如理解的描述有错，请务必告知。谢谢！"><span class="nav-number">5.</span> <span class="nav-text">如理解的描述有错，请务必告知。谢谢！</span></a></li></ol></div>
             
 
           </div>
@@ -782,7 +782,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共14.0k字</span>
+  <span class="post-count">全站共46.0k字</span>
 </div>
 
 <!--

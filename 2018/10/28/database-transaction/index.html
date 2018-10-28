@@ -116,19 +116,19 @@
 
 
 
-<meta name="description" content="������ָ�߼��ϵ�һ���������������������ĸ�����ԪҪôȫ���ɹ���Ҫôȫ��ʧ�ܡ��������������þ��ǰѶ���SQL������Ϊһ��������ִ�С� �������Ĵ����ԣ�ACID�� ԭ���� Atomicty��������һ�����ɷָ��ĵ�Ԫ��Ҫôȫ���ɹ���Ҫôȫ��ʧ�ܡ� һ���� Consistenc">
+<meta name="description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID） 原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。 一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。 隔离性 Isolation：并发访问数据库">
 <meta property="og:type" content="article">
-<meta property="og:title" content="��ϵ�����ݿ�������">
+<meta property="og:title" content="关系型数据库的事务">
 <meta property="og:url" content="http://dhsmp.com/2018/10/28/database-transaction/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="������ָ�߼��ϵ�һ���������������������ĸ�����ԪҪôȫ���ɹ���Ҫôȫ��ʧ�ܡ��������������þ��ǰѶ���SQL������Ϊһ��������ִ�С� �������Ĵ����ԣ�ACID�� ԭ���� Atomicty��������һ�����ɷָ��ĵ�Ԫ��Ҫôȫ���ɹ���Ҫôȫ��ʧ�ܡ� һ���� Consistenc">
+<meta property="og:description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID） 原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。 一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。 隔离性 Isolation：并发访问数据库">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/27095586.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/83446062.jpg">
 <meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/98846792.jpg">
-<meta property="og:updated_time" content="2018-10-27T16:24:53.119Z">
+<meta property="og:updated_time" content="2018-10-28T00:40:25.319Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="��ϵ�����ݿ�������">
-<meta name="twitter:description" content="������ָ�߼��ϵ�һ���������������������ĸ�����ԪҪôȫ���ɹ���Ҫôȫ��ʧ�ܡ��������������þ��ǰѶ���SQL������Ϊһ��������ִ�С� �������Ĵ����ԣ�ACID�� ԭ���� Atomicty��������һ�����ɷָ��ĵ�Ԫ��Ҫôȫ���ɹ���Ҫôȫ��ʧ�ܡ� һ���� Consistenc">
+<meta name="twitter:title" content="关系型数据库的事务">
+<meta name="twitter:description" content="事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。 事务的四大特性（ACID） 原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。 一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。 隔离性 Isolation：并发访问数据库">
 <meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/27095586.jpg">
 
 
@@ -163,7 +163,7 @@
 
 
 
-  <title>��ϵ�����ݿ������� | DreamMaker-HS</title>
+  <title>关系型数据库的事务 | DreamMaker-HS</title>
   
 
 
@@ -363,7 +363,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">��ϵ�����ݿ�������</h1>
+          <h1 class="post-title" itemprop="name headline">关系型数据库的事务</h1>
         
 		
         <div class="post-meta">
@@ -375,7 +375,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T00:24:53+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -391,7 +391,7 @@
               
                 <span class="post-meta-item-text">更新于</span>
               
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T00:24:53+08:00">
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:40:25+08:00">
                 2018-10-28
               </time>
             
@@ -427,7 +427,7 @@
 
           
           
-             <span id="/2018/10/28/database-transaction/" class="leancloud_visitors" data-flag-title="��ϵ�����ݿ�������">
+             <span id="/2018/10/28/database-transaction/" class="leancloud_visitors" data-flag-title="关系型数据库的事务">
                <span class="post-meta-divider">|</span>
                <span class="post-meta-item-icon">
                  <i class="fa fa-eye"></i>
@@ -452,7 +452,7 @@
                   <span class="post-meta-item-text">字数统计</span>
                 
                 <span title="字数统计">
-                  201 字
+                  1,575 字
                 </span>
               
 
@@ -478,7 +478,7 @@
     </li>
     <li class="post-copyright-link">
       <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2018/10/28/database-transaction/" title="��ϵ�����ݿ�������">http://dhsmp.com/2018/10/28/database-transaction/</a>
+      <a href="http://dhsmp.com/2018/10/28/database-transaction/" title="关系型数据库的事务">http://dhsmp.com/2018/10/28/database-transaction/</a>
     </li>
     <li class="post-copyright-license">
       <strong>版权声明： </strong>
@@ -496,56 +496,56 @@
       
 
       
-        <p><strong>������ָ�߼��ϵ�һ���������������������ĸ�����ԪҪôȫ���ɹ���Ҫôȫ��ʧ�ܡ��������������þ��ǰѶ���SQL������Ϊһ��������ִ�С�</strong></p>
-<h2 id="�������J����ԣ�ACID��"><a href="#�������J����ԣ�ACID��" class="headerlink" title="�������Ĵ����ԣ�ACID��"></a>�������Ĵ����ԣ�ACID��</h2><ul>
-<li>ԭ���� Atomicty��������һ�����ɷָ��ĵ�Ԫ��Ҫôȫ���ɹ���Ҫôȫ��ʧ�ܡ�</li>
-<li>һ���� Consistency����������ʹ���ݿ���һ��һ����״̬�任����һ��һ����״̬������ת�ˣ�ǰ���ܶ�Ҫһ�¡�</li>
-<li>������ Isolation�������������ݿ�ʱ��ÿһ�����������񣬲��ܱ����������Ĳ������������š���������֮��Ҫ���롣</li>
-<li>�־��� Durability��һ������һ�����ύ���������ݿ������ݵĸı����ǳ־��Եġ�</li>
+        <p><strong>事务是指逻辑上的一组操作，组成这组操作的各个单元要么全部成功，要么全部失败。事务所起的作用就是把多条SQL语句作为一个整体来执行。</strong></p>
+<h2 id="事务的四大特性（ACID）"><a href="#事务的四大特性（ACID）" class="headerlink" title="事务的四大特性（ACID）"></a>事务的四大特性（ACID）</h2><ul>
+<li>原子性 Atomicty：事务是一个不可分割的单元，要么全部成功，要么全部失败。</li>
+<li>一致性 Consistency：事务必须使数据库从一个一致性状态变换到另一个一致性状态。例：转账，前后总额要一致。</li>
+<li>隔离性 Isolation：并发访问数据库时，每一个开启的事务，不能被其他事务的操作数据所干扰。并发事务之间要隔离。</li>
+<li>持久性 Durability：一个事务一旦被提交，它对数据库中数据的改变就是持久性的。</li>
 </ul>
-<h2 id="MySQL���ݿ���������֧��"><a href="#MySQL���ݿ���������֧��" class="headerlink" title="MySQL���ݿ���������֧��"></a>MySQL���ݿ���������֧��</h2><ul>
-<li>start transaction��—-��������</li>
-<li>sql���䣻—-����</li>
-<li>commit;—-�ύ����</li>
-<li>rollback��—-�ع����񣬿��ֶ��ع�������</li>
-<li>���ݿ��ع����ع���������ʼ֮ǰλ�á�״̬��</li>
+<h2 id="MySQL数据库对事务的支持"><a href="#MySQL数据库对事务的支持" class="headerlink" title="MySQL数据库对事务的支持"></a>MySQL数据库对事务的支持</h2><ul>
+<li>start transaction；—-开启事务</li>
+<li>sql语句；—-操作</li>
+<li>commit;—-提交事务</li>
+<li>rollback；—-回滚事务，可手动回滚事务。</li>
+<li>数据库回滚：回滚到事务开始之前位置、状态。</li>
 </ul>
-<h2 id="g��һ���쳣�ع�ʾ��"><a href="#g��һ���쳣�ع�ʾ��" class="headerlink" title="ģ��һ���쳣�ع�ʾ��"></a>ģ��һ���쳣�ع�ʾ��</h2><p>��Oracle���ݿ���������֧����MySQL���������컯�ġ�������MySQLΪ����˵��һ��������<br><strong>start transaction��MySQL�������Ŀ�����</strong><br><strong>Oracle�������������ɵ�һ��DML���������ġ�</strong><br>��һ���򵥵�ת��Ϊ����<br><img src="https://dhsmp.nos-eastchina1.126.net/27095586.jpg" alt=""><br>��һ������ͷ������������<br>�ڶ�������ͷ��ģ��aaa�˻���100��<br>û��ִ��commit�����������������쳣�ˡ��ص��������ڣ����½����鿴��update���䲢û�������ı����ݡ�<br><img src="https://dhsmp.nos-eastchina1.126.net/83446062.jpg" alt=""></p>
-<h2 id="g��һ������ִ��ʾ��"><a href="#g��һ������ִ��ʾ��" class="headerlink" title="ģ��һ������ִ��ʾ��"></a>ģ��һ������ִ��ʾ��</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/98846792.jpg" alt=""><br>��һ������ͷ������������<br>�м�ִ��������update������<br>����commit���ύ�����񡣲Ż����õı��������ݿ��С�û���յ�commit�����ݿ����Զ��ع��ˡ�</p>
-<h2 id="�����J������еĸ�����Isolation"><a href="#�����J������еĸ�����Isolation" class="headerlink" title="�����Ĵ������еĸ�����Isolation"></a>�����Ĵ������еĸ�����Isolation</h2><p>���������Ǹ����ԣ����ܻ������������⣺</p>
+<h2 id="模拟一个异常回滚示例"><a href="#模拟一个异常回滚示例" class="headerlink" title="模拟一个异常回滚示例"></a>模拟一个异常回滚示例</h2><p>因Oracle数据库对事务的支持与MySQL是有所差异化的。这里以MySQL为例来说明一下事务。<br><strong>start transaction是MySQL中事务的开启。</strong><br><strong>Oracle的事务开启是由第一条DML操作开启的。</strong><br>以一个简单的转账为例。<br><img src="https://dhsmp.nos-eastchina1.126.net/27095586.jpg" alt=""><br>第一个红箭头，开启事务。<br>第二个红箭头，模拟aaa账户减100。<br>没有执行commit操作，假设程序出异常了。关掉这个窗口，重新进入查看。update语句并没有真正改变数据。<br><img src="https://dhsmp.nos-eastchina1.126.net/83446062.jpg" alt=""></p>
+<h2 id="模拟一个正常执行示例"><a href="#模拟一个正常执行示例" class="headerlink" title="模拟一个正常执行示例"></a>模拟一个正常执行示例</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/98846792.jpg" alt=""><br>第一个红箭头，开启事务。<br>中间执行了两个update操作。<br>最后commit，提交该事务。才会永久的保存在数据库中。没有收到commit，数据库则自动回滚了。</p>
+<h2 id="事务四大特性中的隔离性Isolation"><a href="#事务四大特性中的隔离性Isolation" class="headerlink" title="事务四大特性中的隔离性Isolation"></a>事务四大特性中的隔离性Isolation</h2><p>如果不考虑隔离性，可能会引发如下问题：</p>
 <ul>
-<li>������һ��������ȡ������һ������δ�ύ�����ݡ�</li>
-<li>�����ظ�������һ�������ڣ���ȡ���е�ĳһ�����ݣ����˶�ȡ�Ľ�����ͬ������ȡͬһ����¼����һ�ζ����ڶ��ζ�������һ����</li>
-<li>�������ö�������һ�������ڶ�ȡ���˱����������������ݣ�����ǰ����ȡ��һ�¡�����ȡͬһ������<br><strong>�����ظ�����Щ��������ȷ�ģ���Щ�����ǲ���ȷ�ġ�</strong><h2 id="���ݿⶨ�������ָ��뼶��"><a href="#���ݿⶨ�������ָ��뼶��" class="headerlink" title="���ݿⶨ�������ָ��뼶��"></a>���ݿⶨ�������ָ��뼶��</h2></li>
-<li>Serializable���ɱ��������������ظ��������������������������ƻ��⣩</li>
-<li>Repeatable read���ɱ��������������ظ���������������<strong>MySQL���ݿ�Ĭ�ϵĸ��뼶����</strong></li>
-<li>Read committed���ɱ�����������������<strong>Oracle���ݿ�Ĭ�ϵĸ��뼶��</strong></li>
-<li>Read uncommitted�����ͼ����������������޷���֤��</li>
+<li>脏读：一个事务读取了另外一个事务未提交的数据。</li>
+<li>不可重复读：在一个事务内，读取表中的某一行数据，多此读取的结果不同。（读取同一条记录，第一次读跟第二次读结果不一样）</li>
+<li>虚读（幻读）：在一个事务内读取到了别的事务插入的数据，导致前后读取不一致。（读取同一个表）<br><strong>不可重复读有些情况是正确的，有些情况是不正确的。</strong><h2 id="数据库定义的四种隔离级别"><a href="#数据库定义的四种隔离级别" class="headerlink" title="数据库定义的四种隔离级别"></a>数据库定义的四种隔离级别</h2></li>
+<li>Serializable：可避免脏读、不可重复读、虚读的情况发生。（类似互斥）</li>
+<li>Repeatable read：可避免脏读、不可重复读的情况发生。<strong>MySQL数据库默认的隔离级别。</strong></li>
+<li>Read committed：可避免脏读情况发生。<strong>Oracle数据库默认的隔离级别</strong></li>
+<li>Read uncommitted：最低级别，以上情况均无法保证。</li>
 </ul>
-<p>���뼶��Խ�ߣ�����Խ�<br>���ݿ����ø��뼶����set transaction isolation level ‘���뼶���ȼ��ֶ�’;<br>��ѯ��ǰ�����ĸ��뼶����select @@tx_isolation;<br>�����Ͳ�����ȥ��ʵ���ˡ������������ò�ͬ�ĸ��뼶������������̨ȥ��ʵ�顣<br><strong>Oracle���ݿ�֧��Read committed��Serializable�����������뼶����</strong></p>
-<h2 id="����ʽ����������ʽ����"><a href="#����ʽ����������ʽ����" class="headerlink" title="����ʽ����������ʽ����"></a>����ʽ����������ʽ����</h2><ul>
-<li>����ʽ�����������Ŀ������ύ���ɳ���Ա�ڴ����п��ơ���ͳ��JDBC�������񡢻ع��������ύ�����Ĳ�������д����ʽ�������������������Ķ��������ı߽磬����ʵ��ϸ���ȵ��������ƣ�</li>
-<li>����ʽ�����������Ŀ������ύ�����ɳ���Ա���ƣ������ⲿ����������spring��������֧�֣��������ļ�������������ע�⼴�ɡ������������ʹ���֮�������ϡ�<h2 id="����������o������"><a href="#����������o������" class="headerlink" title="����������ȫ������"></a>����������ȫ������</h2></li>
-<li>�����������ڵ���EIS�����ݿ��ı��أ����������ڵ��������ڵ����񡣱����������漰����������Դ��</li>
-<li>ȫ����������Դ��������Э�������񣬿��Կ�Խ�������ݿ��ͽ��̡�<strong>���ö��׶��ύЭ�鱣֤�����ĳɹ���</strong></li>
+<p>隔离级别越高，性能越差。<br>数据库设置隔离级别：set transaction isolation level ‘隔离级别等级字段’;<br>查询当前事务的隔离级别：select @@tx_isolation;<br>这里就不挨个去做实验了。可以自行设置不同的隔离级，开两个控制台去做实验。<br><strong>Oracle数据库支持Read committed、Serializable两种事务隔离级别。</strong></p>
+<h2 id="编程式事务与声明式事务"><a href="#编程式事务与声明式事务" class="headerlink" title="编程式事务与声明式事务"></a>编程式事务与声明式事务</h2><ul>
+<li>编程式事务：事务的开启与提交，由程序员在代码中控制。传统的JDBC开启事务、回滚事务、提交事务的操作。编写程序式的事务管理可以清楚的定义事务的边界，可以实现细粒度的事务控制，</li>
+<li>声明式事务：事务的开启与提交，不由程序员控制，交由外部容器处理。spring对事务的支持，在配置文件中声明或采用注解即可。解除了事务和代码之间的耦合。<h2 id="本地事务与全局事务"><a href="#本地事务与全局事务" class="headerlink" title="本地事务与全局事务"></a>本地事务与全局事务</h2></li>
+<li>本地事务：在单个EIS或数据库的本地，并且限制在单个进程内的事务。本地事务不涉及多个数据来源。</li>
+<li>全局事务：资源管理器和协调的事务，可以跨越多个数据库和进程。<strong>采用二阶段提交协议保证事务的成功。</strong></li>
 </ul>
-<h2 id="�ֲ�ʽ����"><a href="#�ֲ�ʽ����" class="headerlink" title="�ֲ�ʽ����"></a>�ֲ�ʽ����</h2><ul>
-<li>�ֲ�ʽ�������ڶ��׶��ύʵ�֣������ύЭ�顣<strong>���׶��ύ���õ��Ǳ��������ԣ����ڸ���������������Ҫ�ȴ���Ӧ�����Ĳ����ߣ��������ܱȽϲ��ʵ��ҵ��ʹ�ù����У�ʹ����������һ����������ͳ������ǿһ���ԡ�ʹ�ô����������ܵ�MQ���м��˽�ɫ��</strong></li>
+<h2 id="分布式事务"><a href="#分布式事务" class="headerlink" title="分布式事务"></a>分布式事务</h2><ul>
+<li>分布式事务基于二阶段提交实现，二次提交协议。<strong>二阶段提交采用的是悲观锁策略，由于各个事务参与者需要等待响应最慢的参与者，因此性能比较差。在实际业务使用过程中，使用数据最终一致性替代传统的数据强一致性。使用带有事务功能的MQ做中间人角色。</strong></li>
 </ul>
-<h2 id="���׶��ύ"><a href="#���׶��ύ" class="headerlink" title="���׶��ύ"></a>���׶��ύ</h2><ul>
-<li>׼���׶Σ��ֳ�ͶƱ�׶Ρ�Э����ѯ�����в������Ƿ�׼�����ύ��׼���ûָ�prepared�������ָ�non-prepared</li>
-<li>�ύ�׶Σ��ֳ�ִ�н׶Ρ�Э������������һ�׶��յ������߻ظ���prepared�����˽׶������в����߷���commitָ���������rollbackָ�</li>
+<h2 id="二阶段提交"><a href="#二阶段提交" class="headerlink" title="二阶段提交"></a>二阶段提交</h2><ul>
+<li>准备阶段：又称投票阶段。协调者询问所有参与者是否准备好提交，准备好恢复prepared，否则恢复non-prepared</li>
+<li>提交阶段：又称执行阶段。协调者如果在上一阶段收到参与者回复的prepared，则此阶段向所有参与者发送commit指令，否则发送rollback指令。</li>
 </ul>
-<h2 id="����һ��g�ͣ��򵥵�˵���֣�"><a href="#����һ��g�ͣ��򵥵�˵���֣�" class="headerlink" title="����һ��ģ�ͣ��򵥵�˵���֣�"></a>����һ��ģ�ͣ��򵥵�˵���֣�</h2><ul>
-<li>Weak ��һ���ԣ�����д��һ����ֵ�󣬶��Ĳ��������ݸ����Ͽ��ܻ���������Ҳ���ܻ�����������</li>
-<li>Eventually ����һ���ԣ�����д��һ����ֵ�����п��ܶ�������������ĳ��ʱ�䱣֤�����ܶ�������</li>
-<li>Strong ǿһ���ԣ��µ�����һ��д�룬�����⸱��ʱ�̶��ܶ�����ֵ��</li>
+<h2 id="数据一致模型（简单的说三种）"><a href="#数据一致模型（简单的说三种）" class="headerlink" title="数据一致模型（简单的说三种）"></a>数据一致模型（简单的说三种）</h2><ul>
+<li>Weak 弱一致性：当你写入一个新值后，读的操作在数据副本上可能会读出来，也可能会读不出来。</li>
+<li>Eventually 最终一致性：当你写入一个新值后，有可能读不出来，但在某个时间保证最终能读出来。</li>
+<li>Strong 强一致性：新的数据一旦写入，在任意副本时刻都能读到新值。</li>
 </ul>
-<h2 id="������"><a href="#������" class="headerlink" title="������"></a>������</h2><ul>
-<li>һ�����񻨷Ѻܳ�ʱ�䲻�ܹ�����������һ���������񣬼��Ƴ�������</li>
-<li>�ֲ�ʽ�������ᵽ��һ�㣬���׶��ύ��Ҫ�ȴ���Ӧ�����Ĳ����ߡ����п��ܻ�����һ����������</li>
-<li>Spring�У���ҵ�񷽷���������@Transactionʱ����������forѭ������dao����insert��updateҲ���ܻ����ɳ�������</li>
-<li>Spring�У���service����ҵ�񷽷���������@Transactionʱ��������һ��service��ҵ�񷽷�������ȥǶ�׷������ã�Ҳ���ܻ����ɳ�������Spring�����������ύ���Ƿ���ִ�����ϡ���Ƕ�׵����У�������ʱ����������ҵ�񷽷�ִ�е�����ʱ�䡣</li>
+<h2 id="长事务"><a href="#长事务" class="headerlink" title="长事务"></a>长事务</h2><ul>
+<li>一个事务花费很长时间不能够结束，就是一个长的事务，简称长事务。</li>
+<li>分布式事务中提到过一点，二阶段提交需要等待响应最慢的参与者。它有可能会变成一个长事务。</li>
+<li>Spring中，在业务方法中上声明@Transaction时，如果采用for循环调用dao进行insert、update也可能会造成长事务。</li>
+<li>Spring中，在service层的业务方法中上声明@Transaction时，调用另一个service的业务方法，如此去嵌套服务调用，也可能会造成长事务。Spring对于事务的提交，是方法执行完毕。在嵌套调用中，事务的时间由最外层业务方法执行的事务时间。</li>
 </ul>
 
       
@@ -603,8 +603,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-			  <a href="/2018/10/28/data_struct/" rel="prev" title="�ع����ݽṹ�Ļ���֪ʶ">
-				<i class="fa fa-chevron-left"></i> �ع����ݽṹ�Ļ���֪ʶ
+			  <a href="/2018/10/28/data_struct/" rel="prev" title="回顾数据结构的基础知识">
+				<i class="fa fa-chevron-left"></i> 回顾数据结构的基础知识
               </a>
             
           </div>
@@ -613,8 +613,8 @@
 
           <div class="post-nav-prev post-nav-item">
 			
-			  <a href="/2018/10/28/cache-system/" rel="next" title="ʹ��ReentrantReadWriteLockʵ��һ���򵥵Ļ���ԭ��">
-				ʹ��ReentrantReadWriteLockʵ��һ���򵥵Ļ���ԭ�� <i class="fa fa-chevron-right"></i>
+			  <a href="/2018/10/28/cache-system/" rel="next" title="使用ReentrantReadWriteLock实现一个简单的缓存原理">
+				使用ReentrantReadWriteLock实现一个简单的缓存原理 <i class="fa fa-chevron-right"></i>
               </a>
             
           </div>
@@ -698,7 +698,7 @@
             
             <div class="site-state-item site-state-categories">
               <a href="/categories/index.html">
-                <span class="site-state-item-count">16</span>
+                <span class="site-state-item-count">17</span>
                 <span class="site-state-item-name">分类</span>
               </a>
             </div>
@@ -764,7 +764,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#�������J����ԣ�ACID��"><span class="nav-number">1.</span> <span class="nav-text">�������Ĵ����ԣ�ACID��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL���ݿ���������֧��"><span class="nav-number">2.</span> <span class="nav-text">MySQL���ݿ���������֧��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#g��һ���쳣�ع�ʾ��"><span class="nav-number">3.</span> <span class="nav-text">ģ��һ���쳣�ع�ʾ��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#g��һ������ִ��ʾ��"><span class="nav-number">4.</span> <span class="nav-text">ģ��һ������ִ��ʾ��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�����J������еĸ�����Isolation"><span class="nav-number">5.</span> <span class="nav-text">�����Ĵ������еĸ�����Isolation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#���ݿⶨ�������ָ��뼶��"><span class="nav-number">6.</span> <span class="nav-text">���ݿⶨ�������ָ��뼶��</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����ʽ����������ʽ����"><span class="nav-number">7.</span> <span class="nav-text">����ʽ����������ʽ����</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����������o������"><span class="nav-number">8.</span> <span class="nav-text">����������ȫ������</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#�ֲ�ʽ����"><span class="nav-number">9.</span> <span class="nav-text">�ֲ�ʽ����</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#���׶��ύ"><span class="nav-number">10.</span> <span class="nav-text">���׶��ύ</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#����һ��g�ͣ��򵥵�˵���֣�"><span class="nav-number">11.</span> <span class="nav-text">����һ��ģ�ͣ��򵥵�˵���֣�</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#������"><span class="nav-number">12.</span> <span class="nav-text">������</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#事务的四大特性（ACID）"><span class="nav-number">1.</span> <span class="nav-text">事务的四大特性（ACID）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#MySQL数据库对事务的支持"><span class="nav-number">2.</span> <span class="nav-text">MySQL数据库对事务的支持</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模拟一个异常回滚示例"><span class="nav-number">3.</span> <span class="nav-text">模拟一个异常回滚示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#模拟一个正常执行示例"><span class="nav-number">4.</span> <span class="nav-text">模拟一个正常执行示例</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#事务四大特性中的隔离性Isolation"><span class="nav-number">5.</span> <span class="nav-text">事务四大特性中的隔离性Isolation</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据库定义的四种隔离级别"><span class="nav-number">6.</span> <span class="nav-text">数据库定义的四种隔离级别</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#编程式事务与声明式事务"><span class="nav-number">7.</span> <span class="nav-text">编程式事务与声明式事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#本地事务与全局事务"><span class="nav-number">8.</span> <span class="nav-text">本地事务与全局事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分布式事务"><span class="nav-number">9.</span> <span class="nav-text">分布式事务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#二阶段提交"><span class="nav-number">10.</span> <span class="nav-text">二阶段提交</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据一致模型（简单的说三种）"><span class="nav-number">11.</span> <span class="nav-text">数据一致模型（简单的说三种）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#长事务"><span class="nav-number">12.</span> <span class="nav-text">长事务</span></a></li></ol></div>
             
 
           </div>
@@ -816,7 +816,7 @@
 
 <div class="powered-by">
   <i class="fa fa-user-md"></i>
-  <span class="post-count">全站共14.0k字</span>
+  <span class="post-count">全站共46.0k字</span>
 </div>
 
 <!--

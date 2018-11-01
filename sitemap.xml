@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dhsmp.com/2017/07/06/lock/</loc>
+    
+    <lastmod>2018-11-01T01:54:51.584Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dhsmp.com/about/index.html</loc>
     
     <lastmod>2018-10-28T02:51:15.470Z</lastmod>
@@ -110,13 +117,6 @@
     <loc>http://dhsmp.com/2017/07/30/mysql-store-engine/</loc>
     
     <lastmod>2018-10-28T00:50:44.826Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dhsmp.com/2017/07/16/lock/</loc>
-    
-    <lastmod>2018-10-28T00:50:07.533Z</lastmod>
     
   </url>
   

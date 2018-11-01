@@ -3,6 +3,24 @@
 
 
     
+  <url>
+    <loc>http://dhsmp.com/2017/07/06/lock/</loc>
+    <lastmod>2018-11-01T01:54:51.584Z</lastmod>
+    <data>
+        <display>
+        <title>Java中synchronized关键字与JDK1.5中显示Lock操作</title>
+        <pubTime>2017-07-06T14:16:08.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="Java" url="http://dhsmp.com/categories/Java/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://dhsmp.com/2017/06/27/objectinit/</loc>
@@ -277,24 +295,6 @@
            
              
               <breadCrumb title="MySQL" url="http://dhsmp.com/categories/MySQL/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://dhsmp.com/2017/07/16/lock/</loc>
-    <lastmod>2018-10-28T00:50:07.533Z</lastmod>
-    <data>
-        <display>
-        <title>Java中synchronized关键字与JDK1.5中显示Lock操作</title>
-        <pubTime>2017-07-16T14:16:08.000Z</pubTime>
-        
-         
-           
-             
-              <breadCrumb title="Java" url="http://dhsmp.com/categories/Java/"/>
           
         </display>
     </data>

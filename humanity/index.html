@@ -116,19 +116,44 @@
 
 
 
-<meta name="description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
-<meta property="og:type" content="article">
-<meta property="og:title" content="单例设计模式">
-<meta property="og:url" content="http://dhsmp.com/2017/11/12/single-design/index.html">
+<meta name="description" content="吴军-《浪潮之巅》阅读时间：2011简评：【★★★★★】  引领世界的科技企业的激荡历程。一本科普科技界历史进程，展望未来的书籍。看的心潮澎湃，世界就应该是作者书中那样，引领世界的变革。开阔视野、增长认识。  采铜-《精进：如何成为一个很厉害的人》阅读时间：2017.08简评：【★★★★★】  本书多少有点带有心灵鸡汤的嫌疑。采铜的认知确实很实际，看完这本书最大的感受是更加真实的剖析了自己。从自己">
+<meta property="og:type" content="website">
+<meta property="og:title" content="人文类书籍">
+<meta property="og:url" content="http://dhsmp.com/humanity/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
-<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/68605968.jpg">
-<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/76859891.jpg">
-<meta property="og:updated_time" content="2018-10-28T00:51:54.307Z">
+<meta property="og:description" content="吴军-《浪潮之巅》阅读时间：2011简评：【★★★★★】  引领世界的科技企业的激荡历程。一本科普科技界历史进程，展望未来的书籍。看的心潮澎湃，世界就应该是作者书中那样，引领世界的变革。开阔视野、增长认识。  采铜-《精进：如何成为一个很厉害的人》阅读时间：2017.08简评：【★★★★★】  本书多少有点带有心灵鸡汤的嫌疑。采铜的认知确实很实际，看完这本书最大的感受是更加真实的剖析了自己。从自己">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/46793671.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/32032414.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/96836406.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/78617288.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/2012773.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/88530493.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/63466510.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/20181102092830-609940.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/98034686.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20190131111248-160170.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/82791525.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/78201622.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/53237132.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/27058798.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/20181102100323-646390.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20181227040538-395293.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20190131111019-178725.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/15450157.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/79669162.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/20181102100836-111063.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/84668436.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/32044776.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20190315091115-249502.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/26219756.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/42167361.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/90173289.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/23029946.jpg">
+<meta property="og:updated_time" content="2019-04-25T08:29:44.790Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单例设计模式">
-<meta name="twitter:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
-<meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/68605968.jpg">
+<meta name="twitter:title" content="人文类书籍">
+<meta name="twitter:description" content="吴军-《浪潮之巅》阅读时间：2011简评：【★★★★★】  引领世界的科技企业的激荡历程。一本科普科技界历史进程，展望未来的书籍。看的心潮澎湃，世界就应该是作者书中那样，引领世界的变革。开阔视野、增长认识。  采铜-《精进：如何成为一个很厉害的人》阅读时间：2017.08简评：【★★★★★】  本书多少有点带有心灵鸡汤的嫌疑。采铜的认知确实很实际，看完这本书最大的感受是更加真实的剖析了自己。从自己">
+<meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/46793671.jpg">
 
 
 
@@ -156,13 +181,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/11/12/single-design/"/>
+  <link rel="canonical" href="http://dhsmp.com/humanity/"/>
 
 
 
 
 
-  <title>单例设计模式 | DreamMaker-HS</title>
+  <title>人文类书籍 | DreamMaker-HS</title>
   
 
 
@@ -366,269 +391,116 @@
             
 
   <div id="posts" class="posts-expand">
-    
+  <header class="post-header">
 
-  
+	<h1 class="post-title" itemprop="name headline">人文类书籍</h1>
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/11/12/single-design/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HuaShan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/20170622104033.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DreamMaker-HS">
-    </span>
+</header>
 
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">单例设计模式</h1>
-        
-		
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T22:16:08+08:00">
-                2017-11-12
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:51:54+08:00">
-                2018-10-28
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/11/12/single-design/" class="leancloud_visitors" data-flag-title="单例设计模式">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  578 字
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
     
-	
-	<div>
-	  
-		
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      HuaShan
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2017/11/12/single-design/" title="单例设计模式">http://dhsmp.com/2017/11/12/single-design/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-
-
-	  
-	</div>
-	
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>Java中有23种设计模式。<strong>设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。</strong>其应用场景如下：</p>
-<ul>
-<li>在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。</li>
-<li>在整个程序空间使用全局变量，共享资源。</li>
-<li>节省对象的创建时间等等。</li>
-</ul>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol>
-<li>禁止其他的应用程序，通过此类来创建对象。私有化构造函数。</li>
-<li>在本类里面创建对象。</li>
-<li>为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。</li>
+      <h2 id="吴军-《浪潮之巅》"><a href="#吴军-《浪潮之巅》" class="headerlink" title="吴军-《浪潮之巅》"></a>吴军-《浪潮之巅》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/46793671.jpg" alt=""><br>阅读时间：2011<br>简评：【★★★★★】</p>
+<ol>
+<li>引领世界的科技企业的激荡历程。一本科普科技界历史进程，展望未来的书籍。看的心潮澎湃，世界就应该是作者书中那样，引领世界的变革。开阔视野、增长认识。</li>
 </ol>
-<h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Single</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single s = <span class="keyword">new</span> Single();</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> s;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>静态成员，随着类的加载而被加载。<strong>该类在加载进内存时候，就已经初始化一个对象。</strong>俗称：饿汉式。通过getInstance()即可获取该对象，并使用该对象。</p>
-<h2 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Single</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single s = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">synchronized</span> (Single.class) &#123;</div><div class="line">				<span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</div><div class="line">					s = <span class="keyword">new</span> Single();</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> s;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>静态成员，随着类的加载而被加载。该类在加载进内存时候，对象还不存在。通过getInstance()获取该对象的时候才会初始化。那么这时就会出现线程安全问题。这里需要明确一点：<strong>线程安全问题：只读不写没有该问题，有读有写就有该问题</strong>。这也是饿汉式为什么没有线程安全问题的原因。</p>
-<h3 id="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><a href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。" class="headerlink" title="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。"></a>synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</h3><h3 id="getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><a href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？" class="headerlink" title="getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？"></a>getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">synchronized</span> (Single.class) &#123;</div><div class="line">		s = <span class="keyword">new</span> Single();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> s;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>多线程中每一个线程调用getInstance()都会发生互斥。</li>
-<li>当有第一个线程进入到同步代码块创建一个对象的时候，刚走到return，互斥已经结束。第二个线程进入到同步代码块，这时又会创建一个对象。在内存中就会出现两个对象。<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4>加双重if，同步效率较高一点。<h2 id="Java中的示例"><a href="#Java中的示例" class="headerlink" title="Java中的示例"></a>Java中的示例</h2><h3 id="Runtime类，饿汉式"><a href="#Runtime类，饿汉式" class="headerlink" title="Runtime类，饿汉式"></a>Runtime类，饿汉式</h3><img src="https://dhsmp.nos-eastchina1.126.net/68605968.jpg" alt=""><h3 id="System类，懒汉式"><a href="#System类，懒汉式" class="headerlink" title="System类，懒汉式"></a>System类，懒汉式</h3><img src="https://dhsmp.nos-eastchina1.126.net/76859891.jpg" alt=""></li>
-</ul>
+<h2 id="采铜-《精进：如何成为一个很厉害的人》"><a href="#采铜-《精进：如何成为一个很厉害的人》" class="headerlink" title="采铜-《精进：如何成为一个很厉害的人》"></a>采铜-《精进：如何成为一个很厉害的人》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/32032414.jpg" alt=""><br>阅读时间：2017.08<br>简评：【★★★★★】</p>
+<ol>
+<li>本书多少有点带有心灵鸡汤的嫌疑。采铜的认知确实很实际，看完这本书最大的感受是更加真实的剖析了自己。从自己的兴趣爱好，现有的资源，未来的认知等方面。能产生十足的危机感，以及对未来的向往。</li>
+<li>摘抄：<br> 当一件需要长期坚持的事情摆在我们面前时，我们总喜欢谈论意志力的重要性，好像只要你意志力足够强，你就能坚持到底一样。而如果你没有坚持到底，那一定是意志力的原因。我从没有相信过这种意志力的神话。在我看来，意志力是非常不可靠的，你越强调它，越依赖它，你中途放弃的可能性就越大。因为意志力总有可以承受的极限，就像一根已经绷得很紧的绳子，若是再用力的话，随时都会绷断。<br> <strong>如果我能长期坚持去坚持做一件事，一定是这件事带给我的丰盈感和满足感超过了我的所有付出，一定是这件事日日夜夜萦绕在我的心头让我欲罢不能，一定是这件事唤起了我内心深处最强烈的兴趣。</strong>也就是说，赐予我力量的，是激情的驱动，而不是意志力的鞭策。</li>
+<li><strong>做自己认为cool的事情。</strong></li>
+<li><strong>一个成熟的人，他的标准来自他的内心，而大多数人，却受环境所左右。</strong></li>
+</ol>
+<h2 id="吴军-《硅谷之谜》"><a href="#吴军-《硅谷之谜》" class="headerlink" title="吴军-《硅谷之谜》"></a>吴军-《硅谷之谜》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/96836406.jpg" alt=""><br>阅读时间：2017.11<br>简评：【★★★★★】</p>
+<ol>
+<li>作者从不同的视角介绍硅谷的发展与起源，试图剖析硅谷成为世界科技中心的真正原因，全世界其他地方为何难以复制它的模式。</li>
+<li>作者阐述的观点就是硅谷地区的社会构成就是一个小型的世界，不同种族、不同文化、不同国家的人齐聚在此，硅谷的包容、多元的文化、优秀的人才。</li>
+</ol>
+<h2 id="吴军-《文明之光》"><a href="#吴军-《文明之光》" class="headerlink" title="吴军-《文明之光》"></a>吴军-《文明之光》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/78617288.jpg" alt=""><br>阅读时间：2018.01<br>简评：【★★★★★】</p>
+<ol>
+<li>全书共四册，跨界之作。从历史、科技、艺术、政治，阐述人类文明的发展进程。而非历史书上简单的一些发明或帝国的兴衰过程。</li>
+<li>最感兴趣的是第二册，近现代科学技术的发展。一个个科学家们的故事，看得心生向往。不得不感慨，世界还是由科学家们所改变的。</li>
+</ol>
+<h2 id="吴军-《数学之美》"><a href="#吴军-《数学之美》" class="headerlink" title="吴军-《数学之美》"></a>吴军-《数学之美》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/2012773.jpg" alt=""><br>阅读时间：2018.03<br>简评：【★★★★★】</p>
+<ol>
+<li>虽然很多公式看不明白。但是终于找到数学对现实世界的巨大影响。以前总是觉得很遥远，又抽象。</li>
+</ol>
+<h2 id="吴军-《大学之路》"><a href="#吴军-《大学之路》" class="headerlink" title="吴军-《大学之路》"></a>吴军-《大学之路》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/88530493.jpg" alt=""><br>阅读时间：2018.02<br>简评：【★★★★★】</p>
+<ol>
+<li>作者写的书一直都是从客观的角度、实事求是的态度去写。介绍了近现代大学的起源，美国一流名校之间的历史、强项、差异，以及对现行教育的一些思考（通才教育、专才教育）。</li>
+<li>摘抄：<br> “教育改变命运”和博雅教育这两句话，今天已经成为了中国老师和家长们的共识，并且让很多年轻的学子们从中受益。但是，更多的年轻人在走出校门时却依然找不到他们所学和将来所做之间的联系，以至于有了被骗的感觉。<strong>实际上，对于寒门子弟来讲，首要任务是掌握一门技能，这是改变命运的捷径，那种希冀一下子从社会底层上升到最顶层的想法，多少有些脱离实际。</strong>而出身于中产家庭的孩子要想进一步提升自己的社会地位，不仅需要掌握技能，还需要接受很好的通识教育。</li>
+</ol>
+<h2 id="吴军-《见识》"><a href="#吴军-《见识》" class="headerlink" title="吴军-《见识》"></a>吴军-《见识》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/63466510.jpg" alt=""><br>阅读时间：2018.03<br>简评：【★★★★★】</p>
+<ol>
+<li>撒切尔夫人喜欢讲这样一段话：<br> <strong>注意你的想法，因为它能决定你的言辞和行动。</strong><br> <strong>注意你的言辞和行动，因为它能主导你的行为。</strong><br> <strong>注意你的行为，因为它能变成你的习惯。</strong><br> <strong>注意你的习惯，因为它能塑造你的性格。</strong><br> <strong>注意你的性格，因为它能决定你的命运。</strong></li>
+<li>本书主要是从作者自己的经历当中去阐述一些关于见识方面的思维类书籍。书中的一些观点比《高手》一书，感觉更实在。<br> <strong>“聪明人会欣赏聪明人，而且只有聪明人才会欣赏聪明人”。</strong><br> <strong>“缺乏见识、缺乏爱、缺乏规矩，是比缺钱更可怕的事情”。</strong></li>
+</ol>
+<h2 id="吴军-《态度》"><a href="#吴军-《态度》" class="headerlink" title="吴军-《态度》"></a>吴军-《态度》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/20181102092830-609940.jpg" alt=""><br>阅读时间：2018.11<br>简评：【★★★★★】</p>
+<ol>
+<li>写给女儿的书信。跟曾国藩的家书类似，不过不是写书信，发email。只是载体发生了变化，其实本质是一样的。这种方式很特别，因为写下的文字都是经过深思熟虑的，不像在当面交流时，容易掺杂自己的语气。看过曾国藩家书后，我当时在想以后我小孩长大了，我也应该采取这样书信的交流方式跟小孩沟通。本书还是值得一阅，作为一个知名学者，在育人方面确实是有更高的思维境界。</li>
+<li><strong>教育首先是关怀备至地、深思熟虑地、小心翼翼地去触及年轻的心灵。</strong></li>
+</ol>
+<h2 id="吴军-《智能时代》"><a href="#吴军-《智能时代》" class="headerlink" title="吴军-《智能时代》"></a>吴军-《智能时代》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/98034686.jpg" alt=""><br>阅读时间：2018.03<br>简评：【★★★★★】</p>
+<ol>
+<li>阐述了大数据的历史与发展过程，每一次的世界变革都是效率所产生的变化而引发的。。比较激进的认为2%的人将控制未来，还是一如既往阐述对未来趋势的理解。</li>
+<li>吴军博士的系列书籍都看完了，确实非常不错。博学、客观的角度看待问题、实事求是的精神等，更多的是产生了属于自己的世界观，而不在是以前那样站在自己熟悉的角度去看待问题。这一方面的收获非常大。</li>
+</ol>
+<h2 id="吴军-《具体生活》"><a href="#吴军-《具体生活》" class="headerlink" title="吴军-《具体生活》"></a>吴军-《具体生活》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20190131111248-160170.jpg" alt=""><br>阅读时间：2019.02<br>简评：【★★★★】</p>
+<ol>
+<li>摘录至硅谷来信的中对生活感受的一些文章。总体的感触是，应该为了自己想要的生活去拼搏，而不是仅仅只是想，却不愿去付出。虽然作者的生活方式，是常人无法企及的。但是我们可以学习作者对待生活的态度。随心而动，用心灵去感触世界。<strong>成为一个有趣的人。</strong></li>
+</ol>
+<h2 id="曾国藩，编译：张麟-《曾国潘家书》"><a href="#曾国藩，编译：张麟-《曾国潘家书》" class="headerlink" title="曾国藩，编译：张麟-《曾国潘家书》"></a>曾国藩，编译：张麟-《曾国潘家书》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/82791525.jpg" alt=""><br>阅读时间：2016.05<br>简评：【★★★★★】</p>
+<ol>
+<li>曾国藩往来家书的文言文原字，还有每一篇文言文对应的白话翻译。</li>
+<li>读了一年半了都没读完，文言文比较拗口，轻声读一遍再看白话。读一篇需要好几天才能消化，伟人的思想高度真的不一般。<strong>无论是告诫族中之人如何待人、学习等，发现其实都是心性上的磨炼。</strong><br> <strong>精学自会成器。</strong></li>
+</ol>
+<h2 id="万维钢-《智识分子：做个复杂的现代人》"><a href="#万维钢-《智识分子：做个复杂的现代人》" class="headerlink" title="万维钢-《智识分子：做个复杂的现代人》"></a>万维钢-《智识分子：做个复杂的现代人》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/78201622.jpg" alt=""><br>阅读时间：2018.05<br>简评：【★★★★】</p>
+<ol>
+<li>一本作者个人批判性认识的书。书中有一些观点，还是能够带来一些思考的。跟看《高手》的感觉一样。特别是最后一章，没怎么看明白。</li>
+<li>第二章，流水线时代的英雄。观点还是比较能够带来一些思考。</li>
+</ol>
+<h2 id="万维钢-《高手：精英的见识和我们的时代》"><a href="#万维钢-《高手：精英的见识和我们的时代》" class="headerlink" title="万维钢-《高手：精英的见识和我们的时代》"></a>万维钢-《高手：精英的见识和我们的时代》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/53237132.jpg" alt=""><br>阅读时间：2018.05<br>简评：【★★★★】</p>
+<ol>
+<li>一本作者阐述自己思维方式的书。书中有一些观点，其实连自己都不认同。像最后一章洞见未来，里面的暗物质，都不知道在讲什么，写在本书里面有什么用。但这并不妨碍吸收不同的观点与认知。<br> <strong>心法：如果你真的能区分你能控制的事情和你不能控制的事情，并且将两者区别对待，那么你在心理上，就会是不可战胜的。在面对人生起伏的时候，你就能真正做到宠辱不惊。</strong><br> <strong>故事的作用：那些乐观的人，都是善于自己给自己讲故事的人。</strong></li>
+</ol>
+<h2 id="魏政延-《天涯若比邻》"><a href="#魏政延-《天涯若比邻》" class="headerlink" title="魏政延-《天涯若比邻》"></a>魏政延-《天涯若比邻》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/27058798.jpg" alt=""><br>阅读时间：2018.08<br>简评：【★★★★】</p>
+<ol>
+<li>北大才子的遗作。看完后，更像是把自己的人生经历写出来，留给自己儿子看的。让自己儿子从书中去感受自己的父亲是一个什么样的人。求学那部分经历，确实还是可以好好看看。从中吸收一下学霸的学习方法，还是挺不错的。<br> <strong>读书需要思考、联想、触类旁通。</strong></li>
+</ol>
+<h2 id="吴晓波-《腾讯传》"><a href="#吴晓波-《腾讯传》" class="headerlink" title="吴晓波-《腾讯传》"></a>吴晓波-《腾讯传》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/20181102100323-646390.jpg" alt=""><br>阅读时间：2018.11<br>简评：【★★★★】</p>
+<ol>
+<li>腾讯创立、发展、壮大的激荡历程。看完后有一种感觉，活脱脱就是我青春年少时的成长过程嘛。第一次去网吧，小学五年级，一个男的叫我去偷看坐他后面的女孩的QQ号。第一次申请QQ号的时候，头像都是随机给的。初三第一次充Q币买QQ秀，第一次买QQ会员，第一次买黄钻会员装扮QQ空间，第一次付费买靓号QQ。还用家里的座机打声讯台充值，结果被查出来打了一顿。我这熊孩子，就是被当时的腾讯给收割了。<strong>此书，是本青春回忆录。鉴定完毕。</strong></li>
+</ol>
+<h2 id="吴晓波-《大败局》"><a href="#吴晓波-《大败局》" class="headerlink" title="吴晓波-《大败局》"></a>吴晓波-《大败局》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20181227040538-395293.jpg" alt=""><br>阅读时间：2018.12<br>简评：【★★★★】</p>
+<ol>
+<li>选取了一些典型的公司，从创立到消亡过程的叙述。虽然不一定完全接近真相，但是确实比在新闻媒体上接触到细节更多，更客观。年少时，总是觉得世界上的富人都是运气好。从本书中反而发现，都是有自己突出的长处。<strong>在精不在多，一个精字其实就足以让人有立足之地了。</strong></li>
+</ol>
+<h2 id="吴晓波-《吴晓波企业史》"><a href="#吴晓波-《吴晓波企业史》" class="headerlink" title="吴晓波-《吴晓波企业史》"></a>吴晓波-《吴晓波企业史》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20190131111019-178725.jpg" alt=""></p>
+<h2 id="田旺，苍耳-《雷军-世界需要我的突围》"><a href="#田旺，苍耳-《雷军-世界需要我的突围》" class="headerlink" title="田旺，苍耳-《雷军:世界需要我的突围》"></a>田旺，苍耳-《雷军:世界需要我的突围》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/15450157.jpg" alt=""><br>阅读时间：2018.09<br>简评：【★★★】</p>
+<ol>
+<li>讲述雷军的个人经历，跟小学的叙事文一样。以时间跨度为连接线，讲述每一个时间节点中，雷军做的一些事情。在2008年的时候，在新华书店看过一本关于雷军的书，忘记书名了，也一直都没有搜索到。所以买了这本来看看。没有那次看的有感觉。08年那次看完之后，所以选择了读计算机。确实也是因为被雷军的经历所吸引。虽然学的不咋滴，但至少不讨厌。人生总是这么奇妙。</li>
+</ol>
+<h2 id="美-阿什利·万斯-《硅谷钢铁侠》"><a href="#美-阿什利·万斯-《硅谷钢铁侠》" class="headerlink" title="[美]阿什利·万斯-《硅谷钢铁侠》"></a>[美]阿什利·万斯-《硅谷钢铁侠》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/79669162.jpg" alt=""><br>阅读时间：2018.08<br>简评：【★★★★】</p>
+<ol>
+<li>马斯克的传奇人生传记，梦想的偏执狂。从传记当中更多的看到是瞄准目标，全力开火，只对目标跟结果负责。对于无法达到目标的人，直接过滤掉。虽然会有不近人情的嫌疑，但其实做事就应该这样，才能把事情做好，并做出成绩。</li>
+</ol>
+<h2 id="美-蒂尔，-美-马斯特斯-《从0到1：开启商业与未来的秘密》"><a href="#美-蒂尔，-美-马斯特斯-《从0到1：开启商业与未来的秘密》" class="headerlink" title="[美]蒂尔，[美]马斯特斯-《从0到1：开启商业与未来的秘密》"></a>[美]蒂尔，[美]马斯特斯-《从0到1：开启商业与未来的秘密》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/20181102100836-111063.jpg" alt=""><br>阅读时间：2019.01<br>简评：【★★★★】</p>
+<ol>
+<li>个人没有商业相关的基础跟知识积累，看的似懂非懂。也说不出好与不好的观点。个人感觉，还是可以从作者那里吸收一些知识跟观点。如何去看待一家公司市场占有率上面的问题，以及公司的发展将来是否可以站到领先的地位。</li>
+</ol>
+<h2 id="以色列-尤瓦尔·赫拉利-《人类简史》"><a href="#以色列-尤瓦尔·赫拉利-《人类简史》" class="headerlink" title="[以色列]尤瓦尔·赫拉利-《人类简史》"></a>[以色列]尤瓦尔·赫拉利-《人类简史》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/84668436.jpg" alt=""><br>阅读时间：2018.10<br>简评：【★★★★】</p>
+<ol>
+<li>以上帝视角阐述人类的发展进程。跟《文明之光》的叙述线应该是一致的。只是《文明之光》讲的更细致更深入。个人感觉那些书评过于夸大了本书的优秀。</li>
+</ol>
+<h2 id="以色列-尤瓦尔·赫拉利-《未来简史》"><a href="#以色列-尤瓦尔·赫拉利-《未来简史》" class="headerlink" title="[以色列]尤瓦尔·赫拉利-《未来简史》"></a>[以色列]尤瓦尔·赫拉利-《未来简史》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/32044776.jpg" alt=""></p>
+<h2 id="美-戴维·布鲁克斯-《品格之路》"><a href="#美-戴维·布鲁克斯-《品格之路》" class="headerlink" title="[美]戴维·布鲁克斯-《品格之路》"></a>[美]戴维·布鲁克斯-《品格之路》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20190315091115-249502.jpg" alt=""></p>
+<h2 id="英-查尔斯-狄更斯-《大卫科波菲尔》"><a href="#英-查尔斯-狄更斯-《大卫科波菲尔》" class="headerlink" title="[英]查尔斯 狄更斯-《大卫科波菲尔》"></a>[英]查尔斯 狄更斯-《大卫科波菲尔》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/26219756.jpg" alt=""></p>
+<h2 id="韦秀英-《哈佛凌晨四点半》"><a href="#韦秀英-《哈佛凌晨四点半》" class="headerlink" title="韦秀英-《哈佛凌晨四点半》"></a>韦秀英-《哈佛凌晨四点半》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/42167361.jpg" alt=""></p>
+<h2 id="朱光潜-《给青年的十二封信》"><a href="#朱光潜-《给青年的十二封信》" class="headerlink" title="朱光潜-《给青年的十二封信》"></a>朱光潜-《给青年的十二封信》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/90173289.jpg" alt=""></p>
+<h2 id="中国诗词大会栏目组-《中国诗词大会-第二季上下册》"><a href="#中国诗词大会栏目组-《中国诗词大会-第二季上下册》" class="headerlink" title="中国诗词大会栏目组-《中国诗词大会 第二季上下册》"></a>中国诗词大会栏目组-《中国诗词大会 第二季上下册》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/23029946.jpg" alt=""></p>
 
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>谢谢你请我吃糖果</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/image/weixinpay.png" alt="HuaShan WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/image/alipaypicture.png" alt="HuaShan Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
-  </div>
-
-
-      
-    </div>
-	
-	
-		﻿
-<div style="text-align:center;color: #ccc;font-size:32px;">--------- 本文结束，感谢您的审阅 ---------</div>
-
-	
-	
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-			  <a href="/2017/11/23/thoughts/" rel="prev" title="云栖大会广东分会感想">
-				<i class="fa fa-chevron-left"></i> 云栖大会广东分会感想
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-			
-			  <a href="/2017/10/12/redis-summary/" rel="next" title="redis的总结与回顾">
-				redis的总结与回顾 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
 
 
@@ -762,7 +634,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">1.</span> <span class="nav-text">实现步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#饿汉式"><span class="nav-number">2.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#懒汉式"><span class="nav-number">3.</span> <span class="nav-text">懒汉式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><span class="nav-number">3.1.</span> <span class="nav-text">synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><span class="nav-number">3.2.</span> <span class="nav-text">getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#结论"><span class="nav-number">3.2.1.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的示例"><span class="nav-number">4.</span> <span class="nav-text">Java中的示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Runtime类，饿汉式"><span class="nav-number">4.1.</span> <span class="nav-text">Runtime类，饿汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System类，懒汉式"><span class="nav-number">4.2.</span> <span class="nav-text">System类，懒汉式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《浪潮之巅》"><span class="nav-number">1.</span> <span class="nav-text">吴军-《浪潮之巅》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#采铜-《精进：如何成为一个很厉害的人》"><span class="nav-number">2.</span> <span class="nav-text">采铜-《精进：如何成为一个很厉害的人》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《硅谷之谜》"><span class="nav-number">3.</span> <span class="nav-text">吴军-《硅谷之谜》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《文明之光》"><span class="nav-number">4.</span> <span class="nav-text">吴军-《文明之光》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《数学之美》"><span class="nav-number">5.</span> <span class="nav-text">吴军-《数学之美》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《大学之路》"><span class="nav-number">6.</span> <span class="nav-text">吴军-《大学之路》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《见识》"><span class="nav-number">7.</span> <span class="nav-text">吴军-《见识》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《态度》"><span class="nav-number">8.</span> <span class="nav-text">吴军-《态度》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《智能时代》"><span class="nav-number">9.</span> <span class="nav-text">吴军-《智能时代》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴军-《具体生活》"><span class="nav-number">10.</span> <span class="nav-text">吴军-《具体生活》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#曾国藩，编译：张麟-《曾国潘家书》"><span class="nav-number">11.</span> <span class="nav-text">曾国藩，编译：张麟-《曾国潘家书》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#万维钢-《智识分子：做个复杂的现代人》"><span class="nav-number">12.</span> <span class="nav-text">万维钢-《智识分子：做个复杂的现代人》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#万维钢-《高手：精英的见识和我们的时代》"><span class="nav-number">13.</span> <span class="nav-text">万维钢-《高手：精英的见识和我们的时代》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#魏政延-《天涯若比邻》"><span class="nav-number">14.</span> <span class="nav-text">魏政延-《天涯若比邻》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴晓波-《腾讯传》"><span class="nav-number">15.</span> <span class="nav-text">吴晓波-《腾讯传》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴晓波-《大败局》"><span class="nav-number">16.</span> <span class="nav-text">吴晓波-《大败局》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴晓波-《吴晓波企业史》"><span class="nav-number">17.</span> <span class="nav-text">吴晓波-《吴晓波企业史》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#田旺，苍耳-《雷军-世界需要我的突围》"><span class="nav-number">18.</span> <span class="nav-text">田旺，苍耳-《雷军:世界需要我的突围》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-阿什利·万斯-《硅谷钢铁侠》"><span class="nav-number">19.</span> <span class="nav-text">[美]阿什利·万斯-《硅谷钢铁侠》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-蒂尔，-美-马斯特斯-《从0到1：开启商业与未来的秘密》"><span class="nav-number">20.</span> <span class="nav-text">[美]蒂尔，[美]马斯特斯-《从0到1：开启商业与未来的秘密》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以色列-尤瓦尔·赫拉利-《人类简史》"><span class="nav-number">21.</span> <span class="nav-text">[以色列]尤瓦尔·赫拉利-《人类简史》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#以色列-尤瓦尔·赫拉利-《未来简史》"><span class="nav-number">22.</span> <span class="nav-text">[以色列]尤瓦尔·赫拉利-《未来简史》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-戴维·布鲁克斯-《品格之路》"><span class="nav-number">23.</span> <span class="nav-text">[美]戴维·布鲁克斯-《品格之路》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-查尔斯-狄更斯-《大卫科波菲尔》"><span class="nav-number">24.</span> <span class="nav-text">[英]查尔斯 狄更斯-《大卫科波菲尔》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#韦秀英-《哈佛凌晨四点半》"><span class="nav-number">25.</span> <span class="nav-text">韦秀英-《哈佛凌晨四点半》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#朱光潜-《给青年的十二封信》"><span class="nav-number">26.</span> <span class="nav-text">朱光潜-《给青年的十二封信》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#中国诗词大会栏目组-《中国诗词大会-第二季上下册》"><span class="nav-number">27.</span> <span class="nav-text">中国诗词大会栏目组-《中国诗词大会 第二季上下册》</span></a></li></ol></div>
             
 
           </div>
@@ -912,10 +784,10 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-
+  
 
   
 

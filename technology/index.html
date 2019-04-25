@@ -116,19 +116,51 @@
 
 
 
-<meta name="description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
-<meta property="og:type" content="article">
-<meta property="og:title" content="单例设计模式">
-<meta property="og:url" content="http://dhsmp.com/2017/11/12/single-design/index.html">
+<meta name="description" content="周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》阅读时间：2017.09简评：【★★★★★】  内容量很大，知识点很多。绝对是一本需要重复看三次以上的好书。 看完后对自动内存管理机制、高效并发两部分最感兴趣，值得一阅。  封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》 李林锋-《分布式服务框架原理与实践》阅读时间：2017.04简评：【★★★★】  对一些专业术语，分布式服务的认">
+<meta property="og:type" content="website">
+<meta property="og:title" content="技术类书籍">
+<meta property="og:url" content="http://dhsmp.com/technology/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
-<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/68605968.jpg">
-<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/76859891.jpg">
-<meta property="og:updated_time" content="2018-10-28T00:51:54.307Z">
+<meta property="og:description" content="周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》阅读时间：2017.09简评：【★★★★★】  内容量很大，知识点很多。绝对是一本需要重复看三次以上的好书。 看完后对自动内存管理机制、高效并发两部分最感兴趣，值得一阅。  封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》 李林锋-《分布式服务框架原理与实践》阅读时间：2017.04简评：【★★★★】  对一些专业术语，分布式服务的认">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/4178722.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/85534749.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/64566789.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/83733837.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/28616401.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20181227040212-920114.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/69623920.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/64657634.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/30812161.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/56080836.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/72031246.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/83671317.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/15916349.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/992717.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/97529503.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/17845414.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/30458332.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/97340288.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/56241549.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/10523342.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/4114745.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/46373435.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/24574393.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/26368500.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/56371253.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/13795828.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/65961711.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/90063733.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/24054059.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/23211845.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/34135464.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/32291374.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20181102030340-284612.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/30924573.jpg">
+<meta property="og:updated_time" content="2019-04-25T08:31:27.266Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="单例设计模式">
-<meta name="twitter:description" content="Java中有23种设计模式。设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。其应用场景如下：  在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。 在整个程序空间使用全局变量，共享资源。 节省对象的创建时间等等。  实现步骤 禁止其他的应用程序，通过此类来创建对象。私有化构造函数。 在本类里面创建对象。 为了其他应用程序能够访问本类对象">
-<meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/68605968.jpg">
+<meta name="twitter:title" content="技术类书籍">
+<meta name="twitter:description" content="周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》阅读时间：2017.09简评：【★★★★★】  内容量很大，知识点很多。绝对是一本需要重复看三次以上的好书。 看完后对自动内存管理机制、高效并发两部分最感兴趣，值得一阅。  封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》 李林锋-《分布式服务框架原理与实践》阅读时间：2017.04简评：【★★★★】  对一些专业术语，分布式服务的认">
+<meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/4178722.jpg">
 
 
 
@@ -156,13 +188,13 @@
 
 
 
-  <link rel="canonical" href="http://dhsmp.com/2017/11/12/single-design/"/>
+  <link rel="canonical" href="http://dhsmp.com/technology/"/>
 
 
 
 
 
-  <title>单例设计模式 | DreamMaker-HS</title>
+  <title>技术类书籍 | DreamMaker-HS</title>
   
 
 
@@ -366,269 +398,92 @@
             
 
   <div id="posts" class="posts-expand">
-    
+  <header class="post-header">
 
-  
+	<h1 class="post-title" itemprop="name headline">技术类书籍</h1>
 
-  
-  
-  
 
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://dhsmp.com/2017/11/12/single-design/">
 
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="HuaShan">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/image/20170622104033.png">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="DreamMaker-HS">
-    </span>
+</header>
 
     
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">单例设计模式</h1>
-        
-		
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-11-12T22:16:08+08:00">
-                2017-11-12
-              </time>
-            
-
-            
-              <span class="post-meta-divider">|</span>
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-check-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">更新于</span>
-              
-              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:51:54+08:00">
-                2018-10-28
-              </time>
-            
-          </span>
-
-          
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/设计模式/" itemprop="url" rel="index">
-                    <span itemprop="name">设计模式</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-             <span id="/2017/11/12/single-design/" class="leancloud_visitors" data-flag-title="单例设计模式">
-               <span class="post-meta-divider">|</span>
-               <span class="post-meta-item-icon">
-                 <i class="fa fa-eye"></i>
-               </span>
-               
-                 <span class="post-meta-item-text">阅读次数 </span>
-               
-                 <span class="leancloud-visitors-count"></span> 次
-             </span>
-          
-
-          
-
-          
-            <div class="post-wordcount">
-              
-                
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-file-word-o"></i>
-                </span>
-                
-                  <span class="post-meta-item-text">字数统计</span>
-                
-                <span title="字数统计">
-                  578 字
-                </span>
-              
-
-              
-
-              
-            </div>
-          
-
-          
-
-        </div>
-      </header>
     
-	
-	<div>
-	  
-		
-  <ul class="post-copyright">
-    <li class="post-copyright-author">
-      <strong>本文作者：</strong>
-      HuaShan
-    </li>
-    <li class="post-copyright-link">
-      <strong>本文链接：</strong>
-      <a href="http://dhsmp.com/2017/11/12/single-design/" title="单例设计模式">http://dhsmp.com/2017/11/12/single-design/</a>
-    </li>
-    <li class="post-copyright-license">
-      <strong>版权声明： </strong>
-      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
-    </li>
-  </ul>
-
-
-	  
-	</div>
-	
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        <p>Java中有23种设计模式。<strong>设计模式是针对问题最有效的解决方法。单例设计模式：解决一个类在内存中只存在一个实例。</strong>其应用场景如下：</p>
-<ul>
-<li>在多线程之间，只初始化一次的资源。如socket资源、servlet环境等。</li>
-<li>在整个程序空间使用全局变量，共享资源。</li>
-<li>节省对象的创建时间等等。</li>
-</ul>
-<h2 id="实现步骤"><a href="#实现步骤" class="headerlink" title="实现步骤"></a>实现步骤</h2><ol>
-<li>禁止其他的应用程序，通过此类来创建对象。私有化构造函数。</li>
-<li>在本类里面创建对象。</li>
-<li>为了其他应用程序能够访问本类对象，需要对外界提供一种访问方式。</li>
+      <h2 id="周志明-《深入理解Java虚拟机-JVM高级特性与最佳实践》"><a href="#周志明-《深入理解Java虚拟机-JVM高级特性与最佳实践》" class="headerlink" title="周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》"></a>周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/4178722.jpg" alt=""><br>阅读时间：2017.09<br>简评：【★★★★★】</p>
+<ol>
+<li>内容量很大，知识点很多。绝对是一本需要重复看三次以上的好书。</li>
+<li>看完后对自动内存管理机制、高效并发两部分最感兴趣，值得一阅。</li>
 </ol>
-<h2 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Single</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single s = <span class="keyword">new</span> Single();</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">return</span> s;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>静态成员，随着类的加载而被加载。<strong>该类在加载进内存时候，就已经初始化一个对象。</strong>俗称：饿汉式。通过getInstance()即可获取该对象，并使用该对象。</p>
-<h2 id="懒汉式"><a href="#懒汉式" class="headerlink" title="懒汉式"></a>懒汉式</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Single</span> </span>&#123;</div><div class="line">	<span class="keyword">private</span> <span class="keyword">static</span> Single s = <span class="keyword">null</span>;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">private</span> <span class="title">Single</span><span class="params">()</span> </span>&#123;</div><div class="line"></div><div class="line">	&#125;</div><div class="line"></div><div class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">		<span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</div><div class="line">			<span class="keyword">synchronized</span> (Single.class) &#123;</div><div class="line">				<span class="keyword">if</span> (s == <span class="keyword">null</span>) &#123;</div><div class="line">					s = <span class="keyword">new</span> Single();</div><div class="line">				&#125;</div><div class="line">			&#125;</div><div class="line">		&#125;</div><div class="line">		<span class="keyword">return</span> s;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>静态成员，随着类的加载而被加载。该类在加载进内存时候，对象还不存在。通过getInstance()获取该对象的时候才会初始化。那么这时就会出现线程安全问题。这里需要明确一点：<strong>线程安全问题：只读不写没有该问题，有读有写就有该问题</strong>。这也是饿汉式为什么没有线程安全问题的原因。</p>
-<h3 id="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><a href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。" class="headerlink" title="synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。"></a>synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</h3><h3 id="getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><a href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？" class="headerlink" title="getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？"></a>getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Single <span class="title">getInstance</span><span class="params">()</span> </span>&#123;</div><div class="line">	<span class="keyword">synchronized</span> (Single.class) &#123;</div><div class="line">		s = <span class="keyword">new</span> Single();</div><div class="line">	&#125;</div><div class="line">	<span class="keyword">return</span> s;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<ul>
-<li>多线程中每一个线程调用getInstance()都会发生互斥。</li>
-<li>当有第一个线程进入到同步代码块创建一个对象的时候，刚走到return，互斥已经结束。第二个线程进入到同步代码块，这时又会创建一个对象。在内存中就会出现两个对象。<h4 id="结论"><a href="#结论" class="headerlink" title="结论"></a>结论</h4>加双重if，同步效率较高一点。<h2 id="Java中的示例"><a href="#Java中的示例" class="headerlink" title="Java中的示例"></a>Java中的示例</h2><h3 id="Runtime类，饿汉式"><a href="#Runtime类，饿汉式" class="headerlink" title="Runtime类，饿汉式"></a>Runtime类，饿汉式</h3><img src="https://dhsmp.nos-eastchina1.126.net/68605968.jpg" alt=""><h3 id="System类，懒汉式"><a href="#System类，懒汉式" class="headerlink" title="System类，懒汉式"></a>System类，懒汉式</h3><img src="https://dhsmp.nos-eastchina1.126.net/76859891.jpg" alt=""></li>
-</ul>
+<h2 id="封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》"><a href="#封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》" class="headerlink" title="封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》"></a>封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/85534749.jpg" alt=""></p>
+<h2 id="李林锋-《分布式服务框架原理与实践》"><a href="#李林锋-《分布式服务框架原理与实践》" class="headerlink" title="李林锋-《分布式服务框架原理与实践》"></a>李林锋-《分布式服务框架原理与实践》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/64566789.jpg" alt=""><br>阅读时间：2017.04<br>简评：【★★★★】</p>
+<ol>
+<li>对一些专业术语，分布式服务的认知进行了扫盲。</li>
+<li>有一些知识点就是提一下，加一些文字描述。有很大的技术帮助，真没感觉出来。RPC框架、SOA服务、Dubbo、分布式服务框架的架构。zookeeper等都有提到，但其实都讲的不深。重点就是是扫盲，提高认知。</li>
+</ol>
+<p>读书笔记：</p>
+<ol>
+<li><a href="http://dhsmp.com/2018/01/25/webservice-summary/">WebService、RPC、微服务的一些认知</a></li>
+</ol>
+<h2 id="梁栋-《Java加密与解密的艺术》"><a href="#梁栋-《Java加密与解密的艺术》" class="headerlink" title="梁栋-《Java加密与解密的艺术》"></a>梁栋-《Java加密与解密的艺术》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/83733837.jpg" alt=""><br>阅读时间：2016.10<br>简评：【★★★★】</p>
+<ol>
+<li>科普了一下密码学相关知识，虽然有大量的与Java加密相关的API示例，工作中还是极少用到。作为一项知识量的积累，还是不错的。例子的冗余代码较多。</li>
+</ol>
+<h2 id="子柳-《淘宝技术这十年》"><a href="#子柳-《淘宝技术这十年》" class="headerlink" title="子柳-《淘宝技术这十年》"></a>子柳-《淘宝技术这十年》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/28616401.jpg" alt=""><br>阅读时间：2017.05<br>简评：【★★★★】</p>
+<ol>
+<li>看故事书一样，非常精彩。阿里的每一次技术变革等，都写的很精彩。有时候想，自己要是能参与这样的过程，该有多酸爽啊。这种升级打怪的历程，真不是每个人都能遇到的。</li>
+</ol>
+<h2 id="杨冠宝-《阿里巴巴Java开发手册》"><a href="#杨冠宝-《阿里巴巴Java开发手册》" class="headerlink" title="杨冠宝-《阿里巴巴Java开发手册》"></a>杨冠宝-《阿里巴巴Java开发手册》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20181227040212-920114.jpg" alt=""></p>
+<h2 id="刘增杰，李坤-《MySQL5-6从零开始学》"><a href="#刘增杰，李坤-《MySQL5-6从零开始学》" class="headerlink" title="刘增杰，李坤-《MySQL5.6从零开始学》"></a>刘增杰，李坤-《MySQL5.6从零开始学》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/69623920.jpg" alt=""><br>阅读时间：2017.06<br>简评：【★★★★】</p>
+<ol>
+<li>写的很细，入门篇。非常不错。以前都是这也知道一点，那也会一点，凑合着能使用。总算是系统的补充了一下MySQL方面的基础知识了。重点是性能优化、索引那两章。</li>
+</ol>
+<p>读书笔记：</p>
+<ol>
+<li><a href="http://dhsmp.com/2017/07/06/mysql-store-engine/">MySQL的存储引擎</a></li>
+<li><a href="http://dhsmp.com/2017/07/10/mysql-index/">MySQL中InnoDB存储引擎的索引</a></li>
+<li><a href="http://dhsmp.com/2017/07/11/mysql-optimize/">MySQL的性能优化</a></li>
+</ol>
+<h2 id="美-布赖恩特-《深入理解计算机系统》"><a href="#美-布赖恩特-《深入理解计算机系统》" class="headerlink" title="[美]布赖恩特-《深入理解计算机系统》"></a>[美]布赖恩特-《深入理解计算机系统》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/64657634.jpg" alt=""></p>
+<h2 id="英-艾伦·克莱门茨-《计算机组成原理》"><a href="#英-艾伦·克莱门茨-《计算机组成原理》" class="headerlink" title="[英]艾伦·克莱门茨-《计算机组成原理》"></a>[英]艾伦·克莱门茨-《计算机组成原理》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/30812161.jpg" alt=""><br>阅读时间：2018.05<br>简评：【★★★★】</p>
+<ol>
+<li>经典的教科书，介绍支配数字计算机系统的基本原理。底层硬件的部分，个人的感官跟看编译原理那本一样，昏昏欲睡。看一遍还是有好处，至少脑海中会有对计算机组成的一个抽象图。</li>
+<li>指令部分关于过、子程序、函数、存储，还是有必要看看的。了解程序在运算过程中，内存的工作原理。</li>
+</ol>
+<h2 id="鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版"><a href="#鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版" class="headerlink" title="鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版"></a>鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/56080836.jpg" alt=""></p>
+<h2 id="高俊峰-《循序渐进Linux》第二版"><a href="#高俊峰-《循序渐进Linux》第二版" class="headerlink" title="高俊峰-《循序渐进Linux》第二版"></a>高俊峰-《循序渐进Linux》第二版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/72031246.jpg" alt=""></p>
+<h2 id="程杰-《大话数据结构》"><a href="#程杰-《大话数据结构》" class="headerlink" title="程杰-《大话数据结构》"></a>程杰-《大话数据结构》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/83671317.jpg" alt=""><br>阅读时间：2018.03<br>简评：【★★★★】</p>
+<ol>
+<li>大白话写的，不知道为啥，感觉没教科书写的好。可能是教科书翻看的次数较多吧。快速过了一遍，顺便把以前的知识回顾了一下。</li>
+</ol>
+<p>读书笔记：</p>
+<ol>
+<li><a href="http://dhsmp.com/2017/06/29/list-set-map/">Java的List、Set、Map容器</a></li>
+<li><a href="http://dhsmp.com/2018/02/26/data_struct/">回顾数据结构的基础知识</a></li>
+<li><a href="http://dhsmp.com/2018/03/29/implement/">数据结构中一些示例代码的实现</a></li>
+</ol>
+<h2 id="程杰-《大话设计模式》"><a href="#程杰-《大话设计模式》" class="headerlink" title="程杰-《大话设计模式》"></a>程杰-《大话设计模式》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/15916349.jpg" alt=""></p>
+<h2 id="姜承尧-《MySql技术内存：InnoDB存储引擎》第二版"><a href="#姜承尧-《MySql技术内存：InnoDB存储引擎》第二版" class="headerlink" title="姜承尧-《MySql技术内存：InnoDB存储引擎》第二版"></a>姜承尧-《MySql技术内存：InnoDB存储引擎》第二版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/992717.jpg" alt=""></p>
+<h2 id="许令波-《深入分析Java-Web技术内幕》"><a href="#许令波-《深入分析Java-Web技术内幕》" class="headerlink" title="许令波-《深入分析Java Web技术内幕》"></a>许令波-《深入分析Java Web技术内幕》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/97529503.jpg" alt=""></p>
+<h2 id="李智慧-《大型网站技术架构-核心原理与案例分析》"><a href="#李智慧-《大型网站技术架构-核心原理与案例分析》" class="headerlink" title="李智慧-《大型网站技术架构 核心原理与案例分析》"></a>李智慧-《大型网站技术架构 核心原理与案例分析》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/17845414.jpg" alt=""></p>
+<h2 id="张开涛-《亿级流量网站架构核心技术》"><a href="#张开涛-《亿级流量网站架构核心技术》" class="headerlink" title="张开涛-《亿级流量网站架构核心技术》"></a>张开涛-《亿级流量网站架构核心技术》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/30458332.jpg" alt=""></p>
+<h2 id="曾宪杰-《大型网站系统与Java中间件实践》"><a href="#曾宪杰-《大型网站系统与Java中间件实践》" class="headerlink" title="曾宪杰-《大型网站系统与Java中间件实践》"></a>曾宪杰-《大型网站系统与Java中间件实践》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/97340288.jpg" alt=""></p>
+<h2 id="倪超-《从Paxos到ZooKeeper-分布式一致性原理与实践》"><a href="#倪超-《从Paxos到ZooKeeper-分布式一致性原理与实践》" class="headerlink" title="倪超-《从Paxos到ZooKeeper 分布式一致性原理与实践》"></a>倪超-《从Paxos到ZooKeeper 分布式一致性原理与实践》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/56241549.jpg" alt=""></p>
+<h2 id="郝佳-《Spring源码深度解析》"><a href="#郝佳-《Spring源码深度解析》" class="headerlink" title="郝佳-《Spring源码深度解析》"></a>郝佳-《Spring源码深度解析》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/10523342.jpg" alt=""></p>
+<h2 id="美-布洛克-《Effective-Java中文版》"><a href="#美-布洛克-《Effective-Java中文版》" class="headerlink" title="[美]布洛克-《Effective Java中文版》"></a>[美]布洛克-《Effective Java中文版》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/4114745.jpg" alt=""></p>
+<h2 id="凯文、R-福尔-《TCP-IP详解-卷1：协议》"><a href="#凯文、R-福尔-《TCP-IP详解-卷1：协议》" class="headerlink" title="凯文、R.福尔-《TCP/IP详解 卷1：协议》"></a>凯文、R.福尔-《TCP/IP详解 卷1：协议》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/46373435.jpg" alt=""></p>
+<h2 id="美-史蒂芬·普拉达-《C-Primer-Plus》中文第六版"><a href="#美-史蒂芬·普拉达-《C-Primer-Plus》中文第六版" class="headerlink" title="[美]史蒂芬·普拉达-《C Primer Plus》中文第六版"></a>[美]史蒂芬·普拉达-《C Primer Plus》中文第六版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/24574393.jpg" alt=""></p>
+<h2 id="澳-詹姆斯·特恩布尔-《第一本Docker书》修订版"><a href="#澳-詹姆斯·特恩布尔-《第一本Docker书》修订版" class="headerlink" title="[澳]詹姆斯·特恩布尔-《第一本Docker书》修订版"></a>[澳]詹姆斯·特恩布尔-《第一本Docker书》修订版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/26368500.jpg" alt=""></p>
+<h2 id="美-盖茨-《Java并发编程实战》"><a href="#美-盖茨-《Java并发编程实战》" class="headerlink" title="[美]盖茨-《Java并发编程实战》"></a>[美]盖茨-《Java并发编程实战》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/56371253.jpg" alt=""></p>
+<h2 id="方腾飞，魏鹏，程晓明-《Java并发编程的艺术》"><a href="#方腾飞，魏鹏，程晓明-《Java并发编程的艺术》" class="headerlink" title="方腾飞，魏鹏，程晓明-《Java并发编程的艺术》"></a>方腾飞，魏鹏，程晓明-《Java并发编程的艺术》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/13795828.jpg" alt=""></p>
+<h2 id="葛一鸣-《实战Java高并发程序设计》"><a href="#葛一鸣-《实战Java高并发程序设计》" class="headerlink" title="葛一鸣-《实战Java高并发程序设计》"></a>葛一鸣-《实战Java高并发程序设计》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/65961711.jpg" alt=""></p>
+<h2 id="英-沃伯顿-《Java-8函数式编程》"><a href="#英-沃伯顿-《Java-8函数式编程》" class="headerlink" title="[英]沃伯顿-《Java 8函数式编程》"></a>[英]沃伯顿-《Java 8函数式编程》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/90063733.jpg" alt=""></p>
+<h2 id="英-厄马-《Java-8实战》"><a href="#英-厄马-《Java-8实战》" class="headerlink" title="[英]厄马-《Java 8实战》"></a>[英]厄马-《Java 8实战》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/24054059.jpg" alt=""></p>
+<h2 id="美-诺曼·毛瑞尔-《Netty实战》"><a href="#美-诺曼·毛瑞尔-《Netty实战》" class="headerlink" title="[美]诺曼·毛瑞尔-《Netty实战》"></a>[美]诺曼·毛瑞尔-《Netty实战》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/23211845.jpg" alt=""></p>
+<h2 id="陶辉-《深入理解Nginx：模块开发与架构解析》第二版"><a href="#陶辉-《深入理解Nginx：模块开发与架构解析》第二版" class="headerlink" title="陶辉-《深入理解Nginx：模块开发与架构解析》第二版"></a>陶辉-《深入理解Nginx：模块开发与架构解析》第二版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/34135464.jpg" alt=""></p>
+<h2 id="英-纽曼-《微服务设计》"><a href="#英-纽曼-《微服务设计》" class="headerlink" title="[英]纽曼-《微服务设计》"></a>[英]纽曼-《微服务设计》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/32291374.jpg" alt=""></p>
+<h2 id="美-桑德斯-《高性能网站建设指南》"><a href="#美-桑德斯-《高性能网站建设指南》" class="headerlink" title="[美]桑德斯-《高性能网站建设指南》"></a>[美]桑德斯-《高性能网站建设指南》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20181102030340-284612.jpg" alt=""></p>
+<h2 id="美-约西亚-L-卡尔森-《Redis实战》"><a href="#美-约西亚-L-卡尔森-《Redis实战》" class="headerlink" title="[美]约西亚 L.卡尔森-《Redis实战》"></a>[美]约西亚 L.卡尔森-《Redis实战》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/30924573.jpg" alt=""></p>
 
-      
-    </div>
-
-    <div>
-      
-        
-
-      
-    </div>
-
-    <div>
-      
-        
-  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
-    <div>谢谢你请我吃糖果</div>
-    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
-      <span>赏</span>
-    </button>
-    <div id="QR" style="display: none;">
-      
-        <div id="wechat" style="display: inline-block">
-          <img id="wechat_qr" src="/image/weixinpay.png" alt="HuaShan WeChat Pay"/>
-          <p>微信打赏</p>
-        </div>
-      
-      
-        <div id="alipay" style="display: inline-block">
-          <img id="alipay_qr" src="/image/alipaypicture.png" alt="HuaShan Alipay"/>
-          <p>支付宝打赏</p>
-        </div>
-      
-    </div>
-  </div>
-
-
-      
-    </div>
-	
-	
-		﻿
-<div style="text-align:center;color: #ccc;font-size:32px;">--------- 本文结束，感谢您的审阅 ---------</div>
-
-	
-	
-    <footer class="post-footer">
-      
-
-      
-      
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-			  <a href="/2017/11/23/thoughts/" rel="prev" title="云栖大会广东分会感想">
-				<i class="fa fa-chevron-left"></i> 云栖大会广东分会感想
-              </a>
-            
-          </div>
-
-          <span class="post-nav-divider"></span>
-
-          <div class="post-nav-prev post-nav-item">
-			
-			  <a href="/2017/10/12/redis-summary/" rel="next" title="redis的总结与回顾">
-				redis的总结与回顾 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
+    
   </div>
 
 
@@ -762,7 +617,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实现步骤"><span class="nav-number">1.</span> <span class="nav-text">实现步骤</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#饿汉式"><span class="nav-number">2.</span> <span class="nav-text">饿汉式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#懒汉式"><span class="nav-number">3.</span> <span class="nav-text">懒汉式</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#synchronized代码块使用的锁，是该类的字节码对象锁。getInstance-在任何地方调用，都会发生互斥。"><span class="nav-number">3.1.</span> <span class="nav-text">synchronized代码块使用的锁，是该类的字节码对象锁。getInstance()在任何地方调用，都会发生互斥。</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getInstance-方法用了两个if判断，为什么不直接使用下面的代码呢？"><span class="nav-number">3.2.</span> <span class="nav-text">getInstance()方法用了两个if判断，为什么不直接使用下面的代码呢？</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#结论"><span class="nav-number">3.2.1.</span> <span class="nav-text">结论</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Java中的示例"><span class="nav-number">4.</span> <span class="nav-text">Java中的示例</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Runtime类，饿汉式"><span class="nav-number">4.1.</span> <span class="nav-text">Runtime类，饿汉式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#System类，懒汉式"><span class="nav-number">4.2.</span> <span class="nav-text">System类，懒汉式</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#周志明-《深入理解Java虚拟机-JVM高级特性与最佳实践》"><span class="nav-number">1.</span> <span class="nav-text">周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》"><span class="nav-number">2.</span> <span class="nav-text">封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#李林锋-《分布式服务框架原理与实践》"><span class="nav-number">3.</span> <span class="nav-text">李林锋-《分布式服务框架原理与实践》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梁栋-《Java加密与解密的艺术》"><span class="nav-number">4.</span> <span class="nav-text">梁栋-《Java加密与解密的艺术》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子柳-《淘宝技术这十年》"><span class="nav-number">5.</span> <span class="nav-text">子柳-《淘宝技术这十年》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杨冠宝-《阿里巴巴Java开发手册》"><span class="nav-number">6.</span> <span class="nav-text">杨冠宝-《阿里巴巴Java开发手册》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刘增杰，李坤-《MySQL5-6从零开始学》"><span class="nav-number">7.</span> <span class="nav-text">刘增杰，李坤-《MySQL5.6从零开始学》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-布赖恩特-《深入理解计算机系统》"><span class="nav-number">8.</span> <span class="nav-text">[美]布赖恩特-《深入理解计算机系统》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-艾伦·克莱门茨-《计算机组成原理》"><span class="nav-number">9.</span> <span class="nav-text">[英]艾伦·克莱门茨-《计算机组成原理》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版"><span class="nav-number">10.</span> <span class="nav-text">鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高俊峰-《循序渐进Linux》第二版"><span class="nav-number">11.</span> <span class="nav-text">高俊峰-《循序渐进Linux》第二版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程杰-《大话数据结构》"><span class="nav-number">12.</span> <span class="nav-text">程杰-《大话数据结构》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程杰-《大话设计模式》"><span class="nav-number">13.</span> <span class="nav-text">程杰-《大话设计模式》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#姜承尧-《MySql技术内存：InnoDB存储引擎》第二版"><span class="nav-number">14.</span> <span class="nav-text">姜承尧-《MySql技术内存：InnoDB存储引擎》第二版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#许令波-《深入分析Java-Web技术内幕》"><span class="nav-number">15.</span> <span class="nav-text">许令波-《深入分析Java Web技术内幕》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#李智慧-《大型网站技术架构-核心原理与案例分析》"><span class="nav-number">16.</span> <span class="nav-text">李智慧-《大型网站技术架构 核心原理与案例分析》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#张开涛-《亿级流量网站架构核心技术》"><span class="nav-number">17.</span> <span class="nav-text">张开涛-《亿级流量网站架构核心技术》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#曾宪杰-《大型网站系统与Java中间件实践》"><span class="nav-number">18.</span> <span class="nav-text">曾宪杰-《大型网站系统与Java中间件实践》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#倪超-《从Paxos到ZooKeeper-分布式一致性原理与实践》"><span class="nav-number">19.</span> <span class="nav-text">倪超-《从Paxos到ZooKeeper 分布式一致性原理与实践》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#郝佳-《Spring源码深度解析》"><span class="nav-number">20.</span> <span class="nav-text">郝佳-《Spring源码深度解析》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-布洛克-《Effective-Java中文版》"><span class="nav-number">21.</span> <span class="nav-text">[美]布洛克-《Effective Java中文版》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#凯文、R-福尔-《TCP-IP详解-卷1：协议》"><span class="nav-number">22.</span> <span class="nav-text">凯文、R.福尔-《TCP/IP详解 卷1：协议》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-史蒂芬·普拉达-《C-Primer-Plus》中文第六版"><span class="nav-number">23.</span> <span class="nav-text">[美]史蒂芬·普拉达-《C Primer Plus》中文第六版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#澳-詹姆斯·特恩布尔-《第一本Docker书》修订版"><span class="nav-number">24.</span> <span class="nav-text">[澳]詹姆斯·特恩布尔-《第一本Docker书》修订版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-盖茨-《Java并发编程实战》"><span class="nav-number">25.</span> <span class="nav-text">[美]盖茨-《Java并发编程实战》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方腾飞，魏鹏，程晓明-《Java并发编程的艺术》"><span class="nav-number">26.</span> <span class="nav-text">方腾飞，魏鹏，程晓明-《Java并发编程的艺术》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#葛一鸣-《实战Java高并发程序设计》"><span class="nav-number">27.</span> <span class="nav-text">葛一鸣-《实战Java高并发程序设计》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-沃伯顿-《Java-8函数式编程》"><span class="nav-number">28.</span> <span class="nav-text">[英]沃伯顿-《Java 8函数式编程》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-厄马-《Java-8实战》"><span class="nav-number">29.</span> <span class="nav-text">[英]厄马-《Java 8实战》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-诺曼·毛瑞尔-《Netty实战》"><span class="nav-number">30.</span> <span class="nav-text">[美]诺曼·毛瑞尔-《Netty实战》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#陶辉-《深入理解Nginx：模块开发与架构解析》第二版"><span class="nav-number">31.</span> <span class="nav-text">陶辉-《深入理解Nginx：模块开发与架构解析》第二版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-纽曼-《微服务设计》"><span class="nav-number">32.</span> <span class="nav-text">[英]纽曼-《微服务设计》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-桑德斯-《高性能网站建设指南》"><span class="nav-number">33.</span> <span class="nav-text">[美]桑德斯-《高性能网站建设指南》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-约西亚-L-卡尔森-《Redis实战》"><span class="nav-number">34.</span> <span class="nav-text">[美]约西亚 L.卡尔森-《Redis实战》</span></a></li></ol></div>
             
 
           </div>
@@ -912,10 +767,10 @@
   
 
   
-  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-
+  
 
   
 

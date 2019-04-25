@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dhsmp.com/humanity/index.html</loc>
+    
+    <lastmod>2019-04-25T11:51:03.574Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dhsmp.com/enbook/index.html</loc>
     
     <lastmod>2019-04-25T08:33:05.678Z</lastmod>
@@ -19,13 +26,6 @@
     <loc>http://dhsmp.com/technology/index.html</loc>
     
     <lastmod>2019-04-25T08:31:27.266Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dhsmp.com/humanity/index.html</loc>
-    
-    <lastmod>2019-04-25T08:29:44.790Z</lastmod>
     
   </url>
   

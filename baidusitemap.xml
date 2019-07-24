@@ -4,6 +4,25 @@
 
     
   <url>
+    <loc>http://dhsmp.com/2019/07/24/mysql-partition/</loc>
+    <lastmod>2019-07-24T08:38:37.663Z</lastmod>
+    <data>
+        <display>
+        <title>MySQL上表分区的试验</title>
+        <pubTime>2019-07-24T08:06:46.000Z</pubTime>
+        
+         
+           
+             
+              <breadCrumb title="MySQL" url="http://dhsmp.com/categories/MySQL/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://dhsmp.com/2019/01/02/annual-summary-2019/</loc>
     <lastmod>2019-07-02T06:59:49.833Z</lastmod>
     <data>
@@ -20,7 +39,6 @@
     </data>
     </url>
 
-    
     
     
     

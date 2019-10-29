@@ -2,16 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dhsmp.com/humanity/index.html</loc>
+    
+    <lastmod>2019-10-29T10:59:35.674Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dhsmp.com/technology/index.html</loc>
     
-    <lastmod>2019-10-06T13:36:18.717Z</lastmod>
+    <lastmod>2019-10-29T01:11:59.898Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://dhsmp.com/2019/01/02/annual-summary-2019/</loc>
     
-    <lastmod>2019-10-05T00:51:19.650Z</lastmod>
+    <lastmod>2019-10-26T13:09:46.984Z</lastmod>
     
   </url>
   
@@ -75,13 +82,6 @@
     <loc>http://dhsmp.com/2018/04/26/data_struct_tree/</loc>
     
     <lastmod>2019-09-19T12:43:46.012Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dhsmp.com/humanity/index.html</loc>
-    
-    <lastmod>2019-09-02T01:24:09.537Z</lastmod>
     
   </url>
   

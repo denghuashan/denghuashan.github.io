@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://dhsmp.com/humanity/index.html</loc>
+    
+    <lastmod>2020-02-09T03:12:49.699Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://dhsmp.com/2019/12/31/annual-summary-2020/</loc>
+    
+    <lastmod>2020-02-09T03:04:38.916Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://dhsmp.com/2019/12/31/look-back-2019/</loc>
     
     <lastmod>2019-12-31T11:56:03.310Z</lastmod>
@@ -9,23 +23,9 @@
   </url>
   
   <url>
-    <loc>http://dhsmp.com/2019/12/31/annual-summary-2020/</loc>
-    
-    <lastmod>2019-12-31T11:12:41.487Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://dhsmp.com/2019/01/02/annual-summary-2019/</loc>
     
     <lastmod>2019-12-31T07:56:10.495Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://dhsmp.com/humanity/index.html</loc>
-    
-    <lastmod>2019-12-28T13:38:48.565Z</lastmod>
     
   </url>
   

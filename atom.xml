@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://dhsmp.com/"/>
-  <updated>2020-02-09T03:04:38.916Z</updated>
+  <updated>2020-03-11T14:44:02.279Z</updated>
   <id>http://dhsmp.com/</id>
   
   <author>
@@ -17,13 +17,34 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Hello World</title>
+    <link href="http://dhsmp.com/2020/03/11/hello-world/"/>
+    <id>http://dhsmp.com/2020/03/11/hello-world/</id>
+    <published>2020-03-11T14:44:02.279Z</published>
+    <updated>2020-03-11T14:44:02.279Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">"My New Post"</span></div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html" target="_blank" rel="external">Deployment</a></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
+      
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2020年月度目标与进展</title>
     <link href="http://dhsmp.com/2019/12/31/annual-summary-2020/"/>
     <id>http://dhsmp.com/2019/12/31/annual-summary-2020/</id>
     <published>2019-12-31T11:08:36.000Z</published>
-    <updated>2020-02-09T03:04:38.916Z</updated>
+    <updated>2020-03-09T08:40:03.329Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1月"><a href="#1月" class="headerlink" title="1月"></a>1月</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工专》</li><li>复习《计算机网络管理》</li><li>再读《深入理解Java虚拟机》</li><li>阅读《经济学通识》</li><li>阅读《你有你的计划，世界另有计划》</li></ul><h3 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>自学教材《高等数学-工专》</del></li></ul><h3 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h3><ul><li>复习《计算机网络管理》</li><li>再读《深入理解Java虚拟机》</li><li>阅读《经济学通识》</li><li>阅读《你有你的计划，世界另有计划》</li></ul><h2 id="2月"><a href="#2月" class="headerlink" title="2月"></a>2月</h2><h3 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《经济学通识》</li><li>阅读《你想活出怎样的人生》</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="1月"><a href="#1月" class="headerlink" title="1月"></a>1月</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工专》</li><li>复习《计算机网络管理》</li><li>再读《深入理解Java虚拟机》</li><li>阅读《经济学通识》</li><li>阅读《你有你的计划，世界另有计划》</li></ul><h3 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>自学教材《高等数学-工专》</del></li></ul><h3 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h3><ul><li>复习《计算机网络管理》</li><li>再读《深入理解Java虚拟机》</li><li>阅读《经济学通识》</li><li>阅读《你有你的计划，世界另有计划》</li></ul><h2 id="2月"><a href="#2月" class="headerlink" title="2月"></a>2月</h2><h3 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《经济学通识》</li><li>阅读《你想活出怎样的人生》</li></ul><h3 id="未完成-1"><a href="#未完成-1" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《经济学通识》</li><li>阅读《你想活出怎样的人生》</li></ul><h2 id="3月"><a href="#3月" class="headerlink" title="3月"></a>3月</h2><h3 id="目标-2"><a href="#目标-2" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li></ul>]]></content>
     
     <summary type="html">
     
@@ -45,7 +66,7 @@
     <link href="http://dhsmp.com/2019/12/31/look-back-2019/"/>
     <id>http://dhsmp.com/2019/12/31/look-back-2019/</id>
     <published>2019-12-31T07:58:05.000Z</published>
-    <updated>2019-12-31T11:56:03.310Z</updated>
+    <updated>2019-12-31T11:56:03.311Z</updated>
     
     <content type="html"><![CDATA[<h2 id="即将消逝的2019"><a href="#即将消逝的2019" class="headerlink" title="即将消逝的2019"></a>即将消逝的2019</h2><p>2019即将消逝，回顾这一年的生活，过得很迷糊。个人阶段性的目标很发散，执行起来，效率较低。碌碌无为，指的就是我这种人。第一季度忙着备考，补充吴晓波所写的经济类相关知识。如果真要谈论收获，大抵都是些自欺欺人式的收获。比方说看待问题的发展，预测问题的走势。真要说有用，我也看不出来。第二季度忙着写论文，与其说忙，不如说是在打渔。时间是被消磨掉的。第三季度，忧心忡忡，心绪难宁。工作，学习，生活，考试，感觉快要被逼疯。第四季度，迷失中的自我，非常不喜欢这种感觉。我该如何让自己逃脱出来？<br>整个2019出现在脑海中频率较高的词有：政策、系统化、刻意练习。<br>关于政策这个词，国家所颁布的一些政策纲领文件，它都对国民生活产生巨大影响。从吴晓波所写的书里面，真实的感受到经济政策对国民经济的巨大刺激作用，同时确实有那么一批人能够从这些经济政策中嗅到财富的气味，同时抓住一波又一波的先机。后知后觉，在这些政策中是很可怕的。一定要看第一手的政策资料，逐行逐句的看，一句一句的去想是什么含义。这样才不会被别人带偏你的思维方式与理解。<br>关于系统化，可能是比较关注的几个人物提到过几次，所以让自己一直在想，什么是知识点，什么是系统化。具体点就是，背过乘法口诀的，都知道5乘以6等于30，这个5X6=30，其实就是一个知识点。再具体一点，在商店买了5瓶可乐，每瓶刚好6块钱，这时可以用乘法口诀5X6=30，算出来需要支付30元。用一个知识点，解决了实际场景中的某个问题。或者遇到某个问题时，你刚好知道能够用哪个知识点来解决或解答这个问题。属于一个整体中的部分，而不再是让知识点单一的存在。这就是我所理解的系统化，较为肤浅。<br>关于刻意练习，之前看过《刻意练习》，感触不深。考试很累，背书也累，还经常背了就忘。所以一直很好奇那些考神，为什么考试特别厉害，分数那么高。挺逗的一件事情是在11月参加软考，在草稿纸上写了一句话，奋笔疾书是一种什么样的感觉？说实话，我至今都没找到过这种感觉。所以在想怎样让自己记得更牢固，刻意练习又讲的是什么。应该是对自己不熟悉的知识点，进行重复。这种重复应该还是刻意的，发现自己对某个知识点生疏了，再重复的练习一下，成为一个熟练工。刻意，所谈论的应该是一种主动性，而不是被动。</p><h2 id="2020的期许"><a href="#2020的期许" class="headerlink" title="2020的期许"></a>2020的期许</h2><p>I’m brave!愿2020，考神附体。再见，2019！</p><center><img src="http://dhsmp.nos-eastchina1.126.net/20191231075005-436189.jpg" alt=""></center>]]></content>
     
@@ -106,29 +127,6 @@
     </summary>
     
       <category term="随想" scheme="http://dhsmp.com/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>回望2018</title>
-    <link href="http://dhsmp.com/2018/12/29/look-back-2018/"/>
-    <id>http://dhsmp.com/2018/12/29/look-back-2018/</id>
-    <published>2018-12-29T02:27:05.000Z</published>
-    <updated>2019-01-08T01:06:43.203Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="回忆多似伤感"><a href="#回忆多似伤感" class="headerlink" title="回忆多似伤感"></a>回忆多似伤感</h2><p>2018即将消逝，经历了很多，成长了很多。但是这些成长却是用痛苦跟折磨堆积起来的。我不知道什么是幸福，因为我一直在追赶。5月份以前，每天也就按部就班的推进学习计划。到了6月开始，因为家庭的一些事情，整个心情、心态都一直处于紧绷状态。我觉得自己是一个凡人，甚至一个庸人。这些事情的处理、应对，让我深深感受到，无知才是我这种家庭最大的敌人。我一直在想，知识到底是什么？近半年的时间，完全没有上半年那样能够踏实的静下心来看会书。朋友说是压力。其实想想，也是。压力一直都有，之前只是某一单方面的压力，能够很好的转化为学习的动力。而5月之后，压力的陡增，导致心态一直都处于扭曲的状态。但是至少有一件事情，没有落下。那就是每天的学习。我并不认为自己很厉害，也并不认为自己很自律。对于学习，我只是不敢再放弃。在求学的道路上，十二年的赛跑中，最后三年的自暴自弃，一直到现在都在影响着我的人生。</p><h2 id="展望未来"><a href="#展望未来" class="headerlink" title="展望未来"></a>展望未来</h2><p>未来到底是什么？我到现在还清晰的记得，以前小学五年级时，一个人放学回家，走在路上，傻傻的在想，我往左走两下，往右走两下，会不会影响明天发生在我身上的一些未知事情或别人身上的事情呢？小时候铁臂阿童木、哆啦A梦看多了。到现在，特别的笃定因果关系。撞的南墙太多了，所以特别的笃定。对于未来，也没有特别的设想。能够按照心里既定的计划路线去走好接下来的两年，已是最大的幸福。<br>所以，为了幸福。加油啊，小伙子。<br><img src="http://dhsmp.nos-eastchina1.126.net/20190107050528-211821.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;回忆多似伤感&quot;&gt;&lt;a href=&quot;#回忆多似伤感&quot; class=&quot;headerlink&quot; title=&quot;回忆多似伤感&quot;&gt;&lt;/a&gt;回忆多似伤感&lt;/h2&gt;&lt;p&gt;2018即将消逝，经历了很多，成长了很多。但是这些成长却是用痛苦跟折磨堆积起来的。我不知道什么是幸福，因为我
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://dhsmp.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>

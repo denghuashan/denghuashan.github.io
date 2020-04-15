@@ -5,9 +5,9 @@
   <subtitle>勤思善问，可敌良师益友。</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://dhsmp.com/"/>
+  <link href="http://denghs.com/"/>
   <updated>2020-04-06T12:24:04.032Z</updated>
-  <id>http://dhsmp.com/</id>
+  <id>http://denghs.com/</id>
   
   <author>
     <name>HuaShan</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>2020年月度目标与进展</title>
-    <link href="http://dhsmp.com/2019/12/31/annual-summary-2020/"/>
-    <id>http://dhsmp.com/2019/12/31/annual-summary-2020/</id>
+    <link href="http://denghs.com/2019/12/31/annual-summary-2020/"/>
+    <id>http://denghs.com/2019/12/31/annual-summary-2020/</id>
     <published>2019-12-31T11:08:36.000Z</published>
     <updated>2020-04-06T12:24:04.032Z</updated>
     
@@ -35,15 +35,15 @@
     
     </summary>
     
-      <category term="随想" scheme="http://dhsmp.com/categories/%E9%9A%8F%E6%83%B3/"/>
+      <category term="随想" scheme="http://denghs.com/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
   </entry>
   
   <entry>
     <title>再见，2019</title>
-    <link href="http://dhsmp.com/2019/12/31/look-back-2019/"/>
-    <id>http://dhsmp.com/2019/12/31/look-back-2019/</id>
+    <link href="http://denghs.com/2019/12/31/look-back-2019/"/>
+    <id>http://denghs.com/2019/12/31/look-back-2019/</id>
     <published>2019-12-31T07:58:05.000Z</published>
     <updated>2019-12-31T11:56:03.311Z</updated>
     
@@ -58,15 +58,15 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://dhsmp.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://denghs.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>
   
   <entry>
     <title>MySQL上表分区的试验</title>
-    <link href="http://dhsmp.com/2019/07/24/mysql-partition/"/>
-    <id>http://dhsmp.com/2019/07/24/mysql-partition/</id>
+    <link href="http://denghs.com/2019/07/24/mysql-partition/"/>
+    <id>http://denghs.com/2019/07/24/mysql-partition/</id>
     <published>2019-07-24T08:06:46.000Z</published>
     <updated>2019-09-21T03:24:16.142Z</updated>
     
@@ -81,15 +81,15 @@
     
     </summary>
     
-      <category term="MySQL" scheme="http://dhsmp.com/categories/MySQL/"/>
+      <category term="MySQL" scheme="http://denghs.com/categories/MySQL/"/>
     
     
   </entry>
   
   <entry>
     <title>2019年月度目标与进展</title>
-    <link href="http://dhsmp.com/2019/01/02/annual-summary-2019/"/>
-    <id>http://dhsmp.com/2019/01/02/annual-summary-2019/</id>
+    <link href="http://denghs.com/2019/01/02/annual-summary-2019/"/>
+    <id>http://denghs.com/2019/01/02/annual-summary-2019/</id>
     <published>2019-01-02T07:04:17.000Z</published>
     <updated>2019-12-31T07:56:10.495Z</updated>
     
@@ -105,15 +105,15 @@
     
     </summary>
     
-      <category term="随想" scheme="http://dhsmp.com/categories/%E9%9A%8F%E6%83%B3/"/>
+      <category term="随想" scheme="http://denghs.com/categories/%E9%9A%8F%E6%83%B3/"/>
     
     
   </entry>
   
   <entry>
     <title>回望2018</title>
-    <link href="http://dhsmp.com/2018/12/29/look-back-2018/"/>
-    <id>http://dhsmp.com/2018/12/29/look-back-2018/</id>
+    <link href="http://denghs.com/2018/12/29/look-back-2018/"/>
+    <id>http://denghs.com/2018/12/29/look-back-2018/</id>
     <published>2018-12-29T02:27:05.000Z</published>
     <updated>2019-01-08T01:06:43.203Z</updated>
     
@@ -128,7 +128,7 @@
     
     </summary>
     
-      <category term="随笔" scheme="http://dhsmp.com/categories/%E9%9A%8F%E7%AC%94/"/>
+      <category term="随笔" scheme="http://denghs.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>

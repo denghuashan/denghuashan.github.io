@@ -116,15 +116,18 @@
 
 
 
-<meta name="description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
-<meta property="og:type" content="website">
-<meta property="og:title" content="DreamMaker-HS">
-<meta property="og:url" content="http://denghs.com/categories/随笔/Java/index.html">
+<meta name="description" content="很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想再复述一下当时写的一些过程。 效果演示 设计思路类图设计图主要代码">
+<meta property="og:type" content="article">
+<meta property="og:title" content="坦克大战的实现">
+<meta property="og:url" content="http://denghs.com/2020/08/20/tank/index.html">
 <meta property="og:site_name" content="DreamMaker-HS">
-<meta property="og:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta property="og:description" content="很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想再复述一下当时写的一些过程。 效果演示 设计思路类图设计图主要代码">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20200820084042-32685.gif">
+<meta property="og:updated_time" content="2020-08-20T12:55:07.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="DreamMaker-HS">
-<meta name="twitter:description" content="博学而笃志，切问而静思。本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！">
+<meta name="twitter:title" content="坦克大战的实现">
+<meta name="twitter:description" content="很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想再复述一下当时写的一些过程。 效果演示 设计思路类图设计图主要代码">
+<meta name="twitter:image" content="http://dhsmp.nos-eastchina1.126.net/20200820084042-32685.gif">
 
 
 
@@ -152,13 +155,13 @@
 
 
 
-  <link rel="canonical" href="http://denghs.com/categories/随笔/Java/"/>
+  <link rel="canonical" href="http://denghs.com/2020/08/20/tank/"/>
 
 
 
 
 
-  <title>分类: Java | DreamMaker-HS</title>
+  <title>坦克大战的实现 | DreamMaker-HS</title>
   
 
 
@@ -183,7 +186,7 @@
     
   
 
-  <div class="container sidebar-position-left  ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -361,45 +364,249 @@
           <div id="content" class="content">
             
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h1>Java<small>分类</small>
-      </h1>
-    </div>
-
+  <div id="posts" class="posts-expand">
     
-      
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h2 class="post-title">
-        
-            <a class="post-title-link" href="/2017/12/21/webservice/" itemprop="url">
-              
-                <span itemprop="name">WebService、RPC、微服务的一些认知</span>
-              
-            </a>
-        
-      </h2>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2017-12-21T22:16:08+08:00"
-              content="2017-12-21" >
-          12-21
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
-  </section>
 
   
 
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://denghs.com/2020/08/20/tank/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuaShan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/20170622104033.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DreamMaker-HS">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">坦克大战的实现</h1>
+        
+		
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-08-20T20:10:08+08:00">
+                2020-08-20
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2020-08-20T20:55:07+08:00">
+                2020-08-20
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Java/" itemprop="url" rel="index">
+                    <span itemprop="name">Java</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2020/08/20/tank/" class="leancloud_visitors" data-flag-title="坦克大战的实现">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  67 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+	
+	<div>
+	  
+		
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      HuaShan
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://denghs.com/2020/08/20/tank/" title="坦克大战的实现">http://denghs.com/2020/08/20/tank/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+	  
+	</div>
+	
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想再复述一下当时写的一些过程。</p>
+<h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20200820084042-32685.gif" alt=""></p>
+<h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><h2 id="设计图"><a href="#设计图" class="headerlink" title="设计图"></a>设计图</h2><h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2>
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>谢谢你请我吃糖果</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/image/weixinpay.png" alt="HuaShan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/image/alipaypicture.png" alt="HuaShan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+	
+	
+		﻿
+<div style="text-align:center;color: #ccc;font-size:32px;">--------- 本文结束，感谢您的审阅 ---------</div>
+
+	
+	
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+			
+			  <a href="/2019/12/31/annual-summary-2020/" rel="next" title="2020年月度目标与进展">
+				2020年月度目标与进展 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -407,6 +614,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -426,8 +637,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/image/20170622104033.png"
@@ -509,6 +729,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#效果演示"><span class="nav-number">1.</span> <span class="nav-text">效果演示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计思路"><span class="nav-number">2.</span> <span class="nav-text">设计思路</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#类图"><span class="nav-number">3.</span> <span class="nav-text">类图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#设计图"><span class="nav-number">4.</span> <span class="nav-text">设计图</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#主要代码"><span class="nav-number">5.</span> <span class="nav-text">主要代码</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -652,10 +888,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
 
-  
+
 
   
 

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://denghs.com/"/>
-  <updated>2020-07-08T11:47:03.791Z</updated>
+  <updated>2020-08-20T12:55:07.680Z</updated>
   <id>http://denghs.com/</id>
   
   <author>
@@ -17,13 +17,37 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>坦克大战的实现</title>
+    <link href="http://denghs.com/2020/08/20/tank/"/>
+    <id>http://denghs.com/2020/08/20/tank/</id>
+    <published>2020-08-20T12:10:08.000Z</published>
+    <updated>2020-08-20T12:55:07.680Z</updated>
+    
+    <content type="html"><![CDATA[<p>很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想再复述一下当时写的一些过程。</p><h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20200820084042-32685.gif" alt=""></p><h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><h2 id="设计图"><a href="#设计图" class="headerlink" title="设计图"></a>设计图</h2><h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想再复述一下当时写的一些过程。&lt;/p&gt;
+&lt;h2 id=&quot;效果演示&quot;&gt;&lt;a href=&quot;#效果演示&quot; class=&quot;headerlink&quot; title=&quot;效果演示&quot;&gt;&lt;/a&gt;效果演示&lt;/h2&gt;&lt;p&gt;
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://denghs.com/categories/Java/"/>
+    
+    
+  </entry>
+  
+  <entry>
     <title>2020年月度目标与进展</title>
     <link href="http://denghs.com/2019/12/31/annual-summary-2020/"/>
     <id>http://denghs.com/2019/12/31/annual-summary-2020/</id>
     <published>2019-12-31T11:08:36.000Z</published>
-    <updated>2020-07-08T11:47:03.791Z</updated>
+    <updated>2020-11-13T07:59:50.432Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1月"><a href="#1月" class="headerlink" title="1月"></a>1月</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工专》</li><li>复习《计算机网络管理》</li><li>再读《深入理解Java虚拟机》</li><li>阅读《经济学通识》</li><li>阅读《你有你的计划，世界另有计划》</li></ul><h3 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>自学教材《高等数学-工专》</del></li></ul><h3 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h3><ul><li>复习《计算机网络管理》</li><li>再读《深入理解Java虚拟机》</li><li>阅读《经济学通识》</li><li>阅读《你有你的计划，世界另有计划》</li></ul><h2 id="2月"><a href="#2月" class="headerlink" title="2月"></a>2月</h2><h3 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《经济学通识》</li><li>阅读《你想活出怎样的人生》</li></ul><h3 id="未完成-1"><a href="#未完成-1" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《经济学通识》</li><li>阅读《你想活出怎样的人生》</li></ul><h2 id="3月"><a href="#3月" class="headerlink" title="3月"></a>3月</h2><h3 id="目标-2"><a href="#目标-2" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li></ul><h3 id="未完成-2"><a href="#未完成-2" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li></ul><h2 id="4月"><a href="#4月" class="headerlink" title="4月"></a>4月</h2><h3 id="目标-3"><a href="#目标-3" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《愿你的青春不负梦想》</li></ul><h3 id="未完成-3"><a href="#未完成-3" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《愿你的青春不负梦想》</li></ul><h2 id="5月"><a href="#5月" class="headerlink" title="5月"></a>5月</h2><h3 id="目标-4"><a href="#目标-4" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《愿你的青春不负梦想》</li></ul><h3 id="未完成-4"><a href="#未完成-4" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li></ul><h3 id="已完成-1"><a href="#已完成-1" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>复习《计算机网络管理》</del></li></ul><h2 id="6月"><a href="#6月" class="headerlink" title="6月"></a>6月</h2><h3 id="目标-5"><a href="#目标-5" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="未完成-5"><a href="#未完成-5" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li><li>阅读《影响商业的50本书》</li></ul><h2 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h2><h3 id="目标-6"><a href="#目标-6" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li><li>阅读《影响商业的50本书》</li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="1月"><a href="#1月" class="headerlink" title="1月"></a>1月</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工专》</li><li>复习《计算机网络管理》</li><li>再读《深入理解Java虚拟机》</li><li>阅读《经济学通识》</li><li>阅读《你有你的计划，世界另有计划》</li></ul><h3 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>自学教材《高等数学-工专》</del></li></ul><h3 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h3><ul><li>复习《计算机网络管理》</li><li>再读《深入理解Java虚拟机》</li><li>阅读《经济学通识》</li><li>阅读《你有你的计划，世界另有计划》</li></ul><h2 id="2月"><a href="#2月" class="headerlink" title="2月"></a>2月</h2><h3 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《经济学通识》</li><li>阅读《你想活出怎样的人生》</li></ul><h3 id="未完成-1"><a href="#未完成-1" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《经济学通识》</li><li>阅读《你想活出怎样的人生》</li></ul><h2 id="3月"><a href="#3月" class="headerlink" title="3月"></a>3月</h2><h3 id="目标-2"><a href="#目标-2" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li></ul><h3 id="未完成-2"><a href="#未完成-2" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li></ul><h2 id="4月"><a href="#4月" class="headerlink" title="4月"></a>4月</h2><h3 id="目标-3"><a href="#目标-3" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《愿你的青春不负梦想》</li></ul><h3 id="未完成-3"><a href="#未完成-3" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《愿你的青春不负梦想》</li></ul><h2 id="5月"><a href="#5月" class="headerlink" title="5月"></a>5月</h2><h3 id="目标-4"><a href="#目标-4" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>复习《计算机网络管理》</li><li>阅读《愿你的青春不负梦想》</li></ul><h3 id="未完成-4"><a href="#未完成-4" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li></ul><h3 id="已完成-1"><a href="#已完成-1" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>复习《计算机网络管理》</del></li></ul><h2 id="6月"><a href="#6月" class="headerlink" title="6月"></a>6月</h2><h3 id="目标-5"><a href="#目标-5" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="未完成-5"><a href="#未完成-5" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li><li>阅读《影响商业的50本书》</li></ul><h2 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h2><h3 id="目标-6"><a href="#目标-6" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="未完成-6"><a href="#未完成-6" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《愿你的青春不负梦想》</li><li>阅读《影响商业的50本书》</li></ul><h2 id="8月"><a href="#8月" class="headerlink" title="8月"></a>8月</h2><h3 id="目标-7"><a href="#目标-7" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="未完成-7"><a href="#未完成-7" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h2 id="9月"><a href="#9月" class="headerlink" title="9月"></a>9月</h2><h3 id="目标-8"><a href="#目标-8" class="headerlink" title="目标"></a>目标</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《影响商业的50本书》</li><li>复习《计算机网络管理》</li></ul><h3 id="未完成-8"><a href="#未完成-8" class="headerlink" title="未完成"></a>未完成</h3><ul><li>自学教材《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="已完成-2"><a href="#已完成-2" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>复习《计算机网络管理》</del></li></ul><h2 id="10月"><a href="#10月" class="headerlink" title="10月"></a>10月</h2><h3 id="目标-9"><a href="#目标-9" class="headerlink" title="目标"></a>目标</h3><ul><li>复习教程《计算机网络管理》</li><li>阅读《影响商业的50本书》</li><li>自学教材《高等数学-工本》</li><li>参加10月份考试</li></ul><h3 id="未完成-9"><a href="#未完成-9" class="headerlink" title="未完成"></a>未完成</h3><ul><li>阅读《影响商业的50本书》</li><li>自学教材《高等数学-工本》</li></ul><h3 id="已完成-3"><a href="#已完成-3" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>复习教程《计算机网络管理》</del></li><li><del>参加10月份考试</del></li></ul><h2 id="11月"><a href="#11月" class="headerlink" title="11月"></a>11月</h2><h3 id="目标-10"><a href="#目标-10" class="headerlink" title="目标"></a>目标</h3><ul><li>完成《高等数学-工本》的学习</li><li>完成《新概念英语-二》的学习</li><li>阅读《信息传》</li><li>输出一篇博客文章</li></ul>]]></content>
     
     <summary type="html">
     
@@ -106,29 +130,6 @@
     </summary>
     
       <category term="随想" scheme="http://denghs.com/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>回望2018</title>
-    <link href="http://denghs.com/2018/12/29/look-back-2018/"/>
-    <id>http://denghs.com/2018/12/29/look-back-2018/</id>
-    <published>2018-12-29T02:27:05.000Z</published>
-    <updated>2019-01-08T01:06:43.203Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="回忆多似伤感"><a href="#回忆多似伤感" class="headerlink" title="回忆多似伤感"></a>回忆多似伤感</h2><p>2018即将消逝，经历了很多，成长了很多。但是这些成长却是用痛苦跟折磨堆积起来的。我不知道什么是幸福，因为我一直在追赶。5月份以前，每天也就按部就班的推进学习计划。到了6月开始，因为家庭的一些事情，整个心情、心态都一直处于紧绷状态。我觉得自己是一个凡人，甚至一个庸人。这些事情的处理、应对，让我深深感受到，无知才是我这种家庭最大的敌人。我一直在想，知识到底是什么？近半年的时间，完全没有上半年那样能够踏实的静下心来看会书。朋友说是压力。其实想想，也是。压力一直都有，之前只是某一单方面的压力，能够很好的转化为学习的动力。而5月之后，压力的陡增，导致心态一直都处于扭曲的状态。但是至少有一件事情，没有落下。那就是每天的学习。我并不认为自己很厉害，也并不认为自己很自律。对于学习，我只是不敢再放弃。在求学的道路上，十二年的赛跑中，最后三年的自暴自弃，一直到现在都在影响着我的人生。</p><h2 id="展望未来"><a href="#展望未来" class="headerlink" title="展望未来"></a>展望未来</h2><p>未来到底是什么？我到现在还清晰的记得，以前小学五年级时，一个人放学回家，走在路上，傻傻的在想，我往左走两下，往右走两下，会不会影响明天发生在我身上的一些未知事情或别人身上的事情呢？小时候铁臂阿童木、哆啦A梦看多了。到现在，特别的笃定因果关系。撞的南墙太多了，所以特别的笃定。对于未来，也没有特别的设想。能够按照心里既定的计划路线去走好接下来的两年，已是最大的幸福。<br>所以，为了幸福。加油啊，小伙子。<br><img src="http://dhsmp.nos-eastchina1.126.net/20190107050528-211821.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;h2 id=&quot;回忆多似伤感&quot;&gt;&lt;a href=&quot;#回忆多似伤感&quot; class=&quot;headerlink&quot; title=&quot;回忆多似伤感&quot;&gt;&lt;/a&gt;回忆多似伤感&lt;/h2&gt;&lt;p&gt;2018即将消逝，经历了很多，成长了很多。但是这些成长却是用痛苦跟折磨堆积起来的。我不知道什么是幸福，因为我
-      
-    
-    </summary>
-    
-      <category term="随笔" scheme="http://denghs.com/categories/%E9%9A%8F%E7%AC%94/"/>
     
     
   </entry>

@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://denghs.com/"/>
-  <updated>2021-02-04T07:57:49.150Z</updated>
+  <updated>2021-07-08T12:50:02.827Z</updated>
   <id>http://denghs.com/</id>
   
   <author>
@@ -15,6 +15,30 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>坦克大战的实现</title>
+    <link href="http://denghs.com/2021/07/08/tank-game/"/>
+    <id>http://denghs.com/2021/07/08/tank-game/</id>
+    <published>2021-07-08T12:49:15.000Z</published>
+    <updated>2021-07-08T12:50:02.827Z</updated>
+    
+    <content type="html"><![CDATA[<p>很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想用文字的方式复述一下当时完成这个小游戏过程，以及当时遇到的一些困难。</p><h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20200820084042-32685.gif" alt=""></p><h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><p>从整个坦克大战的游戏所拥有的元素进行思考，需要哪些对象来支持。<br>主要元素：<br>1、坦克<br>2、炮弹<br>次要元素：<br>1、开始按钮、开始页、游戏地图。<br>游戏流程：<br>1、1个坦克一次不能发出超过5个炮弹。<br>2、坦克不能开出地图。<br>3、炮弹打中己方无效，打中敌方，敌方消失。<br>4、坦克之间的行进，不能重叠。</p><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20210602101119-640509.jpg" alt=""></p><h2 id="流程图"><a href="#流程图" class="headerlink" title="流程图"></a>流程图</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20210708074531-614983.png" alt=""><br>主要的核心点，在于使用Thread，产生子线程，并使各个子线程间进行相互通信。因run()的返回值是void类型，所以也使用了单例中的懒汉式，方便拿到各个子线程，对其进行控制。</p><h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2><p>MyPanel<br><img src="http://dhsmp.nos-eastchina1.126.net/20210708074938-737399.jpg" alt=""><br><img src="http://dhsmp.nos-eastchina1.126.net/20210708075438-565008.jpg" alt=""></p><p>EnemyTank<br><img src="http://dhsmp.nos-eastchina1.126.net/20210708075044-592176.jpg" alt=""></p><p>Bullet<br><img src="http://dhsmp.nos-eastchina1.126.net/20210708075149-505896.jpg" alt=""></p><p>ShareData<br><img src="http://dhsmp.nos-eastchina1.126.net/20210708075245-448864.jpg" alt=""></p><h2 id="线程消耗"><a href="#线程消耗" class="headerlink" title="线程消耗"></a>线程消耗</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20210708080145-278845.jpg" alt=""></p><p><img src="http://dhsmp.nos-eastchina1.126.net/20210708080032-642053.jpg" alt=""></p><h2 id="FutureTask"><a href="#FutureTask" class="headerlink" title="FutureTask"></a>FutureTask</h2><p>FutureTask是JDK1.5以后concurrent包中的类。之所以想写这个，是因为在没看源码之前，使用FutureTask，它居然能有返回值。百思不得其解，明明Thread的run()是void类型，为何使用FutureTask居然有返回值，难道JDK1.5之后关于线程，重新写了。直到看了源码以后，发现FutureTask的run()，其实跟我写的这个小游戏，线程之间产生通信的方式，思想都是相通的。<br><img src="http://dhsmp.nos-eastchina1.126.net/20210708083037-278523.jpg" alt=""><br>在执行Callable的call()函数后，把返回值存了起来。而存起来的方式，是在FutureTask中定义了一个类型为Object的成员变量outcome进行接收，而在get()函数中，对outcome按泛型的具体类型进行强转进行返回。<br><img src="http://dhsmp.nos-eastchina1.126.net/20210708083809-719024.jpg" alt=""></p><p><img src="http://dhsmp.nos-eastchina1.126.net/20210708083836-916815.jpg" alt=""></p><p>而在坦克大战中，坦克、子弹能够消亡，也是在类中定义了一个boolean类型的成员变量run，来控制线程的执行。<br><img src="http://dhsmp.nos-eastchina1.126.net/20210708084315-419155.jpg" alt=""><br>一旦触发相应的逻辑时，通过ShareData拿到对应的线程实例，把该线程实例中的成员变量run置位false，让该线程消亡。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想用文字的方式复述一下当时完成这个小游戏过程，以及当时遇到的一些困难。&lt;/p&gt;
+&lt;h2 id=&quot;效果演示&quot;&gt;&lt;a href=&quot;#效果演示&quot; class=&quot;headerlink&quot; title=&quot;效果
+      
+    
+    </summary>
+    
+      <category term="Java" scheme="http://denghs.com/categories/Java/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>年年岁岁，岁岁年年（2020）</title>
@@ -44,9 +68,9 @@
     <link href="http://denghs.com/2020/12/31/annual-summary-2021/"/>
     <id>http://denghs.com/2020/12/31/annual-summary-2021/</id>
     <published>2020-12-31T11:08:36.000Z</published>
-    <updated>2021-05-27T09:29:55.763Z</updated>
+    <updated>2021-07-08T12:48:16.533Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="1月"><a href="#1月" class="headerlink" title="1月"></a>1月</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《高等数学-工本》</li><li>完成《新概念英语-二》的学习</li><li>阅读《影响商业的50本书》</li></ul><h3 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>《新概念英语-二》的学习</del></li><li><del>《高等数学-工本》</del></li></ul><h3 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h3><ul><li>阅读《影响商业的50本书》</li></ul><h2 id="2月"><a href="#2月" class="headerlink" title="2月"></a>2月</h2><h3 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="已完成-1"><a href="#已完成-1" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>复习《高等数学-工本》</del></li></ul><h3 id="未完成-1"><a href="#未完成-1" class="headerlink" title="未完成"></a>未完成</h3><ul><li>阅读《影响商业的50本书》</li></ul><h2 id="3月"><a href="#3月" class="headerlink" title="3月"></a>3月</h2><h3 id="目标-2"><a href="#目标-2" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="未完成-2"><a href="#未完成-2" class="headerlink" title="未完成"></a>未完成</h3><ul><li>复习《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h2 id="4月"><a href="#4月" class="headerlink" title="4月"></a>4月</h2><h3 id="目标-3"><a href="#目标-3" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《高等数学-工本》</li><li>参加考试《高等数学-工本》</li></ul><h3 id="已完成-2"><a href="#已完成-2" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>复习《高等数学-工本》</del></li></ul><h2 id="5月"><a href="#5月" class="headerlink" title="5月"></a>5月</h2><h3 id="目标-4"><a href="#目标-4" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《深入理解Java虚拟机》</li></ul><h3 id="未完成-3"><a href="#未完成-3" class="headerlink" title="未完成"></a>未完成</h3><ul><li>复习《深入理解Java虚拟机》</li></ul><h3 id="已完成-3"><a href="#已完成-3" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>《高等数学-工本》已通过</del></li></ul>]]></content>
+    <content type="html"><![CDATA[<h2 id="1月"><a href="#1月" class="headerlink" title="1月"></a>1月</h2><h3 id="目标"><a href="#目标" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《高等数学-工本》</li><li>完成《新概念英语-二》的学习</li><li>阅读《影响商业的50本书》</li></ul><h3 id="已完成"><a href="#已完成" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>《新概念英语-二》的学习</del></li><li><del>《高等数学-工本》</del></li></ul><h3 id="未完成"><a href="#未完成" class="headerlink" title="未完成"></a>未完成</h3><ul><li>阅读《影响商业的50本书》</li></ul><h2 id="2月"><a href="#2月" class="headerlink" title="2月"></a>2月</h2><h3 id="目标-1"><a href="#目标-1" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="已完成-1"><a href="#已完成-1" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>复习《高等数学-工本》</del></li></ul><h3 id="未完成-1"><a href="#未完成-1" class="headerlink" title="未完成"></a>未完成</h3><ul><li>阅读《影响商业的50本书》</li></ul><h2 id="3月"><a href="#3月" class="headerlink" title="3月"></a>3月</h2><h3 id="目标-2"><a href="#目标-2" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h3 id="未完成-2"><a href="#未完成-2" class="headerlink" title="未完成"></a>未完成</h3><ul><li>复习《高等数学-工本》</li><li>阅读《影响商业的50本书》</li></ul><h2 id="4月"><a href="#4月" class="headerlink" title="4月"></a>4月</h2><h3 id="目标-3"><a href="#目标-3" class="headerlink" title="目标"></a>目标</h3><ul><li>复习《高等数学-工本》</li><li>参加考试《高等数学-工本》</li></ul><h3 id="已完成-2"><a href="#已完成-2" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>复习《高等数学-工本》</del></li></ul><h2 id="5月"><a href="#5月" class="headerlink" title="5月"></a>5月</h2><h3 id="目标-4"><a href="#目标-4" class="headerlink" title="目标"></a>目标</h3><ul><li>《深入理解Java虚拟机》</li></ul><h3 id="未完成-3"><a href="#未完成-3" class="headerlink" title="未完成"></a>未完成</h3><ul><li>《深入理解Java虚拟机》</li></ul><h3 id="已完成-3"><a href="#已完成-3" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>《高等数学-工本》已通过</del></li></ul><p><img src="http://dhsmp.nos-eastchina1.126.net/20210708084651-785369.jpg" alt=""></p><h2 id="6月"><a href="#6月" class="headerlink" title="6月"></a>6月</h2><h3 id="目标-5"><a href="#目标-5" class="headerlink" title="目标"></a>目标</h3><ul><li>《深入理解Java虚拟机》</li><li>《Spring Cloud微服务实战》</li></ul><h3 id="未完成-4"><a href="#未完成-4" class="headerlink" title="未完成"></a>未完成</h3><ul><li>《深入理解Java虚拟机》</li><li>《Spring Cloud微服务实战》</li></ul><h3 id="已完成-4"><a href="#已完成-4" class="headerlink" title="已完成"></a>已完成</h3><ul><li><del>《深入理解Java虚拟机》</del></li></ul><h2 id="7月"><a href="#7月" class="headerlink" title="7月"></a>7月</h2><h3 id="目标-6"><a href="#目标-6" class="headerlink" title="目标"></a>目标</h3><ul><li>《Spring Cloud微服务实战》</li></ul>]]></content>
     
     <summary type="html">
     
@@ -59,30 +83,6 @@
     </summary>
     
       <category term="随想" scheme="http://denghs.com/categories/%E9%9A%8F%E6%83%B3/"/>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>坦克大战的实现</title>
-    <link href="http://denghs.com/2020/08/20/tank/"/>
-    <id>http://denghs.com/2020/08/20/tank/</id>
-    <published>2020-08-20T12:10:08.000Z</published>
-    <updated>2020-11-13T08:07:16.754Z</updated>
-    
-    <content type="html"><![CDATA[<p>很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想用文字的方式复述一下当时完成这个小游戏过程，以及当时遇到的一些困难。</p><h2 id="效果演示"><a href="#效果演示" class="headerlink" title="效果演示"></a>效果演示</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20200820084042-32685.gif" alt=""></p><h2 id="设计思路"><a href="#设计思路" class="headerlink" title="设计思路"></a>设计思路</h2><h2 id="类图"><a href="#类图" class="headerlink" title="类图"></a>类图</h2><h2 id="设计图"><a href="#设计图" class="headerlink" title="设计图"></a>设计图</h2><h2 id="主要代码"><a href="#主要代码" class="headerlink" title="主要代码"></a>主要代码</h2>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想用文字的方式复述一下当时完成这个小游戏过程，以及当时遇到的一些困难。&lt;/p&gt;
-&lt;h2 id=&quot;效果演示&quot;&gt;&lt;a href=&quot;#效果演示&quot; class=&quot;headerlink&quot; title=&quot;效果
-      
-    
-    </summary>
-    
-      <category term="Java" scheme="http://denghs.com/categories/Java/"/>
     
     
   </entry>

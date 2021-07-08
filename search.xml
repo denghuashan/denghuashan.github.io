@@ -2,7 +2,7 @@
 <search>
   <entry>
     <title><![CDATA[坦克大战的实现]]></title>
-    <url>%2F2021%2F07%2F08%2Ftank-game%2F</url>
+    <url>%2F2021%2F07%2F08%2Ftank%2F</url>
     <content type="text"><![CDATA[很早期时写过的代码了，花了一个多星期的时间才写出这个坦克大战。有点小意思，所以想用文字的方式复述一下当时完成这个小游戏过程，以及当时遇到的一些困难。 效果演示 设计思路从整个坦克大战的游戏所拥有的元素进行思考，需要哪些对象来支持。主要元素：1、坦克2、炮弹次要元素：1、开始按钮、开始页、游戏地图。游戏流程：1、1个坦克一次不能发出超过5个炮弹。2、坦克不能开出地图。3、炮弹打中己方无效，打中敌方，敌方消失。4、坦克之间的行进，不能重叠。 类图 流程图主要的核心点，在于使用Thread，产生子线程，并使各个子线程间进行相互通信。因run()的返回值是void类型，所以也使用了单例中的懒汉式，方便拿到各个子线程，对其进行控制。 主要代码MyPanel EnemyTank Bullet ShareData 线程消耗 FutureTaskFutureTask是JDK1.5以后concurrent包中的类。之所以想写这个，是因为在没看源码之前，使用FutureTask，它居然能有返回值。百思不得其解，明明Thread的run()是void类型，为何使用FutureTask居然有返回值，难道JDK1.5之后关于线程，重新写了。直到看了源码以后，发现FutureTask的run()，其实跟我写的这个小游戏，线程之间产生通信的方式，思想都是相通的。在执行Callable的call()函数后，把返回值存了起来。而存起来的方式，是在FutureTask中定义了一个类型为Object的成员变量outcome进行接收，而在get()函数中，对outcome按泛型的具体类型进行强转进行返回。 而在坦克大战中，坦克、子弹能够消亡，也是在类中定义了一个boolean类型的成员变量run，来控制线程的执行。一旦触发相应的逻辑时，通过ShareData拿到对应的线程实例，把该线程实例中的成员变量run置位false，让该线程消亡。]]></content>
       <categories>
         <category>Java</category>

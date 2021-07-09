@@ -1,0 +1,1439 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="DreamMaker-HS" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/image/timg.jpg?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="前沿从去年9月开始，看教材《计算机网络原理》到4月考试通过，前前后后花了大半年时间。必须得承认，我不是神童，也不是学霸，不是那种一学就会的体质。《计算机网络原理》绝对是我啃得最慢，也是我认为最枯燥的一本教科书。但是我还是靠自学把它啃下来了，磨炼了心性。对于计算机网络世界的理解，真的上升了不少，不仅仅只是编程。曾国藩对于学习，提出过四点要求，个人觉得非常有意思。一曰看生书宜求速，不多读则太陋。一曰温">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络原理学习部分的总结">
+<meta property="og:url" content="http://denghs.com/2018/07/30/network/index.html">
+<meta property="og:site_name" content="DreamMaker-HS">
+<meta property="og:description" content="前沿从去年9月开始，看教材《计算机网络原理》到4月考试通过，前前后后花了大半年时间。必须得承认，我不是神童，也不是学霸，不是那种一学就会的体质。《计算机网络原理》绝对是我啃得最慢，也是我认为最枯燥的一本教科书。但是我还是靠自学把它啃下来了，磨炼了心性。对于计算机网络世界的理解，真的上升了不少，不仅仅只是编程。曾国藩对于学习，提出过四点要求，个人觉得非常有意思。一曰看生书宜求速，不多读则太陋。一曰温">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/40277440.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/83019517.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/28381599.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/37102701.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/65343908.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/25960527.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/68226925.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/14023142.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/80606994.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/88120148.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/42908405.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/743647.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/48033311.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/96367096.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/21516818.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/78452877.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/7500754.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/89098859.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/95311087.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/71000992.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/50225753.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/61114084.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/9071104.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/57953401.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/77880357.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/45858470.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/97210689.jpg">
+<meta property="og:updated_time" content="2018-10-28T00:40:25.463Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机网络原理学习部分的总结">
+<meta name="twitter:description" content="前沿从去年9月开始，看教材《计算机网络原理》到4月考试通过，前前后后花了大半年时间。必须得承认，我不是神童，也不是学霸，不是那种一学就会的体质。《计算机网络原理》绝对是我啃得最慢，也是我认为最枯燥的一本教科书。但是我还是靠自学把它啃下来了，磨炼了心性。对于计算机网络世界的理解，真的上升了不少，不仅仅只是编程。曾国藩对于学习，提出过四点要求，个人觉得非常有意思。一曰看生书宜求速，不多读则太陋。一曰温">
+<meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/40277440.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://denghs.com/2018/07/30/network/"/>
+
+
+
+
+
+  <title>计算机网络原理学习部分的总结 | DreamMaker-HS</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DreamMaker-HS</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">勤思善问，可敌良师益友。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-humanity">
+          <a href="/humanity" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            人文书
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-technology">
+          <a href="/technology" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cubes"></i> <br />
+            
+            技术书
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-method">
+          <a href="/method" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cogs"></i> <br />
+            
+            方法书
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-enbook">
+          <a href="/enbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-envelope"></i> <br />
+            
+            英文
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://denghs.com/2018/07/30/network/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="HuaShan">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/image/20170622104033.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="DreamMaker-HS">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机网络原理学习部分的总结</h1>
+        
+		
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2018-07-30T16:48:57+08:00">
+                2018-07-30
+              </time>
+            
+
+            
+              <span class="post-meta-divider">|</span>
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-check-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">更新于</span>
+              
+              <time title="更新于" itemprop="dateModified" datetime="2018-10-28T08:40:25+08:00">
+                2018-10-28
+              </time>
+            
+          </span>
+
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/计算机理论/" itemprop="url" rel="index">
+                    <span itemprop="name">计算机理论</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+             <span id="/2018/07/30/network/" class="leancloud_visitors" data-flag-title="计算机网络原理学习部分的总结">
+               <span class="post-meta-divider">|</span>
+               <span class="post-meta-item-icon">
+                 <i class="fa fa-eye"></i>
+               </span>
+               
+                 <span class="post-meta-item-text">阅读次数 </span>
+               
+                 <span class="leancloud-visitors-count"></span> 次
+             </span>
+          
+
+          
+
+          
+            <div class="post-wordcount">
+              
+                
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">字数统计</span>
+                
+                <span title="字数统计">
+                  2,457 字
+                </span>
+              
+
+              
+
+              
+            </div>
+          
+
+          
+
+        </div>
+      </header>
+    
+	
+	<div>
+	  
+		
+  <ul class="post-copyright">
+    <li class="post-copyright-author">
+      <strong>本文作者：</strong>
+      HuaShan
+    </li>
+    <li class="post-copyright-link">
+      <strong>本文链接：</strong>
+      <a href="http://denghs.com/2018/07/30/network/" title="计算机网络原理学习部分的总结">http://denghs.com/2018/07/30/network/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>版权声明： </strong>
+      本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/3.0/" rel="external nofollow" target="_blank">CC BY-NC-SA 3.0</a> 许可协议。转载请注明出处！
+    </li>
+  </ul>
+
+
+	  
+	</div>
+	
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h2 id="前沿"><a href="#前沿" class="headerlink" title="前沿"></a>前沿</h2><p>从去年9月开始，看教材《计算机网络原理》到4月考试通过，前前后后花了大半年时间。必须得承认，我不是神童，也不是学霸，不是那种一学就会的体质。《计算机网络原理》绝对是我啃得最慢，也是我认为最枯燥的一本教科书。但是我还是靠自学把它啃下来了，磨炼了心性。对于计算机网络世界的理解，真的上升了不少，不仅仅只是编程。<br>曾国藩对于学习，提出过四点要求，个人觉得非常有意思。<br><strong>一曰看生书宜求速，不多读则太陋。<br>一曰温旧书宜求熟，不背诵则易忘。<br>一曰习字宜有恒，不善写则如身之无衣，山之无木。<br>一曰作文宜苦思，不善作则如人之哑不能言，马之肢不能行。</strong></p>
+<h2 id="计算机网络概述"><a href="#计算机网络概述" class="headerlink" title="计算机网络概述"></a>计算机网络概述</h2><p>在教科书中，有一段话是需要背的。什么是计算机网络？只有当你能够很顺的背下来，你才会去回味、去理解概述的含义。这里再借鉴一下教科书上的内容。<br><strong>计算机网络，是指将地理位置不同的具有独立功能的多台计算机及其外部设备，通过通信线路连接起来，在网络操作系统，网络管理软件及网络通信协议的管理和协调下，实现资源共享和信息传递的计算机系统。</strong><br>在整个计算机网络发展史中，早期60年代的计算机网络是美国军方研制的ARPNET网，主要是科研机构为实现资源共享。到了80年代诞生出统一的标准-OSI参考模型。也就是常说的七层模型。教科书都是以七层模型来讲，但是事实上的标准是TCP/IP四层模型。七层模型从高往低依次是：<strong>应、表、会、传、网、数、物</strong>（记第一个字，刚好是一句七言绝句诗，方便记忆）。四层模型从高往低依次：<strong>应、传、互、主</strong>。<br><img src="https://dhsmp.nos-eastchina1.126.net/40277440.jpg" alt=""><br>每一层中所包含的协议：（两张图都是网上找的，跟教科书上也是一样的，隔个三五天翻看一下，一回生二回熟，慢慢就记住了）<br><img src="https://dhsmp.nos-eastchina1.126.net/83019517.jpg" alt=""><br>发送端在将数据进行发送时，需要经过一系列的封装。<br><img src="https://dhsmp.nos-eastchina1.126.net/28381599.jpg" alt=""><br>接收端在接收数据的时候，再进行相应的解封。<br><img src="https://dhsmp.nos-eastchina1.126.net/37102701.jpg" alt=""><br><img src="https://dhsmp.nos-eastchina1.126.net/65343908.jpg" alt=""></p>
+<h2 id="物理层"><a href="#物理层" class="headerlink" title="物理层"></a>物理层</h2><p>总结的方式也按教科书章节的划分，从底层往上层温习。<strong>物理层主要是实现比特流的透明传输，为数据链路层提供数据传输服务，直接面向实际承担数据传输的物理介质。其实就是最原始的二进制位数据的传输。</strong><br>传输介质主要是有线、无线两大类。有线传输介质中有双绞线、同轴电缆、光钎。双绞线跟同轴电缆不可避免的就需要把二进制数据，转换成电频进行传输。专业术语叫调制解调器，俗称猫（MODEL）。在接收方中，再把电信号还原成二进制数据。而光纤传输的是光信号，需要发送端将其转成光信号，接收端再还原成电信号。<br>数据在传输过程中无可避免的就会出现传输速率，信道容量，误码率，通信方式的问题。就类似现实社会中，公司有一堆的货物要运到某个地方，货物就是数据，运输的路径其实就是传输过程，是走汽车运输还是火车运输，货物所运达的时间，传输的速率是不同的。在传输过程中可能会出现少了某一个物品。货物很多，是一次一次的运输，还是一次找10个承运人来运输…等等这些问题。这里不得不提一位伟人-香农。香农提出了信息熵的概念，为信息论和数字通信奠定了基础。<br>物理层的主要任务确定传输媒体接口的一些特性。主要是机械特性、电气特性、功能特性、规程特性。</p>
+<ul>
+<li>机械特性：例如网卡接口的数目、形状、大小等。</li>
+<li>电气特性：电压的范围-5V到+5V。</li>
+<li>功能特性：用电压的取值范围来表示比特数据。-5V到0V表示0，+5V到0V表示1.</li>
+<li>规程特性：规定建立连接时各个相关部件的工作步骤。<br><img src="https://dhsmp.nos-eastchina1.126.net/25960527.jpg" alt=""><br><img src="https://dhsmp.nos-eastchina1.126.net/68226925.jpg" alt=""><br>信号的编码方式<br><img src="https://dhsmp.nos-eastchina1.126.net/14023142.jpg" alt=""><br><strong>曼彻斯特编码：bit中间有信号跳变，从低到高的跳变表示0，从高到低的跳变表示1。</strong><br><img src="https://dhsmp.nos-eastchina1.126.net/80606994.jpg" alt=""><br><strong>差分曼彻斯特编码：bit中间有信号跳变，bit与bit之间也有信号跳变表示下一bit为0。bit与bit之间无信号跳变，表示下一bit为1。</strong><br><img src="https://dhsmp.nos-eastchina1.126.net/88120148.jpg" alt=""><br><img src="https://dhsmp.nos-eastchina1.126.net/42908405.jpg" alt=""><h2 id="数据链路层"><a href="#数据链路层" class="headerlink" title="数据链路层"></a>数据链路层</h2>数据链路层主要是对物理层传输原始bit流功能的加强，将物理层提供的可能出错的物理连接改造成为逻辑上无差错的数据链路，使之对网络层表现为一条无差错的链路。数据链路层的传送单位称为帧。<br><img src="https://dhsmp.nos-eastchina1.126.net/743647.jpg" alt=""><br>数据链路层主要是要解决三个问题：</li>
+<li>封装成帧：就是在一段数据的前后分别添加首部和尾部，然后就构成了一个帧，确定帧的界限。首部和尾部的一个重要作用就是进行帧定界。<br><img src="https://dhsmp.nos-eastchina1.126.net/48033311.jpg" alt=""></li>
+<li>透明传输：是指不管所传数据是什么样的比特组合，都应当能够在链路上传送。当所传数据中的比特组合恰巧与某一个控制信息完全一样时，就必须采取适当的措施，使接收方不会将这样的数据误认为是某种控制信息。<br><img src="https://dhsmp.nos-eastchina1.126.net/96367096.jpg" alt=""></li>
+<li>差错控制：传输过程中可能会产生比特差错：1 可能会变成 0 而 0 也可能变成 1。为了保证数据传输的可靠性，在计算机网络传输数据时，必须采用各种差错检测措施。在数据链路层传送的帧中，广泛使用了循环冗余检验CRC的检错技术。<h2 id="网络层"><a href="#网络层" class="headerlink" title="网络层"></a>网络层</h2>网络层的目的是实现两个端系统之间的数据透明传送，具体功能包括路由选择、拥塞控制、网际互连等。<br><img src="https://dhsmp.nos-eastchina1.126.net/21516818.jpg" alt=""><br><img src="https://dhsmp.nos-eastchina1.126.net/78452877.jpg" alt=""></li>
+<li>RIP协议：路由信息协议，简单的距离向量路由协议。每个RIP路由器都保存了一张路由表，每一项对应着一个目的地。其中每项包括了目的地的IP地址、到目的地的路径距离的度量1、到目的地的路径的下一个路由表的IP地址、路由改变标志以及和这条路由有关的一些计时器。其采用的距离度量是一种非常简单的到目的地距离的测量方式：站点计数度量，也就是该路由要经过的路由器个数。</li>
+<li>OSPF协议：链路状态路由协议，每个路由器通过维护它自己的本地链路状态信息，即路由器到子网的链路状态和可以到达的邻居路由器，通过扩散的方法把更新了的本地链路状态信息广播给自治系统中的每个路由器。这样每个路由器都知道自治系统内部的拓扑结构和链路状态信息。路由器根据这个链路状态库计算出到每个目的地的最短路径。所有路由器都采用相同的算法来计算最短路由，而且这个计算是在路由器本地进行的。动态的路由算法，能够自动而快速地适应拓扑结构的变化。</li>
+<li>IP协议：互连网协议，将多个网络连成一个互连网，把高层的数据以多个数据报的形式通过互连网分发出去。<br><img src="https://dhsmp.nos-eastchina1.126.net/7500754.jpg" alt=""></li>
+<li>ARP协议：地址转换协议。在TCP/IP网络环境下，每个主机都分配了一个32位的IP地址，这种互联网地址是在网际范围标识主机的一种逻辑地址。为了让报文在物理网上传送，必须知道彼此的物理地址。以以太网环境为例，为了正确地向目的站传送报文，必须把目的站32位IP地址转换成48位以太网目的地址，此时所需要的协议就是ARP协议。<br><img src="https://dhsmp.nos-eastchina1.126.net/89098859.jpg" alt=""></li>
+<li>RARP协议：反向地址转换协议，使用与一种特殊的情况，如果站点初始化以后，只有自己的物理网络地址而没有IP地址，则可以通过RARP协议发出广播请求，征求自己的IP地址。而RARP服务器负责回答。无IP地址的站点可以通过RARP协议取得自己的IP地址。</li>
+<li>ICMP协议：互联网控制报文协议。</li>
+<li>IGMP协议：因特网组管理协议。<h2 id="传输层"><a href="#传输层" class="headerlink" title="传输层"></a>传输层</h2><img src="https://dhsmp.nos-eastchina1.126.net/95311087.jpg" alt=""></li>
+<li>TCP协议：需要将传输的数据进行分段传输，建立会话，可靠传输，流量控制。<br><img src="https://dhsmp.nos-eastchina1.126.net/71000992.jpg" alt=""><br>传输层协议和应用层协议之间的关系：端口号加使用的传输层协议，用以标识应用程序。<br><img src="https://dhsmp.nos-eastchina1.126.net/50225753.jpg" alt=""><br>可靠传输原理：ARQ自动请求重传，采用确认和重传机制。<br><img src="https://dhsmp.nos-eastchina1.126.net/61114084.jpg" alt=""><br><img src="https://dhsmp.nos-eastchina1.126.net/9071104.jpg" alt=""><br>TCP报文格式：<br><img src="https://dhsmp.nos-eastchina1.126.net/57953401.jpg" alt=""><br>TCP建立连接三次握手的过程：<br><img src="https://dhsmp.nos-eastchina1.126.net/77880357.jpg" alt=""><br>TCP释放连接四次挥手的过程：<br><img src="https://dhsmp.nos-eastchina1.126.net/45858470.jpg" alt=""></li>
+<li>UDP协议：一个数据包就能够完成数据通信，不分段，不需要建立会话，不需要流量控制，不可靠传输。<br><img src="https://dhsmp.nos-eastchina1.126.net/97210689.jpg" alt=""></li>
+</ul>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+  <div style="padding: 10px 0; margin: 20px auto; width: 90%; text-align: center;">
+    <div>谢谢你请我吃糖果</div>
+    <button id="rewardButton" disable="enable" onclick="var qr = document.getElementById('QR'); if (qr.style.display === 'none') {qr.style.display='block';} else {qr.style.display='none'}">
+      <span>赏</span>
+    </button>
+    <div id="QR" style="display: none;">
+      
+        <div id="wechat" style="display: inline-block">
+          <img id="wechat_qr" src="/image/weixinpay.png" alt="HuaShan WeChat Pay"/>
+          <p>微信打赏</p>
+        </div>
+      
+      
+        <div id="alipay" style="display: inline-block">
+          <img id="alipay_qr" src="/image/alipaypicture.png" alt="HuaShan Alipay"/>
+          <p>支付宝打赏</p>
+        </div>
+      
+    </div>
+  </div>
+
+
+      
+    </div>
+	
+	
+		﻿
+<div style="text-align:center;color: #ccc;font-size:32px;">--------- 本文结束，感谢您的审阅 ---------</div>
+
+	
+	
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+			  <a href="/2018/10/15/annual-summary-2018/" rel="prev" title="2018年月度目标与进展">
+				<i class="fa fa-chevron-left"></i> 2018年月度目标与进展
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+			
+			  <a href="/2018/05/12/shell/" rel="next" title="Shell脚本的回顾">
+				Shell脚本的回顾 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/image/20170622104033.png"
+               alt="HuaShan" />
+          <p class="site-author-name" itemprop="name">HuaShan</p>
+           
+              <p class="site-description motion-element" itemprop="description">博学而笃志，切问而静思。<br>本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_27832819" title="CSDN博客" target="_blank">CSDN博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://toutiao.io/posts/hot/7" title="开发者头条" target="_blank">开发者头条</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.infoq.com/cn/" title="infoQ" target="_blank">infoQ</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#前沿"><span class="nav-number">1.</span> <span class="nav-text">前沿</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#计算机网络概述"><span class="nav-number">2.</span> <span class="nav-text">计算机网络概述</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#物理层"><span class="nav-number">3.</span> <span class="nav-text">物理层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#数据链路层"><span class="nav-number">4.</span> <span class="nav-text">数据链路层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络层"><span class="nav-number">5.</span> <span class="nav-text">网络层</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#传输层"><span class="nav-number">6.</span> <span class="nav-text">传输层</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+	
+	<!-- 网易云音乐 -->
+	<div id="music163player">
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1361299143&auto=1&height=66"></iframe>
+	</div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <!--<i class="fa fa-/image/20170622104033.png"></i>-->
+	<i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuaShan</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    访问人数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</div>
+
+<div class="powered-by">
+  <i class="fa fa-user-md"></i>
+  <span class="post-count">全站共52.2k字</span>
+</div>
+
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+-->
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("DIeRNPYoT7nE5w11cDBWUO3g-gzGzoHsz", "PNbU1RWIJ0Rb48f0JJ29oILp");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>

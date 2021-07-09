@@ -1,0 +1,1275 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="zh-Hans">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+<link href="//cdn.bootcss.com/pace/1.0.2/themes/pink/pace-theme-flash.css" rel="stylesheet">
+<style>
+    .pace .pace-progress {
+        background: #1E92FB; /*进度条颜色*/
+        height: 3px;
+    }
+    .pace .pace-progress-inner {
+         box-shadow: 0 0 10px #1E92FB, 0 0 5px     #1E92FB; /*阴影颜色*/
+    }
+    .pace .pace-activity {
+        border-top-color: #1E92FB;    /*上边框颜色*/
+        border-left-color: #1E92FB;    /*左边框颜色*/
+    }
+</style>
+
+
+  
+  
+    
+    
+  <script src="/lib/pace/pace.min.js?v=1.0.2"></script>
+  <link href="/lib/pace/pace-theme-minimal.min.css?v=1.0.2" rel="stylesheet">
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+  <link rel="alternate" href="/atom.xml" title="DreamMaker-HS" type="application/atom+xml" />
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/image/timg.jpg?v=5.1.1" />
+
+
+
+
+
+
+<meta name="description" content="周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》阅读时间：2017.09简评：【★★★★★】  内容量很大，知识点很多。绝对是一本需要重复看三次以上的好书。 看完后对自动内存管理机制、高效并发两部分最感兴趣，值得一阅。  封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》 李林锋-《分布式服务框架原理与实践》阅读时间：2017.04简评：【★★★★】  对一些专业术语，分布式服务的认">
+<meta property="og:type" content="website">
+<meta property="og:title" content="技术类书籍">
+<meta property="og:url" content="http://denghs.com/technology/index.html">
+<meta property="og:site_name" content="DreamMaker-HS">
+<meta property="og:description" content="周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》阅读时间：2017.09简评：【★★★★★】  内容量很大，知识点很多。绝对是一本需要重复看三次以上的好书。 看完后对自动内存管理机制、高效并发两部分最感兴趣，值得一阅。  封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》 李林锋-《分布式服务框架原理与实践》阅读时间：2017.04简评：【★★★★】  对一些专业术语，分布式服务的认">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/4178722.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/85534749.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/64566789.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/83733837.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/28616401.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20181227040212-920114.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/69623920.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/64657634.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/30812161.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/56080836.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/72031246.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/83671317.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/15916349.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20191005124111-574819.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20191005124414-546859.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/992717.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/97529503.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/17845414.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/30458332.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/97340288.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/56241549.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/10523342.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/4114745.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/46373435.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/26368500.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/56371253.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/13795828.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/65961711.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/90063733.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/24054059.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/23211845.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/34135464.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/32291374.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20181102030340-284612.jpg">
+<meta property="og:image" content="https://dhsmp.nos-eastchina1.126.net/30924573.jpg">
+<meta property="og:image" content="http://dhsmp.nos-eastchina1.126.net/20190614100409-486355.jpg">
+<meta property="og:updated_time" content="2019-10-29T01:11:59.899Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="技术类书籍">
+<meta name="twitter:description" content="周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》阅读时间：2017.09简评：【★★★★★】  内容量很大，知识点很多。绝对是一本需要重复看三次以上的好书。 看完后对自动内存管理机制、高效并发两部分最感兴趣，值得一阅。  封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》 李林锋-《分布式服务框架原理与实践》阅读时间：2017.04简评：【★★★★】  对一些专业术语，分布式服务的认">
+<meta name="twitter:image" content="https://dhsmp.nos-eastchina1.126.net/4178722.jpg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    sidebar: {"position":"left","display":"always","offset":12,"offset_float":0,"b2t":false,"scrollpercent":true},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: '博主'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://denghs.com/technology/"/>
+
+
+
+
+
+  <title>技术类书籍 | DreamMaker-HS</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">DreamMaker-HS</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">勤思善问，可敌良师益友。</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            首页
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            关于
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            归档
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            分类
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-humanity">
+          <a href="/humanity" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-book"></i> <br />
+            
+            人文书
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-technology">
+          <a href="/technology" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cubes"></i> <br />
+            
+            技术书
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-method">
+          <a href="/method" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-cogs"></i> <br />
+            
+            方法书
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-enbook">
+          <a href="/enbook" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-envelope"></i> <br />
+            
+            英文
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-commonweal">
+          <a href="/404.html" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-heartbeat"></i> <br />
+            
+            公益404
+          </a>
+        </li>
+      
+
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br />
+            
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off"
+             placeholder="搜索..." spellcheck="false"
+             type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+  <header class="post-header">
+
+	<h1 class="post-title" itemprop="name headline">技术类书籍</h1>
+
+
+
+</header>
+
+    
+    
+      <h2 id="周志明-《深入理解Java虚拟机-JVM高级特性与最佳实践》"><a href="#周志明-《深入理解Java虚拟机-JVM高级特性与最佳实践》" class="headerlink" title="周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》"></a>周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/4178722.jpg" alt=""><br>阅读时间：2017.09<br>简评：【★★★★★】</p>
+<ol>
+<li>内容量很大，知识点很多。绝对是一本需要重复看三次以上的好书。</li>
+<li>看完后对自动内存管理机制、高效并发两部分最感兴趣，值得一阅。</li>
+</ol>
+<h2 id="封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》"><a href="#封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》" class="headerlink" title="封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》"></a>封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/85534749.jpg" alt=""></p>
+<h2 id="李林锋-《分布式服务框架原理与实践》"><a href="#李林锋-《分布式服务框架原理与实践》" class="headerlink" title="李林锋-《分布式服务框架原理与实践》"></a>李林锋-《分布式服务框架原理与实践》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/64566789.jpg" alt=""><br>阅读时间：2017.04<br>简评：【★★★★】</p>
+<ol>
+<li>对一些专业术语，分布式服务的认知进行了扫盲。</li>
+<li>有一些知识点就是提一下，加一些文字描述。有很大的技术帮助，真没感觉出来。RPC框架、SOA服务、Dubbo、分布式服务框架的架构。zookeeper等都有提到，但其实都讲的不深。重点就是是扫盲，提高认知。</li>
+</ol>
+<p>读书笔记：</p>
+<ol>
+<li><a href="http://dhsmp.com/2018/01/25/webservice-summary/" target="_blank" rel="external">WebService、RPC、微服务的一些认知</a></li>
+</ol>
+<h2 id="梁栋-《Java加密与解密的艺术》"><a href="#梁栋-《Java加密与解密的艺术》" class="headerlink" title="梁栋-《Java加密与解密的艺术》"></a>梁栋-《Java加密与解密的艺术》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/83733837.jpg" alt=""><br>阅读时间：2016.10<br>简评：【★★★★】</p>
+<ol>
+<li>科普了一下密码学相关知识，虽然有大量的与Java加密相关的API示例，工作中还是极少用到。作为一项知识量的积累，还是不错的。例子的冗余代码较多。</li>
+</ol>
+<h2 id="子柳-《淘宝技术这十年》"><a href="#子柳-《淘宝技术这十年》" class="headerlink" title="子柳-《淘宝技术这十年》"></a>子柳-《淘宝技术这十年》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/28616401.jpg" alt=""><br>阅读时间：2017.05<br>简评：【★★★★】</p>
+<ol>
+<li>看故事书一样，非常精彩。阿里的每一次技术变革等，都写的很精彩。有时候想，自己要是能参与这样的过程，该有多酸爽啊。这种升级打怪的历程，真不是每个人都能遇到的。</li>
+</ol>
+<h2 id="杨冠宝-《阿里巴巴Java开发手册》"><a href="#杨冠宝-《阿里巴巴Java开发手册》" class="headerlink" title="杨冠宝-《阿里巴巴Java开发手册》"></a>杨冠宝-《阿里巴巴Java开发手册》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20181227040212-920114.jpg" alt=""></p>
+<h2 id="刘增杰，李坤-《MySQL5-6从零开始学》"><a href="#刘增杰，李坤-《MySQL5-6从零开始学》" class="headerlink" title="刘增杰，李坤-《MySQL5.6从零开始学》"></a>刘增杰，李坤-《MySQL5.6从零开始学》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/69623920.jpg" alt=""><br>阅读时间：2017.06<br>简评：【★★★★】</p>
+<ol>
+<li>写的很细，入门篇。非常不错。以前都是这也知道一点，那也会一点，凑合着能使用。总算是系统的补充了一下MySQL方面的基础知识了。重点是性能优化、索引那两章。</li>
+</ol>
+<p>读书笔记：</p>
+<ol>
+<li><a href="http://dhsmp.com/2017/07/06/mysql-store-engine/" target="_blank" rel="external">MySQL的存储引擎</a></li>
+<li><a href="http://dhsmp.com/2017/07/10/mysql-index/" target="_blank" rel="external">MySQL中InnoDB存储引擎的索引</a></li>
+<li><a href="http://dhsmp.com/2017/07/11/mysql-optimize/" target="_blank" rel="external">MySQL的性能优化</a></li>
+</ol>
+<h2 id="美-布赖恩特-《深入理解计算机系统》"><a href="#美-布赖恩特-《深入理解计算机系统》" class="headerlink" title="[美]布赖恩特-《深入理解计算机系统》"></a>[美]布赖恩特-《深入理解计算机系统》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/64657634.jpg" alt=""></p>
+<h2 id="英-艾伦·克莱门茨-《计算机组成原理》"><a href="#英-艾伦·克莱门茨-《计算机组成原理》" class="headerlink" title="[英]艾伦·克莱门茨-《计算机组成原理》"></a>[英]艾伦·克莱门茨-《计算机组成原理》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/30812161.jpg" alt=""><br>阅读时间：2018.05<br>简评：【★★★★】</p>
+<ol>
+<li>经典的教科书，介绍支配数字计算机系统的基本原理。底层硬件的部分，个人的感官跟看编译原理那本一样，昏昏欲睡。看一遍还是有好处，至少脑海中会有对计算机组成的一个抽象图。</li>
+<li>指令部分关于过、子程序、函数、存储，还是有必要看看的。了解程序在运算过程中，内存的工作原理。</li>
+</ol>
+<h2 id="鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版"><a href="#鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版" class="headerlink" title="鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版"></a>鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/56080836.jpg" alt=""></p>
+<h2 id="高俊峰-《循序渐进Linux》第二版"><a href="#高俊峰-《循序渐进Linux》第二版" class="headerlink" title="高俊峰-《循序渐进Linux》第二版"></a>高俊峰-《循序渐进Linux》第二版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/72031246.jpg" alt=""></p>
+<h2 id="程杰-《大话数据结构》"><a href="#程杰-《大话数据结构》" class="headerlink" title="程杰-《大话数据结构》"></a>程杰-《大话数据结构》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/83671317.jpg" alt=""><br>阅读时间：2018.03<br>简评：【★★★★】</p>
+<ol>
+<li>大白话写的，不知道为啥，感觉没教科书写的好。可能是教科书翻看的次数较多吧。快速过了一遍，顺便把以前的知识回顾了一下。</li>
+</ol>
+<p>读书笔记：</p>
+<ol>
+<li><a href="http://dhsmp.com/2017/06/29/list-set-map/" target="_blank" rel="external">Java的List、Set、Map容器</a></li>
+<li><a href="http://dhsmp.com/2018/02/26/data_struct/" target="_blank" rel="external">回顾数据结构的基础知识</a></li>
+<li><a href="http://dhsmp.com/2018/03/29/implement/" target="_blank" rel="external">数据结构中一些示例代码的实现</a></li>
+</ol>
+<h2 id="程杰-《大话设计模式》"><a href="#程杰-《大话设计模式》" class="headerlink" title="程杰-《大话设计模式》"></a>程杰-《大话设计模式》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/15916349.jpg" alt=""></p>
+<h2 id="吴翰清-《白帽子讲Web安全》"><a href="#吴翰清-《白帽子讲Web安全》" class="headerlink" title="吴翰清-《白帽子讲Web安全》"></a>吴翰清-《白帽子讲Web安全》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20191005124111-574819.jpg" alt=""><br>阅读时间：2019.10<br>简评：【★★★★】</p>
+<ol>
+<li>传奇人物对自己所从事的安全工作中，关于Web安全问题的系统梳理。看的似懂非懂。但是从书中所罗列出来的被攻击的手段，只有一句惊叹。这群做黑客的简直是群神人，真正验证了那句话，只有你想象不到。从客户端页面上的攻击手段（XSS、CSRF、ClickJaking）到服务器端的攻击手法（SQL注入、上传脚本文件、token劫持、暴力破解、文本标签内容过滤、DDOS攻击、不同字符集编解码的差异）。安全对于计算机相关产业是一个非常重要的问题，所涵盖的也不仅仅只是Web的安全问题。</li>
+</ol>
+<h2 id="李艳鹏-《分布式服务架构：原理、设计与实战》"><a href="#李艳鹏-《分布式服务架构：原理、设计与实战》" class="headerlink" title="李艳鹏-《分布式服务架构：原理、设计与实战》"></a>李艳鹏-《分布式服务架构：原理、设计与实战》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20191005124414-546859.jpg" alt=""></p>
+<h2 id="姜承尧-《MySql技术内存：InnoDB存储引擎》第二版"><a href="#姜承尧-《MySql技术内存：InnoDB存储引擎》第二版" class="headerlink" title="姜承尧-《MySql技术内存：InnoDB存储引擎》第二版"></a>姜承尧-《MySql技术内存：InnoDB存储引擎》第二版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/992717.jpg" alt=""></p>
+<h2 id="许令波-《深入分析Java-Web技术内幕》"><a href="#许令波-《深入分析Java-Web技术内幕》" class="headerlink" title="许令波-《深入分析Java Web技术内幕》"></a>许令波-《深入分析Java Web技术内幕》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/97529503.jpg" alt=""></p>
+<h2 id="李智慧-《大型网站技术架构-核心原理与案例分析》"><a href="#李智慧-《大型网站技术架构-核心原理与案例分析》" class="headerlink" title="李智慧-《大型网站技术架构 核心原理与案例分析》"></a>李智慧-《大型网站技术架构 核心原理与案例分析》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/17845414.jpg" alt=""></p>
+<h2 id="张开涛-《亿级流量网站架构核心技术》"><a href="#张开涛-《亿级流量网站架构核心技术》" class="headerlink" title="张开涛-《亿级流量网站架构核心技术》"></a>张开涛-《亿级流量网站架构核心技术》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/30458332.jpg" alt=""></p>
+<h2 id="曾宪杰-《大型网站系统与Java中间件实践》"><a href="#曾宪杰-《大型网站系统与Java中间件实践》" class="headerlink" title="曾宪杰-《大型网站系统与Java中间件实践》"></a>曾宪杰-《大型网站系统与Java中间件实践》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/97340288.jpg" alt=""></p>
+<h2 id="倪超-《从Paxos到ZooKeeper-分布式一致性原理与实践》"><a href="#倪超-《从Paxos到ZooKeeper-分布式一致性原理与实践》" class="headerlink" title="倪超-《从Paxos到ZooKeeper 分布式一致性原理与实践》"></a>倪超-《从Paxos到ZooKeeper 分布式一致性原理与实践》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/56241549.jpg" alt=""></p>
+<h2 id="郝佳-《Spring源码深度解析》"><a href="#郝佳-《Spring源码深度解析》" class="headerlink" title="郝佳-《Spring源码深度解析》"></a>郝佳-《Spring源码深度解析》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/10523342.jpg" alt=""></p>
+<h2 id="美-布洛克-《Effective-Java中文版》"><a href="#美-布洛克-《Effective-Java中文版》" class="headerlink" title="[美]布洛克-《Effective Java中文版》"></a>[美]布洛克-《Effective Java中文版》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/4114745.jpg" alt=""></p>
+<h2 id="凯文、R-福尔-《TCP-IP详解-卷1：协议》"><a href="#凯文、R-福尔-《TCP-IP详解-卷1：协议》" class="headerlink" title="凯文、R.福尔-《TCP/IP详解 卷1：协议》"></a>凯文、R.福尔-《TCP/IP详解 卷1：协议》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/46373435.jpg" alt=""></p>
+<h2 id="澳-詹姆斯·特恩布尔-《第一本Docker书》修订版"><a href="#澳-詹姆斯·特恩布尔-《第一本Docker书》修订版" class="headerlink" title="[澳]詹姆斯·特恩布尔-《第一本Docker书》修订版"></a>[澳]詹姆斯·特恩布尔-《第一本Docker书》修订版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/26368500.jpg" alt=""></p>
+<h2 id="美-盖茨-《Java并发编程实战》"><a href="#美-盖茨-《Java并发编程实战》" class="headerlink" title="[美]盖茨-《Java并发编程实战》"></a>[美]盖茨-《Java并发编程实战》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/56371253.jpg" alt=""></p>
+<h2 id="方腾飞，魏鹏，程晓明-《Java并发编程的艺术》"><a href="#方腾飞，魏鹏，程晓明-《Java并发编程的艺术》" class="headerlink" title="方腾飞，魏鹏，程晓明-《Java并发编程的艺术》"></a>方腾飞，魏鹏，程晓明-《Java并发编程的艺术》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/13795828.jpg" alt=""></p>
+<h2 id="葛一鸣-《实战Java高并发程序设计》"><a href="#葛一鸣-《实战Java高并发程序设计》" class="headerlink" title="葛一鸣-《实战Java高并发程序设计》"></a>葛一鸣-《实战Java高并发程序设计》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/65961711.jpg" alt=""></p>
+<h2 id="英-沃伯顿-《Java-8函数式编程》"><a href="#英-沃伯顿-《Java-8函数式编程》" class="headerlink" title="[英]沃伯顿-《Java 8函数式编程》"></a>[英]沃伯顿-《Java 8函数式编程》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/90063733.jpg" alt=""></p>
+<h2 id="英-厄马-《Java-8实战》"><a href="#英-厄马-《Java-8实战》" class="headerlink" title="[英]厄马-《Java 8实战》"></a>[英]厄马-《Java 8实战》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/24054059.jpg" alt=""></p>
+<h2 id="美-诺曼·毛瑞尔-《Netty实战》"><a href="#美-诺曼·毛瑞尔-《Netty实战》" class="headerlink" title="[美]诺曼·毛瑞尔-《Netty实战》"></a>[美]诺曼·毛瑞尔-《Netty实战》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/23211845.jpg" alt=""></p>
+<h2 id="陶辉-《深入理解Nginx：模块开发与架构解析》第2版"><a href="#陶辉-《深入理解Nginx：模块开发与架构解析》第2版" class="headerlink" title="陶辉-《深入理解Nginx：模块开发与架构解析》第2版"></a>陶辉-《深入理解Nginx：模块开发与架构解析》第2版</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/34135464.jpg" alt=""></p>
+<h2 id="英-纽曼-《微服务设计》"><a href="#英-纽曼-《微服务设计》" class="headerlink" title="[英]纽曼-《微服务设计》"></a>[英]纽曼-《微服务设计》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/32291374.jpg" alt=""></p>
+<h2 id="美-桑德斯-《高性能网站建设指南》"><a href="#美-桑德斯-《高性能网站建设指南》" class="headerlink" title="[美]桑德斯-《高性能网站建设指南》"></a>[美]桑德斯-《高性能网站建设指南》</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20181102030340-284612.jpg" alt=""></p>
+<h2 id="美-约西亚-L-卡尔森-《Redis实战》"><a href="#美-约西亚-L-卡尔森-《Redis实战》" class="headerlink" title="[美]约西亚 L.卡尔森-《Redis实战》"></a>[美]约西亚 L.卡尔森-《Redis实战》</h2><p><img src="https://dhsmp.nos-eastchina1.126.net/30924573.jpg" alt=""></p>
+<h2 id="谭志彬，柳纯录-《系统集成项目管理工程师教程》第2版"><a href="#谭志彬，柳纯录-《系统集成项目管理工程师教程》第2版" class="headerlink" title="谭志彬，柳纯录-《系统集成项目管理工程师教程》第2版"></a>谭志彬，柳纯录-《系统集成项目管理工程师教程》第2版</h2><p><img src="http://dhsmp.nos-eastchina1.126.net/20190614100409-486355.jpg" alt=""></p>
+
+    
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="/image/20170622104033.png"
+               alt="HuaShan" />
+          <p class="site-author-name" itemprop="name">HuaShan</p>
+           
+              <p class="site-description motion-element" itemprop="description">博学而笃志，切问而静思。<br>本博客的文章属于自己对知识的总结，皆属于原创。如需转载，请注明原文出处。如文章描述有错，请务必告知。谢谢！</p>
+          
+        </div>
+        <nav class="site-state motion-element">
+
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">37</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            
+            
+            <div class="site-state-item site-state-categories">
+              <a href="/categories/index.html">
+                <span class="site-state-item-count">17</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+
+        </nav>
+
+        
+          <div class="feed-link motion-element">
+            <a href="/atom.xml" rel="alternate">
+              <i class="fa fa-rss"></i>
+              RSS
+            </a>
+          </div>
+        
+
+        <div class="links-of-author motion-element">
+          
+        </div>
+
+        
+        
+
+        
+        
+          <div class="links-of-blogroll motion-element links-of-blogroll-inline">
+            <div class="links-of-blogroll-title">
+              <i class="fa  fa-fw fa-globe"></i>
+              友情链接
+            </div>
+            <ul class="links-of-blogroll-list">
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://blog.csdn.net/qq_27832819" title="CSDN博客" target="_blank">CSDN博客</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="https://toutiao.io/posts/hot/7" title="开发者头条" target="_blank">开发者头条</a>
+                </li>
+              
+                <li class="links-of-blogroll-item">
+                  <a href="http://www.infoq.com/cn/" title="infoQ" target="_blank">infoQ</a>
+                </li>
+              
+            </ul>
+          </div>
+        
+
+        
+
+
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#周志明-《深入理解Java虚拟机-JVM高级特性与最佳实践》"><span class="nav-number">1.</span> <span class="nav-text">周志明-《深入理解Java虚拟机:JVM高级特性与最佳实践》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》"><span class="nav-number">2.</span> <span class="nav-text">封亚飞-《揭秘Java虚拟机：JVM设计原理与实现》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#李林锋-《分布式服务框架原理与实践》"><span class="nav-number">3.</span> <span class="nav-text">李林锋-《分布式服务框架原理与实践》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#梁栋-《Java加密与解密的艺术》"><span class="nav-number">4.</span> <span class="nav-text">梁栋-《Java加密与解密的艺术》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#子柳-《淘宝技术这十年》"><span class="nav-number">5.</span> <span class="nav-text">子柳-《淘宝技术这十年》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#杨冠宝-《阿里巴巴Java开发手册》"><span class="nav-number">6.</span> <span class="nav-text">杨冠宝-《阿里巴巴Java开发手册》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#刘增杰，李坤-《MySQL5-6从零开始学》"><span class="nav-number">7.</span> <span class="nav-text">刘增杰，李坤-《MySQL5.6从零开始学》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-布赖恩特-《深入理解计算机系统》"><span class="nav-number">8.</span> <span class="nav-text">[美]布赖恩特-《深入理解计算机系统》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-艾伦·克莱门茨-《计算机组成原理》"><span class="nav-number">9.</span> <span class="nav-text">[英]艾伦·克莱门茨-《计算机组成原理》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版"><span class="nav-number">10.</span> <span class="nav-text">鸟哥-《鸟哥的Linux私房菜-基础学习篇》第三版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#高俊峰-《循序渐进Linux》第二版"><span class="nav-number">11.</span> <span class="nav-text">高俊峰-《循序渐进Linux》第二版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程杰-《大话数据结构》"><span class="nav-number">12.</span> <span class="nav-text">程杰-《大话数据结构》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#程杰-《大话设计模式》"><span class="nav-number">13.</span> <span class="nav-text">程杰-《大话设计模式》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#吴翰清-《白帽子讲Web安全》"><span class="nav-number">14.</span> <span class="nav-text">吴翰清-《白帽子讲Web安全》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#李艳鹏-《分布式服务架构：原理、设计与实战》"><span class="nav-number">15.</span> <span class="nav-text">李艳鹏-《分布式服务架构：原理、设计与实战》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#姜承尧-《MySql技术内存：InnoDB存储引擎》第二版"><span class="nav-number">16.</span> <span class="nav-text">姜承尧-《MySql技术内存：InnoDB存储引擎》第二版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#许令波-《深入分析Java-Web技术内幕》"><span class="nav-number">17.</span> <span class="nav-text">许令波-《深入分析Java Web技术内幕》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#李智慧-《大型网站技术架构-核心原理与案例分析》"><span class="nav-number">18.</span> <span class="nav-text">李智慧-《大型网站技术架构 核心原理与案例分析》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#张开涛-《亿级流量网站架构核心技术》"><span class="nav-number">19.</span> <span class="nav-text">张开涛-《亿级流量网站架构核心技术》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#曾宪杰-《大型网站系统与Java中间件实践》"><span class="nav-number">20.</span> <span class="nav-text">曾宪杰-《大型网站系统与Java中间件实践》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#倪超-《从Paxos到ZooKeeper-分布式一致性原理与实践》"><span class="nav-number">21.</span> <span class="nav-text">倪超-《从Paxos到ZooKeeper 分布式一致性原理与实践》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#郝佳-《Spring源码深度解析》"><span class="nav-number">22.</span> <span class="nav-text">郝佳-《Spring源码深度解析》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-布洛克-《Effective-Java中文版》"><span class="nav-number">23.</span> <span class="nav-text">[美]布洛克-《Effective Java中文版》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#凯文、R-福尔-《TCP-IP详解-卷1：协议》"><span class="nav-number">24.</span> <span class="nav-text">凯文、R.福尔-《TCP/IP详解 卷1：协议》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#澳-詹姆斯·特恩布尔-《第一本Docker书》修订版"><span class="nav-number">25.</span> <span class="nav-text">[澳]詹姆斯·特恩布尔-《第一本Docker书》修订版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-盖茨-《Java并发编程实战》"><span class="nav-number">26.</span> <span class="nav-text">[美]盖茨-《Java并发编程实战》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#方腾飞，魏鹏，程晓明-《Java并发编程的艺术》"><span class="nav-number">27.</span> <span class="nav-text">方腾飞，魏鹏，程晓明-《Java并发编程的艺术》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#葛一鸣-《实战Java高并发程序设计》"><span class="nav-number">28.</span> <span class="nav-text">葛一鸣-《实战Java高并发程序设计》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-沃伯顿-《Java-8函数式编程》"><span class="nav-number">29.</span> <span class="nav-text">[英]沃伯顿-《Java 8函数式编程》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-厄马-《Java-8实战》"><span class="nav-number">30.</span> <span class="nav-text">[英]厄马-《Java 8实战》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-诺曼·毛瑞尔-《Netty实战》"><span class="nav-number">31.</span> <span class="nav-text">[美]诺曼·毛瑞尔-《Netty实战》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#陶辉-《深入理解Nginx：模块开发与架构解析》第2版"><span class="nav-number">32.</span> <span class="nav-text">陶辉-《深入理解Nginx：模块开发与架构解析》第2版</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#英-纽曼-《微服务设计》"><span class="nav-number">33.</span> <span class="nav-text">[英]纽曼-《微服务设计》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-桑德斯-《高性能网站建设指南》"><span class="nav-number">34.</span> <span class="nav-text">[美]桑德斯-《高性能网站建设指南》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#美-约西亚-L-卡尔森-《Redis实战》"><span class="nav-number">35.</span> <span class="nav-text">[美]约西亚 L.卡尔森-《Redis实战》</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#谭志彬，柳纯录-《系统集成项目管理工程师教程》第2版"><span class="nav-number">36.</span> <span class="nav-text">谭志彬，柳纯录-《系统集成项目管理工程师教程》第2版</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+	
+	<!-- 网易云音乐 -->
+	<div id="music163player">
+		<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=1361299143&auto=1&height=66"></iframe>
+	</div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="copyright" >
+  
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <!--<i class="fa fa-/image/20170622104033.png"></i>-->
+	<i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">HuaShan</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    总访问量<span id="busuanzi_value_site_pv"></span>次
+</span>
+</div>
+
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_pv">
+    访问人数<span id="busuanzi_value_site_uv"></span>人次
+</span>
+</div>
+
+<div class="powered-by">
+  <i class="fa fa-user-md"></i>
+  <span class="post-count">全站共52.2k字</span>
+</div>
+
+<!--
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Muse
+  </a>
+</div>
+-->
+        
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.1"></script>
+
+
+
+  
+  
+
+  
+    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.1"></script>
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.1"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+  
+
+  <script type="text/javascript">
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url);
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x" /></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x" /></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+  <script src="https://cdn1.lncld.net/static/js/av-core-mini-0.6.1.js"></script>
+  <script>AV.initialize("DIeRNPYoT7nE5w11cDBWUO3g-gzGzoHsz", "PNbU1RWIJ0Rb48f0JJ29oILp");</script>
+  <script>
+    function showTime(Counter) {
+      var query = new AV.Query(Counter);
+      var entries = [];
+      var $visitors = $(".leancloud_visitors");
+
+      $visitors.each(function () {
+        entries.push( $(this).attr("id").trim() );
+      });
+
+      query.containedIn('url', entries);
+      query.find()
+        .done(function (results) {
+          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
+
+          if (results.length === 0) {
+            $visitors.find(COUNT_CONTAINER_REF).text(0);
+            return;
+          }
+
+          for (var i = 0; i < results.length; i++) {
+            var item = results[i];
+            var url = item.get('url');
+            var time = item.get('time');
+            var element = document.getElementById(url);
+
+            $(element).find(COUNT_CONTAINER_REF).text(time);
+          }
+          for(var i = 0; i < entries.length; i++) {
+            var url = entries[i];
+            var element = document.getElementById(url);
+            var countSpan = $(element).find(COUNT_CONTAINER_REF);
+            if( countSpan.text() == '') {
+              countSpan.text(0);
+            }
+          }
+        })
+        .fail(function (object, error) {
+          console.log("Error: " + error.code + " " + error.message);
+        });
+    }
+
+    function addCount(Counter) {
+      var $visitors = $(".leancloud_visitors");
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
+      var query = new AV.Query(Counter);
+
+      query.equalTo("url", url);
+      query.find({
+        success: function(results) {
+          if (results.length > 0) {
+            var counter = results[0];
+            counter.fetchWhenSave(true);
+            counter.increment("time");
+            counter.save(null, {
+              success: function(counter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.get('time'));
+              },
+              error: function(counter, error) {
+                console.log('Failed to save Visitor num, with error message: ' + error.message);
+              }
+            });
+          } else {
+            var newcounter = new Counter();
+            /* Set ACL */
+            var acl = new AV.ACL();
+            acl.setPublicReadAccess(true);
+            acl.setPublicWriteAccess(true);
+            newcounter.setACL(acl);
+            /* End Set ACL */
+            newcounter.set("title", title);
+            newcounter.set("url", url);
+            newcounter.set("time", 1);
+            newcounter.save(null, {
+              success: function(newcounter) {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(newcounter.get('time'));
+              },
+              error: function(newcounter, error) {
+                console.log('Failed to create');
+              }
+            });
+          }
+        },
+        error: function(error) {
+          console.log('Error:' + error.code + " " + error.message);
+        }
+      });
+    }
+
+    $(function() {
+      var Counter = AV.Object.extend("Counter");
+      if ($('.leancloud_visitors').length == 1) {
+        addCount(Counter);
+      } else if ($('.post-title-link').length > 1) {
+        showTime(Counter);
+      }
+    });
+  </script>
+
+
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+</html>
